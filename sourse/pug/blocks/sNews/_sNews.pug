@@ -1,9 +1,24 @@
+mixin newsItem(date,title,theme,pic,img)
+	+b.news-item(class=`news-item--${theme}`)
+		if pic
+			+img(`img/news-${pic}.jpg`)(class=`news-item__${img}`)
+		+e.text
+			+e.date= date
+			+e.title=title
 mixin sNews(data)
 	// start sNews
 	+b.SECTION.sNews.section#sNews&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sNews
-				
+			+b.section-title
+				h2 Новости и&nbsp;статьи компании
+				.section-subtitle надежные поставщики нашей компании
 			.row
+				+e.col.col-4
+					+newsItem('04 июн 2022','Fresenius продолжает расширять сеть диализных центров в России','common')
+					+newsItem('04 июн 2022','Академия Диализа Fresenius Medical Care запустила первый курс повышения квалификации, аккредитованный на портале НМО Минздрава РФ','common')
+					+newsItem('04 июн 2022','Fresenius открывает второй диализный центр в Красноярске','common')
+				+e.col.col-4
+					+newsItem('04 июн 2022','Академия Диализа Fresenius Medical Care запустила первый курс повышения квалификации, аккредитованный','pic','1','img')
+				+e.col.col-4
+					+newsItem('04 июн 2022','Академия Диализа Fresenius Medical Care запустила первый ','light','2','bg-img')
 	// end sNews

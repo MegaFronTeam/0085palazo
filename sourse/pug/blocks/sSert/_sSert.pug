@@ -7,7 +7,6 @@ mixin sSert(data)
 				.section-subtitle Оценка 5⭐️ на&nbsp;основании более чем 300 отзывов
 			+b.slider-sert--js.swiper
 				.swiper-wrapper
-					- for (var x = 0; x < 3; x++)
 						+e.slide.swiper-slide
 							+e.slide-wrap
 								+img("img/sert-slider-1.jpg")
@@ -17,6 +16,15 @@ mixin sSert(data)
 						+e.slide.swiper-slide
 							+e.slide-wrap
 								+img("img/sert-slider-3.jpg")
+						+e.slide.swiper-slide
+							+e.slide-wrap
+								+img("img/sert-slider-4.jpg")
+						+e.slide.swiper-slide
+							+e.slide-wrap
+								+img("img/sert-slider-1.jpg")
+						+e.slide.swiper-slide
+							+e.slide-wrap
+								+img("img/sert-slider-2.jpg")
 				.swiper-pagination
 				.arrow-wrap
 					+arrow

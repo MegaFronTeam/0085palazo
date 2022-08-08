@@ -2,8 +2,20 @@ mixin sPartners(data)
 	// start sPartners
 	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sPartners
-				
-			.row
-	// end sPartners
+			+b.section-title
+				h2 Наши партнеры
+				.section-subtitle Надежные поставщики нашей компании
+			+e.row.row
+				mixin partnersItem(img, descr='Название компании в одну или несколько строк')
+					+e.item.col-6.col-lg-3
+						+img(`img/partner-${img}.jpg`).sPartners__item-img
+						+e.descr!= descr
+				+partnersItem(1,descr)
+				+partnersItem(2,descr)
+				+partnersItem(3,descr)
+				+partnersItem(4,descr)
+				+partnersItem(5,descr)
+				+partnersItem(6,descr)
+				+partnersItem(7,descr)
+				+partnersItem(1,descr)
+	// end sPartnersz

@@ -2,20 +2,63 @@
 .sFaq {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sTPB: #{rem(54)};
+	
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 
 	}
 	.section-title{
-		
+		margin-bottom: rem(40);
 	}
 	&__col{
 
 	}
 	&__item{
 
+	}
+
+	.dd-group {
+		border-top: 1px dashed #DBDBDB;
+		&__item {
+			border-bottom: 1px dashed #DBDBDB;
+			&.active {
+				.dd-group__head::after {
+					transform: rotate(-135deg);
+				}
+			}
+		}
+		&__head {
+			position: relative;
+			padding: rem(32) 30px rem(32) 0;
+			font-weight: 500;
+			font-size: rem(24);
+			text-transform: uppercase;
+			color: $gray-900;
+			@include media-breakpoint-down(md) {
+				font-size: rem(20);
+			}
+			&::after {
+				position: absolute;
+				top: calc(50% - 4px);
+				right: 0;
+				transform: translateY(-50%) rotate(135deg);
+				transform-origin: left 50%;
+				content: '';
+				width: 11px;
+				height: 11px;
+				border-left: 2px solid $gray-600;
+				border-top: 2px solid $gray-600;
+				@include mt;
+			}
+		}
+		&__content {
+			display: none;
+			font-size: rem(18);
+			line-height: 155%;
+			color: $gray-600;
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}
