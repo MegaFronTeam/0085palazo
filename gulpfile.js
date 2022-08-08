@@ -252,4 +252,6 @@ export let sprite = series(svg, svgCopy)
 
 
 
-export default series(common, libs, styles, imgAll, sprite, pugFiles, parallel(browsersync, startwatch))
+export default series(common, libs, styles, 
+    // imgAll,
+     sprite, pugFiles, parallel(browsersync, startwatch))
