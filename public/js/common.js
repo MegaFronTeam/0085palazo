@@ -382,6 +382,20 @@ function eventHandler() {
 		loop: true,
 	});
 
+	const swiperSert = new Swiper('.slider-sert--js', { 
+		slidesPerView: 3,
+		spaceBetween: 33,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
 
 	// modal window
 

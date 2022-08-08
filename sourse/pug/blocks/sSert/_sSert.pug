@@ -2,8 +2,25 @@ mixin sSert(data)
 	// start sSert
 	+b.SECTION.sSert.section#sSert&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sSert
-				
+			+b.section-title
+				h2 Сертификаты
+				.section-subtitle Оценка 5⭐️ на&nbsp;основании более чем 300 отзывов
+			+b.slider-sert--js.swiper
+				.swiper-wrapper
+					- for (var x = 0; x < 3; x++)
+						+e.slide.swiper-slide
+							+e.slide-wrap
+								+img("img/sert-slider-1.jpg")
+						+e.slide.swiper-slide
+							+e.slide-wrap
+								+img("img/sert-slider-2.jpg")
+						+e.slide.swiper-slide
+							+e.slide-wrap
+								+img("img/sert-slider-3.jpg")
+				.swiper-pagination
+				.arrow-wrap
+					+arrow
+//- <div class="swiper-button-prev"></div>
+//- <div class="swiper-button-next"></div>
 			.row
 	// end sSert
