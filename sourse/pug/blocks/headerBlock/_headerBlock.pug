@@ -3,7 +3,7 @@ mixin headerBlock()
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
 			.row
-				.col-7
+				+e.col--main.col-7
 					+b.slider-main--js.swiper
 						.swiper-wrapper
 							- for (var x = 0; x < 3; x++)
@@ -16,7 +16,7 @@ mixin headerBlock()
 							+arrow
 						.swiper-pagination
 
-				.col-5
+				+e.col--sm.col-5
 					+b.slider-thumb--js.swiper
 						.swiper-wrapper
 							mixin slide(i,t)
