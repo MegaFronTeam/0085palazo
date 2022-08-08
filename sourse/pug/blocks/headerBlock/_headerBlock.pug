@@ -3,28 +3,31 @@ mixin headerBlock()
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
 			.row
-				+e.col--main.col-7
+				+e.col--main.col-lg-6
 					+b.slider-main--js.swiper
 						.swiper-wrapper
 							- for (var x = 0; x < 3; x++)
 								+e.slide.swiper-slide
-									+e.item.bg-wrap
+									+e.item.bg-wrap(href="#")
 										+img("img/main-slide.jpg",'bg').picture-bg
-										+e.title КАЧЕСТВЕННЫЕ КУХНИ ОТ&nbsp;ПРОИЗВОДИТЕЛЯ
-										+e.btn(href="#") Расчет онлайн
+										+e.caption
+											+e.title КАЧЕСТВЕННЫЕ КУХНИ ОТ&nbsp;ПРОИЗВОДИТЕЛЯ
+											.d-none.d-sm-block
+												+e.btn Расчет онлайн
 						.arrow-wrap
 							+arrow
 						.swiper-pagination
 
-				+e.col--sm.col-5
+				+e.col--sm.col-lg-6
 					+b.slider-thumb--js.swiper
 						.swiper-wrapper
 							mixin slide(i,t)
 								+e.slide.swiper-slide
 									+e.item.bg-wrap(href="#")
 										+img(`img/slide-${i}.jpg`,'bg').picture-bg
-										+e.title= t
-										+e.counter 125 моделей
+										+e.caption
+											+e.title= t
+											+e.counter 125 моделей
 							+slide(`1`,`Современные кухни`)
 							+slide(`2`,`КЛАССИЧЕСКИЕ КУХНИ`)
 							+slide(`3`,`Кухни в стиле лофт`)

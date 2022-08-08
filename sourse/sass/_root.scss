@@ -25,6 +25,14 @@
 		--swiperColorDefHover: #fff;
 		--swiperBgDefHover: #ffffff;
 
+		@include media-breakpoint-up(xxl) {
+			--main-slide-x: 48px ;
+		}
+		@include media-breakpoint-up(xl) {
+
+			--main-slide-x: 40px ;
+		}
+		--main-slide-x: 22px ;
 
 	--fancybox-bg: rgba(24, 24, 27, .77);
 

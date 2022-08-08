@@ -592,8 +592,8 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                rem(48);
-$h2-font-size:                rem(48) ;
+$h1-font-size:                rem(44);
+$h2-font-size:                $h1-font-size;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                rem(24);
 $h5-font-size:                $font-size-base * 1.25 !default;

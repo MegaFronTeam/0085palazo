@@ -9,7 +9,7 @@
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	// opacity: 0.7;
+	opacity: 0.7;
 	height: 11200px;
 } 
 
@@ -356,7 +356,8 @@ ul {
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
-		background-color: rgba($color: #fff, $alpha: .2);
+		background-color: rgba($color: #141414, $alpha: .2);
+		
 		outline: none !important;
 		@include mt; 
 		margin-left: 0 !important;
@@ -518,4 +519,14 @@ iframe {
 
 .fancybox__content :focus:not(.carousel__button.is-close){
 	outline: none !important;
+}
+
+@include media-breakpoint-up(xxl){
+
+	h1,
+	h2,
+	.h1,
+	.h2{
+		font-size: rem(48);
+	}
 }
