@@ -2,28 +2,41 @@
 .headerBlock {
 	padding-top: 0;
 	.row{
+		--bs-gutter-y: 72px;
 		--bs-gutter-x: 8px;
+		@include media-breakpoint-up(xl) {
+
+			--sm: 252px;
+		}
+		--sm: 198px;
+		--sm-w:  calc(var(--sm) * 2  + var(--bs-gutter-x) * 2);
 	}
 
 	.swiper-pagination{
-		margin-left: rem(47);
-		bottom:  rem(44);
-	}
+		margin-left: var(--main-slide-x);
+		@include media-breakpoint-up(lg) {
 
-	--main: 696px;
-	&__col--main{ 
-		width: calc(var(--main) + var(--bs-gutter-x));
+			bottom:  calc(var(--main-slide-x) - 4px);
+		}
+		bottom:  -40px;
 	}
-	
-	&__col--sm{ 
-		width: calc(100% - var(--main) - var(--bs-gutter-x));
+	@include media-breakpoint-up(lg) {
+
+		
+		&__col--main{ 
+			width: calc(100% - var(--sm-w) );
+		}
+		
+		&__col--sm{ 
+			width: var(--sm-w);
+		}
 	}
 
 	
  
 	@include media-breakpoint-up(xl) {}
 
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-down(lg) {}
 
 	@include media-breakpoint-up(md) {}
 
@@ -53,15 +66,26 @@
 
 	@include media-breakpoint-down(md) {}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {
+		margin-left: -.75rem;
+		margin-right: -.75rem;
+	}
 
 	@include media-breakpoint-down(xs) {}
 
 
 	.arrow-wrap{
 		position: absolute; 
-		bottom: rem(40);
-		right: rem(48);
+		@include media-breakpoint-down(lg) {
+			--swiperColorDefHover: #7A7A7A;
+			--swiperColorDef:  #{rgba($color: #7A7A7A, $alpha: .2)};
+		}
+		@include media-breakpoint-up(lg) {
+
+			bottom: var(--main-slide-x);
+		}
+		bottom: -40px;
+		right: var(--main-slide-x);
 	}
 }
 .arrow-wrap{
@@ -71,17 +95,40 @@
 }
 // end.headerBlock
 .slider-main{
-	height: 520px;
-	min-height: 100%;
-	border-radius: 4px;
+	@include media-breakpoint-up(lg) {
+		.swiper-pagination-bullet{
+			&:not(.swiper-pagination-bullet-active),
+			&:not(:hover){
+				background-color: rgba($color: #fff, $alpha: .2);
+			}
+
+		}
+	}
+	@include media-breakpoint-down(lg) {
+		overflow: visible;
+	}
+	// height: 520px;
+	@include media-breakpoint-up(sm) {
+		height: 100%;
+
+		border-radius: 4px;
+	}
 	&__slide{
 		height: auto;
 	}
+	&__caption{
+		@include a-cent;
+		padding: var(--main-slide-x);
+	}
 	&__item{
 		display: block;
-		padding: rem(48);
 		height: 100%;
 		position: relative;
+		@include media-breakpoint-down(lg) {
+			@include block(896, 520);
+			min-height: 290px;
+		}
+		// padding: 20px;
 		&::after{
 			content: '';
 			@include a-cent;
@@ -104,50 +151,73 @@
 	}
 }
 .slider-thumb{
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-	.swiper-slide-duplicate{
-		display: none;
-	}
-	.swiper-wrapper{
-		// @include row-sw;
-		transform: none !important;
-		flex-grow: 1;
-		height: 100%;
-		display: grid;
-		grid-template: repeat(2, 1fr) / repeat(2, 1fr) ;
-		gap: var(--bs-gutter-x);
+	@include media-breakpoint-up(md) {
+
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+		.swiper-slide-duplicate{
+			display: none;
+		}
+		.swiper-wrapper{
+			// @include row-sw;
+			transform: none !important;
+			flex-grow: 1;
+			height: 100%;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr) ;
+			gap: var(--bs-gutter-x);
+		}
 	}
 	&__slide{
 		height: auto;
 		border-radius: 4px;
 		width: 100%;
 		overflow: hidden;
+		@include media-breakpoint-down(lg) {
+			margin-left: 8px;
+			width: 256px;
+		}
 		
 	}
 	&__title{
 		font-weight: 500;
 		text-transform: uppercase;
 		color: #fff;
-		@include rfs(24px);
+		@include media-breakpoint-up(xl) {
+			font-size: 24px;
+		}
+		@include rfs(20px);
 		line-height: 1;
 		margin-bottom: rem(15);
 	}
 	&__item{ 
-		padding: 24px;
-		height: 100%;
+		width: 100%;
+		@include media-breakpoint-up(xl) {
+
+			padding: 24px;
+		} 
+		
+		// height: 100%;
 		position: relative;
+		@include block;
 		&::after{
 			content: '';
 			@include a-cent;
 			z-index: -1;
-			background: linear-gradient(168.91deg, #000000 -10.69%, rgba(0, 0, 0, 0) 46%);
+			background:  linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 60.16%);
+		}
+		
+	}
+	&__caption{
+		@include a-cent;
+		@include media-breakpoint-up(xl) {
+
 		}
 		padding: 24px;
 		display: flex;
 		flex-direction: column;
-
+	
 		justify-content: flex-end;
 
 	}
