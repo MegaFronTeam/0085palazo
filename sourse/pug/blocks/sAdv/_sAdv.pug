@@ -1,9 +1,15 @@
 mixin sAdv(data)
 	// start sAdv
-	+b.SECTION.sAdv.section#sAdv&attributes(attributes)
+	+b.sAdv.section#sAdv&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sAdv
-				
 			.row
+				mixin item(i,t)
+					+e.col.col-3
+						+e.img-wrap
+							+img(`img/svg/adv-${i}.svg`)
+						p!= t
+				+item(`1`,`Собственное производство&nbsp;мебели и&nbsp;фасадов`)
+				+item(`2`,`Продукция  сертифицирована`)
+				+item(`3`,`Экологически  чистые материалы  и&nbsp;европейская фурнитура`)
+				+item(`4`,`Комплектуем интерьеры&nbspпод&nbspключ`)
 	// end sAdv

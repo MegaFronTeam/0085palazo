@@ -1,11 +1,14 @@
 // start .sAdv
 .sAdv {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(52)};
+
+	}
+	--sPB: #{rem(5)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+		--bs-gutter-y: #{rem(50)};
 
 	}
 	.section-title{
@@ -16,6 +19,25 @@
 	}
 	&__item{
 
+	}
+	text-align: center;
+	img{
+		margin-bottom: rem(42);
+	}
+	p{
+		margin-left: auto;
+		max-width: 215px;
+		margin-right: auto;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 155%;
+		/* or 19px */ 
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+
+		/* Text2 */
+
+		color: #7A7A7A;
 	}
 
 	@include media-breakpoint-up(xl) {}
