@@ -15,14 +15,14 @@
 	--sTPB: #{rem(40 * .5)};
 
 
-		--swiperArrowSize: #{rem(68)};
-		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+		--swiperArrowSize: #{rem(24)};
+		--swiperArrowPosition: 0;
 		--swiperBorderColorDef: var(--bs-primary);
-		--swiperColorDef: var(--bs-primary);
-		--swiperBgDef: #ffffff;
+		--swiperColorDef: #{rgba(255, 255, 255, 0.2)};
+		--swiperBgDef: transparent;
 	
 		--swiperBorderColorDefHover: var(--bs-primary);
-		--swiperColorDefHover: var(--bs-primary);
+		--swiperColorDefHover: #fff;
 		--swiperBgDefHover: #ffffff;
 
 
