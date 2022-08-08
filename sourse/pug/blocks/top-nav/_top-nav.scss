@@ -1,0 +1,138 @@
+.top-nav {
+	// border-bottom: 1px solid #DBDBDB;
+	.row{
+		align-items: center;
+	}
+	&__head{
+		@include media-breakpoint-up(xxl){
+
+			padding-top: rem(25);
+			padding-bottom: rem(25);
+		}
+		padding-top: rem(15);
+		padding-bottom: rem(15);
+		background: rgba($color: #EDEDED, $alpha: .23);
+	}
+	&__logo-text{
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		max-width: rem(120);
+
+		/* Text2 */
+
+		color: #7A7A7A;
+		font-size: 10px;
+		font-weight: 600;
+	}
+	.btn-outline-primary{
+		.icon{
+
+			font-size: rem(24);
+			@include media-breakpoint-up(xxl) {
+				
+				margin-right: rem(20);
+			}
+			margin-right: rem(10);
+		}
+		height: 48px;
+		@include media-breakpoint-up(xxl) {
+			width: rem(250);
+		}
+		padding-top: 0;
+		padding-bottom: 0;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__soc{
+		margin-left: rem(12);
+	}
+	&__soc,
+	&__tel{
+		font-size: rem(18);
+		--bs-link-color: #{$body-color};
+		.icon{
+			font-size: 1rem;
+		}
+	}
+	
+
+	&__link{
+			position: relative;
+			&::before{
+				content: '';
+				position: absolute;
+				right: rem(-4);
+				top: rem(4);
+				width: rem(7);
+				height: rem(7);
+				border-radius: 50%;
+				background-color: $body-color;
+			}
+		.icon{
+			font-size: 1rem;
+		}
+	}
+	.btn-primary{
+		font-size: rem(14);
+		padding: rem(4.4) rem(12);
+	}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	// 
+	@include media-breakpoint-between(md, xl) {}
+
+	// 
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	// 
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+}
+
+
+.toggle-catalog{
+	position: relative;
+	padding: 1rem ;
+	padding-right: 0;
+	display: flex;
+	justify-content: space-between; 
+	&::after{
+		content: var(--chevron-down);
+		@include mt;
+		position: relative;
+	}
+	&.active{
+		&::after{
+			transform: rotateX(180deg);
+		}
+	}
+}
+
+.catalog-dropdown{
+	@include media-breakpoint-down(lg) {
+		display: none;
+		
+	}
+	
+}

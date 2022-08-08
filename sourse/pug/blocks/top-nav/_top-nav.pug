@@ -1,0 +1,64 @@
+mixin menu-toggle()
+	+b.toggle-menu-mobile--js.d-lg-none
+		span
+mixin mob-mnu()
+	-
+		//- let path = require('path');
+		//- let fs = require('fs');
+		//- var requestURL = 'top-nav.json';
+		//- var request = new XMLHttpRequest();
+		//- request.open('GET', requestURL);
+		//- request.responseType = 'json';
+		//- let dataJson = JSON.parse(json);
+	//- h1= dataJson['lala'] 
+	+b.menu-mobile--js
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			+mnu()
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		+e.head
+			.container
+				.row
+					.col-auto
+						a(href="/")
+							+img("img/logo.png")
+					.col
+						+e.logo-text Мебель на&nbsp;заказ от&nbsp;производителя
+					.col-auto.d-none.d-xxl-block
+						a.btn.btn-outline-primary(href="#")
+							+icon("calc")
+							| Онлайн расчет кухни
+					.col-auto.d-none.d-xxl-block
+						a.btn.btn-outline-primary(href="#")
+							+icon("designer")
+							| Вызвать дизайнера
+					.col-auto.d-none.d-md-block
+						+e.tel(href="tel:8(4942)501-621") 8 (4942) 501-621
+					.col-auto.d-none.d-md-block
+						+e.soc(href="#")
+							+icon("whatsapp")
+						+e.soc(href="#")
+							+icon("viber")
+		.container
+			.row
+				.col-lg.order-lg-0.order-last
+					+b.catalog-dropdown--js.d-lg-block
+						+mnu()
+				.col-lg-auto.col
+					a.btn.btn-primary(href="#") Заказать замер
+				.col-auto
+					+e.link.active(href="#")
+						+icon("compare")
+
+				.col-auto
+					+e.link.active(href="#")
+						+icon("like")
+
+
+				.col-12.d-lg-none
+					+b.toggle-catalog--js  Каталог
+	// end top-nav
