@@ -1,9 +1,87 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-3
+					+e.logo(href="/")
+						+img("img/footer-logo.png")
+					+b.footer-nav
+						+e.title Категории
+						+e.list.UL
+							+e.item.LI
+								+e.link(href="#") Кухни на заказ
+							+e.item.LI
+								+e.link(href="#") Мебель в детскую
+							+e.item.LI
+								+e.link(href="#") Столовые группы
+					+b.footer-nav
+						+e.title Категории
+						+e.list.UL
+							+e.item.LI
+								+e.link(href="#") Дизайнерам
+							+e.item.LI
+								+e.link(href="#") Производителям мебели
+				.col-6
+					+soc
+					+b.footer-nav
+						+e.title ПОЛЕЗНАЯ ИНФОРМАЦИЯ
+						+e.list--columns.UL
+							+e.item.LI
+								+e.link(href="#") О компании
+							+e.item.LI
+								+e.link(href="#") Рассрочка
+							+e.item.LI
+								+e.link(href="#") Наши видео
+							+e.item.LI
+								+e.link(href="#") Фото наших работ
+							+e.item.LI
+								+e.link(href="#") Гарантия
+							+e.item.LI
+								+e.link(href="#") Сборка
+							+e.item.LI
+								+e.link(href="#") Доставка
+							+e.item.LI
+								+e.link(href="#") Дизайн-замер
+							+e.item.LI
+								+e.link(href="#") Оплата
+							+e.item.LI
+								+e.link(href="#") Полезные статьи
+							+e.item.LI
+								+e.link(href="#") Отзывы
+							+e.item.LI
+								+e.link(href="#") Часто задаваемы вопросы
+							+e.item.LI
+								+e.link(href="#") Вакансии
+							+e.item.LI
+								+e.link(href="#") Наши партнеры
+				.col-3
+					+e.buttons
+						+e.btn.btn.btn-outline-primary(href="#")
+								+icon("calc")
+								| Онлайн расчет кухни
+						+e.btn.btn.btn-outline-primary(href="#")
+								+icon("designer")
+								| Вызвать дизайнера
+					+e.schedule
+						+icon("time")
+						| ПН-ПТ, с 9:00 - 18:00
+						span Без перерыва
+					+e.email(href="mailto:sales@palazo.ru")
+						+icon("email")
+						| sales@palazo.ru
+					+e.phone
+						+e.phone-link(href="tel:+74942501621") 8 (4942) 501-621
+						+e.phone-icon(href="https://wa.me/74942501621")
+							+icon("whatsapp")
+						+e.phone-icon(href="viber://chat?number=%2B374942501621")
+							+icon("viber")
+					+e.address.ADDRESS Адрес флагманского салона г. Кострома, ул.Северной правды 35
+			+e.bottom
+				+e.copright ©2017-2021 г. Все права защищены
+				+e.payment
+					+img('img/mir.png')
+					+img('img/mastercard.png')
+					+img('img/visa.png')
+				+e.links
+					+e.map(href="#") Карта сайта
+					+e.policy(href="#") Политика конфиденциальности

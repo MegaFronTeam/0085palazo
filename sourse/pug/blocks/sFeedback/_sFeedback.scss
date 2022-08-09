@@ -1,5 +1,5 @@
-// start .sFeadbacks
-.sFeadbacks {
+// start .sFeedback
+.sFeedback {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
@@ -25,4 +25,4 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
-} // end.sFeadbacks
+} // end.sFeedback

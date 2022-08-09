@@ -1,7 +1,118 @@
 .footer {
-		
+	padding-top: rem(70);
+	background-color: $gray-900;
 	margin-top: auto;
-
+	&__row {
+		margin-bottom: 70px;
+	}
+	&__logo {
+		display: block;
+		margin-bottom: rem(55);
+		width: 150px;
+		height: 31px;
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	.soc {
+		margin-bottom: rem(58);
+		&>* {
+			margin-left: 6.5px;
+			margin-right: 6.5px;
+		}
+		&__item {
+			width: 24px;
+			height: 24px;
+			border: 1.5px solid #CAD0D7;
+			border-radius: 50%;
+			@include mt;
+			&:hover {
+				border: 1.5px solid $red;
+				.icon {
+					color: $red;
+				}
+			}
+		}
+		.icon {
+			width: 10px;
+			height: 10px;
+			color: #CAD0D7;
+			@include mt;
+		}
+	}
+	&__buttons {
+		margin-bottom: rem(32);
+	}
+	&__btn {
+		margin-bottom: 16px;
+		width: 100%;
+		.icon {
+			width: 24px;
+			height: 24px;
+			margin-right: 22px;
+		}
+	}
+	&__schedule {
+		display: flex;
+		align-items: center;
+		margin-bottom: 13px;
+		font-size: 12px;
+		color: $gray-100;
+		font-weight: 600;
+		.icon {
+			margin-right: 8px;
+			width: 16px;
+			height: 16px;
+		}
+		span {
+			margin-left: 10px;
+			color: $gray-600;
+		}
+	}
+	&__email {
+		display: flex;
+		align-items: center;
+		margin-bottom: 22px;
+		font-weight: 600;
+		font-size: 12px;
+		color: $red;
+		.icon {
+			width: 16px;
+			height: 16px;
+			margin-right: 8px;
+		}
+	}
+	&__phone {
+		margin-bottom: rem(41);
+		font-size: rem(18);
+		&-link {
+			margin-right: 22px;
+			color: $white;
+		}
+		&-icon {
+			&:hover {
+				.icon {
+					color: $red;
+				}
+			}
+		}
+		.icon {
+			margin-right: 12px;
+			width: 16px;
+			height: 16px;
+			color: $white;
+			@include mt;
+		}
+	}
+	&__address {
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 155%;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: $gray-100;
+	}
 // 
 @include media-breakpoint-up(xl) {}
 
@@ -40,4 +151,31 @@
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+}
+.footer-nav {
+	margin-bottom: rem(43);
+	&__title {
+		margin-bottom: rem(23);
+		font-weight: 500;
+		font-size: rem(24);
+		line-height: 100%;
+		text-transform: uppercase;
+		color: $gray-600;
+	}
+	&__list {
+		max-width: 400px;
+		list-style-type: none;
+		&--columns {
+			columns: 2 190px;
+			column-gap: rem(18);
+			.footer-nav__item {
+				// max-width: 147px;
+			}
+		}
+	}
+	&__link {
+		font-size: 15px;
+		line-height: 155%;
+		color: $gray-100;
+	}
 }

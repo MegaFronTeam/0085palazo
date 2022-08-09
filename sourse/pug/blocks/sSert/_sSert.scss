@@ -28,6 +28,9 @@
 } // end.sSert
 
 .slider-sert {
+	&__slide {
+		height: auto;
+	}
 	.swiper-wrapper {
 		margin-bottom: 70px;
 	}
@@ -36,11 +39,12 @@
 		align-items: center;
 		justify-content: center;
 		padding: rem(26) rem(28);
+		height: 100%;
 		border: 1px solid #DBDBDB;
 		border-radius: 4px;
 		img {
-			width: 100%;
-			height: 100%;
+			max-width: 100%;
+			max-height: 100%;
 		}
 	}
 	.swiper-pagination {

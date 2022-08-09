@@ -1,7 +1,64 @@
 
 	// start .sForm
 	.sForm {
+		&__container {
+			padding: 48px 64px;
+			background: $gray-900;
+			border-radius: 4px;
+			@include media-breakpoint-down(md) {
+				padding: 21px 17px 16px;
+			}
+		}
 		 
+		h2 {
+			color: $white;
+			@include media-breakpoint-down(md) {
+				font-size: 32px;
+			}
+		}
+
+		&__descr {
+			margin-bottom: rem(42);
+			max-width: 395px;
+			font-size: 15px;
+			line-height: 155%;
+			color: $gray-600;
+			@include media-breakpoint-down(md) {
+				font-size: 12px;
+			}
+			a {
+				color: $gray-600;
+			}
+		}
+		&__form-col {
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 31px;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+				max-width: 312px;
+			}
+			.form-control {
+				margin-bottom: 20px;
+				&:focus {
+
+				}
+			}
+			.btn {
+				@include media-breakpoint-down(md) {
+					font-size: 14px;
+				}
+			}
+		}
+		&__policy {
+			font-weight: 600;
+			font-size: 12px;
+			color: $gray-600;
+			@include media-breakpoint-down(md) {
+				font-size: 10px;
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

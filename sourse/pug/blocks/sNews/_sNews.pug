@@ -1,5 +1,5 @@
 mixin newsItem(date,title,theme,pic,img)
-	+b.news-item(class=`news-item--${theme}`)
+	+b.news-item(class=`news-item--${theme}`,href="#")
 		if pic
 			+img(`img/news-${pic}.jpg`)(class=`news-item__${img}`)
 		+e.text
@@ -12,13 +12,17 @@ mixin sNews(data)
 			+b.section-title
 				h2 Новости и&nbsp;статьи компании
 				.section-subtitle надежные поставщики нашей компании
-			.row
-				+e.col.col-4
-					+newsItem('04 июн 2022','Fresenius продолжает расширять сеть диализных центров в России','common')
-					+newsItem('04 июн 2022','Академия Диализа Fresenius Medical Care запустила первый курс повышения квалификации, аккредитованный на портале НМО Минздрава РФ','common')
-					+newsItem('04 июн 2022','Fresenius открывает второй диализный центр в Красноярске','common')
-				+e.col.col-4
+			+e.row.row
+				.col-md-6.col-xl-4
+					+e.left
+						+newsItem('04 июн 2022','Fresenius продолжает расширять сеть диализных центров в России','common')
+						+newsItem('04 июн 2022','Академия Диализа Fresenius Medical Care запустила первый курс повышения квалификации, аккредитованный на портале НМО Минздрава РФ','common')
+						+newsItem('04 июн 2022','Fresenius открывает второй диализный центр в Красноярске','common')
+				.col-md-6.col-xl-4.d-none.d-md-block
 					+newsItem('04 июн 2022','Академия Диализа Fresenius Medical Care запустила первый курс повышения квалификации, аккредитованный','pic','1','img')
-				+e.col.col-4
+				.col-xl-4.d-none.d-xl-block
 					+newsItem('04 июн 2022','Академия Диализа Fresenius Medical Care запустила первый ','light','2','bg-img')
+			a.btn.btn-outline-primary.d-flex.d-md-none(href="#") 
+				| Показать все
+				+icon('forward')
 	// end sNews
