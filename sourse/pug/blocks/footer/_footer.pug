@@ -2,7 +2,7 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			+e.row.row
-				.col-3
+				.col-sm-6.col-xl-3
 					+e.logo(href="/")
 						+img("img/footer-logo.png")
 					+b.footer-nav
@@ -15,15 +15,15 @@ mixin footer()
 							+e.item.LI
 								+e.link(href="#") Столовые группы
 					+b.footer-nav
-						+e.title Категории
+						+e.title--fading Категории
 						+e.list.UL
 							+e.item.LI
 								+e.link(href="#") Дизайнерам
 							+e.item.LI
 								+e.link(href="#") Производителям мебели
-				.col-6
+				.col-sm-6
 					+soc
-					+b.footer-nav
+					+b.footer-nav--info
 						+e.title ПОЛЕЗНАЯ ИНФОРМАЦИЯ
 						+e.list--columns.UL
 							+e.item.LI
@@ -54,7 +54,7 @@ mixin footer()
 								+e.link(href="#") Вакансии
 							+e.item.LI
 								+e.link(href="#") Наши партнеры
-				.col-3
+				.col-xl-3
 					+e.buttons
 						+e.btn.btn.btn-outline-primary(href="#")
 								+icon("calc")
@@ -75,13 +75,13 @@ mixin footer()
 							+icon("whatsapp")
 						+e.phone-icon(href="viber://chat?number=%2B374942501621")
 							+icon("viber")
-					+e.address.ADDRESS Адрес флагманского салона г. Кострома, ул.Северной правды 35
+					+e.address.ADDRESS Адрес флагманского салона г.&nbsp;Кострома, ул.Северной правды&nbsp;35
 			+e.bottom
-				+e.copright ©2017-2021 г. Все права защищены
+				+e.copyright ©2017-2021 г. Все права защищены
 				+e.payment
 					+img('img/mir.png')
 					+img('img/mastercard.png')
 					+img('img/visa.png')
 				+e.links
 					+e.map(href="#") Карта сайта
-					+e.policy(href="#") Политика конфиденциальности
+					+e.policy(href="#") Политика&nbsp;конфиденциальности
