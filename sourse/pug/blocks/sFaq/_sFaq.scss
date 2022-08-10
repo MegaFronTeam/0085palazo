@@ -1,8 +1,12 @@
 // start .sFaq
 .sFaq {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(68)};
+	--sPB: #{rem(36)};
 	--sTPB: #{rem(54)};
+	@include media-breakpoint-down(sm) {
+		--sPT: #{rem(23)};
+		--sPB: #{rem(15)};
+	}
 	
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -10,7 +14,7 @@
 
 	}
 	.section-title{
-		margin-bottom: rem(40);
+		margin-bottom: rem(53);
 	}
 	&__col{
 
@@ -31,12 +35,13 @@
 		}
 		&__head {
 			position: relative;
-			padding: rem(32) 30px rem(32) 0;
+			padding: rem(23) 30px rem(23) 0;
 			font-weight: 500;
 			font-size: rem(24);
 			text-transform: uppercase;
 			color: $gray-900;
 			@include media-breakpoint-down(md) {
+				line-height: 100%;
 				font-size: rem(20);
 			}
 			&::after {
@@ -58,6 +63,9 @@
 			font-size: rem(18);
 			line-height: 155%;
 			color: $gray-600;
+			p {
+				margin-bottom: rem(34);
+			}
 		}
 	}
 

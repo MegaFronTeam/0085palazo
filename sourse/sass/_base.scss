@@ -131,6 +131,12 @@ body {
 	@include media-breakpoint-down(xl) {
 		margin-bottom: calc(var(--sTPB) * 0.32);
 	}
+	h2 {
+		margin-bottom: 6px;
+		@include media-breakpoint-down(md) {
+			font-size: 24px;
+		}
+	}
 }
 
 .section-subtitle {

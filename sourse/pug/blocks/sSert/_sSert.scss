@@ -1,8 +1,11 @@
 // start .sSert
 .sSert {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(36)};
+	--sPB: #{rem(36)};
 	--sTPB: #{rem(75)};
+	@include media-breakpoint-down(sm) {
+		--sPB: #{rem(25)};
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
@@ -33,6 +36,9 @@
 	}
 	.swiper-wrapper {
 		margin-bottom: 70px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 18px;
+		}
 	}
 	&__slide-wrap {
 		display: flex;

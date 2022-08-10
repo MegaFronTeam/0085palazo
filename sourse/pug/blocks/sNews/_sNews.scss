@@ -1,13 +1,17 @@
 // start .sNews
 .sNews {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(52)};
+	--sPB: #{rem(101)};
 	--sTPB: #{rem(48)};
+	@include media-breakpoint-down(md) {
+		--sPT: #{rem(35)};
+		--sPB: #{rem(42)};
+	}
 	&__row{
 		--bs-gutter-x: #{rem(33)};
 		// --bs-gutter-y: #{rem()};
 		@include media-breakpoint-down(md) {
-			margin-bottom: 34px;
+			margin-bottom: 28px;
 		}
 
 	}
@@ -31,6 +35,7 @@
 	.btn {
 		align-items: center;
 		justify-content: center;
+		padding: 10px;
 		font-weight: 600;
 		.icon {
 			margin-left: 20px;

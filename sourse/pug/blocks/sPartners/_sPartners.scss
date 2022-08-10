@@ -1,8 +1,13 @@
 // start .sPartners
 .sPartners {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(36)};
+	--sPB: #{rem(36)};
 	--sTPB: #{rem(75)};
+	@include media-breakpoint-down(sm) {
+		--sPT: #{rem(18)};
+		--sPB: #{rem(23)};
+		--sTPB: #{rem(44)};
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: #{rem(67)};
@@ -12,6 +17,7 @@
 
 	}
 	.section-title{
+		line-height: 100%;
 		
 	}
 	&__col{

@@ -1,18 +1,18 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		+e.container.container
-			.row
-				.col-lg-8
+		.container
+			+e.container
+				+e.text-col
 					+b.section-title
 						h2 ЕСТЬ ВОПРОСЫ?
 						.section-subtitle Наши специалисты ответят на них
-					+e.descr.P Задайте их&nbsp;по&nbsp;номеру телефона&nbsp;#[a(href="#") +7 (495) 000-00-00] или оставте свой номер телефона и&nbsp;наш инженер перезвонит вам через 15&nbsp;минут
-				+e.form-col.col-lg-4
+					+e.descr.P Задайте их&nbsp;по&nbsp;номеру телефона&nbsp;#[a(href="74950000000") +7 (495) 000-00-00] или оставте свой номер телефона и&nbsp;наш инженер перезвонит вам через 15&nbsp;минут
+				+e.form-col
 					+form-wrap()
 						+input('Введите','tel','Ваш номер телефона')
 						+e.button.BUTTON(type="submit").btn.btn-primary Оставить заявку
-				.col-lg-8
+				.col-lg-9
 					+e.policy.P Нажимая «Оставить завку», я соглашаюсь c 
 						a(href="#")  обработкой персональных данных 
 						| на условиях 
