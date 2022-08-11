@@ -90,12 +90,27 @@
 }
 
 // Разделы каталога
-
-.catalog-row {
-	--bs-gutter-x: #{rem(33)};
+.slider-catalog {
 	margin-bottom: 40px;
+	&__slide {
+		max-width: 383px;
+		&:not(:last-child) {
+			margin-right: 33px;
+			@include media-breakpoint-down(lg) {
+				margin-right: 8px;
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			width: 252px;
+		}
+	}
+
 }
+
 .catalog-item {
+	// width: 383px;
+	// height: 312px;
+	max-width: 100%;
 	@include block(383,312);
 	border-radius: 4px;
 	background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 60.16%);
