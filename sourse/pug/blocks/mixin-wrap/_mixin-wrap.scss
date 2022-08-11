@@ -111,7 +111,28 @@
 	}
 }
 
+.page-head {
+	margin-bottom: 33px;
+	padding-top: 25px;
+	border-top: 1px solid #DBDBDB;;
+}
+
+.breadcrumb {
+	margin-bottom: 20px !important;
+}
+
 .breadcrumb-item{
 	width: auto;
-	margin-right: rem(32);
+	margin-right: rem(12);
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 600;
+	letter-spacing: 0.07em;
+	&+.breadcrumb-item {
+		padding-left: 0;
+		&:before {
+		padding-right: rem(12);
+		content: url('../img/bc-arrow.svg');
+		}
+	}
 }

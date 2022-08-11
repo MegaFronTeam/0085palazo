@@ -1,3 +1,20 @@
+mixin productTags(...items)
+	+b.tags-list.UL
+		-for (var i = 0; i < items.length; i++)
+			+e.item.LI
+				+e.btn.BUTTON= items[i]
+		+e.item.LI
+			.btn.btn-outline-primary Показать все
+	// /.tags-list
+
+mixin catalogRowItem(img,title,price)
+	.col.col-4
+		+b.catalog-item(href="#")
+			+img(`img/prod-${img}.jpg`)
+			+e.text
+				+e.title= title 
+				+e.price= price
+
 mixin product-item(i, t, p ,pr)
 	+b.product-item
 		+e.img-wrap(href="#")
