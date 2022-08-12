@@ -135,4 +135,7 @@
 		content: url('../img/bc-arrow.svg');
 		}
 	}
+	&.active a{
+		color: $gray-600;
+	}
 }

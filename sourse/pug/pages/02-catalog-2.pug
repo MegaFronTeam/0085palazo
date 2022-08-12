@@ -28,7 +28,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'КАТАЛОГ МЕБЕЛИ'
+	- let  title= 'КУХНИ НА ЗАКАЗ'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -37,11 +37,14 @@ block pagecontent
 	+header()
 		+topLine
 		+top-nav()
-	+page-head(title,'Каталог' )
+	+page-head(title,'Каталог','КУХНИ НА ЗАКАЗ' )
+	.container.slider-container
+		+catalogSlider
 	//- +sCatalog
 	.container
-		+categorySlider
-		+productTags('Прямые','Угловые','МДФ','Пластик','Современные','Лофт','Классические','Кантри','Классические', 'Кнопка','Лофт','Классические','Кантри','Классические', 'Кнопка')
+		//- +catalogSlider
+		+productTags('Прямые','Угловые','МДФ','Пластик','Современные','Лофт','Классические','Кантри')
+	+sSert
 	+sFaq
 	+footer()
       

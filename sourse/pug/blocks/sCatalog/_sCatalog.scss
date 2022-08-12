@@ -68,8 +68,15 @@
 	flex-wrap: wrap;
 	list-style-type: none;
 	margin-bottom: 0;
+	.swiper-wrapper {
+		flex-wrap: wrap;
+		@include media-breakpoint-down(sm) {
+			flex-wrap: nowrap;
+		}
+	}
 	&__item {
 		margin-bottom: 4px;
+		width: auto;
 		&:not(:last-child) {
 			margin-right: 8px;
 		}
@@ -90,7 +97,7 @@
 }
 
 // Разделы каталога
-.slider-catalog {
+.slider-category {
 	margin-bottom: 40px;
 	&__slide {
 		max-width: 383px;
@@ -104,12 +111,9 @@
 			width: 252px;
 		}
 	}
-
 }
 
 .catalog-item {
-	// width: 383px;
-	// height: 312px;
 	max-width: 100%;
 	@include block(383,312);
 	border-radius: 4px;
@@ -144,5 +148,133 @@
 		letter-spacing: 0.07em;
 		text-transform: uppercase;
 		color: $gray-600;
+	}
+}
+
+// Слайдер в hero-блоке
+.slider-container {
+	@include media-breakpoint-down(sm) {
+		padding: 0;
+	}
+}
+
+.slider-catalog {
+	margin-bottom: 24px;
+	@include media-breakpoint-down(sm) {
+		overflow: visible;
+		padding-bottom: 50px;
+	}
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		padding: 48px 32px 48px 62px;
+		background: $gray-900;
+		border-radius: 4px;
+		@include media-breakpoint-down(lg) {
+			padding: 20px;
+		}
+		@include media-breakpoint-down(sm) {
+			padding: 20px 10px;
+		}
+	}
+	&__title {
+		margin-bottom: 24px;
+		font-weight: 500;
+		font-size: rem(48);
+		line-height: 100%;
+		text-transform: uppercase;
+		color: $white;
+		@include media-breakpoint-down(xl) {
+			max-width: 350px;
+			font-size: rem(32);
+		}
+	}
+	&__descr {
+		max-width: 400px;
+		margin-bottom: 23px;
+		font-size: 15px;
+		line-height: 155%;
+		color: $gray-600;
+		@include media-breakpoint-down(md) {
+			max-width: none;
+		}
+	}
+	&__controls {
+		position: absolute;
+		bottom: 63px;
+		left: 335px;
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-down(lg) {
+			bottom: 32px;
+			left: 235px;
+		}
+		@include media-breakpoint-down(sm) {
+			width: calc(100% - 30px);
+			justify-content: space-between;
+			bottom: 0px;
+			left: 15px;
+		}
+	}
+	&__btn {
+		padding: 11px 38px;
+		margin-right: 55px;
+		@include media-breakpoint-down(lg) {
+			padding: 11px;
+		}
+		@include media-breakpoint-down(md) {
+			margin-right: auto;
+		}
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+	}
+	.swiper-pagination {
+		position: static;
+		width: auto;
+		margin-right: auto;
+	}
+	.swiper-pagination-bullet {
+		background: #FFFFFF;
+		opacity: 0.2;
+		@include media-breakpoint-down(sm) {
+			background: $gray-900;
+		}
+	}
+	.swiper-pagination-bullet-active {
+		background-color: $red;
+		opacity: 1;
+		@include media-breakpoint-down(sm) {
+			background-color: $red;
+		}
+	}
+
+	.swiper-button-hand {
+		border-color: $white;
+		@include media-breakpoint-down(sm) {
+			border-color: $gray-900;
+		}
+		.icon {
+			stroke: $white;
+			@include media-breakpoint-down(sm) {
+				stroke: $gray-900;
+			}
+		}
+	}
+
+	.swiper-button-disabled {
+		border-color: rgba(#FFFFFF, .2);
+		.icon {
+			stroke: rgba(#FFFFFF, .2);
+		}
+	}
+	img {
+		max-height: 100%;
+		@include media-breakpoint-down(xl) {
+			max-width: 40%;
+		}
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
 	}
 }

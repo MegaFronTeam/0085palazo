@@ -1,10 +1,12 @@
 mixin productTags(...items)
-	+b.tags-list.UL
-		-for (var i = 0; i < items.length; i++)
-			+e.item.LI
-				+e.btn.BUTTON= items[i]
-		+e.item.LI
-			.btn.btn-outline-primary Показать все
+	.tags-slider
+		+b.tags-list--js.swiper.UL(data-mobile="false")
+			.swiper-wrapper
+				-for (var i = 0; i < items.length; i++)
+					+e.item.swiper-slide.LI
+						+e.btn.BUTTON= items[i]
+				+e.item.swiper-slide.LI
+					.btn.btn-outline-primary Показать все
 	// /.tags-list
 
 mixin catalogRowItem(img,title,price)
@@ -14,8 +16,8 @@ mixin catalogRowItem(img,title,price)
 			+e.title= title 
 			+e.price= price
 
-mixin catalogSlider
-	+b.slider-catalog--js.swiper
+mixin categorySlider
+	+b.slider-category--js.swiper
 		.swiper-wrapper
 			+e.slide.swiper-slide
 				+catalogRowItem(`1`,`КУХНИ НА ЗАКАЗ`,`от 125 000 руб.`)
@@ -37,6 +39,36 @@ mixin product-item(i, t, p ,pr)
 			+e.btn(href='#')
 	// /.product-item
 
+mixin catalogSlider
+	+b.slider-catalog--js.swiper
+		.swiper-wrapper
+			+e.slide.swiper-slide
+				+e.item
+					+e.text
+						+e.title ПРОЙДИТЕ ОПРОС И&nbsp;ПОЛУЧИТЕ СКИДКУ
+						+e.descr Подбирите кухню ответив всего на&nbsp;7&nbsp;вопросов и&nbsp;получите скидку от&nbsp;производителя
+						+btn('Подобрать кухню').btn.btn-primary
+					+img('img/catalog-slider.png')
+			+e.slide.swiper-slide
+				+e.item
+					+e.text
+						+e.title ПРОЙДИТЕ ОПРОС И&nbsp;ПОЛУЧИТЕ СКИДКУ
+						+e.descr Подбирите кухню ответив всего на&nbsp;7&nbsp;вопросов и&nbsp;получите скидку от&nbsp;производителя
+						+btn('Подобрать кухню').btn.btn-primary
+					+img('img/catalog-slider.png')
+			+e.slide.swiper-slide
+				+e.item
+					+e.text
+						+e.title ПРОЙДИТЕ ОПРОС И&nbsp;ПОЛУЧИТЕ СКИДКУ
+						+e.descr Подбирите кухню ответив всего на&nbsp;7&nbsp;вопросов и&nbsp;получите скидку от&nbsp;производителя
+						+btn('Подобрать кухню').btn.btn-primary
+					+img('img/catalog-slider.png')
+		+e.controls
+			.swiper-pagination
+			.arrow-wrap
+				+arrow
+
+
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
@@ -44,7 +76,15 @@ mixin sCatalog(data)
 			+b.section-title
 				h2 ПОПУЛЯРНЫЕ КУХНИ
 				.section-subtitle Выбор наших клиентов в 2022 году
-			+catalogSlider
+			+categorySlider()
+			//- +b.slider-catalog--js.swiper
+			//- 	.swiper-wrapper
+			//- 		+e.slide.swiper-slide
+			//- 			+catalogRowItem(`1`,`КУХНИ НА ЗАКАЗ`,`от 125 000 руб.`)
+			//- 		+e.slide.swiper-slide
+			//- 			+catalogRowItem(`2`,`МЕБЕЛЬ В ДЕТСКУЮ`,`от 125 000 руб.`)
+			//- 		+e.slide.swiper-slide
+			//- 			+catalogRowItem(`3`,`СТОЛОВЫЕ ГРУППЫ`,`от 125 000 руб.`)
 
 			//- +e.row.row
 			//- 	- const wrapClass="col-3"
