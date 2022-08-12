@@ -1,4 +1,7 @@
 "use strict";
+
+const { default: Choices } = require("choices.js");
+
 const JSCCommon = { 
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -454,6 +457,9 @@ function eventHandler() {
 	window.addEventListener('resize', () => {
 		tagsToSlide();
 	});
+
+	// const filterSelect = document.querySelector('.filter-select');
+	// const choices = new Choices(filterSelect);
 	// modal window
 
 

@@ -68,6 +68,19 @@ mixin catalogSlider
 			.arrow-wrap
 				+arrow
 
+mixin catFilter
+	+b.catalog-filter
+		+e.row.d-none.d-md-grid
+			+select('Форма','Не выбрано','Не выбрано 1','Не выбрано 2')
+			+select('Стиль','Не выбрано','Не выбрано 1','Не выбрано 2')
+			+select('Материал','Выбрано 3','Не выбрано 1','Не выбрано 2')
+			+select('Цвет','Розовы...','Не выбрано 1','Не выбрано 2')
+			+select('Стоимость','Не выбрано','Не выбрано 1','Не выбрано 2')
+			+select('Размер','Не выбрано','Не выбрано 1','Не выбрано 2')
+			+select('Тип','Не выбрано','Не выбрано 1','Не выбрано 2')
+		+btn('Сбросить фильтры','button').btn.d-none.d-md-block
+		button.d-md-none.icon-btn
+			+icon('filter')
 
 mixin sCatalog(data)
 	// start sCatalog
