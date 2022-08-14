@@ -1,7 +1,5 @@
 "use strict";
 
-const { default: Choices } = require("choices.js");
-
 const JSCCommon = { 
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -362,6 +360,11 @@ function eventHandler() {
 		
 		
 	});
+
+	// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+	// const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+
 	// modal window
 	const swiperMain = new Swiper('.slider-main--js', { 
 		slidesPerView: 1,
@@ -405,8 +408,8 @@ function eventHandler() {
 			}
 		},
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.slider-sert .swiper-button-next',
+			prevEl: '.slider-sert .swiper-button-prev',
 		},
 		pagination: {
 			el: ' .swiper-pagination',
@@ -419,13 +422,22 @@ function eventHandler() {
 		slidesPerView: 1,
 		spaceBetween: 10,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.slider-catalog .swiper-button-next',
+			prevEl: '.slider-catalog .swiper-button-prev',
 		},
 		pagination: {
-			el: ' .swiper-pagination',
+			el: '.slider-catalog .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
+		},
+	});
+
+	const swiperProd = new Swiper('.product-item__slider--js', { 
+		slidesPerView: 1,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.product-item__slider .swiper-button-next',
+			prevEl: '.product-item__slider .swiper-button-prev',
 		},
 	});
 

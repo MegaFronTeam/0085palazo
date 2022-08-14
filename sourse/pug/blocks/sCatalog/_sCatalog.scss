@@ -21,6 +21,7 @@
 		height: auto;
 	}
 
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -40,6 +41,20 @@
 		height: auto;
 	}
 }
+.cat-body-row {
+	--bs-gutter-x: #{rem(32)};
+	--bs-gutter-y: var(--bs-gutter-x);
+		margin-bottom: 31px;
+}
+
+.bottom-controls {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.pagination-wrapper {
+		display: flex;
+	}
+}
 
 .product-item{
 	display: flex;
@@ -51,13 +66,217 @@
 	overflow: hidden;
 	position: relative;
 	&__img-wrap{
-		@include block(383, 312);
+		@include block(384,312);
+		width: 100%;
+		border-radius: 4px 4px 0px 0px;
+		overflow: hidden;
+		&::before {
+			// background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 60.16%);
+			z-index: 11;
+		}
 	}
-	&__caption{
-		flex-grow: 1;
+	&__slider-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 15;
+	}
+	&__slider {
+		z-index: 15;
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+		}
+	}
+	.swiper-slide::after {
+		content: "";
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 60.16%);
+	z-index: 11;
+	}
+	.swiper-button-hand {
+		color: white;
+		z-index: 20;
+	}
+	.swiper-button-hand-prev {
+		left: 16px;
+	}
+	.swiper-button-hand-next {
+		right: 16px;
+	}
+	&__buttons {
+		position: absolute;
+		top: 24px;
+		left: 24px;
+		z-index: 15;
+		button {
+			width: 40px;
+			height: 32px;
+			border-radius: 4px;
+			border: none;
+			.icon {
+				width: 16px;
+				height: 16px;
+				color: $red;
+			}
+		}
+		.product-item__compare-btn {
+			margin-right: 8px;
+			background: rgba(255, 255, 255, 0.1);
+		}
+		.product-item__fave-btn {
+			background-color: $white;
+		}
+	}
+	&__tags {
+		position: absolute;
+		top: 24px;
+		right: 16px;
 		display: flex;
 		flex-direction: column;
-		padding: rem(20);
+		align-items: flex-end;
+		z-index: 15;
+	}
+	&__tag {
+		display: inline-block;
+		padding: 4px 10px;
+		width: auto;
+		font-weight: 600;
+		font-size: 10px;
+		border-radius: 4px;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		&:not(:last-child) {
+			margin-bottom: 7px;
+		}
+		&--discount {
+			color: $red;
+			background-color: $body-color;
+		}
+		&--guarantee {
+			color: $white;
+			background-color: rgba(20, 20, 20, 0.5);
+		}
+		&--promo {
+			color:$body-color;
+			background-color: #F178B6;
+		}
+	}
+	&__title {
+		position: absolute;
+		left: 24px;
+		bottom: 24px;
+		max-width: 150px;
+		font-weight: 500;
+		font-size: rem(24);
+		line-height: 100%;
+		text-transform: uppercase;
+		color: $white;
+		z-index: 15;
+		@include media-breakpoint-down(lg) {
+			font-size: rem(20);
+		}
+	}
+	&__descr {
+		padding: 26px 10px 17px 24px ;
+		background: $gray-100;
+		color: $gray-600;
+		font-size: 12px;
+		font-weight: 600;
+		border-radius: 0px 0px 4px 4px;
+		@include media-breakpoint-down(lg) {
+			padding: 16px;;
+		}
+	}
+	.icon-question {
+		width: 16px;
+		height: 16px;
+		margin-left: 5px;
+		color: $red;
+	}
+	&__text {
+		margin-bottom: 15px;
+	}
+	&__text-row {
+		display: flex;
+	}
+	&__text-title {
+		margin-bottom: 6px;
+	}
+	&__text-left, &__text-right {
+		display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+		width: 50%;
+	}
+	&__form-row {
+		display: flex;
+		padding: 2px;
+		width: auto;
+		margin-bottom: 16px;
+		border: 1px solid $red;
+		border-radius: 4px;
+	}
+	.custom-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+		margin-bottom: 0;
+    padding-left: 0;
+		min-height: 0;
+    text-align: center;
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
+	.custom-input__input {
+    position: absolute;
+    left: 20px;
+    top: 0;
+		height: 100%;
+    opacity: 1;
+    width: 100%;
+    z-index: 2;
+    background-color: transparent;
+		border: none;
+	}
+	.form-check-input[type=radio] {
+		width: 95%;
+		height: 100%;
+		margin-top: 0;
+    border-radius: 4px;
+		&:checked {
+			background-color: $red;
+			background-image: none;
+			border: none;
+			&+span {
+				color: $white;
+			}
+		}
+}
+	.custom-input__text {
+		position: relative;
+		padding: 0 6px;
+    z-index: 10;
+    pointer-events: none;
+	}
+	&__price {
+		margin-top: -6px;
+		font-weight: 500;
+		font-size: 24px;
+		text-transform: uppercase;
+		color: $gray-900;
+		@include media-breakpoint-down(lg) {
+			font-size: rem(20);
+		}
 	}
 }
 
@@ -281,11 +500,18 @@
 
 // Фильтр
 
+.filter-wrap {
+	position: relative;
+	margin-bottom: 45px;
+}
+
 .catalog-filter {
 	padding-top: 14px;
 	padding-bottom: 24px;
 	@include media-breakpoint-down(md) {
-		text-align: right;
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 	&__row {
 		display: grid;
@@ -340,6 +566,88 @@
 		.icon {
 			width: 16px;
 			height: 16px;
+		}
+	}
+}
+
+.catalog-sorter {
+	display: flex;
+	align-items: center;
+	padding: 21px 0;
+	font-weight: 600;
+	font-size: 12px;
+	@include media-breakpoint-down(xl) {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.pagination-wrapper {
+		margin-left: auto;
+	}
+	&__input-wrap {
+		position: relative;
+		margin-right: 51px;
+		@include media-breakpoint-down(xl) {
+			margin-bottom: 20px;
+		}
+		&::after {
+			position: absolute;
+			display: inline-block;
+			content: '';
+			bottom: 7px;
+			right: 0;
+			width: 11px;
+			height: 11px;
+			border-right:2px solid $gray-600;
+			border-bottom:2px solid $gray-600;
+			transform: rotate(45deg);
+		}
+		
+		label {
+			display: flex;
+			align-items: center;
+		}
+		span {
+			margin-right: 16px;
+		}
+	}
+	&__input {
+		padding: 0;
+		padding-right: 15px;
+		font-weight: 600;
+		font-size: 12px;
+		color: $red;
+		border: none;
+	}
+	&__total {
+		margin-right: auto;
+		@include media-breakpoint-down(xl) {
+			width: 50%;
+			text-align: right;
+			margin-right: 0;
+		}
+	}
+	&__display {
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-down(xl) {
+			width: 50%;
+		}
+		.btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 9px;
+			font-weight: 600;
+			font-size: 12px;
+			width: 32px;
+			height: 32px;
+			border: 1px solid $gray-100;
+			border-radius: 4px;
+			color: $gray-600;
+			&.active {
+				border-color: $red;
+				color: $body-color;
+			}
 		}
 	}
 }

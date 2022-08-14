@@ -26,17 +26,52 @@ mixin categorySlider
 			+e.slide.swiper-slide
 				+catalogRowItem(`3`,`СТОЛОВЫЕ ГРУППЫ`,`от 125 000 руб.`)
 
-mixin product-item(i, t, p ,pr)
+mixin product-item(img, title="Кухня Дестини", total='110 900 р', price='18 900 р')
 	+b.product-item
-		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
-		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
+		+e.img-wrap
+			+e.slider-wrapper
+				+e.slider--js.swiper
+					.swiper-wrapper
+						.swiper-slide
+							+img(`img/prod-${img}.jpg`)
+						.swiper-slide
+							+img(`img/prod-${img}.jpg`)
+					+arrow
+			+e.buttons
+				+e.compare-btn.BUTTON 
+					+icon('compare')
+				+e.fave-btn.BUTTON  
+					+icon('fave')
+			+e.tags
+				+e.tag--discount Скидка 15%
+				+e.tag--guarantee Гарантия 5 лет
+				+e.tag--promo Акция
+			+e.title(href="#")!= title
+		+e.descr
+			+e.text Сравните цену в разных материалах 
+				a(href="#", data-bs-toggle="tooltip" data-bs-title="Default tooltip")
+					+icon('question')
+			+e.text-row
+				+e.text-left.FORM
+					+e.text-title Фасад верх
+					+e.form-row
+						+in-c('radio','ПВХ','front-up')
+						+in-c('radio','ПЛАСТИК','front-up')
+				+e.text-right.FORM
+					+e.text-title Фасад верх
+					+e.form-row
+						+in-c('radio','ПВХ','front-down')
+						+in-c('radio','ПЛАСТИК','front-down')
+			+e.text-row
+				+e.text-left
+					+e.text-title Стоимость кухни от
+					+e.price= total
+				+e.text-right
+					+e.text-title.d-none.d-lg-block Цена погонного метра
+						+icon('question')
+					+e.text-title.d-lg-none Цена п.м.
+						+icon('question')
+					+e.price= price
 	// /.product-item
 
 mixin catalogSlider
@@ -69,18 +104,28 @@ mixin catalogSlider
 				+arrow
 
 mixin catFilter
-	+b.catalog-filter
-		+e.row.d-none.d-md-grid
-			+select('Форма','Не выбрано','Не выбрано 1','Не выбрано 2')
-			+select('Стиль','Не выбрано','Не выбрано 1','Не выбрано 2')
-			+select('Материал','Выбрано 3','Не выбрано 1','Не выбрано 2')
-			+select('Цвет','Розовы...','Не выбрано 1','Не выбрано 2')
-			+select('Стоимость','Не выбрано','Не выбрано 1','Не выбрано 2')
-			+select('Размер','Не выбрано','Не выбрано 1','Не выбрано 2')
-			+select('Тип','Не выбрано','Не выбрано 1','Не выбрано 2')
-		+btn('Сбросить фильтры','button').btn.d-none.d-md-block
-		button.d-md-none.icon-btn
-			+icon('filter')
+	.filter-wrap
+		+b.catalog-filter
+			+e.row.d-none.d-md-grid
+				+select('Форма','Не выбрано','Не выбрано 1','Не выбрано 2')
+				+select('Стиль','Не выбрано','Не выбрано 1','Не выбрано 2')
+				+select('Материал','Выбрано 3','Не выбрано 1','Не выбрано 2')
+				+select('Цвет','Розовы...','Не выбрано 1','Не выбрано 2')
+				+select('Стоимость','Не выбрано','Не выбрано 1','Не выбрано 2')
+				+select('Размер','Не выбрано','Не выбрано 1','Не выбрано 2')
+				+select('Тип','Не выбрано','Не выбрано 1','Не выбрано 2')
+			+btn('Сбросить фильтры','button').btn.d-none.d-md-block
+			button.d-md-none.icon-btn
+				+icon('filter')
+		+b.catalog-sorter
+			+select('Сортировка','Сначала дорогие','Сначала недорогие')
+			+e.total.d-none.d-md-block Всего: 250
+			+e.display.d-none.d-md-flex
+				| Отображать по:
+				+btn('12','button').btn.active
+				+btn('24','button').btn
+				+btn('48','button').btn
+			+pugin()
 
 mixin sCatalog(data)
 	// start sCatalog
@@ -119,3 +164,40 @@ mixin sCatalog(data)
 			//- 		+product-item(`8`,``,``,``) 
 
 	// end sCatalog
+
+mixin catalogBody()
+	.container
+		.row.cat-body-row
+			.col-md-6.col-xl-4
+				+product-item('1')
+			.col-md-6.col-xl-4
+				+product-item('2')
+			.col-md-6.col-xl-4
+				+product-item('3')
+			.col-md-6.col-xl-4
+				+product-item('4')
+			.col-md-6.col-xl-4
+				+product-item('5')
+			.col-md-6.col-xl-4
+				+product-item('1')
+			.col-md-6.col-xl-4
+				+product-item('2')
+			.col-md-6.col-xl-4
+				+product-item('3')
+			.col-md-6.col-xl-4
+				+product-item('4')
+			.col-md-6.col-xl-4
+				+product-item('5')
+			.col-md-6.col-xl-4
+				+product-item('2')
+			.col-md-6.col-xl-4
+				+product-item('3')
+		+e.bottom-controls
+			.catalog-sorter__display.d-none.d-md-flex Отображать по:
+				button(class="catalog-sorter__btn btn active" type="button") 12
+				button(class="catalog-sorter__btn btn" type="button") 24
+				button(class="catalog-sorter__btn btn" type="button") 48
+			.d-none.d-md-flex
+				+pugin()
+			.d-md-none
+				+puginMobile()
