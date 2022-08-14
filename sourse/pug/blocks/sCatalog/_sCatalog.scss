@@ -51,6 +51,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	font-size: 12px;
+	font-weight: 600;
 	.pagination-wrapper {
 		display: flex;
 	}
@@ -185,6 +187,7 @@
 		}
 	}
 	&__descr {
+		flex-grow: 1;
 		padding: 26px 10px 17px 24px ;
 		background: $gray-100;
 		color: $gray-600;

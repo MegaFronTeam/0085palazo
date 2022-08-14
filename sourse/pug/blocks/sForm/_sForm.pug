@@ -18,3 +18,24 @@ mixin sForm()
 						| на условиях 
 						a(href="#") Политики конфиденциальности.
 	// end sForm
+
+
+mixin sFormFile()
+	// start sForm
+	+b.SECTION.sForm--file.section#sForm&attributes(attributes)
+		.container
+			+e.container
+				+e.text-col
+					+b.section-title
+						h2 Я УЖЕ ЗНАЮ КАКУЮ КУХНЮ&nbsp;ХОЧУ
+					+e.descr.P Просто отправте нам фото и мы посчитаем стоимость изготовления
+					+e.policy--file.d-none.d-sm-block.P Нажимая «Оставить завку», я соглашаюсь c 
+						a(href="#")  обработкой персональных данных 
+						| на условиях 
+						a(href="#") Политики конфиденциальности.
+				+e.form-col
+					+form-wrap()
+						+add-file('Выбрать фото')
+						+input('Введите','tel','Ваш номер телефона')
+						+e.button.BUTTON(type="submit").btn.btn-primary Оставить заявку
+	// end sForm
