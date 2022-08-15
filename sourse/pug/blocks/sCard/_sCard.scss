@@ -1,0 +1,132 @@
+// start .sCard
+.sCard {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		--bs-gutter-x: #{rem(32)};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	&__images-wrap {
+		margin-bottom: 38px;
+	}
+
+	&__tags {
+		position: absolute;
+		top: 24px;
+		right: 23px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		z-index: 10;
+	}
+
+	&__tabs {
+		.tabs__caption {
+			display: flex;
+			padding-bottom: 27px;
+			margin-bottom: 20px;
+			font-weight: 600;
+			line-height: 100%;
+			border-bottom: 1px solid #DBDBDB;
+		}
+		.tabs__btn {
+			padding-bottom: 27px;
+			&.active {
+				border-bottom: 3px solid $red;
+			}
+			&:not(:last-child) {
+				margin-right: rem(48);
+			}
+		}
+		.tabs__content {
+			font-weight: 400;
+			font-size: rem(18);
+			line-height: 155%;
+			color: $gray-600;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCard
+
+.card-slider {
+	margin-bottom: 14px;
+	&__img-wrap {
+		@include block(800,650);
+		position: relative;
+		border-radius: 4px;
+		overflow: hidden;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+	.swiper-button-hand {
+		color: $white;
+		&-prev {
+			left: 16px;
+		}
+		&-next {
+			right: 16px;
+		}
+	}
+}
+
+.card-thumbs-slider {
+	&::after {
+		position: absolute;
+		content: '';
+		top: 0;
+		right: -80px;
+		width: 160px;
+		height: 130px;
+		background: linear-gradient(270.79deg, #FFFFFF 45.2%, rgba(255, 255, 255, 0) 81.59%);
+		z-index: 1;
+	}
+	.swiper-slide {
+		width: 160px;
+		height: 130px;
+		@include mt;
+	}
+	.swiper-slide-thumb-active {
+		// padding: 6px 5px;
+		border: 1px solid $red;
+		border-radius: 4px;
+		.card-thumbs-slider__img-wrap {
+			transform: scale(.93)
+		}
+	}
+	&__img-wrap {
+		@include block(160,130);
+		max-width: 160px;
+		border-radius: 4px;
+		overflow: hidden;
+		max-height: 100%;
+		@include mt;
+	}
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+}

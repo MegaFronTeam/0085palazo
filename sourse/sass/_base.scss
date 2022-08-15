@@ -125,6 +125,10 @@ body {
 	padding-bottom: var(--sPB);
 }
 
+h1 {
+	text-transform: uppercase;
+}
+
 .section-title {
 	margin-bottom: var(--sTPB);
 	text-transform: uppercase;
@@ -537,5 +541,6 @@ iframe {
 	.h1,
 	.h2{
 		font-size: rem(48);
+		text-transform: uppercase;
 	}
 }

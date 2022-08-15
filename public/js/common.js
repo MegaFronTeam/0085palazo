@@ -290,7 +290,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -468,6 +468,24 @@ function eventHandler() {
 	tagsToSlide();
 	window.addEventListener('resize', () => {
 		tagsToSlide();
+	});
+
+	let cardThumbsSlider = new Swiper(".card-thumbs-slider--js", {
+		spaceBetween: 16,
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchSlidesProgress: true,
+	});
+	
+	let cardSwiper = new Swiper('.card-slider--js', {
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".card-slider .swiper-button-next",
+			prevEl: ".card-slider .swiper-button-prev",
+		},
+		thumbs: {
+			swiper:cardThumbsSlider,
+		},
 	});
 
 	// const filterSelect = document.querySelector('.filter-select');
