@@ -509,7 +509,19 @@ function eventHandler() {
 	})
 
 
-
+	let sSalonPhotosSwiper = new Swiper('.sSalonPhotos__slider--js', {
+		spaceBetween: 32,
+		slidesPerView: 3,
+		navigation: {
+			nextEl: ".sSalonPhotos .swiper-button-next",
+			prevEl: ".sSalonPhotos .swiper-button-prev",
+		},
+		pagination: {
+			el: '.sSalonPhotos .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		}
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

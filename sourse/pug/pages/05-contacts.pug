@@ -10,15 +10,14 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
-include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sSalonPhotos/_sSalonPhotos.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '04-about-company.jpg'
+	- let  bg= '05-contacts.jpg'
 
 block title
-	- let  title= 'О компании'
+	- let  title= 'Контакты'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -28,6 +27,6 @@ block pagecontent
 		+topLine
 		+top-nav()
 	+page-head(title, 'О компании')
-	+sAbout
+	+sContact
 	+sSalonPhotos
 	+footer()
