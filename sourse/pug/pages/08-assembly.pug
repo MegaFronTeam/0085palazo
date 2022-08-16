@@ -10,14 +10,14 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
-include ../blocks/sOurPartners/_sOurPartners.pug
+include ../blocks/sAssembly/_sAssembly.pug
 
 block variables
-	- let  mainPage= 'main-page' 
-	- let  bg= '07-our-partners.jpg'
+	- let  mainPage= 'assembly-page' 
+	- let  bg= '08-assembly.jpg'
 
 block title
-	- let  title= 'НАШИ ПАРТНЕРЫ'
+	- let  title= 'сборка'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -26,6 +26,6 @@ block pagecontent
 	+header()
 		+topLine
 		+top-nav()
-	+page-head(title, 'надежные поставщики нашей компании' ,title)
-	+sOurPartners
+	+page-head(title, '' ,title)
+	+sAssembly
 	+footer()

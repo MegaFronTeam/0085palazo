@@ -1,0 +1,25 @@
+mixin sOurPartners(data)
+	// start sOurPartners
+	+b.SECTION.sOurPartners.section#sOurPartners&attributes(attributes)
+		.container
+			+e.row.row
+				mixin item(i, oneStr=true)
+					.col-12
+						+e.inner-row.row
+							.col-md-auto
+								+img(`img/sOurPartners-img-${i}.png`)
+							.col-md
+								if oneStr
+									h4 Название компании в одну или несколько стро
+								else
+									h4 Название компании в одну или несколько стро Название компании в одну или несколько стро
+								p Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются. Но&nbsp;как часто Вам приходится переносить мебель?
+				+item(1)
+				+item(2)
+				+item(3)
+				+item(4)
+				+item(5)
+				+item(6)
+				+item(7)
+				+item(1, false)
+	// end sOurPartners

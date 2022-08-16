@@ -566,3 +566,14 @@ iframe {
 		margin-bottom: 4px;
 	}
 }
+
+.assembly-page {
+	.page-head {
+		margin-bottom: 36px;
+	}
+	.breadcrumb {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(47) !important;
+		}
+	}
+}
