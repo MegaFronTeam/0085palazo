@@ -46,3 +46,13 @@ mixin page-head(t, text, ...items)
 				h1= t
 			if text
 				p!= text
+
+mixin video(i)
+	+b.video(href="https://www.youtube.com/watch?v=L_LUpnjgPso&t=1s" data-fancybox= `sAbout-video-${i}` )
+		+e.img-wrap
+			.img-wrap-center
+				+img(`img/video-img-${i}.jpg`)
+		+e.content
+			+e.icon 
+				+icon('play')
+			.h4 спальня в белом цвете

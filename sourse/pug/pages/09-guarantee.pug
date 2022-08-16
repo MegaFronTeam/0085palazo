@@ -9,25 +9,17 @@ include ../blocks/sContent/_sContent.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
-include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/footer/_footer.pug
-include ../blocks/sAdv/_sAdv.pug
-include ../blocks/sCategories/_sCategories.pug
-include ../blocks/sCalc/_sCalc.pug
-include ../blocks/sQwiz/_sQwiz.pug
-include ../blocks/sHowWork/_sHowWork.pug
-include ../blocks/sFeedback/_sFeedback.pug
+include ../blocks/sGuarantee/_sGuarantee.pug
 include ../blocks/sSert/_sSert.pug
-include ../blocks/sPartners/_sPartners.pug
-include ../blocks/sFaq/_sFaq.pug
 include ../blocks/sNews/_sNews.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= 'main.jpg'
+	- let  bg= '09-guarantee.jpg'
 
 block title
-	- let  title= 'Главная'
+	- let  title= 'Гарантии'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -36,21 +28,8 @@ block pagecontent
 	+header()
 		+topLine
 		+top-nav()
-	+headerBlock 
-	+sAdv
-	+sCategories
-	+sCalc
-	+sCatalog
-	+sQwiz
-	+sHowWork
-	+sFeedback
+	+page-head('Гарантии на нашу мебель', 'Гарантийные обязательства нашей компании' ,'гарантии')
+	+sGuarantee
 	+sSert
-	+sPartners
-	+sFaq
-	+sForm()
-	+sNews('Новости и&nbsp;статьи компании')
+	+sNews('вам может быть интересно')
 	+footer()
-      
-
-
-

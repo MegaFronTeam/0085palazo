@@ -1,9 +1,37 @@
 mixin sExamples(data)
 	// start sExamples
-	+b.SECTION.sExamples.section#sExamples&attributes(attributes)
+	+b.sExamples.section#sExamples&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sExamples
-				
-			.row
+			.tabs
+				.tabs__caption
+					mixin tabsBtn(text)
+						+e.col--js.tabs__btn.btn.btn-light&attributes(attributes)!= text
+					+tabsBtn('кухни').active
+					+tabsBtn('детские')
+					+tabsBtn('гостинные')
+					+tabsBtn('спальни')
+					+tabsBtn('шкафы')
+					+tabsBtn('кабинеты')
+					+tabsBtn('прихожие')
+					+tabsBtn('стеллажи')
+					+tabsBtn('кухни').hidden
+					+tabsBtn('детские').hidden
+					+tabsBtn('гостинные').hidden
+					+tabsBtn('спальни').hidden
+					+tabsBtn('шкафы').hidden
+					+tabsBtn('кабинеты').hidden
+					+tabsBtn('прихожие').hidden
+					+tabsBtn('стеллажи').hidden
+					+e.btn.btn.btn-outline-primary(data-hidden="Показать все" data-show="Скрыть") Показать все
+				.tabs__content.active
+					+e.inner-row.row
+						-for(let i = 6; i <=17; i++)
+							.col-sm-6.col-lg-4 
+								+catalogRowItem(i, 'детская спальня', '125 000 руб.')
+				-for(let i = 0; i <15; i++)
+					.tabs__content
+						+e.inner-row.row
+							-for(let i = 6; i <=17; i++)
+								.col-sm-6.col-lg-4 
+									+catalogRowItem(i, 'детская спальня', '125 000 руб.')
 	// end sExamples

@@ -564,6 +564,19 @@ function eventHandler() {
 		spaceBetween: 0,
 		slidesPerView: 'auto',
 	});
+
+	$('.sExamples__btn').click(function() {
+		$(this).toggleClass('active-btn');
+		let textHidden = this.dataset.hidden;
+		let textShow = this.dataset.show;
+		// console.log(textHidden);
+		if($('.sExamples__btn').hasClass('active-btn')) {
+			this.innerHTML = textShow;
+		} else {
+			this.innerHTML = textHidden;
+		}
+		$('.sExamples__col--js.hidden').slideToggle();
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
