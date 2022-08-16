@@ -3,70 +3,75 @@ mixin sCard(data)
 	+b.SECTION.sCard.section#sCard&attributes(attributes)
 		.container
 			+e.row.row
+				+e.action-buttons
+					button
+						+icon('compare')
+					button
+						+icon('fave')
 				.col-lg-7.col-xl-8
 					+e.images-wrap
-								.swiper.card-slider.card-slider--js
-									.swiper-wrapper
-										.swiper-slide
-											.card-slider__img-wrap
-												+e.tags
-													.product-item__tag.product-item__tag--discount Скидка 15%
-													.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
-													.product-item__tag.product-item__tag--promo Акция
-												+img('img/prod-1.jpg')
-										.swiper-slide
-											.card-slider__img-wrap
-												+e.tags
-													.product-item__tag.product-item__tag--discount Скидка 15%
-													.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
-													.product-item__tag.product-item__tag--promo Акция
-												+img('img/prod-2.jpg')
-										.swiper-slide
-											.card-slider__img-wrap
-												+e.tags
-													.product-item__tag.product-item__tag--discount Скидка 15%
-													.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
-													.product-item__tag.product-item__tag--promo Акция
-												+img('img/prod-3.jpg')
-										.swiper-slide
-											.card-slider__img-wrap
-												+e.tags
-													.product-item__tag.product-item__tag--discount Скидка 15%
-													.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
-													.product-item__tag.product-item__tag--promo Акция
-												+img('img/prod-4.jpg')
-										.swiper-slide
-											.card-slider__img-wrap
-												+e.tags
-													.product-item__tag.product-item__tag--discount Скидка 15%
-													.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
-													.product-item__tag.product-item__tag--promo Акция
+						+e.tags
+							.product-item__tag.product-item__tag--discount Скидка 15%
+							.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
+							.product-item__tag.product-item__tag--promo Акция
+						.swiper.card-slider.card-slider--js
+							.swiper-wrapper
+								.swiper-slide
+									.card-slider__img-wrap
+										+img('img/prod-1.jpg')
+								.swiper-slide
+									.card-slider__img-wrap
+										+e.tags
+											.product-item__tag.product-item__tag--discount Скидка 15%
+											.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
+											.product-item__tag.product-item__tag--promo Акция
+										+img('img/prod-2.jpg')
+								.swiper-slide
+									.card-slider__img-wrap
+										+e.tags
+											.product-item__tag.product-item__tag--discount Скидка 15%
+											.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
+											.product-item__tag.product-item__tag--promo Акция
+										+img('img/prod-3.jpg')
+								.swiper-slide
+									.card-slider__img-wrap
+										+e.tags
+											.product-item__tag.product-item__tag--discount Скидка 15%
+											.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
+											.product-item__tag.product-item__tag--promo Акция
+										+img('img/prod-4.jpg')
+								.swiper-slide
+									.card-slider__img-wrap
+										+e.tags
+											.product-item__tag.product-item__tag--discount Скидка 15%
+											.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
+											.product-item__tag.product-item__tag--promo Акция
+										+img('img/prod-5.jpg')
+							+arrow
+						.swiper.card-thumbs-slider.card-thumbs-slider--js
+							.swiper-wrapper
+								.swiper-slide
+									.card-thumbs-slider__img-wrap
+										+img('img/prod-1.jpg')
+								.swiper-slide
+									.card-thumbs-slider__img-wrap
+										+img('img/prod-2.jpg')
+								.swiper-slide
+									.card-thumbs-slider__img-wrap
+										+img('img/prod-3.jpg')
+								.swiper-slide
+									.card-thumbs-slider__img-wrap
+										+img('img/prod-4.jpg')
+								.swiper-slide
+											.card-thumbs-slider__img-wrap
 												+img('img/prod-5.jpg')
-									+arrow
-								.swiper.card-thumbs-slider.card-thumbs-slider--js
-									.swiper-wrapper
-										.swiper-slide
-											.card-thumbs-slider__img-wrap
-												+img('img/prod-1.jpg')
-										.swiper-slide
-											.card-thumbs-slider__img-wrap
-												+img('img/prod-2.jpg')
-										.swiper-slide
-											.card-thumbs-slider__img-wrap
-												+img('img/prod-3.jpg')
-										.swiper-slide
-											.card-thumbs-slider__img-wrap
-												+img('img/prod-4.jpg')
-										.swiper-slide
-											.card-thumbs-slider__img-wrap
-												+img('img/prod-5.jpg')
-					+e.tabs.tabs
-						.tabs__caption
-							.tabs__btn.active Описание
-							.tabs__btn Оплата и рассрочка
-							.tabs__btn Доставка и монтаж
-							.tabs__btn Гарантии
-							.tabs__btn FAQ
+					+e.tabs.tabs.swiper
+						.tabs__caption.swiper-wrapper
+							.tabs__btn.swiper-slide.active Описание
+							.tabs__btn.swiper-slide Оплата и рассрочка
+							.tabs__btn.swiper-slide Доставка и монтаж
+							.tabs__btn.swiper-slide Гарантии
+							.tabs__btn.swiper-slide FAQ
 						.tabs__content.active
 							p К&nbsp;сожалению, во&nbsp;встроенной мебели есть и&nbsp;недостатки, как в&nbsp;любой другой мебели. Но&nbsp;они не&nbsp;столь значительны, достоинства в&nbsp;любом случае перевешивают
 							p Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются. Но&nbsp;как часто Вам приходится переносить мебель? Обычно, встроенный шкаф-купе стоит годами и&nbsp;сносится только перед капитальным ремонтом.
@@ -118,14 +123,14 @@ mixin sCard(data)
 							+descrItem('material','Материал','эмаль, их ЛДСП, из МДФ, пластик, пленка, ПВХ, Lavik Luxe (Алвик Люкс), глянцевые, акрил')
 							+descrItem('color','Тип','черный, темный, мерый, комбинированный')
 							+descrItem('option','Цвет','на заказ, летние для дачи, готовые, встроенные, модульные, для офиса, для квартиры и дома, для студии, для гостиной')
-						+e.news
+						+e.news.d-none.d-lg-block
 							+e.news-title.H2 Полезные статьи
 							+newsItem('04 июн 2022','Fresenius продолжает расширять сеть диализных центров в России','common')
 							+newsItem('04 июн 2022','Академия Диализа Fresenius Medical Care запустила первый курс повышения квалификации','common')
 							+newsItem('04 июн 2022','Fresenius открывает второй диализный центр в Красноярске','common')
 							+e.news-archive(href="#") Архив статей
 								+icon('forward')
-			+e.features-row
+			+e.features-row.d-none.d-md-grid
 				mixin featureItem(icon='kitchen',text)
 					+e.feature
 						+icon(`${icon}`)
@@ -136,17 +141,17 @@ mixin sCard(data)
 				+featureItem('kitchen','СБОРКА ОТ&nbsp;5%&nbsp;ОТ&nbsp;ЦЕНЫ')
 				+featureItem('kitchen','СРОК ПРОИЗВОДСТВА ОТ&nbsp;35&nbsp;РАБ. ДНЕЙ')
 			+catalogSlider()
-			+e.materila-tabs.tabs
-				.tabs__caption
-					.tabs__btn.active ФАСАДЫ
-					.tabs__btn КОРПУСА
-					.tabs__btn СТОЛЕШНИЦЫ
-					.tabs__btn ФУРНИТУРА
+			+e.materila-tabs.tabs.swiper
+				.tabs__caption.swiper-wrapper
+					.tabs__btn.swiper-slide.active ФАСАДЫ
+					.tabs__btn.swiper-slide КОРПУСА
+					.tabs__btn.swiper-slide СТОЛЕШНИЦЫ
+					.tabs__btn.swiper-slide ФУРНИТУРА
 				.tabs__content.active
 					.row
-						.col-5
+						.col-lg-5
 							+img('img/tab-kitchen.jpg')
-						.col-7
+						.col-lg-7
 							.tabs-inner
 								.tabs-inner__caption
 									.tabs-inner__btn.active МДФ с ПВХ

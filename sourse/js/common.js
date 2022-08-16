@@ -516,6 +516,14 @@ function eventHandler() {
 			swiper:cardThumbsSlider,
 		},
 	});
+	
+	const cardTabsSlider = new Swiper(".sCard__tabs", {
+		slidesPerView: 'auto',
+	});
+	
+	const materilaTabsSlider = new Swiper(".sCard__materila-tabs", {
+		slidesPerView: 'auto',
+	});
 
 	// const filterSelect = document.querySelector('.filter-select');
 	// const choices = new Choices(filterSelect);

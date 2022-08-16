@@ -119,7 +119,8 @@
 		&--file {
 			padding-top: 68px;
 			@include media-breakpoint-down(md) {
-				padding-top: 31px
+				padding-top: 31px;
+				margin-bottom: 47px;
 			}
 			.sForm__container {
 				padding-bottom: 52px;

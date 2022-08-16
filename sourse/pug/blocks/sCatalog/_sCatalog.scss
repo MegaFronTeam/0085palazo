@@ -75,7 +75,6 @@
 		border-radius: 4px 4px 0px 0px;
 		overflow: hidden;
 		&::before {
-			// background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 60.16%);
 			z-index: 11;
 		}
 	}
@@ -665,6 +664,11 @@
 		display: flex;
 		align-items: center;
 		padding: 31px;
+		@include media-breakpoint-down(md) {
+			padding-left: 0;
+			padding-right: 0;
+			justify-content: space-between;
+		}
 	}
 	.swiper-pagination {
 		position: relative;
