@@ -272,12 +272,12 @@ const JSCCommon = {
 								$(this).toggleClass('active');
 							});
 						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
+						// else {
+						// 	$(this.parentElement).removeClass('active');
+						// 	$(this.parentElement).find('.dd-content-js').slideUp(function () {
+						// 		$(this).removeClass('active');
+						// 	});
+						// }
 					});
 
 				});
@@ -291,6 +291,7 @@ function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs-inner');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -412,25 +413,53 @@ function eventHandler() {
 			prevEl: '.slider-sert .swiper-button-prev',
 		},
 		pagination: {
-			el: ' .swiper-pagination',
+			el: '.slider-sert .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
 		},
 	});
-
-	const swiperCat = new Swiper('.slider-catalog--js', { 
-		slidesPerView: 1,
-		spaceBetween: 10,
+	
+	const swiperMore = new Swiper('.slider-more--js', { 
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 25
+			},
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 32
+			},
+		},
 		navigation: {
-			nextEl: '.slider-catalog .swiper-button-next',
-			prevEl: '.slider-catalog .swiper-button-prev',
+			nextEl: '.slider-more .swiper-button-next',
+			prevEl: '.slider-more .swiper-button-prev',
 		},
 		pagination: {
-			el: '.slider-catalog .swiper-pagination',
+			el: '.slider-more .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
 		},
 	});
+	const catSliders = document.querySelectorAll('.slider-catalog--js');
+	for (let catSlider of catSliders) {
+		const swiperCat = new Swiper('.slider-catalog--js', { 
+			slidesPerView: 1,
+			spaceBetween: 10,
+			navigation: {
+				nextEl: catSlider.querySelector('.swiper-button-next'),
+				prevEl:  catSlider.querySelector('.swiper-button-prev'),
+			},
+			pagination: {
+				el: catSlider.querySelector('.swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+			},
+		});
+	}
 
 	const swiperProd = new Swiper('.product-item__slider--js', { 
 		slidesPerView: 1,

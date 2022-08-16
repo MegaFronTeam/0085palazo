@@ -26,6 +26,25 @@ mixin categorySlider
 			+e.slide.swiper-slide
 				+catalogRowItem(`3`,`СТОЛОВЫЕ ГРУППЫ`,`от 125 000 руб.`)
 
+mixin seeMore(title)
+	h2= title
+	+b.slider-more--js.swiper
+		.swiper-wrapper
+			+e.slide.swiper-slide
+				+product-item('1')
+			+e.slide.swiper-slide
+				+product-item('2')
+			+e.slide.swiper-slide
+				+product-item('3')
+			+e.slide.swiper-slide
+				+product-item('4')
+			+e.slide.swiper-slide
+				+product-item('5')
+		+e.controls
+			.swiper-pagination
+			.arrow-wrap
+				+arrow
+
 mixin product-item(img, title="Кухня Дестини", total='110 900 р', price='18 900 р')
 	+b.product-item
 		+e.img-wrap
@@ -201,3 +220,4 @@ mixin catalogBody()
 				+pugin()
 			.d-md-none
 				+puginMobile()
+

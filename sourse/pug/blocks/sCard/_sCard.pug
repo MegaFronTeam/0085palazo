@@ -3,7 +3,7 @@ mixin sCard(data)
 	+b.SECTION.sCard.section#sCard&attributes(attributes)
 		.container
 			+e.row.row
-				.col-8
+				.col-lg-7.col-xl-8
 					+e.images-wrap
 								.swiper.card-slider.card-slider--js
 									.swiper-wrapper
@@ -62,8 +62,8 @@ mixin sCard(data)
 												+img('img/prod-5.jpg')
 					+e.tabs.tabs
 						.tabs__caption
-							.tabs__btn.active Оплата и рассрочка
-							.tabs__btn Описание
+							.tabs__btn.active Описание
+							.tabs__btn Оплата и рассрочка
 							.tabs__btn Доставка и монтаж
 							.tabs__btn Гарантии
 							.tabs__btn FAQ
@@ -79,5 +79,133 @@ mixin sCard(data)
 							p Встроенная мебель портит стены. Да, она крепится непосредственно в&nbsp;стены, которые предварительно просверливаются для дюбелей. Но&nbsp;зачем Вам стена за&nbsp;шкафом, который будет стоять не&nbsp;один год?
 						.tabs__content
 							p К&nbsp;сожалению, во&nbsp;встроенной мебели есть и&nbsp;недостатки, как в&nbsp;любой другой мебели. Но&nbsp;они не&nbsp;столь значительны, достоинства в&nbsp;любом случае перевешивают
-			.col-4
+				.col-lg-5.col-xl-4
+					+e.descr-wrap
+						.product-item__text-row
+							.product-item__text-left.FORM
+								.product-item__text-title Фасад верх
+								.product-item__form-row
+									+in-c('radio','ПВХ','front-up')
+									+in-c('radio','ПЛАСТИК','front-up')
+							.product-item__text-right.FORM
+								.product-item__text-title Фасад верх
+								.product-item__form-row
+									+in-c('radio','ПВХ','front-down')
+									+in-c('radio','ПЛАСТИК','front-down')
+						.product-item__text-row
+							.product-item__text-left
+								.product-item__text-title Стоимость кухни от
+								.product-item__price 110 900 р
+							.product-item__text-right
+								.product-item__text-title.d-none.d-lg-block Цена погонного метра
+									+icon('question')
+								.product-item__text-title.d-lg-none Цена п.м.
+									+icon('question')
+								.product-item__price 18 900 р
+						+e.buttons
+							+btn('Расчитать онлайн').btn.btn-primary
+							+btn('Быстрый заказ').btn.btn-outline-primary
+						+e.descr
+							mixin descrItem(icon,term,def)
+								+icon(`${icon}`)
+								+e.text
+									+e.term= term
+									+e.defenition= def
+							+descrItem('kitchen','Стиль','модерн, хай-тек, современный, минимализм')
+							+descrItem('forms','Форма','прямые, линейные')
+							+descrItem('label','Стоимость','от 70000 до 150000 руб.')
+							+descrItem('size','Размеры','модерн, хай-тек, современный, минимализм')
+							+descrItem('material','Материал','эмаль, их ЛДСП, из МДФ, пластик, пленка, ПВХ, Lavik Luxe (Алвик Люкс), глянцевые, акрил')
+							+descrItem('color','Тип','черный, темный, мерый, комбинированный')
+							+descrItem('option','Цвет','на заказ, летние для дачи, готовые, встроенные, модульные, для офиса, для квартиры и дома, для студии, для гостиной')
+						+e.news
+							+e.news-title.H2 Полезные статьи
+							+newsItem('04 июн 2022','Fresenius продолжает расширять сеть диализных центров в России','common')
+							+newsItem('04 июн 2022','Академия Диализа Fresenius Medical Care запустила первый курс повышения квалификации','common')
+							+newsItem('04 июн 2022','Fresenius открывает второй диализный центр в Красноярске','common')
+							+e.news-archive(href="#") Архив статей
+								+icon('forward')
+			+e.features-row
+				mixin featureItem(icon='kitchen',text)
+					+e.feature
+						+icon(`${icon}`)
+						+e.feature-text!= text
+				+featureItem('kitchen','РАБОТАЕМ ПО ВСЕЙ РОСИИИ')
+				+featureItem('kitchen','КАЖДОЕ ИЗДЕЛИЕ ИНДИВИДУАЛЬНО. БЕЗ НАЦЕНОК ЗА&nbsp;НЕ&nbsp;СТАНДАРТ')
+				+featureItem('kitchen','ТОЛЬКО ЕВРОПЕЙСКАЯ ФУРНИТУРА И&nbsp;ЭКОЛОГИЧЕСКИ ЧИСТЫЕ МАТЕРИАЛЫ')
+				+featureItem('kitchen','СБОРКА ОТ&nbsp;5%&nbsp;ОТ&nbsp;ЦЕНЫ')
+				+featureItem('kitchen','СРОК ПРОИЗВОДСТВА ОТ&nbsp;35&nbsp;РАБ. ДНЕЙ')
+			+catalogSlider()
+			+e.materila-tabs.tabs
+				.tabs__caption
+					.tabs__btn.active ФАСАДЫ
+					.tabs__btn КОРПУСА
+					.tabs__btn СТОЛЕШНИЦЫ
+					.tabs__btn ФУРНИТУРА
+				.tabs__content.active
+					.row
+						.col-5
+							+img('img/tab-kitchen.jpg')
+						.col-7
+							.tabs-inner
+								.tabs-inner__caption
+									.tabs-inner__btn.active МДФ с ПВХ
+									.tabs-inner__btn МДФ
+									.tabs-inner__btn Пластик
+									.tabs-inner__btn Масив
+									.tabs-inner__btn ЛДСП
+								.tabs-inner__content.active
+									.tabs-inner__title ФАСАДЫ ИЗ МДФ С ПВХ - ПЛЕНКОЙ
+									p Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются. Но&nbsp;как часто Вам приходится переносить мебель? Обычно, встроенный шкаф-купе стоит годами и&nbsp;сносится только перед капитальным ремонтом.
+									.tabs-inner__adv
+										.tabs-inner__adv-item
+											.tabs-inner__adv-title 10 лет
+											.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+										.tabs-inner__adv-item
+											.tabs-inner__adv-title 500+
+											.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+										.tabs-inner__adv-item
+											.tabs-inner__adv-title Уход
+											.tabs-inner__adv-descr ПВХ - пленку можно мыть
+								.tabs-inner__content
+									p Стандарт
+								.tabs-inner__content
+									.tabs-inner__adv
+											.tabs-inner__adv-item
+												.tabs-inner__adv-title 10 лет
+												.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+											.tabs-inner__adv-item
+												.tabs-inner__adv-title 500+
+												.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+											.tabs-inner__adv-item
+												.tabs-inner__adv-title Уход
+												.tabs-inner__adv-descr ПВХ - пленку можно мыть
+								.tabs-inner__content
+									.tabs-inner__adv
+											.tabs-inner__adv-item
+												.tabs-inner__adv-title 10 лет
+												.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+											.tabs-inner__adv-item
+												.tabs-inner__adv-title 500+
+												.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+											.tabs-inner__adv-item
+												.tabs-inner__adv-title Уход
+												.tabs-inner__adv-descr ПВХ - пленку можно мыть
+								.tabs-inner__content
+									.tabs-inner__adv
+											.tabs-inner__adv-item
+												.tabs-inner__adv-title 10 лет
+												.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+											.tabs-inner__adv-item
+												.tabs-inner__adv-title 500+
+												.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+											.tabs-inner__adv-item
+												.tabs-inner__adv-title Уход
+												.tabs-inner__adv-descr ПВХ - пленку можно мыть
+				.tabs__content
+					p Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются. Но&nbsp;как часто Вам приходится переносить мебель? Обычно, встроенный шкаф-купе стоит годами и&nbsp;сносится только перед капитальным ремонтом.
+				.tabs__content
+					p Но&nbsp;как часто Вам приходится переносить мебель? Обычно, встроенный шкаф-купе стоит годами и&nbsp;сносится только перед капитальным ремонтом.
+				.tabs__content
+					p Обычно, встроенный шкаф-купе стоит годами и&nbsp;сносится только перед капитальным ремонтом.
 	// end sCard
