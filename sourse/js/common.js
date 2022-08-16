@@ -531,6 +531,10 @@ function eventHandler() {
 			},
 		},
 	});
+	let sInfosSwiper = new Swiper('.sInfo__slider--js', {
+		spaceBetween: 0,
+		slidesPerView: 'auto',
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

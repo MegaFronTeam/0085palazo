@@ -288,11 +288,11 @@ ul {
 	}
 
 	&__content {
-		opacity: 0;
-		@include mt;
+		// opacity: 0;
+		// @include mt;
 		&.active {
 			display: block;
-			opacity: 1;
+			// opacity: 1;
 		}
 
 		display: none;
@@ -558,5 +558,11 @@ iframe {
 	img {
 		max-width: 100%;
 		max-height: 100%;
+	}
+}
+
+.info-page {
+	.page-head {
+		margin-bottom: 4px;
 	}
 }
