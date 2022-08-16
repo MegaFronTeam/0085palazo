@@ -32,6 +32,16 @@ mixin sContact()
 						+e.footer Смс, телеграмм, вибер, воцап - по срокам
 				.col-md-6.col-lg-4
 					+e.wrap 
+						h5 E-mail
+						+e.email-link(href="mailto:salon@palaza.ru") salon@palaza.ru
+				.col-md-6.col-lg-4
+					+e.wrap 
+						h5 Соц.сети
+						+soc
+							+item-sos('instagram-solid')
+							+item-sos('vk-solid')
+				.col-md-6.col-lg-4
+					+e.wrap 
 						h5 Back-офис
 						+e.footer Адрес флагманского салона:<br>г. Кострома, ул.Северной правды&nbsp;35
 	// end sContact

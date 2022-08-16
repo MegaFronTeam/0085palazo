@@ -12,6 +12,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sSalonPhotos/_sSalonPhotos.pug
+include ../blocks/sMapBlock/_sMapBlock.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -30,4 +31,5 @@ block pagecontent
 	+page-head(title, 'О компании')
 	+sAbout
 	+sSalonPhotos
+	+sMapBlock('true')
 	+footer()

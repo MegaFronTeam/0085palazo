@@ -1,0 +1,42 @@
+mixin sMapBlock(info)
+	// start sMapBlock
+	+b.sMapBlock.section#sMapBlock&attributes(attributes)
+		.container
+			+e.map-wrap
+				+e.map
+					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A494b0daca2c0528e155f9159f5a02733eeb420cc4b1cd32d32df76ace21b2230&amp;source=constructor" width="100%" frameborder="0"></iframe>
+				+e.map-info
+					.h5 ГДЕ НАХОДИТСЯ НАША СТУДИЯ?
+					+e.block
+						+e.headline АДРЕС:
+						p г. Кострома, ул. Северной правды д. 35
+					+e.block
+						+e.headline СВЯЖИТЕСЬ С НАМИ:
+						+e.tel(href="tel:+74942501621") +7 (4942) 501-621
+						+e.tel(href="tel:+79103706670") +7 (910) 370-66-70 
+						a(href="mailto:salon@palazo.ru") salon@palazo.ru
+					+e.block
+						+e.headline РЕЖИМ РАБОТЫ:
+						p Пн-Пт: 9:00 - 18:00 ч.
+						p Сб: 10:00 - 16:00 ч.
+					+soc
+						+item-sos('instagram-solid')
+						+item-sos('vk-solid')
+			if info
+				+e.info
+					.h3 Информация о юридическом лице:
+					mixin infoItem(key, val)
+						+e.row.row
+							.col-sm.text-secondary!= key
+							.col-sm-auto!= val
+					table
+						tr
+							th ОГРНИП:
+							th 311000004000609
+						tr
+							td Фактический адрес:
+							td 195267, С-Пб, ул. Ушинского 4 кв 16'
+						tr
+							td Юридический адрес:
+							td 195267, С-Пб, ул. Ушинского 4 кв 16
+	// end sMapBlock

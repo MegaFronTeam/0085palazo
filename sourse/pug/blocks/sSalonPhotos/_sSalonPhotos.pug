@@ -8,7 +8,7 @@ mixin sSalonPhotos(data)
 				.swiper-wrapper
 					mixin slide(i)
 						+e.slide.swiper-slide
-							+e.img-wrap
+							+e.img-wrap(href=`img/sSalonPhotos-img-lg-${i}.png` data-fancybox= "sSalonPhotos-photo")
 								.img-wrap-center
 									+img(`img/sSalonPhotos-img-${i}.jpg`)
 					- for(let i = 0; i < 2; i++)

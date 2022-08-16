@@ -510,8 +510,8 @@ function eventHandler() {
 
 
 	let sSalonPhotosSwiper = new Swiper('.sSalonPhotos__slider--js', {
-		spaceBetween: 32,
-		slidesPerView: 3,
+		spaceBetween: 10,
+		slidesPerView: 1,
 		navigation: {
 			nextEl: ".sSalonPhotos .swiper-button-next",
 			prevEl: ".sSalonPhotos .swiper-button-prev",
@@ -520,7 +520,16 @@ function eventHandler() {
 			el: '.sSalonPhotos .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
-		}
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 32
+			},
+		},
 	});
 };
 if (document.readyState !== 'loading') {
