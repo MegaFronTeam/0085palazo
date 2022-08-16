@@ -2,8 +2,46 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			+b.section-title
+				p По&nbsp;вопросам заказа товара вы&nbsp;можете связаться с&nbsp;нами любым удобным для вас способом&nbsp;&mdash; по&nbsp;офисному телефону, с&nbsp;помощью мобильных мессенджеров или соцсетей. Ваше сообщение также будет доставлено нам.
+			+e.row.row
+				.col-md-6.col-lg-4
+					+e.wrap 
+						h5 Линия консультаций
+						+e.text По&nbsp;любому вопросу вы&nbsp;можете обратиться к&nbsp;нашему боту в&nbsp;телеграмм, вибер или скайп он&nbsp;адресует ваше сообщение доступному сотруднику
+						+e.btn(href="#")
+							| Написать боту
+							+icon('arrow-right')
+				.col-md-6.col-lg-4
+					+e.wrap 
+						h5 Обратная связь
+						+e.text Заполнив анкету клиента вы&nbsp;поможете нам найти узкие места и&nbsp;устранить&nbsp;их, указав команде проекта на&nbsp;нюансы, которые нужно обязательно усовершенствовать.
+						+e.btn(href="#")
+							| Заполнить анкету
+							+icon('arrow-right')
+				.col-md-6.col-lg-4
+					+e.wrap 
+						h5 Телефоны
+						+e.tel(href="tel:84942501621")
+							| 8 (4942) 501-621
+							span круглосуточно
+						+e.text Если звонок по&nbsp;заказу&nbsp;&mdash; пожалуйста звоните с&nbsp;номера, который указан как контактный телефон при оформлении заказа. Это очень ускорит решение вашего вопроса.
+						+e.tel(href="tel:+79620000000")
+							| +7 (962) 000-00-00
+							span с 9.00 до 18.00
+						+e.footer Смс, телеграмм, вибер, воцап - по срокам
+				.col-md-6.col-lg-4
+					+e.wrap 
+						h5 E-mail
+						+e.email-link(href="mailto:salon@palaza.ru") salon@palaza.ru
+				.col-md-6.col-lg-4
+					+e.wrap 
+						h5 Соц.сети
+						+soc
+							+item-sos('instagram-solid')
+							+item-sos('vk-solid')
+				.col-md-6.col-lg-4
+					+e.wrap 
+						h5 Back-офис
+						+e.footer Адрес флагманского салона:<br>г. Кострома, ул.Северной правды&nbsp;35
 	// end sContact

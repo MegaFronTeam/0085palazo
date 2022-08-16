@@ -1,7 +1,108 @@
 
 	// start .sContact
-	.sContact {
-		 
+.sContact {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(44)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(88)};
+	}
+	.section-title {
+		margin-bottom: rem(26);
+		text-transform: initial;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(50);
+		}
+		p {
+			font-size: rem(18);
+			color: $gray-600;
+			margin-bottom: 0;
+		}
+	}
+	&__row {
+		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-y: #{rem(32)};
+	}
+	&__wrap {
+		padding: rem(30.400) rem(37) rem(25.600) rem(31);
+		border: 1px solid $gray-100;
+		border-radius: 4px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		h5 {
+			text-transform: uppercase;
+			margin-bottom: rem(20.800);
+		}
+	}
+	&__text {
+		font-size: rem(15);
+		margin-bottom: rem(24);
+		color: $gray-600;
+		line-height: 1.55em;
+		// flex-grow: 1;
+	}
+	&__btn {
+		font-size: rem(12);
+		font-weight: 600;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		margin-top: auto;
+		margin-bottom: rem(8);
+		.icon {
+			font-size: rem(16);
+			margin-left: rem(16);
+		}
+		&:hover {
+			@keyframes btnAnim {
+				0% {
+					transform: translate(0);
+				}
+				50% {
+					transform: translate(-3px);
+				}
+				100% {
+					transform: translate(0);
+				}
+			}
+			.icon {
+				transform: translate();
+				animation: btnAnim 0.36s ease-in-out;
+			}
+		}
+	}
+	&__tel {
+		display: block;
+		text-transform: uppercase;
+		line-height: 1.1;
+		margin-bottom: rem(17.600);
+		font-size: rem(22);
+		font-weight: 500;
+		@include media-breakpoint-up(xl) {
+			font-size: rem(24);
+		}
+		span {
+			display: block;
+			color: $gray-600;
+			font-size: rem(11);
+		}
+	}
+	&__footer {
+		color: $gray-600;
+		line-height: 1.55em;
+		font-size: rem(15);
+	}
+	&__email-link {
+		font-size: rem(20);
+		font-weight: 500;
+		text-transform: uppercase;
+		margin-top: auto;
+	}
+	.soc {
+		margin-top: auto;
+		--bs-gutter-x: #{rem(24)};
+		font-size: rem(24);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

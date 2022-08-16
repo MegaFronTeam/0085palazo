@@ -1,0 +1,22 @@
+mixin sSalonPhotos(data)
+	// start sSalonPhotos
+	+b.SECTION.sSalonPhotos.section#sSalonPhotos&attributes(attributes)
+		.container
+			+b.section-title
+				h3 Фото салона
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin slide(i)
+						+e.slide.swiper-slide
+							+e.img-wrap(href=`img/sSalonPhotos-img-lg-${i}.png` data-fancybox= "sSalonPhotos-photo")
+								.img-wrap-center
+									+img(`img/sSalonPhotos-img-${i}.jpg`)
+					- for(let i = 0; i < 2; i++)
+						+slide(1)
+						+slide(2)
+						+slide(3)
+					+slide(3)
+				.swiper-pagination
+				.arrow-wrap
+					+arrow
+	// end sSalonPhotos

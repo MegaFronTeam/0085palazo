@@ -1,0 +1,59 @@
+// start .sSalonPhotos
+.sSalonPhotos {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(48)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(96)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		margin-bottom: rem(26);
+	}
+	&__col{
+
+	}
+	&__slider{
+		.swiper-wrapper {
+			padding-bottom: rem(30);
+		}
+	}
+	.swiper-pagination {
+		bottom: 2px;
+	}
+	.arrow-wrap {
+		margin-left: auto;
+	}
+	.swiper-button {
+		&-hand {
+			color: $primary;
+		}
+		&-disabled {
+			color: $gray-600;
+		}
+	}
+	&__img-wrap {
+		@include block(384, 288);
+		border-radius: 4px;
+		overflow: hidden;
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+		img {
+			@include mt;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSalonPhotos
