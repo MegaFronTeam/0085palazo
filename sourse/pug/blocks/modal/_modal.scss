@@ -11,10 +11,21 @@
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
+	width: rem(384);
+	padding: 25px;
 	// min-height: 100%; 
-	padding: 40px;
-
+	color: $body-color;
+	@include media-breakpoint-up(md) {
+		padding: 50px;
+	}
+	h4 {
+		font-weight: 600;
+		margin-bottom: rem(14);
+	}
+	.after-headline {
+		font-size: rem(18);
+		margin-bottom: rem(25);
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -25,13 +36,63 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+	&--thx {
+		.h4 {
+			margin-bottom: rem(23);
+		}
+		.after-headline {
+			margin-bottom: 0;
+		}
+	}
+	&--apply {
+		.form-wrap {
+			&__title {
+				margin-bottom: rem(23);
+			}
+		}
+	}
+	&--review {
+		width: rem(797);
+		.h4 {
+			font-weight: 600;
+		}
+		.modal-win {
+			&__stars {
+				margin-bottom: rem(20);
+				@include media-breakpoint-up(md) {
+					margin-bottom: rem(40);
+				}
+				p {
+					margin-bottom: rem(10);
+					font-weight: 500;
+				}
+			}
+		}
+		.form-wrap {
+			max-width: rem(437);
+			&__input-wrap {
+				margin-bottom: rem(20);
+			}
+			&__btn {
+				max-width: rem(169);
+			}
+			&__policy {
+				text-align: left;
+				max-width: rem(437);
+			}
+		}
+	}
 }
 .fancybox__content>.carousel__button.is-close {
-	top: 20px;
-	right: 20px;
+	top: 0px;
+	right: 0px;
 	color: $gray-600;
 	--carousel-button-svg-filter: none;
 	--carousel-button-svg-stroke-width: 1px;
+	@include media-breakpoint-up(md) {
+		top: 8px;
+		right: 8px;
+	}
 }
 a {
 	outline: 0 !important;
@@ -183,7 +244,7 @@ a {
 
 .modal-city{
 	//@include mt();
-	width: 100%;
+	width: rem(680);
 	position: relative;
 	background-color: #fff;
 
@@ -249,6 +310,8 @@ a {
 			border-color: #DBDBDB;
 			color: #DBDBDB;
 			font-size: rem(18);
+			padding: rem(16);
+			margin-bottom: 0;
 			&::placeholder {
 				color: #DBDBDB;
 			}

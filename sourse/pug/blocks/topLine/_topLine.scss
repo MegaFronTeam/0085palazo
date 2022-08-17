@@ -219,7 +219,7 @@
 		}
 	}
 	&__btns-row{
-		--bs-gutter-x: #{rem(10)};
+		--bs-gutter-x: #{rem(10)} !important;
 		--bs-gutter-y: #{rem(10)};
 	}
 	&__btn{

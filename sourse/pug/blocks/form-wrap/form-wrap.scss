@@ -8,6 +8,31 @@
 		//  outline: 0 !important;
 		 resize: none;
  	}
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+	.form-control {
+		padding-top: 30px;
+		padding-bottom: 8px;
+		&::placeholder {
+			font-size: 18px;
+			color: #DBDBDB;
+		}
+	}
+	label {
+		position: relative;
+	}
+	&__input-wrap {
+		margin-bottom: 10px;
+	}
+	&__input-title {
+		position: absolute;
+		top: 10px;
+		left: 18px;
+		font-weight: 600;
+		font-size: 12px;
+	}
  	&__btn{
  		cursor: pointer;
  	}
@@ -20,6 +45,30 @@
 		color: $gray-600;
 		text-align: center;
 		line-height: 1.55em;
+	}
+	&__btn {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: rem(35);
+		--bs-btn-padding-y: #{rem(11)};
+		.icon {
+			flex: 0 0 auto;
+			font-size: rem(16);
+			margin-left: rem(20);
+		}
+	}
+	&__policy {
+		font-size: rem(12);
+		color: $gray-600;
+		text-align: center;
+	}
+	p.is-invalid {
+		margin-bottom: 0;
+		font-weight: 600;
+		font-size: rem(12);
+		color: $primary;
 	}
 }
 
