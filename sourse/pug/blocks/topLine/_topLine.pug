@@ -3,13 +3,14 @@ mixin topLine()
 	+b.topLine&attributes(attributes)
 		.container
 			.row
-				.col-md-auto.col.d-lg-none
+				.col-md-auto.col.d-lg-none.me-auto.me-lg-0
 					+b.toggle-menu-mobile--js
 						span
-				.col.d-none.d-md-block
-					+b.city-change(href="#")
-						+icon('location')
-						| Москва
+				.col.d-none.d-lg-block
+					+location()
+					//- +b.city-change(href="#")
+					//- 	+icon('location')
+					//- 	| Москва
 				.col-lg-auto.order-lg-0.order-last
 					+b.menu-mobile--js
 						+b.toggle-menu-mobile--js.d-lg-none
@@ -41,3 +42,19 @@ mixin topLine()
 						+icon("viber")
 			+search
 	// end topLine
+
+mixin location()
+	+b.location
+		+e.dd-btn.location-btn-js
+			+icon('location')
+			span.d-none.d-lg-inline-block Москва
+		+e.dd.location-dd-js
+			+e.dd-inner
+				+e.title
+					span.d-block.d-sm-inline Ваш город 
+					span Москва?
+				+e.btns-row.row.gy-1
+					.col-sm-6
+						+e.btn--orange.location-close-js(type='button') Да, верно
+					.col-sm-6
+						+e.btn--out-gray.location-close-js(href="#modal-city" data-fancybox='') Нет, другой
