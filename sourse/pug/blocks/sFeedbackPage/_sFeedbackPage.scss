@@ -6,14 +6,17 @@
 	&__btn-row {
 		justify-content: space-between;
 		align-items: center;
+		--bs-gutter-y: #{rem(15)};
 	}
 	&__tags-col {
 		display: flex;
 		align-items: center;
 	}
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+		padding-top: 40px;
+		padding-bottom: 31px;
+		--bs-gutter-x: #{rem(33)};
+		--bs-gutter-y: #{rem(33)};
 
 	}
 	.section-title{

@@ -10,7 +10,7 @@ mixin productTags(show,...items)
 						.btn.btn-outline-primary Показать все
 	// /.tags-list
 
-mixin catalogRowItem(img,title,price)
+mixin catalogRowItem(img,title,price='125 000 руб.')
 	+b.catalog-item(href="#")
 		+img(`img/prod-${img}.jpg`)
 		+e.text
