@@ -1,0 +1,20 @@
+mixin sReview(data)
+	// start sReview
+	+b.sReview.section#sReview&attributes(attributes)
+		.container
+			+e.btn-row.row
+				.col-auto
+					+e.btn(href="#").btn.btn-light.active видео отзывы
+				.col-auto
+					+e.btn(href="#").btn.btn-light наши клиенты
+				.col-auto
+					+e.btn(href="#").btn.btn-light акты работ
+				.col-auto
+					+e.btn(href="#").btn.btn-light отзовики
+				.col-auto.ms-lg-auto
+					+e.btn(href="#").btn.btn-outline-primary Оставить отзыв
+			+e.row.row
+				-for(let i =1; i <=12; i++)
+					.col-sm-6.col-lg-4
+						+video(i)
+	// end sReview

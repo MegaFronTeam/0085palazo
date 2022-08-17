@@ -577,6 +577,11 @@ function eventHandler() {
 		slidesPerView: 'auto',
 	});
 
+	let sSiteMapSwiper = new Swiper('.sSiteMap__slider--js', {
+		spaceBetween: 0,
+		slidesPerView: 'auto',
+	});
+
 	$('.sExamples__btn').click(function() {
 		$(this).toggleClass('active-btn');
 		let textHidden = this.dataset.hidden;

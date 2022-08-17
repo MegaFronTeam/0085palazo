@@ -1,0 +1,134 @@
+// start .sSiteMap
+.sSiteMap {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(52)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(97.600)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	.tabs {
+		overflow: visible;
+		&__caption {
+			display: flex;
+			margin-bottom: rem(32);
+		}
+		&__btn {
+			@include mt;
+			width: rem(210);
+			height: auto;
+			border-top: 1px solid $gray-600;
+			border-bottom: 1px solid $gray-600;
+			padding: rem(34) rem(10);
+			font-size: rem(12);
+			font-weight: 600;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			text-transform: uppercase;
+			color: $gray-600;
+			&:before {
+				@include mt;
+				content: '';
+				position: absolute;
+				display: block;
+				height: 100%;
+				width: 1px;
+				top: 0;
+				left: 0;
+				background-color: $gray-600;
+			}
+			&:first-child {
+				border-left: 1px solid $gray-600;
+				&:before {
+					content: unset;
+				}
+			}
+			&:last-child {
+				border-right: 1px solid $gray-600;
+			}
+			&:hover, &.active {
+				background-color: rgba(193, 101, 101, 0.1);
+				border-color: $primary;
+				&:first-child {
+					border-right-color: $gray-600;
+				}
+				&:last-child {
+					border-left-color: $gray-600;
+				}
+				&:before {
+					background-color: $primary;
+				}
+			}
+			img {
+				max-width: rem(24);
+				flex: 0 0 auto;
+				@include media-breakpoint-up(sm) {
+					margin-right: rem(16);
+				}
+			}
+			p {
+				text-align: center;
+				margin-bottom: 0;
+				font-size: rem(12);
+				text-transform: uppercase;
+				font-weight: 600;
+				letter-spacing: 0.07em;
+				color: $gray-600;
+				line-height: 1.55em;
+				width: 100%;
+				@include media-breakpoint-up(sm) {
+					max-width: rem(97);
+				}
+			}
+		}
+		&__content {
+			max-width: max-content;
+			@include media-breakpoint-up(lg) {
+				margin-left: rem(32);
+			}
+		}
+	}
+	ul {
+		columns: 2;
+		list-style-type: none;
+		margin-bottom: 0;
+		@include media-breakpoint-up(sm) {
+			column-gap: 59px;
+		}
+		li {
+			line-height: 1.70em;
+			max-width: rem(152);
+			color: #000;
+			font-size: rem(14);
+			@include media-breakpoint-up(sm) {
+				font-size: rem(16);
+			}
+			&:not(:last-child) {
+				margin-bottom: rem(10);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSiteMap
