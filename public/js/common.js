@@ -595,6 +595,27 @@ function eventHandler() {
 		$('.sExamples__col--js.hidden').slideToggle();
 	});
 };
+
+$('.location-btn-js').click(function () {
+	$('.location-dd-js').toggleClass('active');
+});
+$('.location-close-js').click(function () {
+	$('.location-dd-js').removeClass('active');
+});
+document.addEventListener('click', function () {
+	if (!event.target.closest('.location-dd-js') && !event.target.closest('.location-btn-js')) {
+		$('.location-dd-js').removeClass('active');
+	}
+}); //#modal-city
+
+$('.mc-show-all-js').click(function () {
+	$(this).fadeOut(function () {
+		$(this).removeClass('active');
+	}, 0);
+	$('.modal-city--js').toggleClass('big');
+	$('.mc-popular-js, .mc-all-js').toggleClass('active');
+}); //.add-btn-js
+
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {

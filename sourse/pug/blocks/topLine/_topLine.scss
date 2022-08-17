@@ -120,3 +120,138 @@
 	}
 	
 }
+
+.location{
+
+	&__dd-btn{
+		@include mt();
+		cursor: pointer;
+
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: $primary;
+
+		&:hover{
+			color: $body-color;
+			.icon{
+				// color: $body-color;
+			}
+		}
+		font-size: rem(15);
+		line-height: calc(24/15);
+
+		.icon{
+			// @include mt();
+			font-size: rem(26);
+			flex: 0 0 auto;
+			@include media-breakpoint-up(lg){
+				font-size: rem(15);
+				margin-right: rem(11);
+			}
+		}
+	}
+
+	position: relative;
+	z-index: 800;
+	&__dd{
+		@include mt();
+		transform-origin: top left;
+		transform: scale(0);
+		&.active{
+			transform: scale(1);
+		}
+
+		position: absolute;
+		z-index: 900;
+		top: 100%;
+
+		width: rem(230);
+		@include media-breakpoint-up(sm){
+			width: rem(340);
+		}
+		right: 0;
+		@include media-breakpoint-up(md){
+			left: 0;
+			right: unset;
+		}
+		padding-top: rem(20);
+	}
+	&__dd-inner{
+		background-color: $white;
+		box-shadow: 0px 4px 27px rgba(149, 149, 149, 0.25);
+		border-radius: 4px;
+		padding: rem(18) rem(12);
+		@include media-breakpoint-up(sm){
+			padding: rem(20);
+		}
+
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+
+			left: calc(100% - #{rem(20)});
+			@include media-breakpoint-up(md){
+				left: rem(45);
+			}
+			bottom: calc(100% - 1px);
+
+			transform: translateX(-50%);
+
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 10px 11px 10px;
+			border-color: transparent transparent $white transparent;
+		}
+
+	}
+	&__title{
+		color: $headings-color;
+		font-weight: 500;
+		font-size: rem(18);
+		line-height: 1.25;
+
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(12);
+		}
+	}
+	&__btns-row{
+		--bs-gutter-x: #{rem(10)} !important;
+		--bs-gutter-y: #{rem(10)};
+	}
+	&__btn{
+		@extend .btn;
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+
+		font-size: rem(16);
+		line-height: calccalc(20/16);
+
+		padding: rem(6) rem(12);
+		@include media-breakpoint-up(sm){
+			padding: rem(9) rem(15);
+		}
+		border-width: 1px;
+		--bs-btn-font-weight: 500;
+		&--orange{
+			@extend .btn-primary;
+		}
+		&--out-gray{
+			@extend .btn-outline-light;
+			--bs-btn-color: #DBDBDB;
+			--bs-btn-border-color: #DBDBDB;
+			--bs-btn-hover-bg: #DBDBDB;
+			--bs-btn-hover-border-color: #DBDBDB;
+			--bs-btn-active-bg: #DBDBDB;
+			--bs-btn-active-border-color: #DBDBDB;
+		}
+	}
+	&__{}
+
+
+
+}

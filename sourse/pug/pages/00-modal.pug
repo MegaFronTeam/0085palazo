@@ -20,6 +20,14 @@ block pagecontent
 		.row
 			mixin btn(id, name)
 				.col-auto.mb-2
-					a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")= name
-			+btn("modal-call", "modal-call")
+					a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")&attributes(attributes)= name
+			+btn("modal-call", "modal-call")(
+				data-title="Вызвать замерщика"
+			)
+			+btn("modal-call-err", "modal-call-err")
+			+btn("modal-city", "modal-city")
+			+btn("modal-apply", "modal-apply")
+			+btn("modal-apply2", "modal-apply2")
+			+btn("modal-thx", "modal-thx")
+			+btn("modal-review", "modal-review")
 

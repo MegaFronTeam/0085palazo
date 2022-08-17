@@ -74,6 +74,22 @@ mixin add-file(n)
 
 
 mixin policy()
-	+e.policy
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+	+e.policy Нажимая кнопку "Отправить" я соглашаюсь с 
+		a(href="#") Положением о персональных данных и конфиденциальности.
+mixin policy2()
+	+e.policy Нажимая кнопку "Отправить отзыв" я соглашаюсь с 
+		a(href="#") Положением о персональных данных и конфиденциальности.
+
+mixin rating()
+	.rating__group
+		input#mood-1.rating__input(type='radio' name='mood' value='1')
+		label.rating__star(for='mood-1' aria-label='Ужасно')
+		input#mood-2.rating__input(type='radio' name='mood' value='2')
+		label.rating__star(for='mood-2' aria-label='Сносно')
+		input#mood-3.rating__input(type='radio' name='mood' value='3' checked='')
+		label.rating__star(for='mood-3' aria-label='Нормально')
+		input#mood-4.rating__input(type='radio' name='mood' value='4')
+		label.rating__star(for='mood-4' aria-label='Хорошо')
+		input#mood-5.rating__input(type='radio' name='mood' value='5')
+		label.rating__star(for='mood-5' aria-label='Отлично')
+		.rating__focus

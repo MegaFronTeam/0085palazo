@@ -1,17 +1,141 @@
 
-mixin modal() 
+mixin modal(data) 
 	//  start modals
 	//- a(href="modal-call").link-modal-js modal-call 
 	div(id="modal-call"  style="display: none" )
-		+b.modal-win
+		+b.modal-win--call-a-master
 			+form-wrap
 				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+					+e.title.form-data.h4.ttu Вызвать замерщика
+					p.after-headline Заполните форму и&nbsp;мы&nbsp;Вам перезвоним
 
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
+				+input("Ваше Имя", 'text', 'Введите')(required)
+				+input("Телефон", 'tel', 'Введите')(required)  
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
+					+icon('arrow-right')
 				+policy()
 	// #modal-call
+	div(id="modal-call-err"  style="display: none" )
+		+b.modal-win--call-a-master
+			+form-wrap
+				.text-center
+					+e.title.form-data.h4.ttu Вызвать замерщика
+					p.after-headline Заполните форму и&nbsp;мы&nbsp;Вам перезвоним
+
+				+input("Ваше Имя", 'text', 'Введите')(required)
+					p.is-invalid Поле не может быть пустым
+				+input("Телефон", 'tel', 'Введите')(required)  
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
+					+icon('arrow-right')
+				+policy()
+
+	div(id="modal-apply"  style="display: none" )
+		+b.modal-win--apply
+			+form-wrap
+				.text-center
+					+e.title.form-data.h4.ttu ОТКЛИКНУТЬСЯ НА ВАКАНСИЮ
+
+				+input("Ваше Имя", 'text', 'Введите')(required)
+				+input("Телефон", 'tel', 'Введите')(required)
+				+add-file('Загрузить резюме')
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
+					+icon('arrow-right')
+				+policy()
+
+	div(id="modal-apply2"  style="display: none" )
+		+b.modal-win--apply2
+			+form-wrap
+				.text-center
+					+e.title.form-data.h4.ttu ОТКЛИКНУТЬСЯ НА ВАКАНСИЮ
+
+				+input("Ваше Имя", 'text', 'Введите')(required)
+				+input("E-mail", 'email', 'Введите')(required)
+				+add-file('Загрузить резюме')
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
+					+icon('arrow-right')
+				+policy()
+	// #modal-call
+	div(id="modal-thx"  style="display: none" )
+		+b.modal-win--thx
+			.text-center
+				+e.title.form-data.h4.ttu Вызвать замерщика
+				.after-headline Наш менеджер позвонит вам в ближайшее время
+	// #modal-call
 	
+	div(id="modal-review"  style="display: none" )
+		+b.modal-win--review
+			+e.title.form-data.h4.ttu Оставить отзыв о гостиной в современном стиле “Эдельвейс”
+			+e.stars
+				p Общая оценка
+				+rating()
+			.row
+				.col-sm-6.col-lg-4
+					+e.stars
+						p Шум
+						+rating()
+				.col-sm-6.col-lg-4
+					+e.stars
+						p Качество стирки
+						+rating()
+				.col-sm-6.col-lg-4
+					+e.stars
+						p Внешний вид
+						+rating()
+			+form-wrap
+				+input('Введите', 'text', 'Достоинства')
+				+input('Введите', 'text', 'Недостатки')
+				+input('Введите', 'text', 'Недостатки')
+				+input('Введите', 'text', 'Ваше имя')
+				+input('Введите', 'email', 'E-mail')
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
+					+icon('arrow-right')
+				+policy()
 	// end modals
+	div(id="modal-city" style="display: none")
+		+b.modal-city--js
+			+form-wrap
+				+e.H4.title Выберите свой город
+				+input('Ввести название города', 'text')
+				+e.city--popular.mc-popular-js.active
+					.row
+						-for(var i = 0; i < 18; i++)
+							+modCityPopularLink(`Комсомольск-на-Амуре${i}`)
+				+e.city--all.mc-all-js#city-all
+					.row
+						.col
+							+modCityAllItem('A', 'Абакан')
+							+modCityAllItem('Б', 'Балаково')
+							+modCityAllItem('В', 'Валуйки')
+							+modCityAllItem('Д', 'Дзержинск')
+							+modCityAllItem('Я', 'Яркутськ', 100)
+						.col-auto.d-xl-none
+							+e.ancors
+								+modCityAllLetter('A')
+								+modCityAllLetter('Б')
+								+modCityAllLetter('В')
+								+modCityAllLetter('Д')
+				+e.show-all.mc-show-all-js
+					+e.plus
+						+icon('plus')
+					span показать все города
+
+mixin modCityAllLetter(letter)
+	a.scroll-link(href=`#${letter}` data-scrollbox="#city-all")=letter
+
+mixin modCityAllItem(letter, city, amount=12)
+	+e.item(id=letter)
+		.row.gy-3.gy-sm-4
+			.col-md-auto
+				+e.letter=letter
+			.col-md
+				+e.city-row.row
+					-for(var i = 1; i <= amount; i++)
+						+modCityAllLink(city+i)
+
+mixin modCityAllLink(txt)
+	.col-sm-6.col-md-4.col-xl-3.col-base-2
+		a(href="#")=txt
+
+mixin modCityPopularLink(txt)
+	.col-sm-6.col-md-4
+		a(href="#")=txt
