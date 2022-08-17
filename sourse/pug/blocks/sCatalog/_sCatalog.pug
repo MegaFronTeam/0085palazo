@@ -123,6 +123,17 @@ mixin catalogSlider
 			.arrow-wrap
 				+arrow
 
+mixin catSorter
+	+b.catalog-sorter&attributes(attributes)
+		+select('Сортировка','Сначала дорогие','Сначала недорогие')
+		+e.total.d-none.d-md-block Всего: 250
+		+e.display.d-none.d-md-flex
+			| Отображать по:
+			+btn('12','button').btn.active
+			+btn('24','button').btn
+			+btn('48','button').btn
+		+pugin()
+
 mixin catFilter
 	.filter-wrap
 		+b.catalog-filter
@@ -137,15 +148,7 @@ mixin catFilter
 			+btn('Сбросить фильтры','button').btn.d-none.d-md-block
 			button.d-md-none.icon-btn
 				+icon('filter')
-		+b.catalog-sorter
-			+select('Сортировка','Сначала дорогие','Сначала недорогие')
-			+e.total.d-none.d-md-block Всего: 250
-			+e.display.d-none.d-md-flex
-				| Отображать по:
-				+btn('12','button').btn.active
-				+btn('24','button').btn
-				+btn('48','button').btn
-			+pugin()
+		+catSorter
 
 mixin sCatalog(data)
 	// start sCatalog
@@ -185,40 +188,41 @@ mixin sCatalog(data)
 
 	// end sCatalog
 
-mixin catalogBody()
-	.container
-		.row.cat-body-row
-			.col-md-6.col-xl-4
-				+product-item('1')
-			.col-md-6.col-xl-4
-				+product-item('2')
-			.col-md-6.col-xl-4
-				+product-item('3')
-			.col-md-6.col-xl-4
-				+product-item('4')
-			.col-md-6.col-xl-4
-				+product-item('5')
-			.col-md-6.col-xl-4
-				+product-item('1')
-			.col-md-6.col-xl-4
-				+product-item('2')
-			.col-md-6.col-xl-4
-				+product-item('3')
-			.col-md-6.col-xl-4
-				+product-item('4')
-			.col-md-6.col-xl-4
-				+product-item('5')
-			.col-md-6.col-xl-4
-				+product-item('2')
-			.col-md-6.col-xl-4
-				+product-item('3')
-		+e.bottom-controls
-			.catalog-sorter__display.d-none.d-md-flex Отображать по:
-				button(class="catalog-sorter__btn btn active" type="button") 12
-				button(class="catalog-sorter__btn btn" type="button") 24
-				button(class="catalog-sorter__btn btn" type="button") 48
-			.d-none.d-md-flex
-				+pugin()
-			.d-md-none
-				+puginMobile()
+mixin catalogBody
+	.catalog-body-wrap&attributes(attributes)
+		.container
+			.row.cat-body-row
+				.col-md-6.col-xl-4
+					+product-item('1')
+				.col-md-6.col-xl-4
+					+product-item('2')
+				.col-md-6.col-xl-4
+					+product-item('3')
+				.col-md-6.col-xl-4
+					+product-item('4')
+				.col-md-6.col-xl-4
+					+product-item('5')
+				.col-md-6.col-xl-4
+					+product-item('1')
+				.col-md-6.col-xl-4
+					+product-item('2')
+				.col-md-6.col-xl-4
+					+product-item('3')
+				.col-md-6.col-xl-4
+					+product-item('4')
+				.col-md-6.col-xl-4
+					+product-item('5')
+				.col-md-6.col-xl-4
+					+product-item('2')
+				.col-md-6.col-xl-4
+					+product-item('3')
+			+e.bottom-controls
+				.catalog-sorter__display.d-none.d-md-flex Отображать по:
+					button(class="catalog-sorter__btn btn active" type="button") 12
+					button(class="catalog-sorter__btn btn" type="button") 24
+					button(class="catalog-sorter__btn btn" type="button") 48
+				.d-none.d-md-flex
+					+pugin()
+				.d-md-none
+					+puginMobile()
 

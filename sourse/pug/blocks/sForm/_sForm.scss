@@ -246,3 +246,16 @@
 		color: $red;
 	}
 }
+.search-form {
+	.row {
+		--bs-gutter-x: #{rem(33)};
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	input, .btn {
+		padding-top: 11px;
+		padding-bottom: 11px;
+	}
+	.btn {
+		width: 100%;
+	}
+}
