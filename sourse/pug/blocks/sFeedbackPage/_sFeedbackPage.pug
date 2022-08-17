@@ -7,5 +7,36 @@ mixin sFeedbackPage(data)
 					+productTags('','видео отзывы','наши клиенты','акты работ','отзовики')
 				.col-auto
 					+btn('Оставить отзыв').btn.btn-outline-primary
-			.row
+			+e.row.row
+				.col-md-6.col-xl-4
+					+catalogRowItem('6','детская спальня')
+				.col-md-6.col-xl-4
+					+catalogRowItem('7','детская спальня')
+				.col-md-6.col-xl-4
+					+catalogRowItem('8','детская спальня')
+				.col-md-6.col-xl-4
+					+catalogRowItem('9','лаконичная гостиная')
+				.col-md-6.col-xl-4
+					+catalogRowItem('10','современная гостиная')
+				.col-md-6.col-xl-4
+					+catalogRowItem('11','детская спальня')
+				.col-md-6.col-xl-4
+					+catalogRowItem('12','чувственная спальня')
+				.col-md-6.col-xl-4
+					+catalogRowItem('13','комфортная спальня')
+				.col-md-6.col-xl-4
+					+catalogRowItem('14','современная гостиная')
+				.col-md-6.col-xl-4
+					+catalogRowItem('15','гостиная в белом цвете')
+				.col-md-6.col-xl-4
+					+catalogRowItem('16','стенка для гостиной')
+				.col-md-6.col-xl-4
+					+catalogRowItem('17','детская спальня')
+			.bottom-controls
+				.catalog-sorter__display.d-none.d-md-flex Отображать по:
+					button(class="catalog-sorter__btn btn active" type="button") 12
+					button(class="catalog-sorter__btn btn" type="button") 24
+					button(class="catalog-sorter__btn btn" type="button") 48
+				.d-flex
+					+pugin()
 	// end sFeedbackPage
