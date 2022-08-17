@@ -52,6 +52,10 @@
 		}
 }
 
+.catalog-body-wrap.bottom {
+	margin-bottom: rem(104);
+}
+
 
 .product-item{
 	position: relative;
@@ -570,6 +574,9 @@
 	padding: 21px 0;
 	font-weight: 600;
 	font-size: 12px;
+	&.offset {
+		margin-bottom: 27px;
+	}
 	@include media-breakpoint-down(xl) {
 		flex-wrap: wrap;
 		justify-content: space-between;

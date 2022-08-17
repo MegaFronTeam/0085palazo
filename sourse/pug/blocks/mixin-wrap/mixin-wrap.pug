@@ -68,3 +68,8 @@ mixin video(i)
 			+e.icon 
 				+icon('play')
 			.h4 спальня в белом цвете
+
+mixin partnersItem(img, descr='Название компании в одну или несколько строк')
+	+e.item.col-6.col-lg-3
+		+img(`img/partner-${img}.jpg`).sPartners__item-img
+		+e.descr!= descr

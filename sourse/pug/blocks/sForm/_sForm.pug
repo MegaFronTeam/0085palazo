@@ -37,7 +37,7 @@ mixin sForm2()
 				+e.text Нажимая кнопку "Отправить" я соглашаюсь с #[a(href="#") Положением о персональных данных и конфиденциальности.]
 
 mixin sFormFile()
-	// start sForm
+	// start sFormFile
 	+b.SECTION.sForm--file.section#sForm&attributes(attributes)
 		.container
 			+e.container
@@ -54,4 +54,14 @@ mixin sFormFile()
 						+add-file('Выбрать фото')
 						+input('Введите','tel','Ваш номер телефона')
 						+e.button.BUTTON(type="submit").btn.btn-primary Оставить заявку
-	// end sForm
+	// end sFormFile
+
+mixin searchForm()
+	+b.search-form
+		+form-wrap()
+			.row
+				.col-12.col-sm-6.col-md-10
+					+input('','tex')
+				.col-12.col-sm-6.col-md-2
+					+e.button.BUTTON(type="submit").btn.btn-primary Поиск
+	// end searchForm

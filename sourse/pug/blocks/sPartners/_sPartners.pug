@@ -6,10 +6,6 @@ mixin sPartners(data)
 				h2 Наши партнеры
 				.section-subtitle Надежные поставщики нашей компании
 			+e.row.row
-				mixin partnersItem(img, descr='Название компании в одну или несколько строк')
-					+e.item.col-6.col-lg-3
-						+img(`img/partner-${img}.jpg`).sPartners__item-img
-						+e.descr!= descr
 				+partnersItem(1,descr)
 				+partnersItem(2,descr)
 				+partnersItem(3,descr)
