@@ -21,6 +21,7 @@ include ../blocks/sSert/_sSert.pug
 include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sFaq/_sFaq.pug
 include ../blocks/sNews/_sNews.pug
+include ../blocks/sCookies/_sCookies.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -50,6 +51,7 @@ block pagecontent
 	+sForm()
 	+sNews('Новости и&nbsp;статьи компании')
 	+footer()
+	+sCookies
       
 
 

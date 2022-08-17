@@ -1,0 +1,75 @@
+// start .sCookies
+.sCookies {
+	position: fixed;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	--sPT: #{rem(16)};
+	--sPB: #{rem(16)};
+	// --sTPB: #{rem()};
+	background-color: $white;
+	z-index: 100;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(36)};
+		--sPB: #{rem(36)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@include media-breakpoint-up(md) {
+			flex-wrap: nowrap;
+		}
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	p {
+		margin-right: rem(43);
+		margin-bottom: 13px;
+		width: 100%;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 155%;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: $gray-600;
+		@include media-breakpoint-up(md) {
+			width: auto;
+			margin-bottom: 0;
+		}
+	}
+	
+	a {
+		color: $gray-600;
+	}
+
+	.btn {
+		padding: 11px 37px;
+		width: 100%;
+		font-weight: 600;
+		@include media-breakpoint-up(md) {
+			width: auto;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCookies

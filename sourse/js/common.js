@@ -601,6 +601,16 @@ if (document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
+const cookieBtns = document.querySelectorAll('.cookie-btn--js');
+for (let cookieBtn of cookieBtns) {
+	cookieBtn.addEventListener('click', function (event) {
+		const sCookies = document.querySelectorAll('.sCookies');
+		sCookies.forEach((section) => {
+			section.style.display='none';
+		});
+	});
+}
+
 // window.onload = function () {
 // 	document.body.classList.add('loaded_hiding');
 // 	window.setTimeout(function () {
