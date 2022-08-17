@@ -2,70 +2,70 @@ mixin sCard(data)
 	// start sCard
 	+b.SECTION.sCard.section#sCard&attributes(attributes)
 		.container
-			+e.row.row
+			+e.row
 				+e.action-buttons
 					button
 						+icon('compare')
 					button
 						+icon('fave')
-				.col-lg-7.col-xl-8
-					+e.images-wrap
-						+e.tags
-							.product-item__tag.product-item__tag--discount Скидка 15%
-							.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
-							.product-item__tag.product-item__tag--promo Акция
-						.swiper.card-slider.card-slider--js
-							.swiper-wrapper
-								.swiper-slide
-									.card-slider__img-wrap
-										+img('img/prod-1.jpg')
-								.swiper-slide
-									.card-slider__img-wrap
-										+e.tags
-											.product-item__tag.product-item__tag--discount Скидка 15%
-											.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
-											.product-item__tag.product-item__tag--promo Акция
-										+img('img/prod-2.jpg')
-								.swiper-slide
-									.card-slider__img-wrap
-										+e.tags
-											.product-item__tag.product-item__tag--discount Скидка 15%
-											.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
-											.product-item__tag.product-item__tag--promo Акция
-										+img('img/prod-3.jpg')
-								.swiper-slide
-									.card-slider__img-wrap
-										+e.tags
-											.product-item__tag.product-item__tag--discount Скидка 15%
-											.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
-											.product-item__tag.product-item__tag--promo Акция
-										+img('img/prod-4.jpg')
-								.swiper-slide
-									.card-slider__img-wrap
-										+e.tags
-											.product-item__tag.product-item__tag--discount Скидка 15%
-											.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
-											.product-item__tag.product-item__tag--promo Акция
-										+img('img/prod-5.jpg')
-							+arrow
-						.swiper.card-thumbs-slider.card-thumbs-slider--js
-							.swiper-wrapper
-								.swiper-slide
-									.card-thumbs-slider__img-wrap
-										+img('img/prod-1.jpg')
-								.swiper-slide
-									.card-thumbs-slider__img-wrap
-										+img('img/prod-2.jpg')
-								.swiper-slide
-									.card-thumbs-slider__img-wrap
-										+img('img/prod-3.jpg')
-								.swiper-slide
-									.card-thumbs-slider__img-wrap
-										+img('img/prod-4.jpg')
-								.swiper-slide
-											.card-thumbs-slider__img-wrap
-												+img('img/prod-5.jpg')
-					+e.tabs.tabs.swiper
+				//- .col-lg-7.col-xl-8
+				+e.images-wrap
+					+e.tags
+						.product-item__tag.product-item__tag--discount Скидка 15%
+						.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
+						.product-item__tag.product-item__tag--promo Акция
+					.swiper.card-slider.card-slider--js
+						.swiper-wrapper
+							.swiper-slide
+								.card-slider__img-wrap
+									+img('img/prod-1.jpg')
+							.swiper-slide
+								.card-slider__img-wrap
+									+e.tags
+										.product-item__tag.product-item__tag--discount Скидка 15%
+										.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
+										.product-item__tag.product-item__tag--promo Акция
+									+img('img/prod-2.jpg')
+							.swiper-slide
+								.card-slider__img-wrap
+									+e.tags
+										.product-item__tag.product-item__tag--discount Скидка 15%
+										.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
+										.product-item__tag.product-item__tag--promo Акция
+									+img('img/prod-3.jpg')
+							.swiper-slide
+								.card-slider__img-wrap
+									+e.tags
+										.product-item__tag.product-item__tag--discount Скидка 15%
+										.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
+										.product-item__tag.product-item__tag--promo Акция
+									+img('img/prod-4.jpg')
+							.swiper-slide
+								.card-slider__img-wrap
+									+e.tags
+										.product-item__tag.product-item__tag--discount Скидка 15%
+										.product-item__tag.product-item__tag--guarantee Гарантия 5 лет
+										.product-item__tag.product-item__tag--promo Акция
+									+img('img/prod-5.jpg')
+						+arrow
+					.swiper.card-thumbs-slider.card-thumbs-slider--js
+						.swiper-wrapper
+							.swiper-slide
+								.card-thumbs-slider__img-wrap
+									+img('img/prod-1.jpg')
+							.swiper-slide
+								.card-thumbs-slider__img-wrap
+									+img('img/prod-2.jpg')
+							.swiper-slide
+								.card-thumbs-slider__img-wrap
+									+img('img/prod-3.jpg')
+							.swiper-slide
+								.card-thumbs-slider__img-wrap
+									+img('img/prod-4.jpg')
+							.swiper-slide
+										.card-thumbs-slider__img-wrap
+											+img('img/prod-5.jpg')
+				+e.tabs.tabs.swiper
 						.tabs__caption.swiper-wrapper
 							.tabs__btn.swiper-slide.active Описание
 							.tabs__btn.swiper-slide Оплата и рассрочка
@@ -84,8 +84,8 @@ mixin sCard(data)
 							p Встроенная мебель портит стены. Да, она крепится непосредственно в&nbsp;стены, которые предварительно просверливаются для дюбелей. Но&nbsp;зачем Вам стена за&nbsp;шкафом, который будет стоять не&nbsp;один год?
 						.tabs__content
 							p К&nbsp;сожалению, во&nbsp;встроенной мебели есть и&nbsp;недостатки, как в&nbsp;любой другой мебели. Но&nbsp;они не&nbsp;столь значительны, достоинства в&nbsp;любом случае перевешивают
-				.col-lg-5.col-xl-4
-					+e.descr-wrap
+				//- .col-lg-5.col-xl-4
+				+e.descr-wrap
 						.product-item__text-row
 							.product-item__text-left.FORM
 								.product-item__text-title Фасад верх
@@ -149,16 +149,16 @@ mixin sCard(data)
 					.tabs__btn.swiper-slide ФУРНИТУРА
 				.tabs__content.active
 					.row
-						.col-lg-5
+						.d-none.d-lg-block.col-lg-5
 							+img('img/tab-kitchen.jpg')
 						.col-lg-7
-							.tabs-inner
-								.tabs-inner__caption
-									.tabs-inner__btn.active МДФ с ПВХ
-									.tabs-inner__btn МДФ
-									.tabs-inner__btn Пластик
-									.tabs-inner__btn Масив
-									.tabs-inner__btn ЛДСП
+							.tabs-inner.swiper
+								.tabs-inner__caption.swiper-wrapper
+									.tabs-inner__btn.swiper-slide.active МДФ с ПВХ
+									.tabs-inner__btn.swiper-slide МДФ
+									.tabs-inner__btn.swiper-slide Пластик
+									.tabs-inner__btn.swiper-slide Масив
+									.tabs-inner__btn.swiper-slide ЛДСП
 								.tabs-inner__content.active
 									.tabs-inner__title ФАСАДЫ ИЗ МДФ С ПВХ - ПЛЕНКОЙ
 									p Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются. Но&nbsp;как часто Вам приходится переносить мебель? Обычно, встроенный шкаф-купе стоит годами и&nbsp;сносится только перед капитальным ремонтом.

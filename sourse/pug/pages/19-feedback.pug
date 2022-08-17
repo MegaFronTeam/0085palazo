@@ -22,13 +22,16 @@ include ../blocks/sSert/_sSert.pug
 include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sFaq/_sFaq.pug
 include ../blocks/sNews/_sNews.pug
+include ../blocks/sCard/_sCard.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sFeedbackPage/_sFeedbackPage.pug
 
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= null
 
 block title
-	- let  title= 'КАТАЛОГ МЕБЕЛИ'
+	- let  title= 'ОТЗЫВЫ КИЛЕНТОВ “палаццо” '
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -37,12 +40,8 @@ block pagecontent
 	+header()
 		+topLine
 		+top-nav()
-	+page-head(title,'', 'Каталог' )
-	//- +sCatalog
-	.container
-		+categorySlider
-		+productTags('show','Прямые','Угловые','МДФ','Пластик','Современные','Лофт','Классические','Кантри','Классические', 'Кнопка','Лофт','Классические','Кантри','Классические', 'Кнопка')
-	+sFaq
+	+page-head(title, '', 'отзывы' )
+	+sFeedbackPage
 	+footer()
       
 

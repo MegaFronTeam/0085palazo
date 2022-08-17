@@ -1,0 +1,11 @@
+mixin sFeedbackPage(data)
+	// start sFeedbackPage
+	+b.SECTION.sFeedbackPage.section#sFeedbackPage&attributes(attributes)
+		.container
+			+e.btn-row.row
+				+e.tags-col.col-auto
+					+productTags('','видео отзывы','наши клиенты','акты работ','отзовики')
+				.col-auto
+					+btn('Оставить отзыв').btn.btn-outline-primary
+			.row
+	// end sFeedbackPage

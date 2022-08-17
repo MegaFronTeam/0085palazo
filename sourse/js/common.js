@@ -525,6 +525,10 @@ function eventHandler() {
 		slidesPerView: 'auto',
 	});
 
+	const innerTabsSlider = new Swiper(".tabs-inner", {
+		slidesPerView: 'auto',
+	});
+
 	// const filterSelect = document.querySelector('.filter-select');
 	// const choices = new Choices(filterSelect);
 	// modal window

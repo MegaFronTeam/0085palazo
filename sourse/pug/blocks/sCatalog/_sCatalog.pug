@@ -1,20 +1,21 @@
-mixin productTags(...items)
+mixin productTags(show,...items)
 	.tags-slider
 		+b.tags-list--js.swiper.UL(data-mobile="false")
 			.swiper-wrapper
 				-for (var i = 0; i < items.length; i++)
 					+e.item.swiper-slide.LI
 						+e.btn.BUTTON= items[i]
-				+e.item.swiper-slide.LI
-					.btn.btn-outline-primary Показать все
+				if show
+					+e.item.swiper-slide.LI
+						.btn.btn-outline-primary Показать все
 	// /.tags-list
 
 mixin catalogRowItem(img,title,price)
 	+b.catalog-item(href="#")
 		+img(`img/prod-${img}.jpg`)
 		+e.text
-			+e.title= title 
-			+e.price= price
+			+e.title= title
+			+e.price!= price
 
 mixin categorySlider
 	+b.slider-category--js.swiper

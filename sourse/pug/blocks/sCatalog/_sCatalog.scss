@@ -52,16 +52,6 @@
 		}
 }
 
-.bottom-controls {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	font-size: 12px;
-	font-weight: 600;
-	.pagination-wrapper {
-		display: flex;
-	}
-}
 
 .product-item{
 	position: relative;
@@ -677,5 +667,15 @@
 	}	
 	.swiper-button-hand {
 		color: $red;
+	}
+}
+.bottom-controls {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 12px;
+	font-weight: 600;
+	.pagination-wrapper {
+		display: flex;
 	}
 }
