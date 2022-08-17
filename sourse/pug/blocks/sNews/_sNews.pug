@@ -5,12 +5,12 @@ mixin newsItem(date,title,theme,pic,img)
 		+e.text
 			+e.date= date
 			+e.title=title
-mixin sNews(data)
+mixin sNews(title)
 	// start sNews
 	+b.SECTION.sNews.section#sNews&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Новости и&nbsp;статьи компании
+				h2!=title
 				.section-subtitle надежные поставщики нашей компании
 			+e.row.row
 				.col-md-6.col-xl-4

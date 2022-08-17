@@ -1,0 +1,31 @@
+// start .sVideos
+.sVideos {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(100.800)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(104)};
+	}
+	&__row{
+		--bs-gutter-x: #{rem(33)};
+		--bs-gutter-y: #{rem(33)};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sVideos

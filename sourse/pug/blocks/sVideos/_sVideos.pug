@@ -1,0 +1,9 @@
+mixin sVideos(data)
+	// start sVideos
+	+b.sVideos.section#sVideos&attributes(attributes)
+		.container
+			+e.row.row
+				-for(let i =1; i<=12; i++)
+					.col-sm-6.col-lg-4
+						+video(i)
+	// end sVideos

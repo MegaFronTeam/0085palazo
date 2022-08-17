@@ -131,6 +131,7 @@
 
 .breadcrumb {
 	margin-bottom: 20px !important;
+	flex-wrap: nowrap;
 }
 
 .breadcrumb-item{
@@ -188,6 +189,144 @@
 		margin-bottom: 0;
 		@include media-breakpoint-down(xl) {
 			justify-content: flex-end;
+		}
+	}
+}
+
+.video {
+	position: relative;
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
+	}
+	&__img-wrap {
+		@include block(382, 312);
+		z-index: 1;
+		border-radius: 4px;
+		overflow: hidden;
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+		}
+		img {
+			@include mt;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__content {
+		position: absolute;
+		bottom: rem(22.400);
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 3;
+		width: 100%;
+		@include media-breakpoint-up(xl) {
+			bottom: rem(40);
+		}
+	}
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: $primary;
+		color: #fff;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(28);
+		@include media-breakpoint-up(lg) {
+			width: 60px;
+			height: 60px;
+		}
+		@include media-breakpoint-up(xl) {
+			width: 80px;
+			height: 80px;
+		}
+		.icon {
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 3px;
+			font-size: rem(24);
+			flex: 0 0 auto;
+			margin-left: 5px;
+			@include media-breakpoint-up(xl) {
+				font-size: rem(32);
+
+			}
+		}
+	}
+	.h4 {
+		max-width: rem(276);
+		margin-left: auto;
+		margin-right: auto;
+		text-transform: uppercase;
+		margin-bottom: 0;
+		text-align: center;
+		color: #fff;
+		font-size: rem(14);
+		line-height: 1;
+		@include media-breakpoint-up(xl) {
+			font-size: rem(24);
+		}
+	}
+}
+
+.dd-group {
+	border-top: 1px dashed #DBDBDB;
+	&__item {
+		border-bottom: 1px dashed #DBDBDB;
+		&.active {
+			.dd-group__head::after {
+				transform: rotate(-135deg);
+			}
+		}
+	}
+	&__head {
+		position: relative;
+		padding: rem(23) 30px rem(23) 0;
+		font-weight: 500;
+		font-size: rem(24);
+		text-transform: uppercase;
+		color: $gray-900;
+		cursor: pointer;
+		@include media-breakpoint-down(md) {
+			line-height: 100%;
+			font-size: rem(20);
+		}
+		&::after {
+			position: absolute;
+			top: calc(50% - 4px);
+			right: 0;
+			transform: translateY(-50%) rotate(135deg);
+			transform-origin: left 50%;
+			content: '';
+			width: 11px;
+			height: 11px;
+			border-left: 2px solid $gray-600;
+			border-top: 2px solid $gray-600;
+			@include mt;
+		}
+	}
+	&__content {
+		display: none;
+		font-size: rem(18);
+		line-height: 155%;
+		color: $gray-600;
+		p {
+			margin-bottom: rem(34);
+		}
+		&.active {
+			display: block;
 		}
 	}
 }

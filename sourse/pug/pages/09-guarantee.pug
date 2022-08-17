@@ -1,0 +1,35 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sGuarantee/_sGuarantee.pug
+include ../blocks/sSert/_sSert.pug
+include ../blocks/sNews/_sNews.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '09-guarantee.jpg'
+
+block title
+	- let  title= 'Гарантии'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+topLine
+		+top-nav()
+	+page-head('Гарантии на нашу мебель', 'Гарантийные обязательства нашей компании' ,'гарантии')
+	+sGuarantee
+	+sSert
+	+sNews('вам может быть интересно')
+	+footer()

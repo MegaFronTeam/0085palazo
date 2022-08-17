@@ -19,6 +19,22 @@ mixin sForm()
 						a(href="#") Политики конфиденциальности.
 	// end sForm
 
+mixin sForm2()
+	// start sForm
+	+b.SECTION.sForm--2.section#sForm&attributes(attributes)
+		+b.section-title
+			+img('img/svg/question.svg')
+			h4 нужна помощь?
+		+e.form-col
+			+form-wrap()
+				+input('Введите','tel','Ваше имя')
+				+input('Введите','tel','Ваш номер телефона')
+				+input('Введите','email','E-mail')
+				+input('Введите','text','Опишите свой вопрос')
+				+e.button.BUTTON(type="submit").btn.btn-primary
+					| Отправить
+					+icon('arrow-right')
+				+e.text Нажимая кнопку "Отправить" я соглашаюсь с #[a(href="#") Положением о персональных данных и конфиденциальности.]
 
 mixin sFormFile()
 	// start sForm

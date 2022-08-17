@@ -1,23 +1,49 @@
 // start .sExamples
 .sExamples {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(52)};
 	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(104)};
 	}
-	.section-title{
-		
+	&__col {
+		&:nth-child(n + 9) {
+			display: none;
+		}
 	}
-	&__col{
-
+	.tabs {
+		&__caption {
+			@include roww(8px, m);
+			--bs-gutter-y: var(--bs-gutter-x);
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: rem(20);
+			margin-top: calc(var(--bs-gutter-y) * -1);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(40);
+			}
+		}
+		&__btn {
+			margin-top: var(--bs-gutter-y);
+			--bs-btn-padding-y: #{rem(11)};
+			--bs-btn-color: #{$primary};
+			--bs-btn-hover-color: #fff;
+			--bs-btn-hover-bg: #{$primary};
+			--bs-btn-hover-border-color: #{$primary};
+			--bs-btn-active-color: #fff;
+			--bs-btn-active-bg: #{$primary};
+			--bs-btn-active-border-color: #{$primary};
+		}
 	}
-	&__item{
-
+	&__btn {
+		margin-top: var(--bs-gutter-y);
+		--bs-btn-padding-y: #{rem(11)};
+		--bs-btn-active-color: #fff;
 	}
-
+	&__inner-row {
+		--bs-gutter-x: #{rem(33)};
+		--bs-gutter-y: #{rem(33)};
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

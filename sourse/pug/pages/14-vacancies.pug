@@ -10,14 +10,14 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
-include ../blocks/sExamples/_sExamples.pug
+include ../blocks/sVacancies/_sVacancies.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '08-assembly.jpg'
+	- let  bg= '14-vacancies.jpg'
 
 block title
-	- let  title= 'фото наших работ'
+	- let  title= 'вакансии'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -27,5 +27,5 @@ block pagecontent
 		+topLine
 		+top-nav()
 	+page-head(title, '' ,title)
-	+sExamples
+	+sVacancies
 	+footer()

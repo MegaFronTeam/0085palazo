@@ -1,6 +1,6 @@
 // start .sFaq
 .sFaq {
-	--sPT: #{rem(68)};
+	--sPT: #{rem(0)};
 	--sPB: #{rem(36)};
 	--sTPB: #{rem(54)};
 	@include media-breakpoint-down(sm) {
@@ -23,52 +23,71 @@
 
 	}
 
-	.dd-group {
-		border-top: 1px dashed #DBDBDB;
-		&__item {
-			border-bottom: 1px dashed #DBDBDB;
-			&.active {
-				.dd-group__head::after {
-					transform: rotate(-135deg);
+	// .dd-group {
+	// 	border-top: 1px dashed #DBDBDB;
+	// 	&__item {
+	// 		border-bottom: 1px dashed #DBDBDB;
+	// 		&.active {
+	// 			.dd-group__head::after {
+	// 				transform: rotate(-135deg);
+	// 			}
+	// 		}
+	// 	}
+	// 	&__head {
+	// 		position: relative;
+	// 		padding: rem(23) 30px rem(23) 0;
+	// 		font-weight: 500;
+	// 		font-size: rem(24);
+	// 		text-transform: uppercase;
+	// 		color: $gray-900;
+	// 		@include media-breakpoint-down(md) {
+	// 			line-height: 100%;
+	// 			font-size: rem(20);
+	// 		}
+	// 		&::after {
+	// 			position: absolute;
+	// 			top: calc(50% - 4px);
+	// 			right: 0;
+	// 			transform: translateY(-50%) rotate(135deg);
+	// 			transform-origin: left 50%;
+	// 			content: '';
+	// 			width: 11px;
+	// 			height: 11px;
+	// 			border-left: 2px solid $gray-600;
+	// 			border-top: 2px solid $gray-600;
+	// 			@include mt;
+	// 		}
+	// 	}
+	// 	&__content {
+	// 		display: none;
+	// 		font-size: rem(18);
+	// 		line-height: 155%;
+	// 		color: $gray-600;
+	// 		p {
+	// 			margin-bottom: rem(34);
+	// 		}
+	// 		&.active {
+	// 			display: block;
+	// 		}
+	// 	}
+	// }
+	&--2 {
+		--sPT: #{rem(0)};
+		--sPB: #{rem(0)};
+		@include media-breakpoint-up(lg) {
+			--sPB: #{rem(104)};
+		}
+		.dd-group {
+			&__head {
+				padding: rem(26.200) rem(20) rem(26.200) 0;
+			}
+			&__content {
+				p {
+					margin-bottom: rem(29.200);
 				}
 			}
 		}
-		&__head {
-			position: relative;
-			padding: rem(23) 30px rem(23) 0;
-			font-weight: 500;
-			font-size: rem(24);
-			text-transform: uppercase;
-			color: $gray-900;
-			@include media-breakpoint-down(md) {
-				line-height: 100%;
-				font-size: rem(20);
-			}
-			&::after {
-				position: absolute;
-				top: calc(50% - 4px);
-				right: 0;
-				transform: translateY(-50%) rotate(135deg);
-				transform-origin: left 50%;
-				content: '';
-				width: 11px;
-				height: 11px;
-				border-left: 2px solid $gray-600;
-				border-top: 2px solid $gray-600;
-				@include mt;
-			}
-		}
-		&__content {
-			display: none;
-			font-size: rem(18);
-			line-height: 155%;
-			color: $gray-600;
-			p {
-				margin-bottom: rem(34);
-			}
-		}
 	}
-
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
