@@ -1,0 +1,46 @@
+mixin sSiteMap(data)
+	// start sSiteMap
+	+b.SECTION.sSiteMap.section#sSiteMap&attributes(attributes)
+		.container
+			+e.slider--js.swiper.tabs
+				.tabs__caption.swiper-wrapper
+					.tabs__btn.swiper-slide.active о компании
+					.tabs__btn.swiper-slide категории
+					.tabs__btn.swiper-slide блог
+				mixin list()
+					ul
+						li О компании
+						li Рассрочка
+						li Наши видео
+						li Фото наших работ
+						li Гарантия
+						li Сборка
+						li Доставка
+						li Дизайн-замер
+						li Оплата
+						li Полезные статьи
+						li Отзывы
+						li Часто задаваемы вопросы
+						li Вакансии
+						li Наши партнеры
+						li О компании
+						li Рассрочка
+						li Наши видео
+						li Фото наших работ
+						li Гарантия
+						li Сборка
+						li Доставка
+						li Дизайн-замер
+						li Оплата
+						li Полезные статьи
+						li Отзывы
+						li Часто задаваемы вопросы
+						li Вакансии
+						li Наши партнеры
+				.tabs__content.active
+					+list()
+				.tabs__content
+					+list()
+				.tabs__content
+					+list()
+	// end sSiteMap
