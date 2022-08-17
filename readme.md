@@ -15,4 +15,5 @@
 2. <https://megafronteam.github.io/0085palazo/public/14-vacancies.html>
 2. <https://megafronteam.github.io/0085palazo/public/15-map.html>
 2. <https://megafronteam.github.io/0085palazo/public/16-reviews.html>
+2. <https://megafronteam.github.io/0085palazo/public/22-artical.html>
 3. <https://megafronteam.github.io/0085palazo/public/00-modal.html>
