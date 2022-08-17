@@ -11,4 +11,6 @@
 2. <https://megafronteam.github.io/0085palazo/public/10-examples.html>
 2. <https://megafronteam.github.io/0085palazo/public/11-our-video.html>
 2. <https://megafronteam.github.io/0085palazo/public/12-installment-plan.html>
+2. <https://megafronteam.github.io/0085palazo/public/13-faq.html>
+2. <https://megafronteam.github.io/0085palazo/public/14-vacancies.html>
 3. <https://megafronteam.github.io/0085palazo/public/00-modal.html>

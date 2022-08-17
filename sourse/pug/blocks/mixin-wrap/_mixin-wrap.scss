@@ -131,6 +131,7 @@
 
 .breadcrumb {
 	margin-bottom: 20px !important;
+	flex-wrap: nowrap;
 }
 
 .breadcrumb-item{
@@ -276,6 +277,56 @@
 		line-height: 1;
 		@include media-breakpoint-up(xl) {
 			font-size: rem(24);
+		}
+	}
+}
+
+.dd-group {
+	border-top: 1px dashed #DBDBDB;
+	&__item {
+		border-bottom: 1px dashed #DBDBDB;
+		&.active {
+			.dd-group__head::after {
+				transform: rotate(-135deg);
+			}
+		}
+	}
+	&__head {
+		position: relative;
+		padding: rem(23) 30px rem(23) 0;
+		font-weight: 500;
+		font-size: rem(24);
+		text-transform: uppercase;
+		color: $gray-900;
+		cursor: pointer;
+		@include media-breakpoint-down(md) {
+			line-height: 100%;
+			font-size: rem(20);
+		}
+		&::after {
+			position: absolute;
+			top: calc(50% - 4px);
+			right: 0;
+			transform: translateY(-50%) rotate(135deg);
+			transform-origin: left 50%;
+			content: '';
+			width: 11px;
+			height: 11px;
+			border-left: 2px solid $gray-600;
+			border-top: 2px solid $gray-600;
+			@include mt;
+		}
+	}
+	&__content {
+		display: none;
+		font-size: rem(18);
+		line-height: 155%;
+		color: $gray-600;
+		p {
+			margin-bottom: rem(34);
+		}
+		&.active {
+			display: block;
 		}
 	}
 }

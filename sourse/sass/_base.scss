@@ -577,3 +577,20 @@ iframe {
 		}
 	}
 }
+
+.sfaq-page {
+	.page-head {
+		margin-bottom: 39px;
+		h1 {
+			line-height: 1;
+			margin-bottom: 12px;
+		}
+	}
+	.container-faq {
+		// --bs-gutter-x: #{rem(0)};
+	}
+	.row-faq {
+		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-y: #{rem(32)};
+	}
+}

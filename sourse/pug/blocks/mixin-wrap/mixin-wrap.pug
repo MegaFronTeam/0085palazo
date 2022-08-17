@@ -47,6 +47,18 @@ mixin page-head(t, text, ...items)
 			if text
 				p!= text
 
+mixin page-head2(t, text, ...items)
+	+b.page-head
+		- let l = items.length
+		.container
+			.row
+				.col-lg-8
+					+breadcrumb('Главная',...items)
+					if t
+						h1= t
+					if text
+						p!= text
+
 mixin video(i)
 	+b.video(href="https://www.youtube.com/watch?v=L_LUpnjgPso&t=1s" data-fancybox= `sAbout-video-${i}` )
 		+e.img-wrap
