@@ -690,6 +690,15 @@ for (let i = 0; i < headsets.length; i++) {
 	});
 }
 
+let sCategoriesSwiper = new Swiper('.sCategories__slider--js', {
+	spaceBetween: 8,
+	slidesPerView: 'auto',
+	navigation: {
+		nextEl: ".sCategories .swiper-button-next",
+		prevEl: ".sCategories .swiper-button-prev",
+	},
+});
+
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {

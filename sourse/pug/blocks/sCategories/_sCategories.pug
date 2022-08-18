@@ -3,7 +3,37 @@ mixin sCategories(data)
 	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
 		.container
 			+b.section-title
-				h2 sCategories
-				
-			.row
+				h2 КУХНИ НА ЗАКАЗ
+				p От производителя
+			+e.slide-wrap
+				+e.slider--js.swiper 
+					.swiper-wrapper
+						+e.slide.swiper-slide
+							a(href="#").active Все товары
+						-for(let i=0; i<2; i++)
+							+e.slide.swiper-slide
+								a(href="#") Все товары
+							+e.slide.swiper-slide
+								a(href="#") Прямые
+							+e.slide.swiper-slide
+								a(href="#") Угловые
+							+e.slide.swiper-slide
+								a(href="#") МДФ
+							+e.slide.swiper-slide
+								a(href="#") Пластик
+							+e.slide.swiper-slide
+								a(href="#") Современные
+							+e.slide.swiper-slide
+								a(href="#") Лофт
+							+e.slide.swiper-slide
+								a(href="#") Классические
+							+e.slide.swiper-slide
+								a(href="#") Кантри
+							+e.slide.swiper-slide
+								a(href="#") Классические
+							+e.slide.swiper-slide
+								a(href="#") Кнопка
+							+e.slide.swiper-slide
+								a(href="#") Кнопка
+				+arrow 
 	// end sCategories

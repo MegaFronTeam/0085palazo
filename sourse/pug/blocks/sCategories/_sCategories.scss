@@ -9,15 +9,60 @@
 
 	}
 	.section-title{
-		
+		margin-bottom: rem(32);
+		h2 {
+			@include rfs(48px);
+			line-height: 1;
+			text-transform: uppercase;
+		}
+		p {
+			margin-bottom: 0;
+			font-size: rem(10);
+			font-weight: 600;
+			color: $gray-600;
+		}
 	}
-	&__col{
-
+	&__slide-wrap {
+		position: relative;
+		.swiper-button-hand {
+			--swiperBorderColorDef: #{$gray-600};
+			--swiperColorDef: #{$gray-600};
+			--swiperColorDefHover: #{$primary};
+			display: none;
+			@include media-breakpoint-up(lg) {
+				display: flex;
+			}
+			&-prev {
+				left: 0;
+			}
+			&-next {
+				right: 0;
+			}
+		}
 	}
-	&__item{
-
+	&__slider {
+		overflow: visible;
+		@include media-breakpoint-up(lg) {
+			overflow: hidden;
+			margin: 0 rem(40);
+		}
 	}
-
+	&__slide {
+		width: max-content;
+		a {
+			display: block;
+			padding: rem(9) rem(12);
+			background-color: $gray-100;
+			color: $primary;
+			border-radius: 4px;
+			font-size: rem(14);
+			font-weight: 600;
+			&.active {
+				background-color: $primary;
+				color: #fff;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
