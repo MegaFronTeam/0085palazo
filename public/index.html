@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/nouislider/nouislider.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
@@ -365,33 +366,201 @@
 					</div>
 					<div class="sCalc__headset-row row">
 						<div class="col-12">
-							<div class="sCalc__subtitle"><span>1</span>Выберите вид гарнитура и укажите его размеры
+							<div class="sCalc__subtitle d-none d-lg-block"><span>1</span>Выберите вид гарнитура и укажите его размеры
+							</div>
+							<div class="sCalc__subtitle d-block d-lg-none"><span>1</span>вид гарнитура 
 							</div>
 						</div>
-						<div class="sCalc__headset-col col-auto">
+						<div class="col-12 d-block d-lg-none">
+							<div class="sCalc__input-wrap form-group">
+								<label>
+									<select class="sCalc__input form-control">
+										<option>Прямой</option>
+										<option>Г-образный (левый)</option>
+										<option>Г-образный (правый)</option>
+										<option>П-образный</option>
+										<option>Параллельный</option>
+									</select>
+								</label>
+							</div>
+						</div>
+						<div class="sCalc__headset-col col-auto d-none d-lg-block">
 							<label><span class="sCalc__headset-item">
 								<input type="radio" name="headset"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-1.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-1-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">Прямой</span></span>
 							</label>
 						</div>
-						<div class="sCalc__headset-col col-auto">
+						<div class="sCalc__headset-col col-auto d-none d-lg-block">
 							<label><span class="sCalc__headset-item">
 								<input type="radio" name="headset"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-2.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-2-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">Г-образный (левый)</span></span>
 							</label>
 						</div>
-						<div class="sCalc__headset-col col-auto">
+						<div class="sCalc__headset-col col-auto d-none d-lg-block">
 							<label><span class="sCalc__headset-item">
 								<input type="radio" name="headset"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-3.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-3-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">Г-образный (правый)</span></span>
 							</label>
 						</div>
-						<div class="sCalc__headset-col col-auto">
+						<div class="sCalc__headset-col col-auto d-none d-lg-block">
 							<label><span class="sCalc__headset-item">
 								<input type="radio" name="headset"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-4.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-4-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">П-образный</span></span>
 							</label>
 						</div>
-						<div class="sCalc__headset-col col-auto">
+						<div class="sCalc__headset-col col-auto d-none d-lg-block">
 							<label><span class="sCalc__headset-item">
 								<input type="radio" name="headset"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-5.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-5-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">Параллельный</span></span>
 							</label>
+						</div>
+					</div>
+					<div class="sCalc__body-row row">
+						<div class="col-lg-7">
+							<div class="sCalc__size-row row d-flex d-lg-none">
+								<div class="col-6">
+									<div class="sCalc__size-text">Общая длина гарнитура, см
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="sCalc__input-wrap form-group"><input class="sCalc__input form-control" name="text" type="text" placeholder=""/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+							</div>
+							<div class="sCalc__size-lg d-none d-lg-block">
+								<div class="sCalc__position">
+									<div id="slider"></div>
+									<div class="size">
+										<div class="field" id="field"></div>см
+									</div>
+								</div>
+								<div class="sCalc__vertical-position sCalc__vertical-position--left">
+									<div class="vertical-slider" id="vertical-slider"></div>
+									<div class="size">
+										<div class="field" id="field2"></div>см
+									</div>
+								</div>
+								<div class="sCalc__vertical-position sCalc__vertical-position--right">
+									<div class="vertical-slider" id="vertical-slider-right"></div>
+									<div class="size">
+										<div class="field" id="field3"></div>см
+									</div>
+								</div><img src="img/sCalc-img-1.png" alt="" loading="lazy"/>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="sCalc__col-wrap">
+								<div class="sCalc__select-wrap">
+									<div class="sCalc__subtitle d-none d-lg-block"><span>2</span>Выберите материал фасада
+									</div>
+									<div class="sCalc__subtitle d-block d-lg-none"><span>2</span>материал фасада
+									</div>
+									<div class="sCalc__input-wrap form-group">
+										<select class="sCalc__input form-select" name="select">
+											<option value="Выберите">Выберите</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="sCalc__select-wrap">
+									<div class="sCalc__subtitle d-none d-lg-block"><span>3</span>Выберите материал столешницы
+									</div>
+									<div class="sCalc__subtitle d-block d-lg-none"><span>3</span>материал столешницы
+									</div>
+									<div class="sCalc__input-wrap form-group">
+										<select class="sCalc__input form-select" name="select">
+											<option value="Выберите">Выберите</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="sCalc__select-wrap">
+									<div class="sCalc__subtitle d-none d-lg-block"><span>4</span>Выберите тип встраиваемой техники
+									</div>
+									<div class="sCalc__subtitle d-block d-lg-none"><span>4</span>тип встраиваемой техники
+									</div>
+									<div class="form-wrap row">
+										<div class="col-lg-6">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Духовой шкаф</span>
+											</label>
+										</div>
+										<div class="col-lg-6">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Посудомоечная машина</span>
+											</label>
+										</div>
+										<div class="col-lg-6">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Варочная панель </span>
+											</label>
+										</div>
+										<div class="col-lg-6">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вытяжка</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="sCalc__row-price row">
+									<div class="col-lg-5">
+										<div class="sCalc__price-text">Приблизительная стоимость Вашей кухни:
+										</div>
+									</div>
+									<div class="col-lg-7">
+										<div class="sCalc__price">215 000 руб.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sCalc__footer-row">
+						<div class="form-wrap row">
+							<div class="col-lg-4">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Ваше имя</span><input class="form-wrap__input form-control is-invalid" name="text" type="text" placeholder="Введите"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<p class="is-invalid">Поле не может быть пустым</p>
+							</div>
+							<div class="col-lg-4">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Введите"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-4">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Введите"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-8">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Ваше имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-4">
+								<div class="upload-field">
+									<label class="upload-field__wrap"><span class="upload-field__file-name">Прикрепить свой проект</span><span class="upload-field__input-wrap"><span class="upload-field__btn btn btn-outline-primary">
+										<input class="input-upload" type="file" name="file"/><span>Выбрать файл</span></span></span>
+									</label>
+								</div>
+							</div>
+							<div class="col-lg align-self-center d-none d-lg-block">
+								<div class="form-wrap__policy">Я согласен условиями предоставления услуг и <a href="#">обработкой моих персональных данных</a> при нажатии “Отправить на расчет”
+								</div>
+							</div>
+							<div class="col-lg-auto">
+								<div class="form-wrap__btn btn btn-primary">Отправить на расчет
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1468,6 +1637,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/nouislider/nouislider.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

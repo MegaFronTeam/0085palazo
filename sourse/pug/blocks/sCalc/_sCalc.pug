@@ -7,9 +7,14 @@ mixin sCalc(data)
 				p 1156 клиентов уже воспользовались этой услугой
 			+e.headset-row.row
 				.col-12
-					+e.subtitle
+					+e.subtitle.d-none.d-lg-block
 						span 1
 						| Выберите вид гарнитура и укажите его размеры
+					+e.subtitle.d-block.d-lg-none
+						span 1
+						| вид гарнитура 
+				.col-12.d-block.d-lg-none
+					+select('', 'Прямой', 'Г-образный (левый)', 'Г-образный (правый)', 'П-образный', 'Параллельный')
 				mixin headset-item(img, text)
 					label
 						+e.SPAN.headset-item
@@ -18,14 +23,94 @@ mixin sCalc(data)
 								+img(`img/svg/headset-${img}.svg`).non-checked
 								+img(`img/svg/headset-${img}-checked.svg`).checked
 							+e.SPAN.text!= text
-				+e.headset-col.col-auto
+				+e.headset-col.col-auto.d-none.d-lg-block
 					+headset-item(1, 'Прямой')
-				+e.headset-col.col-auto
+				+e.headset-col.col-auto.d-none.d-lg-block
 					+headset-item(2, 'Г-образный (левый)')
-				+e.headset-col.col-auto
+				+e.headset-col.col-auto.d-none.d-lg-block
 					+headset-item(3, 'Г-образный (правый)')
-				+e.headset-col.col-auto
+				+e.headset-col.col-auto.d-none.d-lg-block
 					+headset-item(4, 'П-образный')
-				+e.headset-col.col-auto
+				+e.headset-col.col-auto.d-none.d-lg-block
 					+headset-item(5, 'Параллельный')
+			+e.body-row.row
+				.col-lg-7
+					+e.size-row.row.d-flex.d-lg-none
+						.col-6
+							+e.size-text Общая длина гарнитура, см
+						.col-6
+							+input('', 'text')
+					+e.size-lg.d-none.d-lg-block
+						+e.position
+							div#slider
+							.size
+								#field.field
+								| см
+						+e.vertical-position--left
+							div#vertical-slider.vertical-slider
+							.size
+								#field2.field
+								| см
+						+e.vertical-position--right
+							div#vertical-slider-right.vertical-slider
+							.size
+								#field3.field
+								| см
+						+img('img/sCalc-img-1.png')
+				.col-lg-5
+					+e.col-wrap
+						+e.select-wrap
+							+e.subtitle.d-none.d-lg-block
+								span 2
+								| Выберите материал фасада
+							+e.subtitle.d-block.d-lg-none
+								span 2
+								| материал фасада
+							+input('Выберите', 'select')
+						+e.select-wrap
+							+e.subtitle.d-none.d-lg-block
+								span 3
+								| Выберите материал столешницы
+							+e.subtitle.d-block.d-lg-none
+								span 3
+								| материал столешницы
+							+input('Выберите', 'select')
+						+e.select-wrap
+							+e.subtitle.d-none.d-lg-block
+								span 4
+								| Выберите тип встраиваемой техники
+							+e.subtitle.d-block.d-lg-none
+								span 4
+								| тип встраиваемой техники
+							+b.form-wrap.row
+								.col-lg-6
+									+in-c('checkbox', 'Духовой шкаф')
+								.col-lg-6
+									+in-c('checkbox', 'Посудомоечная машина')
+								.col-lg-6
+									+in-c('checkbox', 'Варочная панель ')
+								.col-lg-6
+									+in-c('checkbox', 'Вытяжка')
+						+e.row-price.row
+							.col-lg-5
+								+e.price-text Приблизительная стоимость Вашей кухни:
+							.col-lg-7
+								+e.price 215 000 руб.
+			+e.footer-row
+				+b.form-wrap.row
+					.col-lg-4
+						+input('Введите', 'text', 'Ваше имя').is-invalid
+						p.is-invalid Поле не может быть пустым
+					.col-lg-4
+						+input('Введите', 'tel', 'Телефон')
+					.col-lg-4
+						+input('Введите', 'email', 'E-mail')
+					.col-lg-8
+						+input('Введите', 'text', 'Ваше имя')
+					.col-lg-4
+						+upload-field('Прикрепить свой проект')
+					.col-lg.align-self-center.d-none.d-lg-block
+						+e.policy Я согласен условиями предоставления услуг и #[a(href="#") обработкой моих персональных данных] при нажатии “Отправить на расчет”
+					.col-lg-auto
+						+e.btn.btn.btn-primary Отправить на расчет
 	// end sCalc

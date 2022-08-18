@@ -35,24 +35,24 @@ const JSCCommon = {
 		const linkModal = document.querySelectorAll(link);
 		function addData() {
 			linkModal.forEach(element => {
-				element.addEventListener('click', () => {
-					let modal = document.querySelector(element.getAttribute("href"));
-					const data = element.dataset;
+				// element.addEventListener('click', () => {
+				// 	let modal = document.querySelector(element.getAttribute("href"));
+				// 	const data = element.dataset;
 
-					function setValue(val, elem) {
-						if (elem && val) {
-							const el = modal.querySelector(elem)
-							el.tagName == "INPUT"
-								? el.value = val
-								: el.innerHTML = val;
-							// console.log(modal.querySelector(elem).tagName)
-						}
-					}
-					setValue(data.title, '.ttu');
-					setValue(data.text, '.after-headline');
-					setValue(data.btn, '.btn');
-					setValue(data.order, '.order');
-				})
+				// 	function setValue(val, elem) {
+				// 		if (elem && val) {
+				// 			const el = modal.querySelector(elem)
+				// 			el.tagName == "INPUT"
+				// 				? el.value = val
+				// 				: el.innerHTML = val;
+				// 			// console.log(modal.querySelector(elem).tagName)
+				// 		}
+				// 	}
+				// 	setValue(data.title, '.ttu');
+				// 	setValue(data.text, '.after-headline');
+				// 	setValue(data.btn, '.btn');
+				// 	setValue(data.order, '.order');
+				// })
 			})
 		}
 		if (linkModal) addData();
@@ -626,6 +626,69 @@ function inputFile(){
 	}
 }
 inputFile();
+
+var slider = document.getElementById('slider');
+var verticalSlider = document.getElementById('vertical-slider');
+var verticalSliderRight = document.getElementById('vertical-slider-right');
+var directionField = document.getElementById('field');
+var directionField2 = document.getElementById('field2');
+var directionField3 = document.getElementById('field3');
+
+var el = $(".sCalc__size-lg").html();
+if (!el) {
+} else {
+	noUiSlider.create(slider, {
+		start: [4000],
+		connect: 'lower',
+		step: 1,
+		decimals: 0,
+		range: {
+			'min': [2000],
+			'max': [10000]
+		}
+	});
+	
+	noUiSlider.create(verticalSlider, {
+		start: [4000],
+		connect: 'lower',
+		orientation: 'vertical',
+		step: 1,
+		// tooltips: true,
+		range: {
+			'min': [2000],
+			'max': [10000]
+		}
+	});
+	noUiSlider.create(verticalSliderRight, {
+		start: [4000],
+		connect: 'lower',
+		orientation: 'vertical',
+		step: 1,
+		// tooltips: true,
+		range: {
+			'min': [2000],
+			'max': [10000]
+		}
+	});
+	
+	slider.noUiSlider.on('update', function (values, handle) {
+		directionField.innerHTML = values[handle];
+	});
+	verticalSlider.noUiSlider.on('update', function (values, handle) {
+		directionField2.innerHTML = values[handle];
+	});
+	verticalSliderRight.noUiSlider.on('update', function (values, handle) {
+		directionField3.innerHTML = values[handle];
+	});
+};
+
+
+let headsets = document.getElementsByClassName('sCalc__headset-col');
+for (let i = 0; i < headsets.length; i++) {
+	headsets[i].addEventListener("click", function() {
+		 console.log(i);
+	});
+}
 
 if (document.readyState !== 'loading') {
 	eventHandler();

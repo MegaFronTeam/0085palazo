@@ -77,6 +77,32 @@
 		font-size: rem(12);
 		color: $primary;
 	}
+	.custom-input {
+		position: relative;
+		padding-left: rem(40);
+		&__input {
+			width: 24px;
+			height: 24px;
+			border: 1px solid $gray-600;
+			border-radius: 4px;
+			margin-right: rem(16);
+			margin-top: 0;
+			margin-left: 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+			&:checked {
+				border-color: $primary;
+				background-size: 15px 14px;
+				background-position: center;
+				box-shadow: 0px 4px 4px rgba(193, 101, 101, 0.21);
+			}
+		}
+		&__text {
+			font-size: rem(15);
+			line-height: 1.55em;
+		}
+	}
 }
 
 
