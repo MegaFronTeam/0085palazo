@@ -22,7 +22,7 @@ mixin modal(data)
 					+e.title.form-data.h4.ttu Вызвать замерщика
 					p.after-headline Заполните форму и&nbsp;мы&nbsp;Вам перезвоним
 
-				+input("Ваше Имя", 'text', 'Введите')(required)
+				+input("Ваше Имя", 'text', 'Введите')(required).is-invalid
 					p.is-invalid Поле не может быть пустым
 				+input("Телефон", 'tel', 'Введите')(required)  
 				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
@@ -37,20 +37,20 @@ mixin modal(data)
 
 				+input("Ваше Имя", 'text', 'Введите')(required)
 				+input("Телефон", 'tel', 'Введите')(required)
-				+add-file('Загрузить резюме')
+				+upload-field('Загрузить резюме')
 				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
 					+icon('arrow-right')
 				+policy()
 
 	div(id="modal-apply2"  style="display: none" )
-		+b.modal-win--apply2
+		+b.modal-win--apply
 			+form-wrap
 				.text-center
-					+e.title.form-data.h4.ttu ОТКЛИКНУТЬСЯ НА ВАКАНСИЮ
+					+e.title.form-data.h4.ttu ОТПРАВИТЬ КУХНЮ НА ОЦЕНКУ
 
 				+input("Ваше Имя", 'text', 'Введите')(required)
 				+input("E-mail", 'email', 'Введите')(required)
-				+add-file('Загрузить резюме')
+				+upload-field('Загрузить резюме')
 				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
 					+icon('arrow-right')
 				+policy()
@@ -58,8 +58,14 @@ mixin modal(data)
 	div(id="modal-thx"  style="display: none" )
 		+b.modal-win--thx
 			.text-center
-				+e.title.form-data.h4.ttu Вызвать замерщика
+				+e.title.form-data.h4.ttu Спасибо!
 				.after-headline Наш менеджер позвонит вам в ближайшее время
+
+	div(id="modal-thx2"  style="display: none" )
+		+b.modal-win--thx
+			.text-center
+				+e.title.form-data.h4.ttu Спасибо, что делитесь опытом!
+				.after-headline Ваш отзыв будет опубликован сразу же после проверки модератором
 	// #modal-call
 	
 	div(id="modal-review"  style="display: none" )
@@ -67,24 +73,25 @@ mixin modal(data)
 			+e.title.form-data.h4.ttu Оставить отзыв о гостиной в современном стиле “Эдельвейс”
 			+e.stars
 				p Общая оценка
-				+rating()
+				+rating('rating', 'rating')
 			.row
 				.col-sm-6.col-lg-4
 					+e.stars
 						p Шум
-						+rating()
+						+rating('rating2', 'rating2')
 				.col-sm-6.col-lg-4
 					+e.stars
 						p Качество стирки
-						+rating()
+						+rating('rating3', 'rating3')
 				.col-sm-6.col-lg-4
 					+e.stars
 						p Внешний вид
-						+rating()
+						+rating('rating4', 'rating4')
 			+form-wrap
 				+input('Введите', 'text', 'Достоинства')
 				+input('Введите', 'text', 'Недостатки')
-				+input('Введите', 'text', 'Недостатки')
+				+input('Введите', 'text', 'Общие впечатления')
+				+upload-field('Прикрепить свой проект')
 				+input('Введите', 'text', 'Ваше имя')
 				+input('Введите', 'email', 'E-mail')
 				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить

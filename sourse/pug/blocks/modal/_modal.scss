@@ -37,6 +37,7 @@
 		font-weight: 100;
 	}
 	&--thx {
+		width: rem(424);
 		.h4 {
 			margin-bottom: rem(23);
 		}
@@ -48,6 +49,18 @@
 		.form-wrap {
 			&__title {
 				margin-bottom: rem(23);
+			}
+		}
+		.upload-field {
+			margin-bottom: rem(10);
+			&__file-name {
+				font-size: rem(14);
+			}
+			&__btn {
+				--bs-btn-padding-x: #{rem(8)};
+				--bs-btn-padding-y: #{rem(5.200)};
+				--bs-btn-font-size: #{rem(14)};
+				min-width: rem(117);
 			}
 		}
 	}

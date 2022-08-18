@@ -82,3 +82,28 @@ mixin partnersItem(img, descr='Название компании в одну и�
 	+e.item.col-6.col-lg-3
 		+img(`img/partner-${img}.jpg`).sPartners__item-img
 		+e.descr!= descr
+
+mixin rating(name, id)
+	.rating__group
+		input.rating__input(type='radio' name=name value='1' id=`${id}-1`)
+		label.rating__star(for=`${id}-1` aria-label='Ужасно')
+		input.rating__input(type='radio' name=name value='2' id=`${id}-2`)
+		label.rating__star(for=`${id}-2` aria-label='Сносно')
+		input.rating__input(type='radio' name=name value='3' checked='' id=`${id}-3`)
+		label.rating__star(for=`${id}-3` aria-label='Нормально')
+		input.rating__input(type='radio' name=name value='4' id=`${id}-4`)
+		label.rating__star(for=`${id}-4` aria-label='Хорошо')
+		input.rating__input(type='radio' name=name value='5' id=`${id}-5`)
+		label.rating__star(for=`${id}-5` aria-label='Отлично')
+		.rating__focus
+
+mixin upload-field(text)
+	+b.upload-field
+		//- +e.title.form-wrap__input-title!=title
+		+e.LABEL.wrap
+			+e.SPAN.file-name!= text
+			+e.SPAN.input-wrap
+				+e.btn.btn.btn-outline-primary
+					input.input-upload(type='file' name='file')
+					//- +icon('clip')
+					span Выбрать файл

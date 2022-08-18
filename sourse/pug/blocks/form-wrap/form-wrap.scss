@@ -33,6 +33,13 @@
 		font-weight: 600;
 		font-size: 12px;
 	}
+	&__input {
+		&.is-invalid {
+			background: none;
+			padding: rem(30) rem(16) rem(8) rem(16);
+		}
+
+	}
  	&__btn{
  		cursor: pointer;
  	}
