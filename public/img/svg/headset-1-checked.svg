@@ -1,0 +1,11 @@
+<svg width="134" height="24" viewBox="0 0 134 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_424_10770" fill="white">
+<path d="M0 0H134V24H0V0Z"/>
+</mask>
+<path d="M0 0H134V24H0V0Z" fill="#C16565" fill-opacity="0.2"/>
+<path d="M0 0V-1H-1V0H0ZM134 0H135V-1H134V0ZM134 24V25H135V24H134ZM0 24H-1V25H0V24ZM0 1H134V-1H0V1ZM133 0V24H135V0H133ZM134 23H0V25H134V23ZM1 24V0H-1V24H1Z" fill="#C16565" mask="url(#path-1-inside-1_424_10770)"/>
+<circle cx="80.5" cy="7.5" r="1.5" fill="#C16565"/>
+<circle cx="80.5" cy="15.5" r="2.5" fill="#C16565"/>
+<circle cx="91.5" cy="7.5" r="2.5" fill="#C16565"/>
+<circle cx="91.5" cy="15.5" r="3.5" fill="#C16565"/>
+</svg>

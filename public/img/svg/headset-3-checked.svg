@@ -1,0 +1,14 @@
+<svg width="134" height="64" viewBox="0 0 134 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_5_1537" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M134 0H0V24H110V64H134V24V8V0Z"/>
+</mask>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M134 0H0V24H110V64H134V24V8V0Z" fill="#C16565" fill-opacity="0.2"/>
+<path d="M0 0V-1H-1V0H0ZM134 0H135V-1H134V0ZM0 24H-1V25H0V24ZM110 24H111V23H110V24ZM110 64H109V65H110V64ZM134 64V65H135V64H134ZM0 1H134V-1H0V1ZM1 24V0H-1V24H1ZM110 23H0V25H110V23ZM111 64V24H109V64H111ZM134 63H110V65H134V63ZM133 24V64H135V24H133ZM133 8V24H135V8H133ZM133 0V8H135V0H133Z" fill="#C16565" mask="url(#path-1-inside-1_5_1537)"/>
+<circle cx="84.5" cy="7.5" r="1.5" fill="#C16565"/>
+<circle cx="84.5" cy="15.5" r="2.5" fill="#C16565"/>
+<circle cx="95.5" cy="7.5" r="2.5" fill="#C16565"/>
+<circle cx="95.5" cy="15.5" r="3.5" fill="#C16565"/>
+<circle r="1.5" transform="matrix(-1 0 0 1 127.5 39.5)" fill="#C16565"/>
+<rect width="9" height="9" rx="2" transform="matrix(-1 0 0 1 126 29)" fill="#C16565"/>
+<rect width="9" height="9" rx="2" transform="matrix(-1 0 0 1 126 41)" fill="#C16565"/>
+</svg>

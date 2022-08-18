@@ -2,8 +2,30 @@ mixin sCalc(data)
 	// start sCalc
 	+b.SECTION.sCalc.section#sCalc&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCalc
-				
-			.row
+			+b.section-title
+				h2 РАССЧИТАЙТЕ СТОИМОСТЬ КУХНИ ВАШЕЙ МЕЧТЫ ЗА 1 МИНУТУ!
+				p 1156 клиентов уже воспользовались этой услугой
+			+e.headset-row.row
+				.col-12
+					+e.subtitle
+						span 1
+						| Выберите вид гарнитура и укажите его размеры
+				mixin headset-item(img, text)
+					label
+						+e.SPAN.headset-item
+							input(type="radio" name="headset")
+							+e.SPAN.img-wrap
+								+img(`img/svg/headset-${img}.svg`).non-checked
+								+img(`img/svg/headset-${img}-checked.svg`).checked
+							+e.SPAN.text!= text
+				+e.headset-col.col-auto
+					+headset-item(1, 'Прямой')
+				+e.headset-col.col-auto
+					+headset-item(2, 'Г-образный (левый)')
+				+e.headset-col.col-auto
+					+headset-item(3, 'Г-образный (правый)')
+				+e.headset-col.col-auto
+					+headset-item(4, 'П-образный')
+				+e.headset-col.col-auto
+					+headset-item(5, 'Параллельный')
 	// end sCalc

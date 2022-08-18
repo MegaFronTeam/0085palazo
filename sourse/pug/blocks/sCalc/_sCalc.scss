@@ -1,7 +1,7 @@
 // start .sCalc
 .sCalc {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(44)};
+	--sPB: #{rem(39)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -9,15 +9,134 @@
 
 	}
 	.section-title{
-		
+		margin-bottom: rem(30);
+		max-width: rem(1157);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(53);
+		}
+		h2 {
+			@include rfs(48px);
+			line-height: 1;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+		p {
+			font-weight: 600;
+			font-size: rem(10);
+			line-height: 1.55em;
+			text-transform: uppercase;
+			letter-spacing: 0.07em;
+			color: $gray-600;
+		}
 	}
-	&__col{
-
+	&__subtitle {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: rem(12);
+		color: $gray-600;
+		span {
+			font-size: rem(12);
+			font-weight: 600;
+			letter-spacing: 0.07em;
+			text-transform: uppercase;
+			background-color: $primary;
+			color: #fff;
+			margin-right: rem(17);
+			padding: 0 rem(5.5);
+		}
 	}
-	&__item{
-
+	&__headset-row {
+		--bs-guuter-x: #{rem(32)};
+		.sCalc__subtitle {
+			margin-bottom: rem(9);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(32);
+			}
+		}
 	}
-
+	&__headset-col {
+		width: calc(100% / 5);
+		label {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__headset-item {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		height: 100%;
+		padding: rem(24) rem(15) rem(8);
+		input {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0px;
+			top: 0;
+			appearance: none;
+			&:before {
+				@include mt;
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				border: 1px solid $gray-100;
+				border-radius: 4px;
+				z-index: 1;
+			}
+			&:checked {
+				&:before {
+					border-color: $primary;
+				}
+				& ~ .sCalc__img-wrap {
+					.non-checked {
+						opacity: 0;
+					}
+					.checked {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.icon {
+			font-size: rem(64);
+			color: $gray-100;
+		}
+	}
+	&__img-wrap {
+		display: block;
+		position: relative;
+		flex-grow: 1;
+		margin-bottom: rem(13);
+		img {
+			@include mt;
+			width: 100%;
+			max-width: rem(134);
+			display: block;
+		}
+		.non-checked {
+			opacity: 1;
+		}
+		.checked {
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	&__text {
+		font-size: rem(12);
+		font-weight: 600;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: #000;
+		line-height: 1.55em;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
