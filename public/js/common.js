@@ -694,10 +694,35 @@ let sCategoriesSwiper = new Swiper('.sCategories__slider--js', {
 	spaceBetween: 8,
 	slidesPerView: 'auto',
 	navigation: {
-		nextEl: ".sCategories .swiper-button-next",
-		prevEl: ".sCategories .swiper-button-prev",
+		nextEl: ".sCategories__slide-wrap .swiper-button-next",
+		prevEl: ".sCategories__slide-wrap .swiper-button-prev",
 	},
 });
+
+
+let sCatalogSliders = $('.catalog-item__slider--js');
+for (let sCatalogSlider of sCatalogSliders) {
+	let sCatalogSwiper = new Swiper(sCatalogSlider, {
+		spaceBetween: 8,
+		slidesPerView: 1,
+		observer: true,
+		navigation: {
+			// nextEl:  `.catalog-item__img-wrap .swiper-button-next`,
+			// prevEl: `.catalog-item__img-wrap .swiper-button-prev`,
+			nextEl: sCatalogSlider.querySelector('.swiper-button-next'),
+			prevEl:  sCatalogSlider.querySelector('.swiper-button-prev'),
+			
+		}
+	});
+	
+	window.addEventListener('resize', function() {
+		if (this.window.innerWidth >= 992) {
+			sCatalogSwiper.enable();
+		} else {
+			sCatalogSwiper.disable();
+		}
+	});
+}
 
 if (document.readyState !== 'loading') {
 	eventHandler();

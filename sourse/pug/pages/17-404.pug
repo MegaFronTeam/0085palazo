@@ -11,6 +11,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 include ../blocks/s404/_s404.pug
+include ../blocks/sCalc/_sCalc.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -28,4 +29,5 @@ block pagecontent
 		+top-nav()
 	+page-head('', '' ,title)
 	+s404
+	+sCalc
 	+footer()

@@ -4,9 +4,12 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(32)};
+			--bs-gutter-y: #{rem(32)};
+		}
 	}
 	.section-title{
 		margin-bottom: rem(32);
@@ -24,6 +27,10 @@
 	}
 	&__slide-wrap {
 		position: relative;
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
 		.swiper-button-hand {
 			--swiperBorderColorDef: #{$gray-600};
 			--swiperColorDef: #{$gray-600};

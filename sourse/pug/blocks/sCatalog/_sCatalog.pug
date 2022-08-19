@@ -17,6 +17,21 @@ mixin catalogRowItem(img,title,price='125 000 руб.')
 			+e.title= title
 			+e.price!= price
 
+mixin catalogRowItem2(img,title,price='125 000 руб.')
+	+b.catalog-item--2(href="#")
+		+e.img-wrap
+			+e.slider-wrapper
+				+e.slider--js.swiper
+					.swiper-wrapper
+						.swiper-slide
+							+img(`img/prod-${img}.jpg`)
+						.swiper-slide
+							+img(`img/prod-${img}.jpg`)
+					+arrow
+		+e.text
+			+e.title= title
+			+e.price!= price
+
 mixin categorySlider
 	+b.slider-category--js.swiper
 		.swiper-wrapper
