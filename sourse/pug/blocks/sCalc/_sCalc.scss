@@ -183,6 +183,7 @@
 		}
 	}
 	&__row-price {
+		--bs-gutter-x: 0;
 		padding: rem(16) 0;
 		border-top: 1px solid $gray-100;
 		border-bottom: 1px solid $gray-100;
