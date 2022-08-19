@@ -1,9 +1,28 @@
 mixin sQwiz(data)
 	// start sQwiz
 	+b.SECTION.sQwiz.section#sQwiz&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sQwiz
-				
-			.row
+		+e.container.container
+			+e.text
+				+b.section-title
+					.section-subtitle ПАЛЛАЦО&nbsp;&mdash; производство мебели для домов и&nbsp;квартир под ключ
+					h2 ОТВЕТЬТЕ НА&nbsp;7&nbsp;ВОПРОСОВ И&nbsp;ПОЛУЧИТЕ КОНСУЛЬТАЦИЮ МЕБЕЛЬЩИКОВ
+				+e.descr Скачайте бесплатный чек-лист для выбора производителя мебели и&nbsp;примеры меблировки в&nbsp;разных ценовых категориях
+				+e.btn(href="#").btn.btn-primary
+					+icon('accept')
+					| Получить чек-лист и примеры
+				+e.bonus
+				+e.bonus-title Бонусы после прохождении теста
+				+e.bonus-list
+					+e.bonus-item(href="#" download)
+						+icon('docs')
+						| Кейсы меблировок квартир
+					+e.bonus-item(href="#" download)
+						+icon('docs')
+						| Чек-лист
+			+e.images
+				+e.vertical-wrap
+					+img('img/quiz-1.jpg')
+				+e.horizontal-wrap.d-none.d-lg-block
+					+img('img/quiz-2.jpg')
+
 	// end sQwiz

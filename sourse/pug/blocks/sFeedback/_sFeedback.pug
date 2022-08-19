@@ -1,9 +1,59 @@
+mixin feedbackItem(more, rating)
+	+b.feedback-item
+		+e.source
+			+e.author Андрей Востровский
+			+e.city г. Москва
+			+b.fb-rating(data-raiting=`${rating}`)
+				+e.body
+					+e.active
+					+e.items
+						input(type="radio" class="fb-rating__item" value="1" name="rating")
+						input(type="radio" class="fb-rating__item" value="2" name="rating")
+						input(type="radio" class="fb-rating__item" value="3" name="rating")
+						input(type="radio" class="fb-rating__item" value="4" name="rating")
+						input(type="radio" class="fb-rating__item" value="5" name="rating")
+		+e.text.P Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются.
+		if more
+			+e.more(href="#") Читать полностью...
+
 mixin sFeedback(data)
 	// start sFeedback
 	+b.SECTION.sFeedback.section#sFeedback&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sFeedback
-				
-			.row
+			+b.section-title
+				h2 Отзывы наших клиентов
+				.section-subtitle Оценка 5⭐️ на основании более чем 300 отзывов
+			+e.tabs.tabs.swiper
+				.tabs__caption.swiper-wrapper
+					.tabs__btn.swiper-slide.active Отзывы
+					.tabs__btn.swiper-slide Видеотзывы
+					.tabs__btn.swiper-slide Благодарственные письма
+				.tabs__content.active
+					+e.stars.FORM(action="#")
+						+b.fb-rating(data-raiting="4.5")
+							+e.body
+								+e.active
+								+e.items
+									input(type="radio" class="fb-rating__item" value="1" name="rating")
+									input(type="radio" class="fb-rating__item" value="2" name="rating")
+									input(type="radio" class="fb-rating__item" value="3" name="rating")
+									input(type="radio" class="fb-rating__item" value="4" name="rating")
+									input(type="radio" class="fb-rating__item" value="5" name="rating")
+							+e.score.d-none.d-md-block 4,6 / 21 оценка 
+					+b.slider-feedback--js.swiper
+						.swiper-wrapper
+							.swiper-slide
+								+feedbackItem('more','2')
+							.swiper-slide
+								+feedbackItem('','3.6')
+							.swiper-slide
+								+feedbackItem('more','2.6')
+							.swiper-slide
+								+feedbackItem('','1.3')
+						+e.controls
+							.swiper-pagination
+							.arrow-wrap
+								+arrow
+							+e.more-btn(href="#").btn.btn-outline-primary.d-none.d-md-block Показать еще отзывы
+								+icon('forward')
 	// end sFeedback

@@ -962,6 +962,55 @@
 									</div>
 								</a>
 							</div>
+							<div class="slider-category__slide swiper-slide">
+								<a class="catalog-item" href="#"><img src="img/prod-1.jpg" alt="" loading="lazy"/>
+									<div class="catalog-item__text">
+										<div class="catalog-item__title">КУХНИ НА ЗАКАЗ
+										</div>
+										<div class="catalog-item__price">от 125 000 руб.
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="slider-category__slide swiper-slide">
+								<a class="catalog-item" href="#"><img src="img/prod-2.jpg" alt="" loading="lazy"/>
+									<div class="catalog-item__text">
+										<div class="catalog-item__title">МЕБЕЛЬ В ДЕТСКУЮ
+										</div>
+										<div class="catalog-item__price">от 125 000 руб.
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="slider-category__slide swiper-slide">
+								<a class="catalog-item" href="#"><img src="img/prod-3.jpg" alt="" loading="lazy"/>
+									<div class="catalog-item__text">
+										<div class="catalog-item__title">СТОЛОВЫЕ ГРУППЫ
+										</div>
+										<div class="catalog-item__price">от 125 000 руб.
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="slider-category__controls row">
+							<div class="d-none d-md-block col-md-6">
+								<div class="swiper-pagination"></div>
+							</div>
+							<div class="col-md-6">
+								<div class="arrow-wrap">
+									<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -969,11 +1018,42 @@
 			<!-- end sCatalog-->
 			<!-- start sQwiz-->
 			<section class="sQwiz section" id="sQwiz">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>sQwiz</h2>
+				<div class="sQwiz__container container">
+					<div class="sQwiz__text">
+						<div class="section-title">
+							<div class="section-subtitle">ПАЛЛАЦО&nbsp;&mdash; производство мебели для домов и&nbsp;квартир под ключ</div>
+							<h2>ОТВЕТЬТЕ НА&nbsp;7&nbsp;ВОПРОСОВ И&nbsp;ПОЛУЧИТЕ КОНСУЛЬТАЦИЮ МЕБЕЛЬЩИКОВ</h2>
+						</div>
+						<div class="sQwiz__descr">Скачайте бесплатный чек-лист для выбора производителя мебели и&nbsp;примеры меблировки в&nbsp;разных ценовых категориях
+						</div>
+						<a class="sQwiz__btn btn btn-primary" href="#">
+							<svg class="icon icon-accept ">
+								<use xlink:href="img/svg/sprite.svg#accept"></use>
+							</svg>Получить чек-лист и примеры
+						</a>
+						<div class="sQwiz__bonus">
+						</div>
+						<div class="sQwiz__bonus-title">Бонусы после прохождении теста
+						</div>
+						<div class="sQwiz__bonus-list">
+							<a class="sQwiz__bonus-item" href="#" download="download">
+								<svg class="icon icon-docs ">
+									<use xlink:href="img/svg/sprite.svg#docs"></use>
+								</svg>Кейсы меблировок квартир
+							</a>
+							<a class="sQwiz__bonus-item" href="#" download="download">
+								<svg class="icon icon-docs ">
+									<use xlink:href="img/svg/sprite.svg#docs"></use>
+								</svg>Чек-лист
+							</a>
+						</div>
 					</div>
-					<div class="row"></div>
+					<div class="sQwiz__images">
+						<div class="sQwiz__vertical-wrap"><img src="img/quiz-1.jpg" alt="" loading="lazy"/>
+						</div>
+						<div class="sQwiz__horizontal-wrap d-none d-lg-block"><img src="img/quiz-2.jpg" alt="" loading="lazy"/>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end sQwiz-->
@@ -1048,10 +1128,164 @@
 			<!-- start sFeedback-->
 			<section class="sFeedback section" id="sFeedback">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sFeedback</h2>
+					<div class="section-title">
+						<h2>Отзывы наших клиентов</h2>
+						<div class="section-subtitle">Оценка 5⭐️ на основании более чем 300 отзывов</div>
 					</div>
-					<div class="row"></div>
+					<div class="sFeedback__tabs tabs swiper">
+						<div class="tabs__caption swiper-wrapper">
+							<div class="tabs__btn swiper-slide active">Отзывы</div>
+							<div class="tabs__btn swiper-slide">Видеотзывы</div>
+							<div class="tabs__btn swiper-slide">Благодарственные письма</div>
+						</div>
+						<div class="tabs__content active">
+							<form class="sFeedback__stars" action="#">
+								<div class="fb-rating" data-raiting="4.5">
+									<div class="fb-rating__body">
+										<div class="fb-rating__active">
+										</div>
+										<div class="fb-rating__items">
+											<input class="fb-rating__item" type="radio" value="1" name="rating"/>
+											<input class="fb-rating__item" type="radio" value="2" name="rating"/>
+											<input class="fb-rating__item" type="radio" value="3" name="rating"/>
+											<input class="fb-rating__item" type="radio" value="4" name="rating"/>
+											<input class="fb-rating__item" type="radio" value="5" name="rating"/>
+										</div>
+									</div>
+									<div class="fb-rating__score d-none d-md-block">4,6 / 21 оценка 
+									</div>
+								</div>
+							</form>
+							<div class="slider-feedback slider-feedback--js swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="feedback-item">
+											<div class="feedback-item__source">
+												<div class="feedback-item__author">Андрей Востровский
+												</div>
+												<div class="feedback-item__city">г. Москва
+												</div>
+												<div class="fb-rating" data-raiting="2">
+													<div class="fb-rating__body">
+														<div class="fb-rating__active">
+														</div>
+														<div class="fb-rating__items">
+															<input class="fb-rating__item" type="radio" value="1" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="2" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="3" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="4" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="5" name="rating"/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p class="feedback-item__text">Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются.
+											</p>
+											<a class="feedback-item__more" href="#">Читать полностью...
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="feedback-item">
+											<div class="feedback-item__source">
+												<div class="feedback-item__author">Андрей Востровский
+												</div>
+												<div class="feedback-item__city">г. Москва
+												</div>
+												<div class="fb-rating" data-raiting="3.6">
+													<div class="fb-rating__body">
+														<div class="fb-rating__active">
+														</div>
+														<div class="fb-rating__items">
+															<input class="fb-rating__item" type="radio" value="1" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="2" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="3" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="4" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="5" name="rating"/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p class="feedback-item__text">Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются.
+											</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="feedback-item">
+											<div class="feedback-item__source">
+												<div class="feedback-item__author">Андрей Востровский
+												</div>
+												<div class="feedback-item__city">г. Москва
+												</div>
+												<div class="fb-rating" data-raiting="2.6">
+													<div class="fb-rating__body">
+														<div class="fb-rating__active">
+														</div>
+														<div class="fb-rating__items">
+															<input class="fb-rating__item" type="radio" value="1" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="2" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="3" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="4" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="5" name="rating"/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p class="feedback-item__text">Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются.
+											</p>
+											<a class="feedback-item__more" href="#">Читать полностью...
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="feedback-item">
+											<div class="feedback-item__source">
+												<div class="feedback-item__author">Андрей Востровский
+												</div>
+												<div class="feedback-item__city">г. Москва
+												</div>
+												<div class="fb-rating" data-raiting="1.3">
+													<div class="fb-rating__body">
+														<div class="fb-rating__active">
+														</div>
+														<div class="fb-rating__items">
+															<input class="fb-rating__item" type="radio" value="1" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="2" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="3" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="4" name="rating"/>
+															<input class="fb-rating__item" type="radio" value="5" name="rating"/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p class="feedback-item__text">Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="slider-feedback__controls">
+									<div class="swiper-pagination"></div>
+									<div class="arrow-wrap">
+										<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+											<svg class="icon icon-chevron-left ">
+												<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+											</svg>
+										</div>
+										<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+											<svg class="icon icon-chevron-right ">
+												<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+											</svg>
+										</div>
+									</div>
+									<a class="slider-feedback__more-btn btn btn-outline-primary d-none d-md-block" href="#">Показать еще отзывы
+										<svg class="icon icon-forward ">
+											<use xlink:href="img/svg/sprite.svg#forward"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end sFeedback-->
@@ -1517,6 +1751,17 @@
 			</section>
 			<!-- end sCookies-->
 		</div>
+		<!-- start sCookies-->
+		<section class="sCookies section" id="sCookies">
+			<div class="container">
+				<div class="sCookies__row">
+					<p>Мы&nbsp;используем файлы cookie. Пользуясь настоящим веб-сайтом, Вы&nbsp;даете свое согласие на&nbsp;использование файлов cookies. <a href="#">Узнать подробнее</a></p>
+					<button class="sCookies__btn cookie-btn cookie-btn--js btn btn-primary" type="button">OK
+					</button>
+				</div>
+			</div>
+		</section>
+		<!-- end sCookies-->
 		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win modal-win--call-a-master">

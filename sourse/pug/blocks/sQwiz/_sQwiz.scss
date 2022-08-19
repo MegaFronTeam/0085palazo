@@ -1,15 +1,196 @@
 // start .sQwiz
 .sQwiz {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	background-color: rgba(#EDEDED, .23);
+	--sPT: #{rem(40)};
+	--sPB: #{rem(27)};
+	--sTPB: #{rem(24)};
+	@include media-breakpoint-up(sm) {
+		--sPB: #{rem(40)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(168)};	
+		--sPB: #{rem(160)};
+	}
+	@include media-breakpoint-up(xl) {
+		--sPB: #{rem(15)};
+	}
+	
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 
 	}
+	&__container {
+		display: flex;
+		@include media-breakpoint-up(lg) {
+			padding-left: rem(83);
+		}
+	}
 	.section-title{
 		
+	}
+	.section-subtitle {
+		margin-bottom: 10px;
+	}
+
+	h2 {
+		max-width: 700px;
+		line-height: 99%;
+	}
+	&__text {
+		width: auto;
+		min-width: 100%;
+		@include media-breakpoint-up(lg) {
+			min-width: 70%;
+		}
+	}
+
+	&__descr {
+		max-width: 202px;
+		margin-bottom: 32px;
+		font-size: rem(15);
+		line-height: 155%;
+		@include media-breakpoint-up(sm) {
+			max-width: 413px;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: rem(18);
+			margin-bottom: 26px;
+
+		}
+	}
+
+	&__btn {
+		padding: 12px 20px;
+		margin-bottom: rem(42);
+		font-size: 14px;
+		font-weight: 600;
+		color: $white;
+		background-color: $red;
+		border-radius: $border-radius;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(16);
+		}
+		.icon {
+			margin-right: 20px;
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	&__bonus {
+		&-title {
+			margin-bottom: 19px;
+			font-weight: 600;
+			font-size: 12px;
+			line-height: 155%;
+			letter-spacing: 0.07em;
+			text-transform: uppercase;
+			color: $gray-600;
+		}
+		&-list {
+			display: flex;
+			max-width: 334px;
+			flex-direction: column;
+			opacity: 0.5;
+		}
+		&-item {
+			display: flex;
+			align-items: center;
+			padding: 8px;
+			width: auto;
+			border: 1px solid #DBDBDB;
+			border-radius: $border-radius;
+			font-size: 14px;
+			font-weight: 600;
+			color: $gray-600;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(16);	
+			}
+			&:not(:last-child) {
+				margin-bottom: 24px;
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 16px;	
+				}
+			}
+			.icon {
+				margin-right: 16px;
+				width: 32px;
+				height: 32px;
+				color: $red;
+			}
+		}
+	}
+	&__images {
+		display: flex;
+		@include media-breakpoint-up(lg) {
+			align-items: flex-start;
+		}
+		img {
+			border-radius: $border-radius;
+		}
+	}
+	&__vertical-wrap {
+		position: relative;
+		height: auto;
+    left: -21%;
+		top: 8%;
+    z-index: -1;
+		max-height: 260px;
+		@include media-breakpoint-up(xl) {
+			max-height: none;
+			left: -41%;
+			top: -66px;
+		}
+		@include media-breakpoint-up(md) {
+			max-height: none;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			top: -15px;
+			right: -15px;
+			width: 100%;
+			height: 100%;
+			border: 1px solid $black;
+			border-radius: $border-radius;
+			z-index: 0;
+			@include media-breakpoint-up(lg) {
+				top: -40px;
+				right: -40px;
+				z-index: -2;
+			}
+		}
+		img {
+			max-height: 100%;
+			width: auto;
+		}
+	}
+	&__horizontal-wrap {
+		position: relative;
+		height: auto;
+    bottom: -20%;
+    left: -80%;
+    z-index: -1;
+		@include media-breakpoint-up(xl) {
+			bottom: -15%;
+			left: -59%;
+		}
+		@include media-breakpoint-up(lg) {
+			bottom: -40%;
+    	left: -59%;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: -40px;
+			right: -40px;
+			width: 53%;
+			height: 53%;
+			border: 1px solid $black;
+			border-radius: $border-radius;
+			z-index: -2;
+		}
 	}
 	&__col{
 

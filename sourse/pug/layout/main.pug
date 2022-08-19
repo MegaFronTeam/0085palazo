@@ -1,6 +1,7 @@
 include include.pug
 include js-css.pug
 include ../blocks/modal/_modal.pug
+include ../blocks/sCookies/_sCookies.pug
 doctype html
 html(lang="ru")
 	head
@@ -40,7 +41,7 @@ html(lang="ru")
 		.main-wrapper
 			block pagecontent
 				h3 content
-		
+		+sCookies()
 		+modal()
 
 		+allcjs()

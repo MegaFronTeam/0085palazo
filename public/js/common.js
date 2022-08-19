@@ -418,6 +418,28 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+
+	const swiperFeedback = new Swiper('.slider-feedback--js', { 
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 32
+			},
+		},
+		navigation: {
+			nextEl: '.slider-feedback .swiper-button-next',
+			prevEl: '.slider-feedback .swiper-button-prev',
+		},
+		pagination: {
+			el: '.slider-feedback .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
 	
 	const swiperMore = new Swiper('.slider-more--js', { 
 		breakpoints: {
@@ -474,6 +496,15 @@ function eventHandler() {
 	for (let sliderCatalog of slidersCatalog) {
 		const swiperCatalog =  new Swiper('.slider-category--js', {
 			slidesPerView: 'auto',
+			navigation: {
+				nextEl: sliderCatalog.querySelector(".swiper-button-next"),
+				prevEl: sliderCatalog.querySelector(".swiper-button-prev"),
+			},
+			pagination: {
+				el: sliderCatalog.querySelector('.swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+			},
 		});
 	}
 
@@ -581,6 +612,41 @@ function eventHandler() {
 		spaceBetween: 0,
 		slidesPerView: 'auto',
 	});
+
+	// Рейтинг в отзывах на главной
+
+	const ratings = document.querySelectorAll('.fb-rating');
+	if (ratings.length > 0) {
+		initRatings();
+	}
+
+	function initRatings() {
+		let ratingActive, ratingValue;
+		for (let index = 0; index < ratings.length; index++) {
+			const rating = ratings[index];
+			console.log(rating);
+			initRating(rating);
+		}
+		function initRating(rating) {
+			initRatingVars(rating);
+	
+			setRatingActiveWidth();
+		}
+		function initRatingVars(rating) {
+			ratingActive = rating.querySelector('.fb-rating__active');
+			ratingValue = rating.getAttribute('data-raiting');
+			console.log(ratingValue);
+		}
+	
+		function setRatingActiveWidth(index = ratingValue) {
+			const ratingActiveWidth = index / 0.05;
+			ratingActive.style.width = `${ratingActiveWidth}%`;
+		}
+	}
+
+
+
+	// / Рейтинг в отзывах на главной
 
 	$('.sExamples__btn').click(function() {
 		$(this).toggleClass('active-btn');

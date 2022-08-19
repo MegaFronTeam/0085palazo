@@ -4,7 +4,7 @@
 	--sPB: #{rem(46)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
-		--sPB: #{rem(92)};
+		--sPB: #{rem(52)};
 	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -330,6 +330,20 @@
 		@include media-breakpoint-down(lg) {
 			width: 252px;
 		}
+	}
+	&__controls {
+		display: flex;
+		align-items: center;
+		padding-top: 40px;
+	}
+	.swiper-pagination {
+		position: relative;
+	}
+	.arrow-wrap {
+		width: 100%;
+	}
+	.swiper-button-hand {
+		color: $gray-600;
 	}
 }
 

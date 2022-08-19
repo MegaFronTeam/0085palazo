@@ -32,7 +32,7 @@ mixin catalogRowItem2(img,title,price='125 000 руб.')
 			+e.title= title
 			+e.price!= price
 
-mixin categorySlider
+mixin categoryRow
 	+b.slider-category--js.swiper
 		.swiper-wrapper
 			+e.slide.swiper-slide
@@ -41,6 +41,28 @@ mixin categorySlider
 				+catalogRowItem(`2`,`МЕБЕЛЬ В ДЕТСКУЮ`,`от 125 000 руб.`)
 			+e.slide.swiper-slide
 				+catalogRowItem(`3`,`СТОЛОВЫЕ ГРУППЫ`,`от 125 000 руб.`)
+
+mixin categorySliderRow
+	+b.slider-category--js.swiper
+		.swiper-wrapper
+			+e.slide.swiper-slide
+				+catalogRowItem(`1`,`КУХНИ НА ЗАКАЗ`,`от 125 000 руб.`)
+			+e.slide.swiper-slide
+				+catalogRowItem(`2`,`МЕБЕЛЬ В ДЕТСКУЮ`,`от 125 000 руб.`)
+			+e.slide.swiper-slide
+				+catalogRowItem(`3`,`СТОЛОВЫЕ ГРУППЫ`,`от 125 000 руб.`)
+			+e.slide.swiper-slide
+				+catalogRowItem(`1`,`КУХНИ НА ЗАКАЗ`,`от 125 000 руб.`)
+			+e.slide.swiper-slide
+				+catalogRowItem(`2`,`МЕБЕЛЬ В ДЕТСКУЮ`,`от 125 000 руб.`)
+			+e.slide.swiper-slide
+				+catalogRowItem(`3`,`СТОЛОВЫЕ ГРУППЫ`,`от 125 000 руб.`)
+		+e.controls.row
+			.d-none.d-md-block.col-md-6
+				.swiper-pagination
+			.col-md-6
+				.arrow-wrap
+					+arrow
 
 mixin seeMore(title)
 	h2= title
@@ -172,7 +194,7 @@ mixin sCatalog(data)
 			+b.section-title
 				h2 ПОПУЛЯРНЫЕ КУХНИ
 				.section-subtitle Выбор наших клиентов в 2022 году
-			+categorySlider()
+			+categorySliderRow()
 			//- +b.slider-catalog--js.swiper
 			//- 	.swiper-wrapper
 			//- 		+e.slide.swiper-slide
