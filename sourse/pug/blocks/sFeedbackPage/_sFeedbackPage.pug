@@ -4,8 +4,9 @@ mixin sFeedbackPage(data)
 		.container
 			.tabs
 				+e.btn-row.row
-					+e.tags-col.col-8
-						.tabs__caption.swiper-wrapper
+					+e.tags-col.col-lg-8
+						+e.slider--js.swiper
+							.tabs__caption.swiper-wrapper
 								.tabs__btn.swiper-slide видео отзывы
 								.tabs__btn.swiper-slide.active наши клиенты
 								.tabs__btn.swiper-slide акты работ
@@ -13,7 +14,10 @@ mixin sFeedbackPage(data)
 					.col-12.col-xl-2
 						+btn('Оставить отзыв').btn.btn-outline-primary
 				.tabs__content
-					321
+					+e.video-row.row
+						-for(let i =1; i <=12; i++)
+							.col-sm-6.col-lg-4
+								+video(i)
 				.tabs__content.active
 					+e.row.row
 						.col-md-6.col-xl-4

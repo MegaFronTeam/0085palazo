@@ -14,7 +14,6 @@
 2. <https://megafronteam.github.io/0085palazo/public/13-faq.html>
 2. <https://megafronteam.github.io/0085palazo/public/14-vacancies.html>
 2. <https://megafronteam.github.io/0085palazo/public/15-map.html>
-2. <https://megafronteam.github.io/0085palazo/public/16-reviews.html>
 2. <https://megafronteam.github.io/0085palazo/public/18-blog.html>
 2. <https://megafronteam.github.io/0085palazo/public/19-feedback.html>
 2. <https://megafronteam.github.io/0085palazo/public/20-favorites.html>
