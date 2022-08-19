@@ -6,9 +6,18 @@
 	&__row{
 		--bs-gutter-x: #{rem(16)};
 		--bs-gutter-y: #{rem(16)};
+		margin-bottom: rem(15);
 		@include media-breakpoint-up(lg) {
 			--bs-gutter-x: #{rem(32)};
 			--bs-gutter-y: #{rem(32)};
+			margin-bottom: rem(42);
+		}
+	}
+	&__col {
+		@include media-breakpoint-down(lg) {
+			&:nth-child(n + 4) {
+				display: none;
+			}
 		}
 	}
 	.section-title{
@@ -51,14 +60,14 @@
 		overflow: visible;
 		@include media-breakpoint-up(lg) {
 			overflow: hidden;
-			margin: 0 rem(40);
+			margin: 0 rem(32);
 		}
 	}
 	&__slide {
 		width: max-content;
 		a {
 			display: block;
-			padding: rem(9) rem(12);
+			padding: rem(5.800) rem(12);
 			background-color: $gray-100;
 			color: $primary;
 			border-radius: 4px;
@@ -68,6 +77,24 @@
 				background-color: $primary;
 				color: #fff;
 			}
+		}
+	}
+	&__btn {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		--bs-btn-padding-x: #{rem(20)};
+		--bs-btn-padding-y: #{rem(9.5)};
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include media-breakpoint-up(md) {
+			max-width: rem(295);
+		}
+		.icon {
+			flex: 0 0 auto;
+			font-size: rem(16);
+			margin-left: rem(20);
 		}
 	}
 	@include media-breakpoint-up(xl) {}
