@@ -40,8 +40,8 @@
 	justify-content: center;
 	align-items: center;
 	img{
-		max-width: 100%;
-		height: auto;
+		// max-width: 100%;
+		// height: auto;
 	}
 }
 .cat-body-row {
@@ -400,8 +400,10 @@
 	&--2 {
 		transform: scale(1);
 		&:hover {
-			transform: scale(1.5);
-			z-index: 125;
+			@include media-breakpoint-up(lg) {
+				transform: scale(1.5);
+				z-index: 125;
+			}
 			.swiper-button-hand {
 				opacity: 1;
 				pointer-events: all;
