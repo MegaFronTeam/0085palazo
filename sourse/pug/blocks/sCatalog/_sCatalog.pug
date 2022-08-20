@@ -106,8 +106,9 @@ mixin product-item(img, title="Кухня Дестини", total='110 900 р', p
 			+e.title(href="#")!= title
 		+e.descr
 			+e.text Сравните цену в разных материалах 
-				a(href="#", data-bs-toggle="tooltip" data-bs-title="Default tooltip")
+				.tooltips
 					+icon('question')
+					.tooltiptext Какой-то текст
 			+e.text-row
 				+e.text-left.FORM
 					+e.text-title Фасад верх
@@ -125,9 +126,13 @@ mixin product-item(img, title="Кухня Дестини", total='110 900 р', p
 					+e.price= total
 				+e.text-right
 					+e.text-title.d-none.d-lg-block Цена погонного метра
-						+icon('question')
+						.tooltips
+							+icon('question')
+							.tooltiptext Какой-то текст
 					+e.text-title.d-lg-none Цена п.м.
-						+icon('question')
+						.tooltips
+							+icon('question')
+							.tooltiptext Какой-то текст
 					+e.price= price
 	// /.product-item
 
@@ -175,7 +180,13 @@ mixin catFilter
 	.filter-wrap
 		+b.catalog-filter
 			+e.row.d-none.d-md-grid
-				+select('Форма','Не выбрано','Не выбрано 1','Не выбрано 2')
+				label(for='select-form') Форма
+					select.form-control.form-control-select(name='select-form'  multiple)
+						option(value='Не выбрано' selected) Не выбрано
+						option(value='Выбор 1') Выбор 1
+						option(value='Выбор 2') Выбор 2
+						option(value='Выбор 3') Выбор 3
+				//- +select('Форма','Не выбрано','Не выбрано 1','Не выбрано 2').choices(multiple)
 				+select('Стиль','Не выбрано','Не выбрано 1','Не выбрано 2')
 				+select('Материал','Выбрано 3','Не выбрано 1','Не выбрано 2')
 				+select('Цвет','Розовы...','Не выбрано 1','Не выбрано 2')

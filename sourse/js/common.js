@@ -647,6 +647,14 @@ function eventHandler() {
 		}
 	}
 
+	const choices = new Choices('.form-control-select', {
+		searchEnabled: false,
+    searchChoices: false,
+		itemSelectText: '',
+		renderSelectedChoices: 'always',
+		placeholderValue: 'Не выбрано',
+		removeItemButton: true,
+	});
 
 
 	// / Рейтинг в отзывах на главной

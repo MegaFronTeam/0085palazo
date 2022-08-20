@@ -329,15 +329,14 @@
 				<div class="filter-wrap">
 					<div class="catalog-filter">
 						<div class="catalog-filter__row d-none d-md-grid">
-							<div class="catalog-filter__input-wrap form-group">
-								<label><span class="catalog-filter__title">Форма</span>
-									<select class="catalog-filter__input form-control">
-										<option>Не выбрано</option>
-										<option>Не выбрано 1</option>
-										<option>Не выбрано 2</option>
-									</select>
-								</label>
-							</div>
+							<label for="select-form">Форма
+								<select class="form-control form-control-select" name="select-form" multiple="multiple">
+									<option value="Не выбрано" selected="selected">Не выбрано</option>
+									<option value="Выбор 1">Выбор 1</option>
+									<option value="Выбор 2">Выбор 2</option>
+									<option value="Выбор 3">Выбор 3</option>
+								</select>
+							</label>
 							<div class="catalog-filter__input-wrap form-group">
 								<label><span class="catalog-filter__title">Стиль</span>
 									<select class="catalog-filter__input form-control">
@@ -493,10 +492,13 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+									<div class="product-item__text">Сравните цену в разных материалах 
+										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
-											</svg></a>
+											</svg>
+											<div class="tooltiptext">Какой-то текст</div>
+										</div>
 									</div>
 									<div class="product-item__text-row">
 										<form class="product-item__text-left">
@@ -529,14 +531,20 @@
 										</div>
 										<div class="product-item__text-right">
 											<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__price">18 900 р
 											</div>
@@ -593,10 +601,13 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+									<div class="product-item__text">Сравните цену в разных материалах 
+										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
-											</svg></a>
+											</svg>
+											<div class="tooltiptext">Какой-то текст</div>
+										</div>
 									</div>
 									<div class="product-item__text-row">
 										<form class="product-item__text-left">
@@ -629,14 +640,20 @@
 										</div>
 										<div class="product-item__text-right">
 											<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__price">18 900 р
 											</div>
@@ -693,10 +710,13 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+									<div class="product-item__text">Сравните цену в разных материалах 
+										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
-											</svg></a>
+											</svg>
+											<div class="tooltiptext">Какой-то текст</div>
+										</div>
 									</div>
 									<div class="product-item__text-row">
 										<form class="product-item__text-left">
@@ -729,14 +749,20 @@
 										</div>
 										<div class="product-item__text-right">
 											<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__price">18 900 р
 											</div>
@@ -793,10 +819,13 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+									<div class="product-item__text">Сравните цену в разных материалах 
+										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
-											</svg></a>
+											</svg>
+											<div class="tooltiptext">Какой-то текст</div>
+										</div>
 									</div>
 									<div class="product-item__text-row">
 										<form class="product-item__text-left">
@@ -829,14 +858,20 @@
 										</div>
 										<div class="product-item__text-right">
 											<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__price">18 900 р
 											</div>
@@ -893,10 +928,13 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+									<div class="product-item__text">Сравните цену в разных материалах 
+										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
-											</svg></a>
+											</svg>
+											<div class="tooltiptext">Какой-то текст</div>
+										</div>
 									</div>
 									<div class="product-item__text-row">
 										<form class="product-item__text-left">
@@ -929,14 +967,20 @@
 										</div>
 										<div class="product-item__text-right">
 											<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__price">18 900 р
 											</div>
@@ -993,10 +1037,13 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+									<div class="product-item__text">Сравните цену в разных материалах 
+										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
-											</svg></a>
+											</svg>
+											<div class="tooltiptext">Какой-то текст</div>
+										</div>
 									</div>
 									<div class="product-item__text-row">
 										<form class="product-item__text-left">
@@ -1029,14 +1076,20 @@
 										</div>
 										<div class="product-item__text-right">
 											<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__price">18 900 р
 											</div>
@@ -1093,10 +1146,13 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+									<div class="product-item__text">Сравните цену в разных материалах 
+										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
-											</svg></a>
+											</svg>
+											<div class="tooltiptext">Какой-то текст</div>
+										</div>
 									</div>
 									<div class="product-item__text-row">
 										<form class="product-item__text-left">
@@ -1129,14 +1185,20 @@
 										</div>
 										<div class="product-item__text-right">
 											<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__price">18 900 р
 											</div>
@@ -1193,10 +1255,13 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+									<div class="product-item__text">Сравните цену в разных материалах 
+										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
-											</svg></a>
+											</svg>
+											<div class="tooltiptext">Какой-то текст</div>
+										</div>
 									</div>
 									<div class="product-item__text-row">
 										<form class="product-item__text-left">
@@ -1229,14 +1294,20 @@
 										</div>
 										<div class="product-item__text-right">
 											<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__price">18 900 р
 											</div>
@@ -1293,10 +1364,13 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+									<div class="product-item__text">Сравните цену в разных материалах 
+										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
-											</svg></a>
+											</svg>
+											<div class="tooltiptext">Какой-то текст</div>
+										</div>
 									</div>
 									<div class="product-item__text-row">
 										<form class="product-item__text-left">
@@ -1329,14 +1403,20 @@
 										</div>
 										<div class="product-item__text-right">
 											<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__price">18 900 р
 											</div>
@@ -1393,10 +1473,13 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+									<div class="product-item__text">Сравните цену в разных материалах 
+										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
-											</svg></a>
+											</svg>
+											<div class="tooltiptext">Какой-то текст</div>
+										</div>
 									</div>
 									<div class="product-item__text-row">
 										<form class="product-item__text-left">
@@ -1429,14 +1512,20 @@
 										</div>
 										<div class="product-item__text-right">
 											<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__price">18 900 р
 											</div>
@@ -1493,10 +1582,13 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+									<div class="product-item__text">Сравните цену в разных материалах 
+										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
-											</svg></a>
+											</svg>
+											<div class="tooltiptext">Какой-то текст</div>
+										</div>
 									</div>
 									<div class="product-item__text-row">
 										<form class="product-item__text-left">
@@ -1529,14 +1621,20 @@
 										</div>
 										<div class="product-item__text-right">
 											<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__price">18 900 р
 											</div>
@@ -1593,10 +1691,13 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
+									<div class="product-item__text">Сравните цену в разных материалах 
+										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
-											</svg></a>
+											</svg>
+											<div class="tooltiptext">Какой-то текст</div>
+										</div>
 									</div>
 									<div class="product-item__text-row">
 										<form class="product-item__text-left">
@@ -1629,14 +1730,20 @@
 										</div>
 										<div class="product-item__text-right">
 											<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
-												<svg class="icon icon-question ">
-													<use xlink:href="img/svg/sprite.svg#question"></use>
-												</svg>
+												<div class="tooltips">
+													<svg class="icon icon-question ">
+														<use xlink:href="img/svg/sprite.svg#question"></use>
+													</svg>
+													<div class="tooltiptext">Какой-то текст</div>
+												</div>
 											</div>
 											<div class="product-item__price">18 900 р
 											</div>

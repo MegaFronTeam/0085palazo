@@ -3,15 +3,27 @@ mixin feedbackItem(more, rating)
 		+e.source
 			+e.author Андрей Востровский
 			+e.city г. Москва
-			+b.fb-rating(data-raiting=`${rating}`)
-				+e.body
-					+e.active
-					+e.items
-						input(type="radio" class="fb-rating__item" value="1" name="rating")
-						input(type="radio" class="fb-rating__item" value="2" name="rating")
-						input(type="radio" class="fb-rating__item" value="3" name="rating")
-						input(type="radio" class="fb-rating__item" value="4" name="rating")
-						input(type="radio" class="fb-rating__item" value="5" name="rating")
+			+e.stars.FORM(action="#")
+				+b.fb-rating(data-raiting=`${rating}`)
+					+e.body
+						+e.active
+							+icon('star')
+							+icon('star')
+							+icon('star')
+							+icon('star')
+							+icon('star')
+						+e.bg
+							+icon('star')
+							+icon('star')
+							+icon('star')
+							+icon('star')
+							+icon('star')
+						+e.items
+							input(type="radio" class="fb-rating__item" value="1" name="rating")
+							input(type="radio" class="fb-rating__item" value="2" name="rating")
+							input(type="radio" class="fb-rating__item" value="3" name="rating")
+							input(type="radio" class="fb-rating__item" value="4" name="rating")
+							input(type="radio" class="fb-rating__item" value="5" name="rating")
 		+e.text.P Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются.
 		if more
 			+e.more(href="#") Читать полностью...
@@ -30,16 +42,26 @@ mixin sFeedback(data)
 					.tabs__btn.swiper-slide Благодарственные письма
 				.tabs__content.active
 					+e.stars.FORM(action="#")
-						+b.fb-rating(style="--star: 4.6")
+						+b.fb-rating(data-raiting="4.5")
 							+e.body
-								+img('img/svg/all-stars-empty.svg')
-								//- +e.active
-								//- +e.items
-									//- input(type="radio" class="fb-rating__item" value="1" name="rating")
-									//- input(type="radio" class="fb-rating__item" value="2" name="rating")
-									//- input(type="radio" class="fb-rating__item" value="3" name="rating")
-									//- input(type="radio" class="fb-rating__item" value="4" name="rating")
-									//- input(type="radio" class="fb-rating__item" value="5" name="rating")
+								+e.active
+									+icon('star')
+									+icon('star')
+									+icon('star')
+									+icon('star')
+									+icon('star')
+								+e.bg
+									+icon('star')
+									+icon('star')
+									+icon('star')
+									+icon('star')
+									+icon('star')
+								+e.items
+									input(type="radio" class="fb-rating__item" value="1" name="rating")
+									input(type="radio" class="fb-rating__item" value="2" name="rating")
+									input(type="radio" class="fb-rating__item" value="3" name="rating")
+									input(type="radio" class="fb-rating__item" value="4" name="rating")
+									input(type="radio" class="fb-rating__item" value="5" name="rating")
 							+e.score.d-none.d-md-block 4,6 / 21 оценка 
 					+b.slider-feedback--js.swiper
 						.swiper-wrapper
@@ -57,4 +79,8 @@ mixin sFeedback(data)
 								+arrow
 							+e.more-btn(href="#").btn.btn-outline-primary.d-none.d-md-block Показать еще отзывы
 								+icon('forward')
+				.tabs__content
+					| Видеотзывы
+				.tabs__content
+					| Благодарственные письма
 	// end sFeedback
