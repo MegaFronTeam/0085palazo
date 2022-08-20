@@ -167,36 +167,108 @@ mixin catalogSlider
 
 mixin catSorter
 	+b.catalog-sorter&attributes(attributes)
-		+select('Сортировка','Сначала дорогие','Сначала недорогие')
-		+e.total.d-none.d-md-block Всего: 250
-		+e.display.d-none.d-md-flex
-			| Отображать по:
-			+btn('12','button').btn.active
-			+btn('24','button').btn
-			+btn('48','button').btn
-		+pugin()
+		+e.container.container
+			+select('Сортировка','Сначала дорогие','Сначала недорогие')
+			+e.total.d-none.d-md-block Всего: 250
+			+e.display.d-none.d-md-flex
+				| Отображать по:
+				+btn('12','button').btn.active
+				+btn('24','button').btn
+				+btn('48','button').btn
+			+pugin()
 
 mixin catFilter
 	.filter-wrap
 		+b.catalog-filter
 			+e.row.d-none.d-md-grid
-				label(for='select-form') Форма
-					select.form-control.form-control-select(name='select-form'  multiple)
-						option(value='Не выбрано' selected) Не выбрано
-						option(value='Выбор 1') Выбор 1
-						option(value='Выбор 2') Выбор 2
-						option(value='Выбор 3') Выбор 3
+				+e.dropdown-item
+					+e.dropdown-title Форма
+					+e.dropdown-btn.BUTTON Не выбрано
+					+e.dropdown-body
+						+e.dropdown-content
+							+in-c('checkbox','Выбор 1','form')
+							+in-c('checkbox','Выбор 2','form')
+							+in-c('checkbox','Выбор 3','form')
+				+e.dropdown-item
+					+e.dropdown-title Стиль
+					+e.dropdown-btn.BUTTON Не выбрано
+					+e.dropdown-body
+						+e.dropdown-content
+							+in-c('checkbox','Выбор 1','style')
+							+in-c('checkbox','Выбор 2','style')
+							+in-c('checkbox','Выбор 3','style')
+				+e.dropdown-item
+					+e.dropdown-title Материал
+					+e.dropdown-btn.BUTTON Не выбрано
+					+e.dropdown-body
+						+e.dropdown-content
+							+in-c('checkbox','Духовой шкаф','material')
+							+in-c('checkbox','Духовой шкаф','material')
+							+in-c('checkbox','Варочная панель ','material')
+							+in-c('checkbox','Духовой шкаф','material')
+							+in-c('checkbox','Духовой шкаф','material')
+							+in-c('checkbox','Варочная панель ','material')
+							+in-c('checkbox','Духовой шкаф','material')
+							+in-c('checkbox','Духовой шкаф','material')
+							+in-c('checkbox','Варочная панель ','material')
+							+in-c('checkbox','Духовой шкаф','material')
+							+in-c('checkbox','Духовой шкаф','material')
+							+in-c('checkbox','Варочная панель ','material')
+						+e.dropdown-summary
+							+e.left Выбрано 3
+							+e.right(href="#") Сбросить
+				+e.dropdown-item--color
+					+e.dropdown-title Цвет
+					+e.dropdown-btn.BUTTON Розовы...
+					+e.dropdown-body
+						+e.dropdown-content
+							+in-c('checkbox','Красный','color').--red
+							+in-c('checkbox','Зеленый','color').--green
+							+in-c('checkbox','Синий','color').--blue
+						+e.dropdown-summary
+							+e.left Выбрано 3
+							+e.right(href="#") Сбросить
+				+e.dropdown-item
+					+e.dropdown-title Стоимость
+					+e.dropdown-btn.BUTTON Не выбрано
+					+e.dropdown-body
+						+e.dropdown-content
+							+in-c('checkbox','Выбор 1','price')
+							+in-c('checkbox','Выбор 2','price')
+							+in-c('checkbox','Выбор 3','price')
+				+e.dropdown-item
+					+e.dropdown-title Размер
+					+e.dropdown-btn.BUTTON Не выбрано
+					+e.dropdown-body
+						+e.dropdown-content
+							+in-c('checkbox','Выбор 1','size')
+							+in-c('checkbox','Выбор 2','size')
+							+in-c('checkbox','Выбор 3','size')
+				+e.dropdown-item
+					+e.dropdown-title Тип
+					+e.dropdown-btn.BUTTON Не выбрано
+					+e.dropdown-body
+						+e.dropdown-content
+							+in-c('checkbox','Выбор 1','type')
+							+in-c('checkbox','Выбор 2','type')
+							+in-c('checkbox','Выбор 3','type')
+				//- label(for='select-form') Форма
+				//- 	select.form-control.form-control-select(name='select-form'  multiple)
+				//- 		option(value='Не выбрано' selected) Не выбрано
+				//- 		option(value='Выбор 1') Выбор 1
+				//- 		option(value='Выбор 2') Выбор 2
+				//- 		option(value='Выбор 3') Выбор 3
 				//- +select('Форма','Не выбрано','Не выбрано 1','Не выбрано 2').choices(multiple)
-				+select('Стиль','Не выбрано','Не выбрано 1','Не выбрано 2')
-				+select('Материал','Выбрано 3','Не выбрано 1','Не выбрано 2')
-				+select('Цвет','Розовы...','Не выбрано 1','Не выбрано 2')
-				+select('Стоимость','Не выбрано','Не выбрано 1','Не выбрано 2')
-				+select('Размер','Не выбрано','Не выбрано 1','Не выбрано 2')
-				+select('Тип','Не выбрано','Не выбрано 1','Не выбрано 2')
+				//- +select('Стиль','Не выбрано','Не выбрано 1','Не выбрано 2')
+				//- +select('Материал','Выбрано 3','Не выбрано 1','Не выбрано 2')
+				//- +select('Цвет','Розовы...','Не выбрано 1','Не выбрано 2')
+				//- +select('Стоимость','Не выбрано','Не выбрано 1','Не выбрано 2')
+				//- +select('Размер','Не выбрано','Не выбрано 1','Не выбрано 2')
+				//- +select('Тип','Не выбрано','Не выбрано 1','Не выбрано 2')
 			+btn('Сбросить фильтры','button').btn.d-none.d-md-block
 			button.d-md-none.icon-btn
 				+icon('filter')
-		+catSorter
+		//- +catSorter
 
 mixin sCatalog(data)
 	// start sCatalog

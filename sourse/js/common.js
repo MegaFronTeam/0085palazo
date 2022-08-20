@@ -568,6 +568,8 @@ function eventHandler() {
 	// modal window
 
 
+
+
 	$(".search-toggle--js").on("click", function(){
 		$(".topLine .search-block").toggleClass("active")
 	})
@@ -616,6 +618,28 @@ function eventHandler() {
 		slidesPerView: 'auto',
 	});
 
+	// Дропдаун фильтра в каталоге
+
+	const dropBtns = document.querySelectorAll('.catalog-filter__dropdown-btn');
+	const dropBody = document.querySelectorAll('.catalog-filter__dropdown-body');
+
+	dropBtns.forEach(btn => {
+		btn.addEventListener('click', (e) =>  {
+			dropBody.forEach(el => {el.classList.remove('catalog-filter__show-dropdown')});
+			e.currentTarget.closest('.catalog-filter__dropdown-item').querySelector('.catalog-filter__dropdown-body').classList.add('catalog-filter__show-dropdown');
+		});
+	});
+
+	document.addEventListener('click', (e) => {
+		if ((!e.target.classList.contains('catalog-filter__dropdown-btn')) && (!e.target.classList.contains('catalog-filter__dropdown-body')) && (!e.target.classList.contains('custom-input__input')) && (!e.target.classList.contains('custom-input__text')) && (!e.target.classList.contains('form-check'))) {
+			console.log(event.target)
+			dropBody.forEach(el => {el.classList.remove('catalog-filter__show-dropdown')});
+		}
+	})
+
+	
+	// / Дропдаун фильтра в каталоге
+
 	// Рейтинг в отзывах на главной
 
 	const ratings = document.querySelectorAll('.fb-rating');
@@ -647,14 +671,14 @@ function eventHandler() {
 		}
 	}
 
-	const choices = new Choices('.form-control-select', {
-		searchEnabled: false,
-    searchChoices: false,
-		itemSelectText: '',
-		renderSelectedChoices: 'always',
-		placeholderValue: 'Не выбрано',
-		removeItemButton: true,
-	});
+	// const choices = new Choices('.form-control-select', {
+	// 	searchEnabled: false,
+  //   searchChoices: false,
+	// 	itemSelectText: '',
+	// 	renderSelectedChoices: 'always',
+	// 	placeholderValue: 'Не выбрано',
+	// 	removeItemButton: true,
+	// });
 
 
 	// / Рейтинг в отзывах на главной

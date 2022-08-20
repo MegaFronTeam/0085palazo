@@ -482,7 +482,7 @@ iframe {
  
   & {
     scrollbar-width: auto;
-    scrollbar-color: var(--bs-primary) transparent;
+    scrollbar-color: $red transparent;
   }
 
   /* Chrome, Edge, and Safari */
@@ -495,7 +495,7 @@ iframe {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--bs-primary);
+    background-color: $red;
     border-radius: 16px;
     border: 0px solid transparent;
   }
