@@ -30,15 +30,16 @@ mixin sFeedback(data)
 					.tabs__btn.swiper-slide Благодарственные письма
 				.tabs__content.active
 					+e.stars.FORM(action="#")
-						+b.fb-rating(data-raiting="4.5")
+						+b.fb-rating(style="--star: 4.6")
 							+e.body
-								+e.active
-								+e.items
-									input(type="radio" class="fb-rating__item" value="1" name="rating")
-									input(type="radio" class="fb-rating__item" value="2" name="rating")
-									input(type="radio" class="fb-rating__item" value="3" name="rating")
-									input(type="radio" class="fb-rating__item" value="4" name="rating")
-									input(type="radio" class="fb-rating__item" value="5" name="rating")
+								+img('img/svg/all-stars-empty.svg')
+								//- +e.active
+								//- +e.items
+									//- input(type="radio" class="fb-rating__item" value="1" name="rating")
+									//- input(type="radio" class="fb-rating__item" value="2" name="rating")
+									//- input(type="radio" class="fb-rating__item" value="3" name="rating")
+									//- input(type="radio" class="fb-rating__item" value="4" name="rating")
+									//- input(type="radio" class="fb-rating__item" value="5" name="rating")
 							+e.score.d-none.d-md-block 4,6 / 21 оценка 
 					+b.slider-feedback--js.swiper
 						.swiper-wrapper
