@@ -176,6 +176,8 @@ mixin catSorter
 				+btn('24','button').btn
 				+btn('48','button').btn
 			+pugin()
+			button.d-md-none.icon-btn
+				+icon('filter')
 
 mixin catFilter
 	.filter-wrap
@@ -266,8 +268,8 @@ mixin catFilter
 				//- +select('Размер','Не выбрано','Не выбрано 1','Не выбрано 2')
 				//- +select('Тип','Не выбрано','Не выбрано 1','Не выбрано 2')
 			+btn('Сбросить фильтры','button').btn.d-none.d-md-block
-			button.d-md-none.icon-btn
-				+icon('filter')
+			//- button.d-md-none.icon-btn
+			//- 	+icon('filter')
 		//- +catSorter
 
 mixin sCatalog(data)

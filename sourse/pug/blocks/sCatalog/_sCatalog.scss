@@ -56,8 +56,10 @@
 }
 
 .catalog-body-wrap.bottom {
-	padding-top: 52px;
 	margin-bottom: rem(104);
+}
+.catalog-body-wrap {
+	padding-top: 52px;
 }
 
 
@@ -584,7 +586,6 @@
 
 .filter-wrap {
 	position: relative;
-	margin-bottom: 45px;
 }
 
 .catalog-filter {
@@ -885,19 +886,23 @@
 
 .catalog-sorter {
 	background: rgba(#EDEDED, .23);
+	@include media-breakpoint-down(md) {
+		padding-top: 16px;
+	}
 	&__container {
 		display: flex;
 		align-items: center;
-		padding: 21px 0;
+		padding-top: 21px;
+		padding-bottom: 21px;
 		font-weight: 600;
 		font-size: 12px;
+		@include media-breakpoint-down(xl) {
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
 	}
 	&.offset {
 		margin-bottom: 27px;
-	}
-	@include media-breakpoint-down(xl) {
-		flex-wrap: wrap;
-		justify-content: space-between;
 	}
 	.pagination-wrapper {
 		margin-left: auto;
@@ -907,6 +912,9 @@
 		margin-right: 51px;
 		@include media-breakpoint-down(xl) {
 			margin-bottom: 20px;
+		}
+		@include media-breakpoint-down(md) {
+			margin-bottom: 0;
 		}
 		&::after {
 			position: absolute;
@@ -969,6 +977,15 @@
 			}
 		}
 	}
+	.icon-btn {
+		background-color: transparent;
+		border: none;
+		color: $red;
+		.icon {
+			width: 16px;
+			height: 16px;
+		}
+	}
 }
 .slider-more {
 	padding-top: rem(50);
@@ -1003,6 +1020,7 @@
 	.pagination-wrapper {
 		display: flex;
 	}
+	
 }
 
 .tooltips {
