@@ -11,11 +11,30 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js
+	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-			+mnu()
+			a(href="/")
+				+img("img/logo.png")
+			ul
+				li: a(href="#")  О компании
+				li: a(href="#")  Партнерам
+				li: a(href="#")  Отзывы
+				li: a(href="#")  Контакты
+			+e.row.row
+				.col-auto
+					+e.email(href="mailto:sales@palazo.ru")
+						+icon("email")
+						| sales@palazo.ru
+				.col-12
+					+e.btn.btn.btn-outline-primary(href="#")
+						+icon("calc")
+						| Онлайн расчет кухни
+				.col-12
+					+e.btn.btn.btn-outline-primary(href="#")
+						+icon("designer")
+						| Вызвать дизайнера
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
