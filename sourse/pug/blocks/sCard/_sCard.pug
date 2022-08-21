@@ -152,30 +152,20 @@ mixin sCard(data)
 						.d-none.d-lg-block.col-lg-5
 							+img('img/tab-kitchen.jpg')
 						.col-lg-7
-							.tabs-inner.swiper
-								.tabs-inner__caption.swiper-wrapper
-									.tabs-inner__btn.swiper-slide.active МДФ с ПВХ
-									.tabs-inner__btn.swiper-slide МДФ
-									.tabs-inner__btn.swiper-slide Пластик
-									.tabs-inner__btn.swiper-slide Масив
-									.tabs-inner__btn.swiper-slide ЛДСП
-								.tabs-inner__content.active
-									.tabs-inner__title ФАСАДЫ ИЗ МДФ С ПВХ - ПЛЕНКОЙ
-									p Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются. Но&nbsp;как часто Вам приходится переносить мебель? Обычно, встроенный шкаф-купе стоит годами и&nbsp;сносится только перед капитальным ремонтом.
-									.tabs-inner__adv
-										.tabs-inner__adv-item
-											.tabs-inner__adv-title 10 лет
-											.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
-										.tabs-inner__adv-item
-											.tabs-inner__adv-title 500+
-											.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
-										.tabs-inner__adv-item
-											.tabs-inner__adv-title Уход
-											.tabs-inner__adv-descr ПВХ - пленку можно мыть
-								.tabs-inner__content
-									p Стандарт
-								.tabs-inner__content
-									.tabs-inner__adv
+							.tabs-inner(style="display: none;")
+								.tabs-inner__caption
+									.tabs-inner__btn.active(href="#tab1") МДФ с ПВХ
+									.tabs-inner__btn(href="#tab2") МДФ
+									.tabs-inner__btn(href="#tab3") Пластик
+									.tabs-inner__btn(href="#tab4") Масив
+									.tabs-inner__btn(href="#tab5") ЛДСП
+								.tab-inner__body
+									.tabs-inner__content.active(id='tab1')
+										.tabs-inner__title ФАСАДЫ ИЗ МДФ С ПВХ - ПЛЕНКОЙ
+										.tabs-inner__img-wrap.d-md-none
+											+img('img/inner-tab.jpg')
+										p Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются. Но&nbsp;как часто Вам приходится переносить мебель? Обычно, встроенный шкаф-купе стоит годами и&nbsp;сносится только перед капитальным ремонтом.
+										.tabs-inner__adv
 											.tabs-inner__adv-item
 												.tabs-inner__adv-title 10 лет
 												.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
@@ -185,28 +175,41 @@ mixin sCard(data)
 											.tabs-inner__adv-item
 												.tabs-inner__adv-title Уход
 												.tabs-inner__adv-descr ПВХ - пленку можно мыть
-								.tabs-inner__content
-									.tabs-inner__adv
-											.tabs-inner__adv-item
-												.tabs-inner__adv-title 10 лет
-												.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
-											.tabs-inner__adv-item
-												.tabs-inner__adv-title 500+
-												.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
-											.tabs-inner__adv-item
-												.tabs-inner__adv-title Уход
-												.tabs-inner__adv-descr ПВХ - пленку можно мыть
-								.tabs-inner__content
-									.tabs-inner__adv
-											.tabs-inner__adv-item
-												.tabs-inner__adv-title 10 лет
-												.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
-											.tabs-inner__adv-item
-												.tabs-inner__adv-title 500+
-												.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
-											.tabs-inner__adv-item
-												.tabs-inner__adv-title Уход
-												.tabs-inner__adv-descr ПВХ - пленку можно мыть
+									.tabs-inner__content(id='tab2')
+										p Стандарт
+									.tabs-inner__content(id='tab3')
+										.tabs-inner__adv
+												.tabs-inner__adv-item
+													.tabs-inner__adv-title 10 лет
+													.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+												.tabs-inner__adv-item
+													.tabs-inner__adv-title 500+
+													.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+												.tabs-inner__adv-item
+													.tabs-inner__adv-title Уход
+													.tabs-inner__adv-descr ПВХ - пленку можно мыть
+									.tabs-inner__content(id='tab4')
+										.tabs-inner__adv
+												.tabs-inner__adv-item
+													.tabs-inner__adv-title 10 лет
+													.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+												.tabs-inner__adv-item
+													.tabs-inner__adv-title 500+
+													.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+												.tabs-inner__adv-item
+													.tabs-inner__adv-title Уход
+													.tabs-inner__adv-descr ПВХ - пленку можно мыть
+									.tabs-inner__content(id='tab5')
+										.tabs-inner__adv
+												.tabs-inner__adv-item
+													.tabs-inner__adv-title 10 лет
+													.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+												.tabs-inner__adv-item
+													.tabs-inner__adv-title 500+
+													.tabs-inner__adv-descr Минимальный срок службы ПВХ-пленки
+												.tabs-inner__adv-item
+													.tabs-inner__adv-title Уход
+													.tabs-inner__adv-descr ПВХ - пленку можно мыть
 				.tabs__content
 					p Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются. Но&nbsp;как часто Вам приходится переносить мебель? Обычно, встроенный шкаф-купе стоит годами и&nbsp;сносится только перед капитальным ремонтом.
 				.tabs__content

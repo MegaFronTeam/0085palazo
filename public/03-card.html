@@ -13,6 +13,7 @@
 		<link href="libs/nouislider/nouislider.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
+		<link href="libs/flextabs-js/jquery.flextabs.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -605,80 +606,84 @@
 								<div class="d-none d-lg-block col-lg-5"><img src="img/tab-kitchen.jpg" alt="" loading="lazy"/>
 								</div>
 								<div class="col-lg-7">
-									<div class="tabs-inner swiper">
-										<div class="tabs-inner__caption swiper-wrapper">
-											<div class="tabs-inner__btn swiper-slide active">МДФ с ПВХ</div>
-											<div class="tabs-inner__btn swiper-slide">МДФ</div>
-											<div class="tabs-inner__btn swiper-slide">Пластик</div>
-											<div class="tabs-inner__btn swiper-slide">Масив</div>
-											<div class="tabs-inner__btn swiper-slide">ЛДСП</div>
+									<div class="tabs-inner" style="display: none;">
+										<div class="tabs-inner__caption">
+											<div class="tabs-inner__btn active" href="#tab1">МДФ с ПВХ</div>
+											<div class="tabs-inner__btn" href="#tab2">МДФ</div>
+											<div class="tabs-inner__btn" href="#tab3">Пластик</div>
+											<div class="tabs-inner__btn" href="#tab4">Масив</div>
+											<div class="tabs-inner__btn" href="#tab5">ЛДСП</div>
 										</div>
-										<div class="tabs-inner__content active">
-											<div class="tabs-inner__title">ФАСАДЫ ИЗ МДФ С ПВХ - ПЛЕНКОЙ</div>
-											<p>Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются. Но&nbsp;как часто Вам приходится переносить мебель? Обычно, встроенный шкаф-купе стоит годами и&nbsp;сносится только перед капитальным ремонтом.</p>
-											<div class="tabs-inner__adv">
-												<div class="tabs-inner__adv-item">
-													<div class="tabs-inner__adv-title">10 лет</div>
-													<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
+										<div class="tab-inner__body">
+											<div class="tabs-inner__content active" id="tab1">
+												<div class="tabs-inner__title">ФАСАДЫ ИЗ МДФ С ПВХ - ПЛЕНКОЙ</div>
+												<div class="tabs-inner__img-wrap d-md-none"><img src="img/inner-tab.jpg" alt="" loading="lazy"/>
 												</div>
-												<div class="tabs-inner__adv-item">
-													<div class="tabs-inner__adv-title">500+</div>
-													<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
-												</div>
-												<div class="tabs-inner__adv-item">
-													<div class="tabs-inner__adv-title">Уход</div>
-													<div class="tabs-inner__adv-descr">ПВХ - пленку можно мыть</div>
+												<p>Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются. Но&nbsp;как часто Вам приходится переносить мебель? Обычно, встроенный шкаф-купе стоит годами и&nbsp;сносится только перед капитальным ремонтом.</p>
+												<div class="tabs-inner__adv">
+													<div class="tabs-inner__adv-item">
+														<div class="tabs-inner__adv-title">10 лет</div>
+														<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
+													</div>
+													<div class="tabs-inner__adv-item">
+														<div class="tabs-inner__adv-title">500+</div>
+														<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
+													</div>
+													<div class="tabs-inner__adv-item">
+														<div class="tabs-inner__adv-title">Уход</div>
+														<div class="tabs-inner__adv-descr">ПВХ - пленку можно мыть</div>
+													</div>
 												</div>
 											</div>
-										</div>
-										<div class="tabs-inner__content">
-											<p>Стандарт</p>
-										</div>
-										<div class="tabs-inner__content">
-											<div class="tabs-inner__adv">
-												<div class="tabs-inner__adv-item">
-													<div class="tabs-inner__adv-title">10 лет</div>
-													<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
-												</div>
-												<div class="tabs-inner__adv-item">
-													<div class="tabs-inner__adv-title">500+</div>
-													<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
-												</div>
-												<div class="tabs-inner__adv-item">
-													<div class="tabs-inner__adv-title">Уход</div>
-													<div class="tabs-inner__adv-descr">ПВХ - пленку можно мыть</div>
+											<div class="tabs-inner__content" id="tab2">
+												<p>Стандарт</p>
+											</div>
+											<div class="tabs-inner__content" id="tab3">
+												<div class="tabs-inner__adv">
+													<div class="tabs-inner__adv-item">
+														<div class="tabs-inner__adv-title">10 лет</div>
+														<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
+													</div>
+													<div class="tabs-inner__adv-item">
+														<div class="tabs-inner__adv-title">500+</div>
+														<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
+													</div>
+													<div class="tabs-inner__adv-item">
+														<div class="tabs-inner__adv-title">Уход</div>
+														<div class="tabs-inner__adv-descr">ПВХ - пленку можно мыть</div>
+													</div>
 												</div>
 											</div>
-										</div>
-										<div class="tabs-inner__content">
-											<div class="tabs-inner__adv">
-												<div class="tabs-inner__adv-item">
-													<div class="tabs-inner__adv-title">10 лет</div>
-													<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
-												</div>
-												<div class="tabs-inner__adv-item">
-													<div class="tabs-inner__adv-title">500+</div>
-													<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
-												</div>
-												<div class="tabs-inner__adv-item">
-													<div class="tabs-inner__adv-title">Уход</div>
-													<div class="tabs-inner__adv-descr">ПВХ - пленку можно мыть</div>
+											<div class="tabs-inner__content" id="tab4">
+												<div class="tabs-inner__adv">
+													<div class="tabs-inner__adv-item">
+														<div class="tabs-inner__adv-title">10 лет</div>
+														<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
+													</div>
+													<div class="tabs-inner__adv-item">
+														<div class="tabs-inner__adv-title">500+</div>
+														<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
+													</div>
+													<div class="tabs-inner__adv-item">
+														<div class="tabs-inner__adv-title">Уход</div>
+														<div class="tabs-inner__adv-descr">ПВХ - пленку можно мыть</div>
+													</div>
 												</div>
 											</div>
-										</div>
-										<div class="tabs-inner__content">
-											<div class="tabs-inner__adv">
-												<div class="tabs-inner__adv-item">
-													<div class="tabs-inner__adv-title">10 лет</div>
-													<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
-												</div>
-												<div class="tabs-inner__adv-item">
-													<div class="tabs-inner__adv-title">500+</div>
-													<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
-												</div>
-												<div class="tabs-inner__adv-item">
-													<div class="tabs-inner__adv-title">Уход</div>
-													<div class="tabs-inner__adv-descr">ПВХ - пленку можно мыть</div>
+											<div class="tabs-inner__content" id="tab5">
+												<div class="tabs-inner__adv">
+													<div class="tabs-inner__adv-item">
+														<div class="tabs-inner__adv-title">10 лет</div>
+														<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
+													</div>
+													<div class="tabs-inner__adv-item">
+														<div class="tabs-inner__adv-title">500+</div>
+														<div class="tabs-inner__adv-descr">Минимальный срок службы ПВХ-пленки</div>
+													</div>
+													<div class="tabs-inner__adv-item">
+														<div class="tabs-inner__adv-title">Уход</div>
+														<div class="tabs-inner__adv-descr">ПВХ - пленку можно мыть</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -2176,6 +2181,7 @@
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/nouislider/nouislider.min.js"></script>
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"></script>
+		<script src="libs/flextabs-js/jquery.flextabs.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

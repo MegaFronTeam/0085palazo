@@ -13,6 +13,7 @@
 		<link href="libs/nouislider/nouislider.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
+		<link href="libs/flextabs-js/jquery.flextabs.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -339,11 +340,165 @@
 									</li>
 						</ul>
 					</div>
-					<button class="d-md-none icon-btn">
+					<button class="catalog-sorter__filter-btn d-md-none icon-btn">
 						<svg class="icon icon-filter ">
 							<use xlink:href="img/svg/sprite.svg#filter"></use>
 						</svg>
 					</button>
+					<div class="catalog-sorter__mob-sort">
+						<div class="catalog-sorter__sort-body">
+							<div class="catalog-sorter__mob-close">
+							</div>
+							<div class="catalog-sorter__mob-title">Фильтр
+							</div>
+							<div class="catalog-filter">
+								<div class="catalog-filter__row">
+								</div>
+								<div class="catalog-filter__dropdown-item">
+									<div class="catalog-filter__dropdown-title">Форма
+									</div>
+									<button class="catalog-filter__dropdown-btn">Не выбрано
+									</button>
+									<div class="catalog-filter__dropdown-body">
+										<div class="catalog-filter__dropdown-content">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="form" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 1</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="form" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 2</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="form" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 3</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="catalog-filter__dropdown-item">
+									<div class="catalog-filter__dropdown-title">Стиль
+									</div>
+									<button class="catalog-filter__dropdown-btn">Не выбрано
+									</button>
+									<div class="catalog-filter__dropdown-body">
+										<div class="catalog-filter__dropdown-content">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="style" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 1</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="style" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 2</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="style" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 3</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="catalog-filter__dropdown-item">
+									<div class="catalog-filter__dropdown-title">Материал
+									</div>
+									<button class="catalog-filter__dropdown-btn">Не выбрано
+									</button>
+									<div class="catalog-filter__dropdown-body">
+										<div class="catalog-filter__dropdown-content">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="material" type="checkbox"/><span class="custom-input__text form-check-label">Духовой шкаф</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="material" type="checkbox"/><span class="custom-input__text form-check-label">Духовой шкаф</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="material" type="checkbox"/><span class="custom-input__text form-check-label">Варочная панель </span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="material" type="checkbox"/><span class="custom-input__text form-check-label">Духовой шкаф</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="material" type="checkbox"/><span class="custom-input__text form-check-label">Духовой шкаф</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="material" type="checkbox"/><span class="custom-input__text form-check-label">Варочная панель </span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="material" type="checkbox"/><span class="custom-input__text form-check-label">Духовой шкаф</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="material" type="checkbox"/><span class="custom-input__text form-check-label">Духовой шкаф</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="material" type="checkbox"/><span class="custom-input__text form-check-label">Варочная панель </span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="material" type="checkbox"/><span class="custom-input__text form-check-label">Духовой шкаф</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="material" type="checkbox"/><span class="custom-input__text form-check-label">Духовой шкаф</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="material" type="checkbox"/><span class="custom-input__text form-check-label">Варочная панель </span>
+											</label>
+										</div>
+										<div class="catalog-filter__dropdown-summary">
+											<div class="catalog-filter__left">Выбрано 3
+											</div>
+											<a class="catalog-filter__right" href="#">Сбросить
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="catalog-filter__dropdown-item catalog-filter__dropdown-item--color">
+									<div class="catalog-filter__dropdown-title">Цвет
+									</div>
+									<button class="catalog-filter__dropdown-btn">Розовы...
+									</button>
+									<div class="catalog-filter__dropdown-body">
+										<div class="catalog-filter__dropdown-content">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input form-check-input--red" name="color" type="checkbox"/><span class="custom-input__text form-check-label">Красный</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input form-check-input--green" name="color" type="checkbox"/><span class="custom-input__text form-check-label">Зеленый</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input form-check-input--blue" name="color" type="checkbox"/><span class="custom-input__text form-check-label">Синий</span>
+											</label>
+										</div>
+										<div class="catalog-filter__dropdown-summary">
+											<div class="catalog-filter__left">Выбрано 3
+											</div>
+											<a class="catalog-filter__right" href="#">Сбросить
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="catalog-filter__dropdown-item">
+									<div class="catalog-filter__dropdown-title">Стоимость
+									</div>
+									<button class="catalog-filter__dropdown-btn">Не выбрано
+									</button>
+									<div class="catalog-filter__dropdown-body">
+										<div class="catalog-filter__dropdown-content">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="price" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 1</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="price" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 2</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="price" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 3</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="catalog-filter__dropdown-item">
+									<div class="catalog-filter__dropdown-title">Размер
+									</div>
+									<button class="catalog-filter__dropdown-btn">Не выбрано
+									</button>
+									<div class="catalog-filter__dropdown-body">
+										<div class="catalog-filter__dropdown-content">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 1</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 2</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="size" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 3</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="catalog-filter__dropdown-item">
+									<div class="catalog-filter__dropdown-title">Тип
+									</div>
+									<button class="catalog-filter__dropdown-btn">Не выбрано
+									</button>
+									<div class="catalog-filter__dropdown-body">
+										<div class="catalog-filter__dropdown-content">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 1</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 2</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type" type="checkbox"/><span class="custom-input__text form-check-label">Выбор 3</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="catalog-body-wrap bottom">
@@ -2433,6 +2588,7 @@
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/nouislider/nouislider.min.js"></script>
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"></script>
+		<script src="libs/flextabs-js/jquery.flextabs.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

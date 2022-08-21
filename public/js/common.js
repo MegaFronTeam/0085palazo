@@ -291,7 +291,7 @@ function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
-	JSCCommon.tabscostume('tabs-inner');
+	// JSCCommon.tabscostume('tabs-inner');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -556,18 +556,12 @@ function eventHandler() {
 		slidesPerView: 'auto',
 	});
 
-	const innerTabsSlider = new Swiper(".tabs-inner", {
-		slidesPerView: 'auto',
-	});
+	// const innerTabsSlider = new Swiper(".tabs-inner", {
+	// 	slidesPerView: 'auto',
+	// });
 	const sFeedbackPageSlider = new Swiper(".sFeedbackPage__slider--js", {
 		slidesPerView: 'auto',
 	});
-
-	// const filterSelect = document.querySelector('.filter-select');
-	// const choices = new Choices(filterSelect);
-	// modal window
-
-
 
 
 	$(".search-toggle--js").on("click", function(){
@@ -625,20 +619,51 @@ function eventHandler() {
 
 	dropBtns.forEach(btn => {
 		btn.addEventListener('click', (e) =>  {
+			dropBtns.forEach(el => {el.classList.remove('active')});
 			dropBody.forEach(el => {el.classList.remove('catalog-filter__show-dropdown')});
+			e.currentTarget.classList.toggle('active');
 			e.currentTarget.closest('.catalog-filter__dropdown-item').querySelector('.catalog-filter__dropdown-body').classList.add('catalog-filter__show-dropdown');
 		});
 	});
 
 	document.addEventListener('click', (e) => {
+		console.log(event.target);
 		if ((!e.target.classList.contains('catalog-filter__dropdown-btn')) && (!e.target.classList.contains('catalog-filter__dropdown-body')) && (!e.target.classList.contains('custom-input__input')) && (!e.target.classList.contains('custom-input__text')) && (!e.target.classList.contains('form-check'))) {
-			console.log(event.target)
+			dropBtns.forEach(el => {el.classList.remove('active')});
 			dropBody.forEach(el => {el.classList.remove('catalog-filter__show-dropdown')});
 		}
 	})
-
 	
 	// / Дропдаун фильтра в каталоге
+
+	// Фильтр на мобильном в каталоге
+
+	$('.catalog-sorter__filter-btn').on("click", function() {
+		$('.catalog-sorter__mob-sort').addClass('active');
+		$('.main-page').css('overflow', 'hidden');
+		document.addEventListener('click', (event) => {
+			let container = event.target.closest(".catalog-sorter__mob-sort.active"); 
+			let toggle = event.target.closest('.catalog-sorter__mob-close'); 
+			let fixed = event.target.closest('body.fixed2');
+			let button = event.target.closest('.catalog-sorte__filter-btn');
+			if (!toggle && !container && !button) {
+				$('.catalog-sorterg__mob-sort').removeClass('active');
+				$('body').removeClass('fixed2');
+			};
+		}, { passive: true });
+	});
+	$('.catalog-sorter__mob-close').on("click", function() {
+		$('.catalog-sorter__mob-sort').removeClass('active');
+		$('.main-page').css('overflow', 'auto');
+	});
+
+	// / Фильтр на мобильном в каталоге
+
+	// Табы в аккордеон в карточке товара
+
+	$('.tabs-inner').flexTabs();
+	
+	// / Табы в аккордеон в карточке товара
 
 	// Рейтинг в отзывах на главной
 

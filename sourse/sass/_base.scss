@@ -91,7 +91,9 @@ body {
 		}
 	}
 }
-
+.is-open {
+	display: block;
+}
 .main-wrapper { 
 	position: relative;
 	width: 100%;
@@ -383,9 +385,6 @@ ul {
 		}
 	}
 }
-
-
-
 
 @include media-breakpoint-up(lg) {
 	.wow {
