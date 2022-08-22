@@ -223,13 +223,17 @@
 	}
 	&__content {
 		position: absolute;
-		bottom: rem(22.400);
+		// bottom: rem(22.400);
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translate(-50%, -50%);
 		z-index: 3;
 		width: 100%;
+		top: 50%;
+		bottom: unset;
 		@include media-breakpoint-up(xl) {
+			top: unset;
 			bottom: rem(40);
+			transform: translate(-50%, 0);
 		}
 	}
 	&__icon {
