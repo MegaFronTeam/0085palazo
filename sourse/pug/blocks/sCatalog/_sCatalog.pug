@@ -1,9 +1,9 @@
 mixin productTags(show,...items)
 	.tags-slider
-		+b.tags-list--js.swiper.UL(data-mobile="false")
+		+b.tags-list--js.swiper(data-mobile="false")
 			.swiper-wrapper
 				-for (var i = 0; i < items.length; i++)
-					+e.item.swiper-slide.LI
+					+e.item.swiper-slide
 						+e.btn.BUTTON= items[i]
 				if show					
 					.btn.btn-outline-primary.swiper-slide(data-visible='visible') Скрыть

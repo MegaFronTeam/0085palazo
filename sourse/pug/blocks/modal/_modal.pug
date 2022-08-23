@@ -23,7 +23,7 @@ mixin modal(data)
 					p.after-headline Заполните форму и&nbsp;мы&nbsp;Вам перезвоним
 
 				+input("Ваше Имя", 'text', 'Введите')(required).is-invalid
-					p.is-invalid Поле не может быть пустым
+					span.is-invalid Поле не может быть пустым
 				+input("Телефон", 'tel', 'Введите')(required)  
 				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить
 					+icon('arrow-right')

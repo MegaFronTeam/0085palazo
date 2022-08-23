@@ -834,66 +834,117 @@ function inputFile(){
 }
 inputFile();
 
-var slider = document.getElementById('slider');
-var verticalSlider = document.getElementById('vertical-slider');
-var verticalSliderRight = document.getElementById('vertical-slider-right');
-var directionField = document.getElementById('field');
-var directionField2 = document.getElementById('field2');
-var directionField3 = document.getElementById('field3');
+var sliders = document.querySelectorAll('.slider');
+var sliders2 = document.querySelectorAll('.slider-2');
+var verticalSliders = document.querySelectorAll('.vertical-slider-1');
+var verticalSliderRights = document.querySelectorAll('.vertical-slider-2');
+var directionFields = document.querySelectorAll('.field1');
+var directionFields2 = document.querySelectorAll('.field2');
+var directionFields3 = document.querySelectorAll('.field3');
+var directionFields4 = document.querySelectorAll('.field4');
 
 var el = $(".sCalc__size-lg").html();
 if (!el) {
 } else {
-	noUiSlider.create(slider, {
-		start: [4000],
-		connect: 'lower',
-		step: 1,
-		decimals: 0,
-		range: {
-			'min': [2000],
-			'max': [10000]
+	for (let slider of sliders) {
+		noUiSlider.create(slider, {
+			start: [4000],
+			connect: 'lower',
+			step: 1,
+			decimals: 0,
+			range: {
+				'min': [2000],
+				'max': [10000]
+			}
+		});
+		for (let directionField of directionFields) {
+			console.log(sliders);
+			slider.noUiSlider.on('update', function (values, handle) {
+				directionField.innerHTML = values[handle];
+			});
 		}
-	});
-	
-	noUiSlider.create(verticalSlider, {
-		start: [4000],
-		connect: 'lower',
-		orientation: 'vertical',
-		step: 1,
-		// tooltips: true,
-		range: {
-			'min': [2000],
-			'max': [10000]
+	}
+	for (let verticalSlider of verticalSliders) {
+		noUiSlider.create(verticalSlider, {
+			start: [4000],
+			connect: 'lower',
+			orientation: 'vertical',
+			step: 1,
+			// tooltips: true,
+			range: {
+				'min': [2000],
+				'max': [10000]
+			}
+		});
+		for (let directionField2 of directionFields2) {
+			verticalSlider.noUiSlider.on('update', function (values, handle) {
+				directionField2.innerHTML = values[handle];
+			});
 		}
-	});
-	noUiSlider.create(verticalSliderRight, {
-		start: [4000],
-		connect: 'lower',
-		orientation: 'vertical',
-		step: 1,
-		// tooltips: true,
-		range: {
-			'min': [2000],
-			'max': [10000]
+	}
+	for (let verticalSliderRight of verticalSliderRights) {
+		noUiSlider.create(verticalSliderRight, {
+			start: [4000],
+			connect: 'lower',
+			orientation: 'vertical',
+			step: 1,
+			// tooltips: true,
+			range: {
+				'min': [2000],
+				'max': [10000]
+			}
+		});
+		for (let directionField3 of directionFields3) {
+			verticalSliderRight.noUiSlider.on('update', function (values, handle) {
+				directionField3.innerHTML = values[handle];
+			});
 		}
-	});
-	
-	slider.noUiSlider.on('update', function (values, handle) {
-		directionField.innerHTML = values[handle];
-	});
-	verticalSlider.noUiSlider.on('update', function (values, handle) {
-		directionField2.innerHTML = values[handle];
-	});
-	verticalSliderRight.noUiSlider.on('update', function (values, handle) {
-		directionField3.innerHTML = values[handle];
-	});
+	}
+	for (let slider2 of sliders2) {
+		noUiSlider.create(slider2, {
+			start: [4000],
+			connect: 'lower',
+			step: 1,
+			// tooltips: true,
+			range: {
+				'min': [2000],
+				'max': [10000]
+			}
+		});
+		for (let directionField4 of directionFields4) {
+			slider2.noUiSlider.on('update', function (values, handle) {
+				directionField4.innerHTML = values[handle];
+			});
+		}
+	}
 };
 
 
 let headsets = document.getElementsByClassName('sCalc__headset-col');
-for (let i = 0; i < headsets.length; i++) {
-	headsets[i].addEventListener("click", function() {
-		//  console.log(i);
+for (let headset of headsets) {
+	// function ifCheked() {
+	// };
+	headset.addEventListener('click', function() {
+		let val = headset.querySelector('input').value;
+		// console.log(headset);
+		// if (headset.querySelector('input').checked) {
+		// 	// alert("selected: " + headset.value);
+		// }
+		const tabs = document.querySelectorAll('.sCalc__size-lg');
+		console.log(val);
+		for (let tab of tabs) {
+			if(tab.classList.contains('active')) {
+				tab.style.display = 'none';
+				tab.classList.remove('active');
+				// $(tab).hide(function() {
+				// });
+			} if(tab.id == val) {
+				$(tab).fadeIn(function() {
+					this.classList.add('active');
+				});
+			}
+		}
+		
 	});
 }
 
