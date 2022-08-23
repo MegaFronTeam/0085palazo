@@ -11,20 +11,20 @@ mixin sHowWork(data)
 					span!= i
 					+e.text!= text
 					if btn
-						+e.btn(href="#").btn.btn-primary Заказать расчет
+						+e.btn(href="#" data-src="modal-apply2" data-fancybox="modal").btn.btn-primary Заказать расчет
 					+e.dropdown
 						p Мы встретимся с вами в удобном для вас месте и обсудим все детали заказа
 			+e.row.row
-				+e.col.col-lg-2.col-md-4.col-sm-6
+				+e.col.col-lg-2.col-md-4.col-6
 					+item(1, 'Предварительный расчет', true)
-				+e.col.col-lg-2.col-md-4.col-sm-6
+				+e.col.col-lg-2.col-md-4.col-6
 					+item(2, 'Встреча и обсуждение эскиза')
-				+e.col.col-lg-2.col-md-4.col-sm-6
+				+e.col.col-lg-2.col-md-4.col-6
 					+item(3, 'Заключение договора')
-				+e.col.col-lg-2.col-md-4.col-sm-6
+				+e.col.col-lg-2.col-md-4.col-6
 					+item(4, 'Производство мебели')
-				+e.col.col-lg-2.col-md-4.col-sm-6
+				+e.col.col-lg-2.col-md-4.col-6
 					+item(5, 'Доставка')
-				+e.col.col-lg-2.col-md-4.col-sm-6
+				+e.col.col-lg-2.col-md-4.col-6
 					+item(6, 'Установка')
 	// end sHowWork

@@ -636,7 +636,7 @@ function eventHandler() {
 	});
 
 	document.addEventListener('click', (e) => {
-		console.log(event.target);
+		// console.log(event.target);
 		if ((!e.target.classList.contains('catalog-filter__dropdown-btn')) && (!e.target.classList.contains('catalog-filter__dropdown-body')) && (!e.target.classList.contains('custom-input__input')) && (!e.target.classList.contains('custom-input__text')) && (!e.target.classList.contains('form-check'))) {
 			dropBtns.forEach(el => {el.classList.remove('active')});
 			dropBody.forEach(el => {el.classList.remove('catalog-filter__show-dropdown')});
@@ -725,7 +725,7 @@ function eventHandler() {
 		let ratingActive, ratingValue;
 		for (let index = 0; index < ratings.length; index++) {
 			const rating = ratings[index];
-			console.log(rating);
+			// console.log(rating);
 			initRating(rating);
 		}
 		function initRating(rating) {
@@ -736,7 +736,7 @@ function eventHandler() {
 		function initRatingVars(rating) {
 			ratingActive = rating.querySelector('.fb-rating__active');
 			ratingValue = rating.getAttribute('data-raiting');
-			console.log(ratingValue);
+			// console.log(ratingValue);
 		}
 	
 		function setRatingActiveWidth(index = ratingValue) {
@@ -893,7 +893,7 @@ if (!el) {
 let headsets = document.getElementsByClassName('sCalc__headset-col');
 for (let i = 0; i < headsets.length; i++) {
 	headsets[i].addEventListener("click", function() {
-		 console.log(i);
+		//  console.log(i);
 	});
 }
 

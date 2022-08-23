@@ -112,15 +112,19 @@
 			column-gap: 59px;
 		}
 		li {
-			line-height: 1.70em;
-			max-width: rem(152);
-			color: #000;
-			font-size: rem(14);
-			@include media-breakpoint-up(sm) {
-				font-size: rem(16);
-			}
 			&:not(:last-child) {
 				margin-bottom: rem(10);
+			}
+		}
+		a {
+			line-height: 1.70em;
+			max-width: rem(152);
+			font-size: 14px;
+			&:not(:hover) {
+				color: #000;
+			}
+			@include media-breakpoint-up(sm) {
+				font-size: rem(16);
 			}
 		}
 	}

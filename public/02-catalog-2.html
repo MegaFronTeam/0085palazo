@@ -18,6 +18,42 @@
 	</head>
 	<body class="main-page">
 		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner"><a href="/"><img src="img/logo.png" alt="" loading="lazy"/></a>
+					<ul>
+						<li><a href="#"> О компании</a></li>
+						<li><a href="#"> Партнерам</a></li>
+						<li><a href="#"> Отзывы</a></li>
+						<li><a href="#"> Контакты</a></li>
+					</ul>
+					<div class="menu-mobile__row row">
+						<div class="col-auto">
+							<a class="menu-mobile__email" href="mailto:sales@palazo.ru">
+								<svg class="icon icon-email ">
+									<use xlink:href="img/svg/sprite.svg#email"></use>
+								</svg>sales@palazo.ru
+							</a>
+						</div>
+						<div class="col-12">
+							<a class="menu-mobile__btn btn btn-outline-primary" href="#" data-src="modal-apply2" data-fancybox="modal">
+								<svg class="icon icon-calc ">
+									<use xlink:href="img/svg/sprite.svg#calc"></use>
+								</svg>Онлайн расчет кухни
+							</a>
+						</div>
+						<div class="col-12">
+							<a class="menu-mobile__btn btn btn-outline-primary" href="#" data-src="modal-call" data-fancybox="modal">
+								<svg class="icon icon-designer ">
+									<use xlink:href="img/svg/sprite.svg#designer"></use>
+								</svg>Вызвать дизайнера
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--  мобильное меню-->
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start topLine-->
@@ -120,11 +156,11 @@
 									<div class="top-nav__logo-text">Мебель на&nbsp;заказ от&nbsp;производителя
 									</div>
 								</div>
-								<div class="col-auto d-none d-xxl-block"><a class="btn btn-outline-primary" href="#">
+								<div class="col-auto d-none d-xxl-block"><a class="btn btn-outline-primary" href="#" data-src="modal-apply2" data-fancybox="modal">
 										<svg class="icon icon-calc ">
 											<use xlink:href="img/svg/sprite.svg#calc"></use>
 										</svg>Онлайн расчет кухни</a></div>
-								<div class="col-auto d-none d-xxl-block"><a class="btn btn-outline-primary" href="#">
+								<div class="col-auto d-none d-xxl-block"><a class="btn btn-outline-primary" href="#" data-src="modal-call" data-fancybox="modal">
 										<svg class="icon icon-designer ">
 											<use xlink:href="img/svg/sprite.svg#designer"></use>
 										</svg>Вызвать дизайнера</a></div>
@@ -187,7 +223,7 @@
 									</ul>
 								</div>
 							</div>
-							<div class="col-lg-auto col"><a class="btn btn-primary" href="#">Заказать замер</a></div>
+							<div class="col-lg-auto col"><a class="btn btn-primary" href="#" data-src="modal-call" data-fancybox="modal">Заказать замер</a></div>
 							<div class="col-auto">
 								<a class="top-nav__link active" href="#">
 									<svg class="icon icon-compare ">
@@ -2155,18 +2191,18 @@
 						<p>Простая схема работы для взаимодействия с нашими клиентами</p>
 					</div>
 					<div class="sHowWork__row row">
-						<div class="sHowWork__col col-lg-2 col-md-4 col-sm-6">
+						<div class="sHowWork__col col-lg-2 col-md-4 col-6">
 								<div class="sHowWork__item"><img src="img/svg/sHowWork-img-1.svg" alt="" loading="lazy"/><span>1</span>
 									<div class="sHowWork__text">Предварительный расчет
 									</div>
-									<a class="sHowWork__btn btn btn-primary" href="#">Заказать расчет
+									<a class="sHowWork__btn btn btn-primary" href="#" data-src="modal-apply2" data-fancybox="modal">Заказать расчет
 									</a>
 									<div class="sHowWork__dropdown">
 										<p>Мы встретимся с вами в удобном для вас месте и обсудим все детали заказа</p>
 									</div>
 								</div>
 						</div>
-						<div class="sHowWork__col col-lg-2 col-md-4 col-sm-6">
+						<div class="sHowWork__col col-lg-2 col-md-4 col-6">
 								<div class="sHowWork__item"><img src="img/svg/sHowWork-img-1.svg" alt="" loading="lazy"/><span>2</span>
 									<div class="sHowWork__text">Встреча и обсуждение эскиза
 									</div>
@@ -2175,7 +2211,7 @@
 									</div>
 								</div>
 						</div>
-						<div class="sHowWork__col col-lg-2 col-md-4 col-sm-6">
+						<div class="sHowWork__col col-lg-2 col-md-4 col-6">
 								<div class="sHowWork__item"><img src="img/svg/sHowWork-img-1.svg" alt="" loading="lazy"/><span>3</span>
 									<div class="sHowWork__text">Заключение договора
 									</div>
@@ -2184,7 +2220,7 @@
 									</div>
 								</div>
 						</div>
-						<div class="sHowWork__col col-lg-2 col-md-4 col-sm-6">
+						<div class="sHowWork__col col-lg-2 col-md-4 col-6">
 								<div class="sHowWork__item"><img src="img/svg/sHowWork-img-1.svg" alt="" loading="lazy"/><span>4</span>
 									<div class="sHowWork__text">Производство мебели
 									</div>
@@ -2193,7 +2229,7 @@
 									</div>
 								</div>
 						</div>
-						<div class="sHowWork__col col-lg-2 col-md-4 col-sm-6">
+						<div class="sHowWork__col col-lg-2 col-md-4 col-6">
 								<div class="sHowWork__item"><img src="img/svg/sHowWork-img-1.svg" alt="" loading="lazy"/><span>5</span>
 									<div class="sHowWork__text">Доставка
 									</div>
@@ -2202,7 +2238,7 @@
 									</div>
 								</div>
 						</div>
-						<div class="sHowWork__col col-lg-2 col-md-4 col-sm-6">
+						<div class="sHowWork__col col-lg-2 col-md-4 col-6">
 								<div class="sHowWork__item"><img src="img/svg/sHowWork-img-1.svg" alt="" loading="lazy"/><span>6</span>
 									<div class="sHowWork__text">Установка
 									</div>
@@ -2471,12 +2507,12 @@
 						</div>
 						<div class="col-xl-3">
 							<div class="footer__buttons">
-								<a class="footer__btn btn btn-outline-primary" href="#">
+								<a class="footer__btn btn btn-outline-primary" href="#" data-src="modal-apply2" data-fancybox="modal">
 									<svg class="icon icon-calc ">
 										<use xlink:href="img/svg/sprite.svg#calc"></use>
 									</svg>Онлайн расчет кухни
 								</a>
-								<a class="footer__btn btn btn-outline-primary" href="#">
+								<a class="footer__btn btn btn-outline-primary" href="#" data-src="modal-call" data-fancybox="modal">
 									<svg class="icon icon-designer ">
 										<use xlink:href="img/svg/sprite.svg#designer"></use>
 									</svg>Вызвать дизайнера

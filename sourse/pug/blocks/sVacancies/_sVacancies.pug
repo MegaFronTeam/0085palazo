@@ -6,7 +6,7 @@ mixin sVacancies(data)
 				h3 Отдел продаж
 			mixin content()
 				p Требуемый опыт работы: Опыт работы в&nbsp;мебельном бизнесе обязателен; Знание конструктива корпусной мебели.<br>График работы: График работы: 5/2 (выходные: воскресенье, понедельник) 9:00-17:30
-				+e.btn(href="#").btn.btn-primary Отправить резюме
+				+e.btn(href="#" data-src="modal-apply" data-fancybox="modal").btn.btn-primary Отправить резюме
 			+ddGroup()
 				+ddGroupItem('Менеджер по продажам', 'active')
 					+content

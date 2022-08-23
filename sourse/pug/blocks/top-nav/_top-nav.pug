@@ -28,11 +28,11 @@ mixin mob-mnu()
 						+icon("email")
 						| sales@palazo.ru
 				.col-12
-					+e.btn.btn.btn-outline-primary(href="#")
+					+e.btn.btn.btn-outline-primary(href="#" data-src='modal-apply2' data-fancybox="modal")
 						+icon("calc")
 						| Онлайн расчет кухни
 				.col-12
-					+e.btn.btn.btn-outline-primary(href="#")
+					+e.btn.btn.btn-outline-primary(href="#" data-src="modal-call" data-fancybox="modal")
 						+icon("designer")
 						| Вызвать дизайнера
 	//  мобильное меню
@@ -48,11 +48,11 @@ mixin top-nav()
 					.col
 						+e.logo-text Мебель на&nbsp;заказ от&nbsp;производителя
 					.col-auto.d-none.d-xxl-block
-						a.btn.btn-outline-primary(href="#")
+						a.btn.btn-outline-primary(href="#" data-src='modal-apply2' data-fancybox="modal")
 							+icon("calc")
 							| Онлайн расчет кухни
 					.col-auto.d-none.d-xxl-block
-						a.btn.btn-outline-primary(href="#")
+						a.btn.btn-outline-primary(href="#" data-src="modal-call" data-fancybox="modal")
 							+icon("designer")
 							| Вызвать дизайнера
 					.col-auto.d-none.d-md-block
@@ -68,7 +68,7 @@ mixin top-nav()
 					+b.catalog-dropdown--js.d-lg-block
 						+mnu()
 				.col-lg-auto.col
-					a.btn.btn-primary(href="#") Заказать замер
+					a.btn.btn-primary(href="#" data-src="modal-call" data-fancybox="modal") Заказать замер
 				.col-auto
 					+e.link.active(href="#")
 						+icon("compare")

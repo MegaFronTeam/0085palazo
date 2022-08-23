@@ -74,6 +74,7 @@
 	display: none;
 	order: 1;
 	min-width: 100%;
+	z-index: 200;
 	@include media-breakpoint-up(lg) {
 		display: none !important;
 		// display: block !important;
