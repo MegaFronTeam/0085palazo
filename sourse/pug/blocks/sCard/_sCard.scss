@@ -344,6 +344,9 @@
 
 	&__materila-tabs {
 		padding-top: 40px;
+		@include media-breakpoint-down(md) {
+			overflow: visible;
+		}
 		.tabs__caption {
 			display: flex;
 			justify-content: space-between;
