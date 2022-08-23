@@ -457,8 +457,8 @@ function eventHandler() {
 			},
 		},
 		navigation: {
-			nextEl: '.slider-more .swiper-button-next',
-			prevEl: '.slider-more .swiper-button-prev',
+			nextEl: '.slider-more .slider-more__controls .swiper-button-next',
+			prevEl: '.slider-more .slider-more__controls .swiper-button-prev',
 		},
 		pagination: {
 			el: '.slider-more .swiper-pagination',
@@ -468,7 +468,7 @@ function eventHandler() {
 	});
 	const catSliders = document.querySelectorAll('.slider-catalog--js');
 	for (let catSlider of catSliders) {
-		const swiperCat = new Swiper('.slider-catalog--js', { 
+		const swiperCat = new Swiper(catSlider, { 
 			slidesPerView: 1,
 			spaceBetween: 10,
 			navigation: {
@@ -483,14 +483,18 @@ function eventHandler() {
 		});
 	}
 
-	const swiperProd = new Swiper('.product-item__slider--js', { 
-		slidesPerView: 1,
-		spaceBetween: 10,
-		navigation: {
-			nextEl: '.product-item__slider .swiper-button-next',
-			prevEl: '.product-item__slider .swiper-button-prev',
-		},
-	});
+	const prodSliders = document.querySelectorAll('.product-item__slider--js');
+	for (let prodSlider of prodSliders) {
+		const swiperProd = new Swiper(prodSlider, { 
+			slidesPerView: 1,
+			spaceBetween: 10,
+			navigation: {
+				nextEl: prodSlider.querySelector('.swiper-button-next'),
+				prevEl: prodSlider.querySelector('.swiper-button-prev'),
+			},
+		});
+
+	}
 
 	const slidersCatalog = document.querySelectorAll('.slider-category--js');
 	for (let sliderCatalog of slidersCatalog) {
@@ -531,7 +535,12 @@ function eventHandler() {
 	});
 
 	let cardThumbsSlider = new Swiper(".card-thumbs-slider--js", {
-		spaceBetween: 16,
+		breakpoints: {
+			576: {
+				spaceBetween: 16
+			},
+		},
+		spaceBetween: 6,
 		slidesPerView: 'auto',
 		freeMode: true,
 		watchSlidesProgress: true,
@@ -636,6 +645,46 @@ function eventHandler() {
 	
 	// / Дропдаун фильтра в каталоге
 
+	// Кнопка тэгов "Показать еще"
+	function showMoreTags() {
+		const tagsList = document.querySelectorAll('.tags-list');
+		
+		if (tagsList) {
+			tagsList.forEach(function(list) {
+				const tagsBtns = list.querySelectorAll('.tags-list__item');
+				const showMoreBtn = list.querySelector('.tags-list .btn');
+
+				showMoreBtn.addEventListener('click', function(event) {
+					event.preventDefault();
+					if (showMoreBtn.dataset.visible == 'visible') {
+						for (let count = 5; count < tagsBtns.length; count++) {
+							console.log('1323')
+							tagsBtns[count].classList.add('hidden');
+						}
+						showMoreBtn.textContent = 'Показать все'
+						showMoreBtn.dataset.visible = 'invisible';
+						return;
+					}
+					else if (showMoreBtn.dataset.visible == 'invisible') {
+						for (let count = 5; count < tagsBtns.length; count++) {
+							tagsBtns[count].classList.remove('hidden');
+						}
+						showMoreBtn.textContent = 'Скрыть'
+						showMoreBtn.dataset.visible = 'visible';
+					}
+				});
+
+				// for (let count = 5; count < tagsBtns.length; count++) {
+				// 	tagsBtns[count].classList.add('hidden');
+				// }
+			})
+		}
+	}
+	
+	showMoreTags();
+
+	// / Кнопка тэгов "Показать еще"
+
 	// Фильтр на мобильном в каталоге
 
 	$('.catalog-sorter__filter-btn').on("click", function() {
@@ -695,18 +744,50 @@ function eventHandler() {
 			ratingActive.style.width = `${ratingActiveWidth}%`;
 		}
 	}
-
-	// const choices = new Choices('.form-control-select', {
-	// 	searchEnabled: false,
-  //   searchChoices: false,
-	// 	itemSelectText: '',
-	// 	renderSelectedChoices: 'always',
-	// 	placeholderValue: 'Не выбрано',
-	// 	removeItemButton: true,
-	// });
-
-
+	
+	
 	// / Рейтинг в отзывах на главной
+	
+	// Тултипы
+	
+	const tooltips = document.querySelectorAll('.tooltips');
+	
+	tooltips.forEach((tooltip) => {
+		const tooltiptext = tooltip.nextElementSibling;
+		const popperInstance = Popper.createPopper(tooltip, tooltiptext, {
+			placement: 'top',
+			modifiers: [
+				{
+					name: 'offset',
+					options: {
+						offset: [0, 8],
+					},
+				},
+			],
+		});
+		function show() {
+			tooltiptext.setAttribute('data-show', '');
+			popperInstance.update();
+		}
+		
+		function hide() {
+			tooltiptext.removeAttribute('data-show');
+		}
+		
+		const showEvents = ['mouseenter', 'focus'];
+		const hideEvents = ['mouseleave', 'blur'];
+		
+		showEvents.forEach((event) => {
+			tooltip.addEventListener(event, show);
+		});
+		
+		hideEvents.forEach((event) => {
+			tooltip.addEventListener(event, hide);
+		});
+	})
+	
+
+	//  / Тултипы
 
 	$('.sExamples__btn').click(function() {
 		$(this).toggleClass('active-btn');

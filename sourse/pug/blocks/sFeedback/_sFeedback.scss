@@ -23,6 +23,8 @@
 		height: 24px;
 	}
 	.tabs {
+		margin: -24px;
+    padding: 24px;
 		&__caption {
 			padding: 25px 0;
 			margin-bottom: 49px;
@@ -119,6 +121,10 @@
 }
 
 .slider-feedback {
+		margin: -24px;
+    padding: 24px;
+		overflow: visible;
+		z-index: 2;
 	.swiper-wrapper {
 		margin-bottom: 56px;
 	}

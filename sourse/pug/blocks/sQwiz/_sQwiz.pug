@@ -13,10 +13,10 @@ mixin sQwiz(data)
 				+e.bonus
 				+e.bonus-title Бонусы после прохождении теста
 				+e.bonus-list
-					+e.bonus-item(href="#" download)
+					+e.bonus-item.--disabled(href="#" download)
 						+icon('docs')
 						| Кейсы меблировок квартир
-					+e.bonus-item(href="#" download)
+					+e.bonus-item.--disabled(href="#" download)
 						+icon('docs')
 						| Чек-лист
 			+e.images

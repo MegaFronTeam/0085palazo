@@ -4,7 +4,7 @@ mixin sCard(data)
 		.container
 			+e.row
 				+e.action-buttons
-					button
+					button.active
 						+icon('compare')
 					button
 						+icon('fave')
@@ -90,12 +90,12 @@ mixin sCard(data)
 							.product-item__text-left.FORM
 								.product-item__text-title Фасад верх
 								.product-item__form-row
-									+in-c('radio','ПВХ','front-up')
+									+in-c('radio','ПВХ','front-up')(checked)
 									+in-c('radio','ПЛАСТИК','front-up')
 							.product-item__text-right.FORM
 								.product-item__text-title Фасад верх
 								.product-item__form-row
-									+in-c('radio','ПВХ','front-down')
+									+in-c('radio','ПВХ','front-down')(checked)
 									+in-c('radio','ПЛАСТИК','front-down')
 						.product-item__text-row
 							.product-item__text-left
@@ -103,9 +103,15 @@ mixin sCard(data)
 								.product-item__price 110 900 р
 							.product-item__text-right
 								.product-item__text-title.d-none.d-lg-block Цена погонного метра
-									+icon('question')
+									.tooltips
+										+icon('question')
+									.tooltiptext Какой-то текст
+										.tooltip-arrow(data-popper-arrow)
 								.product-item__text-title.d-lg-none Цена п.м.
-									+icon('question')
+									.tooltips
+										+icon('question')
+									.tooltiptext Какой-то текст
+										.tooltip-arrow(data-popper-arrow)
 								.product-item__price 18 900 р
 						+e.buttons
 							+btn('Расчитать онлайн').btn.btn-primary

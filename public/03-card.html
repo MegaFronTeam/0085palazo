@@ -234,7 +234,7 @@
 				<div class="container">
 					<div class="sCard__row">
 						<div class="sCard__action-buttons">
-							<button>
+							<button class="active">
 								<svg class="icon icon-compare ">
 									<use xlink:href="img/svg/sprite.svg#compare"></use>
 								</svg>
@@ -361,7 +361,7 @@
 								<div class="product-item__text-left FORM">
 									<div class="product-item__text-title">Фасад верх</div>
 									<div class="product-item__form-row">
-										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio"/><span class="custom-input__text form-check-label">ПВХ</span>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio" checked="checked"/><span class="custom-input__text form-check-label">ПВХ</span>
 										</label>
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio"/><span class="custom-input__text form-check-label">ПЛАСТИК</span>
 										</label>
@@ -370,7 +370,7 @@
 								<div class="product-item__text-right FORM">
 									<div class="product-item__text-title">Фасад верх</div>
 									<div class="product-item__form-row">
-										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio"/><span class="custom-input__text form-check-label">ПВХ</span>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio" checked="checked"/><span class="custom-input__text form-check-label">ПВХ</span>
 										</label>
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio"/><span class="custom-input__text form-check-label">ПЛАСТИК</span>
 										</label>
@@ -384,14 +384,24 @@
 								</div>
 								<div class="product-item__text-right">
 									<div class="product-item__text-title d-none d-lg-block">Цена погонного метра
-										<svg class="icon icon-question ">
-											<use xlink:href="img/svg/sprite.svg#question"></use>
-										</svg>
+										<div class="tooltips">
+											<svg class="icon icon-question ">
+												<use xlink:href="img/svg/sprite.svg#question"></use>
+											</svg>
+										</div>
+										<div class="tooltiptext">Какой-то текст
+											<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
+										</div>
 									</div>
 									<div class="product-item__text-title d-lg-none">Цена п.м.
-										<svg class="icon icon-question ">
-											<use xlink:href="img/svg/sprite.svg#question"></use>
-										</svg>
+										<div class="tooltips">
+											<svg class="icon icon-question ">
+												<use xlink:href="img/svg/sprite.svg#question"></use>
+											</svg>
+										</div>
+										<div class="tooltiptext">Какой-то текст
+											<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
+										</div>
 									</div>
 									<div class="product-item__price">18 900 р</div>
 								</div>
@@ -720,16 +730,17 @@
 						<div class="sForm__form-col">
 							<div class="form-wrap">
 								<form>
-									<div class="add-file">
-										<label><input class="add-file__input" name="file" type="file"/><span class="add-file__btn"> </span><span class="add-file__text">Выбрать фото</span>
-										</label><span class="add-file__filename"> </span>
+									<div class="add-file upload-field">
+										<label>
+											<input class="add-file__input input-upload" name="file" type="file"/><span class="add-file__btn"> </span><span class="add-file__text upload-field__file-name">Выбрать фото</span>
+										</label><span class="add-file__filename"></span>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<label><span class="form-wrap__input-title">Ваш номер телефона</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Введите"/>
 										</label>
 									</div>
 									<!-- +e.input-wrap-->
-									<button class="form-wrap__button btn btn-primary" type="submit">Оставить заявку
+									<button class="form-wrap__button link-modal-js btn btn-primary" type="submit" href="modal-thx">Оставить заявку
 									</button>
 								</form>
 							</div>
@@ -771,7 +782,7 @@
 												<use xlink:href="img/svg/sprite.svg#compare"></use>
 											</svg>
 										</button>
-										<button class="product-item__fave-btn"> 
+										<button class="product-item__fave-btn active">
 											<svg class="icon icon-fave ">
 												<use xlink:href="img/svg/sprite.svg#fave"></use>
 											</svg>
@@ -789,12 +800,14 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах 
+									<div class="product-item__text">Сравните цену в разных материалах
 										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
 											</svg>
-											<div class="tooltiptext">Какой-то текст</div>
+										</div>
+										<div class="tooltiptext">Какой-то текст
+											<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 										</div>
 									</div>
 									<div class="product-item__text-row">
@@ -802,7 +815,7 @@
 											<div class="product-item__text-title">Фасад верх
 											</div>
 											<div class="product-item__form-row">
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio"/><span class="custom-input__text form-check-label">ПВХ</span>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio" checked="checked"/><span class="custom-input__text form-check-label">ПВХ</span>
 												</label>
 												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio"/><span class="custom-input__text form-check-label">ПЛАСТИК</span>
 												</label>
@@ -812,7 +825,7 @@
 											<div class="product-item__text-title">Фасад верх
 											</div>
 											<div class="product-item__form-row">
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio"/><span class="custom-input__text form-check-label">ПВХ</span>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio" checked="checked"/><span class="custom-input__text form-check-label">ПВХ</span>
 												</label>
 												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio"/><span class="custom-input__text form-check-label">ПЛАСТИК</span>
 												</label>
@@ -832,7 +845,9 @@
 													<svg class="icon icon-question ">
 														<use xlink:href="img/svg/sprite.svg#question"></use>
 													</svg>
-													<div class="tooltiptext">Какой-то текст</div>
+												</div>
+												<div class="tooltiptext">Какой-то текст
+													<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
@@ -840,7 +855,9 @@
 													<svg class="icon icon-question ">
 														<use xlink:href="img/svg/sprite.svg#question"></use>
 													</svg>
-													<div class="tooltiptext">Какой-то текст</div>
+												</div>
+												<div class="tooltiptext">Какой-то текст
+													<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 												</div>
 											</div>
 											<div class="product-item__price">18 900 р
@@ -880,7 +897,7 @@
 												<use xlink:href="img/svg/sprite.svg#compare"></use>
 											</svg>
 										</button>
-										<button class="product-item__fave-btn"> 
+										<button class="product-item__fave-btn active">
 											<svg class="icon icon-fave ">
 												<use xlink:href="img/svg/sprite.svg#fave"></use>
 											</svg>
@@ -898,12 +915,14 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах 
+									<div class="product-item__text">Сравните цену в разных материалах
 										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
 											</svg>
-											<div class="tooltiptext">Какой-то текст</div>
+										</div>
+										<div class="tooltiptext">Какой-то текст
+											<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 										</div>
 									</div>
 									<div class="product-item__text-row">
@@ -911,7 +930,7 @@
 											<div class="product-item__text-title">Фасад верх
 											</div>
 											<div class="product-item__form-row">
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio"/><span class="custom-input__text form-check-label">ПВХ</span>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio" checked="checked"/><span class="custom-input__text form-check-label">ПВХ</span>
 												</label>
 												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio"/><span class="custom-input__text form-check-label">ПЛАСТИК</span>
 												</label>
@@ -921,7 +940,7 @@
 											<div class="product-item__text-title">Фасад верх
 											</div>
 											<div class="product-item__form-row">
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio"/><span class="custom-input__text form-check-label">ПВХ</span>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio" checked="checked"/><span class="custom-input__text form-check-label">ПВХ</span>
 												</label>
 												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio"/><span class="custom-input__text form-check-label">ПЛАСТИК</span>
 												</label>
@@ -941,7 +960,9 @@
 													<svg class="icon icon-question ">
 														<use xlink:href="img/svg/sprite.svg#question"></use>
 													</svg>
-													<div class="tooltiptext">Какой-то текст</div>
+												</div>
+												<div class="tooltiptext">Какой-то текст
+													<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
@@ -949,7 +970,9 @@
 													<svg class="icon icon-question ">
 														<use xlink:href="img/svg/sprite.svg#question"></use>
 													</svg>
-													<div class="tooltiptext">Какой-то текст</div>
+												</div>
+												<div class="tooltiptext">Какой-то текст
+													<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 												</div>
 											</div>
 											<div class="product-item__price">18 900 р
@@ -989,7 +1012,7 @@
 												<use xlink:href="img/svg/sprite.svg#compare"></use>
 											</svg>
 										</button>
-										<button class="product-item__fave-btn"> 
+										<button class="product-item__fave-btn active">
 											<svg class="icon icon-fave ">
 												<use xlink:href="img/svg/sprite.svg#fave"></use>
 											</svg>
@@ -1007,12 +1030,14 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах 
+									<div class="product-item__text">Сравните цену в разных материалах
 										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
 											</svg>
-											<div class="tooltiptext">Какой-то текст</div>
+										</div>
+										<div class="tooltiptext">Какой-то текст
+											<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 										</div>
 									</div>
 									<div class="product-item__text-row">
@@ -1020,7 +1045,7 @@
 											<div class="product-item__text-title">Фасад верх
 											</div>
 											<div class="product-item__form-row">
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio"/><span class="custom-input__text form-check-label">ПВХ</span>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio" checked="checked"/><span class="custom-input__text form-check-label">ПВХ</span>
 												</label>
 												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio"/><span class="custom-input__text form-check-label">ПЛАСТИК</span>
 												</label>
@@ -1030,7 +1055,7 @@
 											<div class="product-item__text-title">Фасад верх
 											</div>
 											<div class="product-item__form-row">
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio"/><span class="custom-input__text form-check-label">ПВХ</span>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio" checked="checked"/><span class="custom-input__text form-check-label">ПВХ</span>
 												</label>
 												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio"/><span class="custom-input__text form-check-label">ПЛАСТИК</span>
 												</label>
@@ -1050,7 +1075,9 @@
 													<svg class="icon icon-question ">
 														<use xlink:href="img/svg/sprite.svg#question"></use>
 													</svg>
-													<div class="tooltiptext">Какой-то текст</div>
+												</div>
+												<div class="tooltiptext">Какой-то текст
+													<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
@@ -1058,7 +1085,9 @@
 													<svg class="icon icon-question ">
 														<use xlink:href="img/svg/sprite.svg#question"></use>
 													</svg>
-													<div class="tooltiptext">Какой-то текст</div>
+												</div>
+												<div class="tooltiptext">Какой-то текст
+													<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 												</div>
 											</div>
 											<div class="product-item__price">18 900 р
@@ -1098,7 +1127,7 @@
 												<use xlink:href="img/svg/sprite.svg#compare"></use>
 											</svg>
 										</button>
-										<button class="product-item__fave-btn"> 
+										<button class="product-item__fave-btn active">
 											<svg class="icon icon-fave ">
 												<use xlink:href="img/svg/sprite.svg#fave"></use>
 											</svg>
@@ -1116,12 +1145,14 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах 
+									<div class="product-item__text">Сравните цену в разных материалах
 										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
 											</svg>
-											<div class="tooltiptext">Какой-то текст</div>
+										</div>
+										<div class="tooltiptext">Какой-то текст
+											<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 										</div>
 									</div>
 									<div class="product-item__text-row">
@@ -1129,7 +1160,7 @@
 											<div class="product-item__text-title">Фасад верх
 											</div>
 											<div class="product-item__form-row">
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio"/><span class="custom-input__text form-check-label">ПВХ</span>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio" checked="checked"/><span class="custom-input__text form-check-label">ПВХ</span>
 												</label>
 												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio"/><span class="custom-input__text form-check-label">ПЛАСТИК</span>
 												</label>
@@ -1139,7 +1170,7 @@
 											<div class="product-item__text-title">Фасад верх
 											</div>
 											<div class="product-item__form-row">
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio"/><span class="custom-input__text form-check-label">ПВХ</span>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio" checked="checked"/><span class="custom-input__text form-check-label">ПВХ</span>
 												</label>
 												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio"/><span class="custom-input__text form-check-label">ПЛАСТИК</span>
 												</label>
@@ -1159,7 +1190,9 @@
 													<svg class="icon icon-question ">
 														<use xlink:href="img/svg/sprite.svg#question"></use>
 													</svg>
-													<div class="tooltiptext">Какой-то текст</div>
+												</div>
+												<div class="tooltiptext">Какой-то текст
+													<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
@@ -1167,7 +1200,9 @@
 													<svg class="icon icon-question ">
 														<use xlink:href="img/svg/sprite.svg#question"></use>
 													</svg>
-													<div class="tooltiptext">Какой-то текст</div>
+												</div>
+												<div class="tooltiptext">Какой-то текст
+													<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 												</div>
 											</div>
 											<div class="product-item__price">18 900 р
@@ -1207,7 +1242,7 @@
 												<use xlink:href="img/svg/sprite.svg#compare"></use>
 											</svg>
 										</button>
-										<button class="product-item__fave-btn"> 
+										<button class="product-item__fave-btn active">
 											<svg class="icon icon-fave ">
 												<use xlink:href="img/svg/sprite.svg#fave"></use>
 											</svg>
@@ -1225,12 +1260,14 @@
 									</a>
 								</div>
 								<div class="product-item__descr">
-									<div class="product-item__text">Сравните цену в разных материалах 
+									<div class="product-item__text">Сравните цену в разных материалах
 										<div class="tooltips">
 											<svg class="icon icon-question ">
 												<use xlink:href="img/svg/sprite.svg#question"></use>
 											</svg>
-											<div class="tooltiptext">Какой-то текст</div>
+										</div>
+										<div class="tooltiptext">Какой-то текст
+											<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 										</div>
 									</div>
 									<div class="product-item__text-row">
@@ -1238,7 +1275,7 @@
 											<div class="product-item__text-title">Фасад верх
 											</div>
 											<div class="product-item__form-row">
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio"/><span class="custom-input__text form-check-label">ПВХ</span>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio" checked="checked"/><span class="custom-input__text form-check-label">ПВХ</span>
 												</label>
 												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-up" type="radio"/><span class="custom-input__text form-check-label">ПЛАСТИК</span>
 												</label>
@@ -1248,7 +1285,7 @@
 											<div class="product-item__text-title">Фасад верх
 											</div>
 											<div class="product-item__form-row">
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio"/><span class="custom-input__text form-check-label">ПВХ</span>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio" checked="checked"/><span class="custom-input__text form-check-label">ПВХ</span>
 												</label>
 												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="front-down" type="radio"/><span class="custom-input__text form-check-label">ПЛАСТИК</span>
 												</label>
@@ -1268,7 +1305,9 @@
 													<svg class="icon icon-question ">
 														<use xlink:href="img/svg/sprite.svg#question"></use>
 													</svg>
-													<div class="tooltiptext">Какой-то текст</div>
+												</div>
+												<div class="tooltiptext">Какой-то текст
+													<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 												</div>
 											</div>
 											<div class="product-item__text-title d-lg-none">Цена п.м.
@@ -1276,7 +1315,9 @@
 													<svg class="icon icon-question ">
 														<use xlink:href="img/svg/sprite.svg#question"></use>
 													</svg>
-													<div class="tooltiptext">Какой-то текст</div>
+												</div>
+												<div class="tooltiptext">Какой-то текст
+													<div class="tooltip-arrow" data-popper-arrow="data-popper-arrow"></div>
 												</div>
 											</div>
 											<div class="product-item__price">18 900 р
@@ -1466,16 +1507,16 @@
 							<div class="footer-nav">
 								<div class="footer-nav__title">Категории
 								</div>
-								<ul class="footer-nav__list">
-									<li class="footer-nav__item">
+								<ul>
+									<li>
 										<a class="footer-nav__link" href="#">Кухни на заказ
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Мебель в детскую
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Столовые группы
 										</a>
 									</li>
@@ -1484,12 +1525,12 @@
 							<div class="footer-nav">
 								<div class="footer-nav__title footer-nav__title--fading">Категории
 								</div>
-								<ul class="footer-nav__list">
-									<li class="footer-nav__item">
+								<ul>
+									<li>
 										<a class="footer-nav__link" href="#">Дизайнерам
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Производителям мебели
 										</a>
 									</li>
@@ -1514,63 +1555,63 @@
 									</svg>
 								</a>
 							</div>
-							<div class="footer-nav footer-nav--info">
+							<div class="footer-nav footer-nav--info footer-nav footer-nav--columns">
 								<div class="footer-nav__title">ПОЛЕЗНАЯ ИНФОРМАЦИЯ
 								</div>
-								<ul class="footer-nav__list footer-nav__list--columns">
-									<li class="footer-nav__item">
+								<ul>
+									<li>
 										<a class="footer-nav__link" href="#">О компании
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Рассрочка
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Наши видео
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Фото наших работ
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Гарантия
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Сборка
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Доставка
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Дизайн-замер
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Оплата
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Полезные статьи
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Отзывы
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Часто задаваемы вопросы
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Вакансии
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Наши партнеры
 										</a>
 									</li>
@@ -1634,15 +1675,13 @@
 			</footer>
 		</div>
 		<!-- start sCookies-->
-		<section class="sCookies section" id="sCookies">
-			<div class="container">
-				<div class="sCookies__row">
-					<p>Мы&nbsp;используем файлы cookie. Пользуясь настоящим веб-сайтом, Вы&nbsp;даете свое согласие на&nbsp;использование файлов cookies. <a href="#">Узнать подробнее</a></p>
-					<button class="sCookies__btn cookie-btn cookie-btn--js btn btn-primary" type="button">OK
-					</button>
-				</div>
+		<div class="container">
+			<div class="row">
+				<p>Мы&nbsp;используем файлы cookie. Пользуясь настоящим веб-сайтом, Вы&nbsp;даете свое согласие на&nbsp;использование файлов cookies. <a href="#">Узнать подробнее</a></p>
+				<button class="btn cookie-btn cookie-btn--js btn btn-primary" type="button">OK
+				</button>
 			</div>
-		</section>
+		</div>
 		<!-- end sCookies-->
 		<!--  start modals-->
 		<div id="modal-call" style="display: none">
@@ -2182,6 +2221,7 @@
 		<script src="libs/nouislider/nouislider.min.js"></script>
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"></script>
 		<script src="libs/flextabs-js/jquery.flextabs.min.js"></script>
+		<script src="libs/@popperjs/core/umd/popper.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

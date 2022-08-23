@@ -323,9 +323,7 @@
 								<button class="tags-list__btn">Кнопка
 								</button>
 							</li>
-							<li class="tags-list__item swiper-slide">
-								<div class="btn btn-outline-primary">Показать все</div>
-							</li>
+							<div class="btn btn-outline-primary swiper-slide" data-visible="visible">Скрыть</div>
 						</div>
 					</ul>
 				</div>
@@ -424,16 +422,16 @@
 							<div class="footer-nav">
 								<div class="footer-nav__title">Категории
 								</div>
-								<ul class="footer-nav__list">
-									<li class="footer-nav__item">
+								<ul>
+									<li>
 										<a class="footer-nav__link" href="#">Кухни на заказ
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Мебель в детскую
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Столовые группы
 										</a>
 									</li>
@@ -442,12 +440,12 @@
 							<div class="footer-nav">
 								<div class="footer-nav__title footer-nav__title--fading">Категории
 								</div>
-								<ul class="footer-nav__list">
-									<li class="footer-nav__item">
+								<ul>
+									<li>
 										<a class="footer-nav__link" href="#">Дизайнерам
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Производителям мебели
 										</a>
 									</li>
@@ -472,63 +470,63 @@
 									</svg>
 								</a>
 							</div>
-							<div class="footer-nav footer-nav--info">
+							<div class="footer-nav footer-nav--info footer-nav footer-nav--columns">
 								<div class="footer-nav__title">ПОЛЕЗНАЯ ИНФОРМАЦИЯ
 								</div>
-								<ul class="footer-nav__list footer-nav__list--columns">
-									<li class="footer-nav__item">
+								<ul>
+									<li>
 										<a class="footer-nav__link" href="#">О компании
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Рассрочка
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Наши видео
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Фото наших работ
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Гарантия
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Сборка
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Доставка
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Дизайн-замер
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Оплата
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Полезные статьи
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Отзывы
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Часто задаваемы вопросы
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Вакансии
 										</a>
 									</li>
-									<li class="footer-nav__item">
+									<li>
 										<a class="footer-nav__link" href="#">Наши партнеры
 										</a>
 									</li>
@@ -592,15 +590,13 @@
 			</footer>
 		</div>
 		<!-- start sCookies-->
-		<section class="sCookies section" id="sCookies">
-			<div class="container">
-				<div class="sCookies__row">
-					<p>Мы&nbsp;используем файлы cookie. Пользуясь настоящим веб-сайтом, Вы&nbsp;даете свое согласие на&nbsp;использование файлов cookies. <a href="#">Узнать подробнее</a></p>
-					<button class="sCookies__btn cookie-btn cookie-btn--js btn btn-primary" type="button">OK
-					</button>
-				</div>
+		<div class="container">
+			<div class="row">
+				<p>Мы&nbsp;используем файлы cookie. Пользуясь настоящим веб-сайтом, Вы&nbsp;даете свое согласие на&nbsp;использование файлов cookies. <a href="#">Узнать подробнее</a></p>
+				<button class="btn cookie-btn cookie-btn--js btn btn-primary" type="button">OK
+				</button>
 			</div>
-		</section>
+		</div>
 		<!-- end sCookies-->
 		<!--  start modals-->
 		<div id="modal-call" style="display: none">
@@ -1140,6 +1136,7 @@
 		<script src="libs/nouislider/nouislider.min.js"></script>
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"></script>
 		<script src="libs/flextabs-js/jquery.flextabs.min.js"></script>
+		<script src="libs/@popperjs/core/umd/popper.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

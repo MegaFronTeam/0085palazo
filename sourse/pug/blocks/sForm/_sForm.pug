@@ -11,7 +11,7 @@ mixin sForm()
 				+e.form-col
 					+form-wrap()
 						+input('Введите','tel','Ваш номер телефона')
-						+e.button.BUTTON(type="submit").btn.btn-primary Оставить заявку
+						+e.button.btn.btn-primary.link-modal-js(type="submit" href="modal-call") Оставить заявку
 				.col-lg-9
 					+e.policy.P Нажимая «Оставить завку», я соглашаюсь c 
 						a(href="#")  обработкой персональных данных 
@@ -51,9 +51,15 @@ mixin sFormFile()
 						a(href="#") Политики конфиденциальности.
 				+e.form-col
 					+form-wrap()
-						+add-file('Выбрать фото')
+						//- +add-file('Выбрать фото')
+						.add-file.upload-field
+							label
+								input.add-file__input.input-upload(name='file' type='file')
+								span.add-file__btn  
+								span.add-file__text.upload-field__file-name Выбрать фото
+							span.add-file__filename
 						+input('Введите','tel','Ваш номер телефона')
-						+e.button.BUTTON(type="submit").btn.btn-primary Оставить заявку
+						+e.button.link-modal-js(type="submit" href="modal-thx").btn.btn-primary Оставить заявку
 	// end sFormFile
 
 mixin searchForm()

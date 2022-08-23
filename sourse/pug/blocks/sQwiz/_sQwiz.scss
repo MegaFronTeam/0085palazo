@@ -104,6 +104,9 @@
 			font-size: 14px;
 			font-weight: 600;
 			color: $gray-600;
+			&--disabled {
+				cursor: default;
+			}
 			@include media-breakpoint-up(lg) {
 				font-size: rem(16);	
 			}

@@ -5,9 +5,8 @@ mixin productTags(show,...items)
 				-for (var i = 0; i < items.length; i++)
 					+e.item.swiper-slide.LI
 						+e.btn.BUTTON= items[i]
-				if show
-					+e.item.swiper-slide.LI
-						.btn.btn-outline-primary Показать все
+				if show					
+					.btn.btn-outline-primary.swiper-slide(data-visible='visible') Скрыть
 	// /.tags-list
 
 mixin catalogRowItem(img,title,price='125 000 руб.')
@@ -97,7 +96,7 @@ mixin product-item(img, title="Кухня Дестини", total='110 900 р', p
 			+e.buttons
 				+e.compare-btn.BUTTON 
 					+icon('compare')
-				+e.fave-btn.BUTTON  
+				+e.fave-btn.BUTTON.active
 					+icon('fave')
 			+e.tags
 				+e.tag--discount Скидка 15%
@@ -105,20 +104,21 @@ mixin product-item(img, title="Кухня Дестини", total='110 900 р', p
 				+e.tag--promo Акция
 			+e.title(href="#")!= title
 		+e.descr
-			+e.text Сравните цену в разных материалах 
+			+e.text Сравните цену в разных материалах
 				.tooltips
 					+icon('question')
-					.tooltiptext Какой-то текст
+				.tooltiptext Какой-то текст
+					.tooltip-arrow(data-popper-arrow)
 			+e.text-row
 				+e.text-left.FORM
 					+e.text-title Фасад верх
 					+e.form-row
-						+in-c('radio','ПВХ','front-up')
+						+in-c('radio','ПВХ','front-up')(checked)
 						+in-c('radio','ПЛАСТИК','front-up')
 				+e.text-right.FORM
 					+e.text-title Фасад верх
 					+e.form-row
-						+in-c('radio','ПВХ','front-down')
+						+in-c('radio','ПВХ','front-down')(checked)
 						+in-c('radio','ПЛАСТИК','front-down')
 			+e.text-row
 				+e.text-left
@@ -128,11 +128,13 @@ mixin product-item(img, title="Кухня Дестини", total='110 900 р', p
 					+e.text-title.d-none.d-lg-block Цена погонного метра
 						.tooltips
 							+icon('question')
-							.tooltiptext Какой-то текст
+						.tooltiptext Какой-то текст
+							.tooltip-arrow(data-popper-arrow)
 					+e.text-title.d-lg-none Цена п.м.
 						.tooltips
 							+icon('question')
-							.tooltiptext Какой-то текст
+						.tooltiptext Какой-то текст
+							.tooltip-arrow(data-popper-arrow)
 					+e.price= price
 	// /.product-item
 

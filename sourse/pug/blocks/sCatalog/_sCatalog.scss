@@ -95,14 +95,14 @@
 	}
 	.swiper-slide::after {
 		content: "";
-	display: block;    
-	width: 100%;
-	height: 100%;    
-	position: absolute;
-	top: 0;      
-	left: 0;   
-	background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 60.16%);
-	z-index: 11;
+		display: block;    
+		width: 100%;
+		height: 100%;    
+		position: absolute;
+		top: 0;      
+		left: 0;   
+		background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 60.16%);
+		z-index: 11;
 	}
 	.swiper-button-hand {
 		color: white;
@@ -124,6 +124,13 @@
 			height: 32px;
 			border-radius: 4px;
 			border: none;
+			@include mt;
+			&:hover {
+				background-color: $white;
+			}
+			&.active {
+				background-color: $white;
+			}
 			.icon {
 				width: 16px;
 				height: 16px;
@@ -133,9 +140,6 @@
 		.product-item__compare-btn {
 			margin-right: 8px;
 			background: rgba(255, 255, 255, 0.1);
-		}
-		.product-item__fave-btn {
-			background-color: $white;
 		}
 	}
 	&__tags {
@@ -291,8 +295,12 @@
 	flex-wrap: wrap;
 	list-style-type: none;
 	margin-bottom: 0;
+	@include media-breakpoint-down(sm) {
+		overflow: visible;
+	}
 	.swiper-wrapper {
 		flex-wrap: wrap;
+		align-items: center;
 		@include media-breakpoint-down(sm) {
 			flex-wrap: nowrap;
 		}
@@ -303,11 +311,20 @@
 		&:not(:last-child) {
 			margin-right: 8px;
 		}
-		&:last-child {
-			.btn {
-				padding: 12px 20px;
-			}
+		// &:last-child {
+		// 	.btn {
+		// 		padding: 12px 20px;
+		// 	}
+		// }
+		&.hidden {
+			display: none;
 		}
+	}
+	.btn {
+		display: inline-block;
+		width: auto;
+		padding: 12px 20px;
+		margin-bottom: 4px;
 	}
 	&__btn {
 		padding: 12px 20px;
@@ -316,12 +333,20 @@
 		background: $gray-100;
 		border-radius: 4px;
 		border: none;
+		@include mt;
+		&:hover {
+			color: $gray-100;
+			background: $red;
+		}
 	}
 }
 
 // Разделы каталога
 .slider-category {
 	margin-bottom: 40px;
+	@include media-breakpoint-down(xxl) {
+		overflow: visible;
+	}
 	&__slide {
 		max-width: 383px;
 		&:not(:last-child) {
@@ -768,6 +793,8 @@
 			height: 16px;
 			border-radius: 50%;
 			background-color: $blue;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 	.form-check-input--red+span {
@@ -783,6 +810,8 @@
 			height: 16px;
 			border-radius: 50%;
 			background-color: $red;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 	.form-check-input--green+span {
@@ -798,6 +827,8 @@
 			height: 16px;
 			border-radius: 50%;
 			background-color: $green;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 	.custom-input__text {
@@ -1100,21 +1131,59 @@
 	display: inline-block;
 	cursor: pointer;
 }
-.tooltips .tooltiptext {
-	visibility: hidden;
-	width: 70px;
+.tooltiptext {
+	// visibility: hidden;
+	// width: 70px;
+	display: none;
 	background-color: $red;
 	color: $white;
 	text-align: center;
-	padding: 5px 0;
+	padding: 10px;
 	border-radius: 6px;
-	position: absolute;
-	bottom: 110%;
-	left: 50%;
-	transform: translateX(-50%);
+	// position: absolute;
+	// bottom: 110%;
+	// left: 50%;
+	// transform: translateX(-50%);
 	z-index: 120;
 	@include mt;
 }
-.tooltips:hover .tooltiptext {
-	visibility: visible;
+
+.tooltiptext[data-show] {
+  display: block;
 }
+.tooltip-arrow,
+.tooltip-arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+.tooltip-arrow {
+  visibility: hidden;
+}
+
+.tooltip-arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.tooltiptext[data-popper-placement^='top'] > .tooltip-arrow{
+  bottom: -4px;
+}
+
+.tooltiptext[data-popper-placement^='bottom'] > .tooltip-arrow {
+  top: -4px;
+}
+
+.tooltiptext[data-popper-placement^='left'] > .tooltip-arrow {
+  right: -4px;
+}
+
+.tooltiptext[data-popper-placement^='right'] > .tooltip-arrow {
+  left: -4px;
+}
+// .tooltips:hover .tooltiptext {
+// 	visibility: visible;
+// }

@@ -12,8 +12,11 @@
 		align-content: start;
 		align-items: start;
 		@include media-breakpoint-down(lg) {
+			grid-template-columns: 1;
 			grid-template-rows:  auto auto auto;
 			gap: 0;
+			min-width: 100%;
+			max-width: 100%;
 		}
 		// --bs-gutter-x: #{rem(32)};
 		// --bs-gutter-y: #{rem()};
@@ -44,14 +47,22 @@
 			background: rgba(193, 101, 101, 0.1);
 			border-radius: 4px;
 			border: none;
+			@include mt;
 			&:not(:last-child) {
 				margin-right: 8px;
+			}
+			&:hover, &.active {
+				background: $red;
+				.icon {
+					color: $white;
+				}
 			}
 		}
 		.icon {
 			width: 16px;
 			height: 16px;
 			color: $red;
+			@include mt;
 		}
 	}
 	&__images-wrap {
@@ -101,19 +112,21 @@
 		@include media-breakpoint-down(lg) {
 			grid-column: 1 / 13;
 			grid-row: 3 / 4;
+			max-width: 100%;
 		}
 		// justify-self: start;
 		margin-bottom: rem(77);
 		.tabs__caption {
 			display: flex;
-			padding-bottom: 27px;
 			margin-bottom: 20px;
+			align-items: stretch;
 			// height: auto;
 			font-weight: 600;
 			line-height: 100%;
 			border-bottom: 1px solid #DBDBDB;
 		}
 		.tabs__btn {
+			padding-bottom: 27px;
 			position: relative;
 			width: auto;
 			@include media-breakpoint-down(lg) {
@@ -122,7 +135,7 @@
 			&.active::after {
 				content: '';
 				position: absolute;
-				bottom: -29px;
+				bottom: -2px;
 				left: 0;
 				width: 100%;
 				height: 3px;
@@ -233,10 +246,10 @@
 		@include media-breakpoint-down(lg) {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
+			gap: 16px;
 		}
 		@include media-breakpoint-down(sm) {
 			grid-template-columns: 1fr;
-			gap: 16px;
 		}
 	}
 
@@ -245,12 +258,6 @@
 		vertical-align: top;
 		@include media-breakpoint-down(xxl) {
 			padding: 7px 10px;
-		}
-		@include media-breakpoint-down(lg) {
-			max-width: 190px;
-		}
-		@include media-breakpoint-down(sm) {
-			max-width: none;
 		}
 	}
 
@@ -552,6 +559,10 @@
 		width: 160px;
 		height: 130px;
 		@include mt;
+		@include media-breakpoint-down(sm) {
+			width: 56px;
+			height: 46px;
+		}
 	}
 	.swiper-slide-thumb-active {
 		// padding: 6px 5px;
