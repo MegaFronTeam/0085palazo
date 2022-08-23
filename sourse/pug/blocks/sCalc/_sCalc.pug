@@ -15,24 +15,24 @@ mixin sCalc(data)
 						| вид гарнитура 
 				.col-12.d-block.d-lg-none
 					+select('', 'Прямой', 'Г-образный (левый)', 'Г-образный (правый)', 'П-образный', 'Параллельный')
-				mixin headset-item(img, text)
+				mixin headset-item(img, text, value, checked)
 					label
 						+e.SPAN.headset-item
-							input(type="radio" name="headset")
+							input(type="radio" name="headset" value= value checked= checked)
 							+e.SPAN.img-wrap
 								+img(`img/svg/headset-${img}.svg`).non-checked
 								+img(`img/svg/headset-${img}-checked.svg`).checked
 							+e.SPAN.text!= text
 				+e.headset-col.col-auto.d-none.d-lg-block
-					+headset-item(1, 'Прямой')
+					+headset-item(1, 'Прямой', "t-cost", 'checked')
 				+e.headset-col.col-auto.d-none.d-lg-block
-					+headset-item(2, 'Г-образный (левый)')
+					+headset-item(2, 'Г-образный (левый)', "g-cost-l")
 				+e.headset-col.col-auto.d-none.d-lg-block
-					+headset-item(3, 'Г-образный (правый)')
+					+headset-item(3, 'Г-образный (правый)', "g-cost-r")
 				+e.headset-col.col-auto.d-none.d-lg-block
-					+headset-item(4, 'П-образный')
+					+headset-item(4, 'П-образный', "p-cost")
 				+e.headset-col.col-auto.d-none.d-lg-block
-					+headset-item(5, 'Параллельный')
+					+headset-item(5, 'Параллельный', "d-cost")
 			+e.body-row.row
 				.col-lg-7
 					+e.size-row.row.d-flex.d-lg-none
@@ -40,23 +40,117 @@ mixin sCalc(data)
 							+e.size-text Общая длина гарнитура, см
 						.col-6
 							+input('', 'text')
-					+e.size-lg.d-none.d-lg-block
-						+e.position
-							div#slider
-							.size
-								#field.field
-								| см
-						+e.vertical-position--left
-							div#vertical-slider.vertical-slider
-							.size
-								#field2.field
-								| см
-						+e.vertical-position--right
-							div#vertical-slider-right.vertical-slider
-							.size
-								#field3.field
-								| см
-						+img('img/sCalc-img-1.png')
+					.d-none.d-lg-block
+						+e.size-lg#t-cost.active
+							+e.position
+								div.slider
+								.size
+									.field.field1
+									| см
+							//- +e.vertical-position--left
+							//- 	div.vertical-slider.vertical-slider-1
+							//- 	.size
+							//- 		.field.field2
+							//- 		| см
+							//- +e.vertical-position--right
+							//- 	div.vertical-slider.vertical-slider-2
+							//- 	.size
+							//- 		.field.field3
+							//- 		| см
+							//- +e.position--bottom
+							//- 	div.slider-2
+							//- 	.size
+							//- 		.field.field4
+							//- 		| см
+							+img('img/sCalc-img-1.png')
+						+e.size-lg#g-cost-l
+							+e.position
+								div.slider
+								.size
+									.field.field1
+									| см
+							+e.vertical-position--left
+								div.vertical-slider.vertical-slider-1
+								.size
+									.field.field2
+									| см
+							//- +e.vertical-position--right
+							//- 	div.vertical-slider.vertical-slider-2
+							//- 	.size
+							//- 		.field.field3
+							//- 		| см
+							//- +e.position--bottom
+							//- 	div.slider-2
+							//- 	.size
+							//- 		.field.field4
+							//- 		| см
+							+img('img/sCalc-img-1.png')
+						+e.size-lg#g-cost-r
+							+e.position
+								div.slider
+								.size
+									.field.field1
+									| см
+							//- +e.vertical-position--left
+							//- 	div.vertical-slider.vertical-slider-1
+							//- 	.size
+							//- 		.field.field2
+							//- 		| см
+							+e.vertical-position--right
+								div.vertical-slider.vertical-slider-2
+								.size
+									.field.field3
+									| см
+							//- +e.position--bottom
+							//- 	div.slider-2
+							//- 	.size
+							//- 		.field.field4
+							//- 		| см
+							+img('img/sCalc-img-1.png')
+						+e.size-lg#p-cost
+							+e.position
+								div.slider
+								.size
+									.field.field1
+									| см
+							+e.vertical-position--left
+								div.vertical-slider.vertical-slider-1
+								.size
+									.field.field2
+									| см
+							+e.vertical-position--right
+								div.vertical-slider.vertical-slider-2
+								.size
+									.field.field3
+									| см
+							//- +e.position--bottom
+							//- 	div.slider-2
+							//- 	.size
+							//- 		.field.field4
+							//- 		| см
+							+img('img/sCalc-img-1.png')
+						+e.size-lg#d-cost
+							+e.position
+								div.slider
+								.size
+									.field.field1
+									| см
+							//- +e.vertical-position--left
+							//- 	div.vertical-slider.vertical-slider-1
+							//- 	.size
+							//- 		.field.field2
+							//- 		| см
+							//- +e.vertical-position--right
+							//- 	div.vertical-slider.vertical-slider-2
+							//- 	.size
+							//- 		.field.field3
+							//- 		| см
+							+e.position--bottom
+								div.slider-2
+								.size
+									.field.field4
+									| см
+							+img('img/sCalc-img-1.png')
 				.col-lg-5
 					+e.col-wrap
 						+e.select-wrap

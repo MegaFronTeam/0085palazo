@@ -250,6 +250,9 @@
 	&__size-lg {
 		padding: rem(66) rem(73) 0 rem(73);
 		position: relative;
+		&:not(.active) {
+			display: none;
+		}
 		img {
 			width: 100%;
 			max-width: rem(551);
@@ -306,6 +309,10 @@
 		top: 43px;
 		left: 73px;
 		width: calc(100% - (73px * 2));
+		&--bottom {
+			bottom: -50px;
+			top: unset;
+		}
 		.size {
 			position: absolute;
 			display: flex;
@@ -317,7 +324,7 @@
 			top: -41px;
 			left: 50%;
 			transform: translateX(-50%);
-			#field {
+			.field {
 				color: $body-color;
 				margin-right: rem(25);
 			}

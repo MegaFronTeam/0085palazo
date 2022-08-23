@@ -785,27 +785,27 @@
 						</div>
 						<div class="sCalc__headset-col col-auto d-none d-lg-block">
 							<label><span class="sCalc__headset-item">
-								<input type="radio" name="headset"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-1.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-1-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">Прямой</span></span>
+								<input type="radio" name="headset" value="t-cost" checked="checked"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-1.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-1-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">Прямой</span></span>
 							</label>
 						</div>
 						<div class="sCalc__headset-col col-auto d-none d-lg-block">
 							<label><span class="sCalc__headset-item">
-								<input type="radio" name="headset"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-2.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-2-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">Г-образный (левый)</span></span>
+								<input type="radio" name="headset" value="g-cost-l"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-2.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-2-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">Г-образный (левый)</span></span>
 							</label>
 						</div>
 						<div class="sCalc__headset-col col-auto d-none d-lg-block">
 							<label><span class="sCalc__headset-item">
-								<input type="radio" name="headset"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-3.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-3-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">Г-образный (правый)</span></span>
+								<input type="radio" name="headset" value="g-cost-r"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-3.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-3-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">Г-образный (правый)</span></span>
 							</label>
 						</div>
 						<div class="sCalc__headset-col col-auto d-none d-lg-block">
 							<label><span class="sCalc__headset-item">
-								<input type="radio" name="headset"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-4.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-4-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">П-образный</span></span>
+								<input type="radio" name="headset" value="p-cost"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-4.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-4-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">П-образный</span></span>
 							</label>
 						</div>
 						<div class="sCalc__headset-col col-auto d-none d-lg-block">
 							<label><span class="sCalc__headset-item">
-								<input type="radio" name="headset"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-5.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-5-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">Параллельный</span></span>
+								<input type="radio" name="headset" value="d-cost"/><span class="sCalc__img-wrap"><img class="non-checked" src="img/svg/headset-5.svg" alt="" loading="lazy"/><img class="checked" src="img/svg/headset-5-checked.svg" alt="" loading="lazy"/></span><span class="sCalc__text">Параллельный</span></span>
 							</label>
 						</div>
 					</div>
@@ -822,25 +822,77 @@
 									<!-- +e.input-wrap-->
 								</div>
 							</div>
-							<div class="sCalc__size-lg d-none d-lg-block">
-								<div class="sCalc__position">
-									<div id="slider"></div>
-									<div class="size">
-										<div class="field" id="field"></div>см
-									</div>
+							<div class="d-none d-lg-block">
+								<div class="sCalc__size-lg active" id="t-cost">
+									<div class="sCalc__position">
+										<div class="slider"></div>
+										<div class="size">
+											<div class="field field1"></div>см
+										</div>
+									</div><img src="img/sCalc-img-1.png" alt="" loading="lazy"/>
 								</div>
-								<div class="sCalc__vertical-position sCalc__vertical-position--left">
-									<div class="vertical-slider" id="vertical-slider"></div>
-									<div class="size">
-										<div class="field" id="field2"></div>см
+								<div class="sCalc__size-lg" id="g-cost-l">
+									<div class="sCalc__position">
+										<div class="slider"></div>
+										<div class="size">
+											<div class="field field1"></div>см
+										</div>
 									</div>
+									<div class="sCalc__vertical-position sCalc__vertical-position--left">
+										<div class="vertical-slider vertical-slider-1"></div>
+										<div class="size">
+											<div class="field field2"></div>см
+										</div>
+									</div><img src="img/sCalc-img-1.png" alt="" loading="lazy"/>
 								</div>
-								<div class="sCalc__vertical-position sCalc__vertical-position--right">
-									<div class="vertical-slider" id="vertical-slider-right"></div>
-									<div class="size">
-										<div class="field" id="field3"></div>см
+								<div class="sCalc__size-lg" id="g-cost-r">
+									<div class="sCalc__position">
+										<div class="slider"></div>
+										<div class="size">
+											<div class="field field1"></div>см
+										</div>
 									</div>
-								</div><img src="img/sCalc-img-1.png" alt="" loading="lazy"/>
+									<div class="sCalc__vertical-position sCalc__vertical-position--right">
+										<div class="vertical-slider vertical-slider-2"></div>
+										<div class="size">
+											<div class="field field3"></div>см
+										</div>
+									</div><img src="img/sCalc-img-1.png" alt="" loading="lazy"/>
+								</div>
+								<div class="sCalc__size-lg" id="p-cost">
+									<div class="sCalc__position">
+										<div class="slider"></div>
+										<div class="size">
+											<div class="field field1"></div>см
+										</div>
+									</div>
+									<div class="sCalc__vertical-position sCalc__vertical-position--left">
+										<div class="vertical-slider vertical-slider-1"></div>
+										<div class="size">
+											<div class="field field2"></div>см
+										</div>
+									</div>
+									<div class="sCalc__vertical-position sCalc__vertical-position--right">
+										<div class="vertical-slider vertical-slider-2"></div>
+										<div class="size">
+											<div class="field field3"></div>см
+										</div>
+									</div><img src="img/sCalc-img-1.png" alt="" loading="lazy"/>
+								</div>
+								<div class="sCalc__size-lg" id="d-cost">
+									<div class="sCalc__position">
+										<div class="slider"></div>
+										<div class="size">
+											<div class="field field1"></div>см
+										</div>
+									</div>
+									<div class="sCalc__position sCalc__position--bottom">
+										<div class="slider-2"></div>
+										<div class="size">
+											<div class="field field4"></div>см
+										</div>
+									</div><img src="img/sCalc-img-1.png" alt="" loading="lazy"/>
+								</div>
 							</div>
 						</div>
 						<div class="col-lg-5">
