@@ -1,6 +1,6 @@
 mixin sFeedbackPage(data)
 	// start sFeedbackPage
-	+b.SECTION.sFeedbackPage.section#sFeedbackPage&attributes(attributes)
+	+b.sFeedbackPage.section#sFeedbackPage&attributes(attributes)
 		.container
 			.tabs
 				+e.btn-row.row
@@ -12,7 +12,7 @@ mixin sFeedbackPage(data)
 								.tabs__btn.swiper-slide акты работ
 								.tabs__btn.swiper-slide отзовики
 					.col-12.col-xl-2.text-xl-end
-						+btn('Оставить отзыв').btn.btn-outline-primary
+						+e.btn(href='#' data-src="modal-review" data-fancybox="modal").btn.btn-outline-primary Оставить отзыв
 				.tabs__content
 					+e.video-row.row
 						-for(let i =1; i <=12; i++)
