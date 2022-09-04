@@ -9,7 +9,8 @@ mixin headerBlock()
 							- for (var x = 0; x < 3; x++)
 								+e.slide.swiper-slide
 									+e.item.bg-wrap(href="#")
-										+img("img/main-slide.jpg",'bg').picture-bg
+										+e.img-wrap.picture-bg
+											+img("img/main-slide.jpg",'bg')
 										+e.caption
 											+e.title КАЧЕСТВЕННЫЕ КУХНИ ОТ&nbsp;ПРОИЗВОДИТЕЛЯ
 											.d-none.d-sm-block
@@ -32,6 +33,7 @@ mixin headerBlock()
 							+slide(`2`,`КЛАССИЧЕСКИЕ КУХНИ`)
 							+slide(`3`,`Кухни в стиле лофт`)
 							+slide(`4`,`КУХНИ НЕОКЛАССИКА`) 
+						+arrow()
 
 						
 	// end headerBlock

@@ -133,7 +133,9 @@
 		color: $primary;
 
 		&:hover{
-			color: $body-color;
+			@include media-breakpoint-up(md) {
+				color: $body-color;
+			}
 			.icon{
 				// color: $body-color;
 			}

@@ -4,7 +4,7 @@
 	--sPB: #{rem(46)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
-		--sPB: #{rem(52)};
+		--sPB: #{rem(35)};
 	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -343,7 +343,7 @@
 
 // Разделы каталога
 .slider-category {
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	@include media-breakpoint-down(xxl) {
 		overflow: visible;
 	}
@@ -368,7 +368,8 @@
 		position: relative;
 	}
 	.arrow-wrap {
-		width: 100%;
+		// width: 100%;
+		margin-left: auto;
 	}
 	.swiper-button-hand {
 		color: $gray-600;
@@ -443,19 +444,21 @@
 		transform: scale(1);
 		background: none;
 		&:hover {
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(md) {
 				transform: scale(1.5);
 				z-index: 125;
 			}
-			.swiper-button-hand {
-				opacity: 1;
-				pointer-events: all;
-			}
-			.swiper-button-disabled {
-				opacity: .35;
-			}
-			.catalog-item__slider-wrapper {
-				pointer-events: all;
+			@include media-breakpoint-up(md) {
+				.swiper-button-hand {
+					opacity: 1;
+					pointer-events: all;
+				}
+				.swiper-button-disabled {
+					opacity: .35;
+				}
+				.catalog-item__slider-wrapper {
+					pointer-events: all;
+				}
 			}
 		}
 		.catalog-item {

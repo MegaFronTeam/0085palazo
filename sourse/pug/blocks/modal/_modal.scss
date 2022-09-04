@@ -5,9 +5,11 @@
 .fancybox__content {
 	padding: 0;
 	max-width: 100%;
+	overflow: hidden;
 }
 .modal-win {
 	// display: block;
+	overflow: auto;
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
@@ -257,6 +259,7 @@ a {
 
 .modal-city{
 	//@include mt();
+	overflow: auto;
 	width: rem(680);
 	position: relative;
 	background-color: #fff;
@@ -321,7 +324,7 @@ a {
 		&__input{
 			border-width: 1px!important;
 			border-color: #DBDBDB;
-			color: #DBDBDB;
+			color: $body-color;
 			font-size: rem(18);
 			padding: rem(16);
 			margin-bottom: 0;
@@ -362,7 +365,10 @@ a {
 				font-size: rem(18);
 				color: $body-color;
 				&:hover{
-					color: $primary;
+					color: $body-color;
+					@include media-breakpoint-up(md) {
+						color: $primary;
+					}
 				}
 			}
 		}
@@ -421,9 +427,11 @@ a {
 
 			text-transform: uppercase;
 			font-size: rem(12);
-			color: $body-color;
 			&:hover{
-				color: $primary;
+				color: $body-color;
+				@include media-breakpoint-up(md) {
+					color: $primary;
+				}
 			}
 		}
 		&__plus{

@@ -98,7 +98,7 @@
 				border-radius: 4px;
 				z-index: 1;
 			}
-			&:checked {
+			&:checked, &:hover {
 				&:before {
 					border-color: $primary;
 				}
@@ -235,6 +235,14 @@
 				text-align: left;
 				font-size: rem(12);
 				font-weight: 600;
+				a {
+					&:hover {
+						@include media-breakpoint-up(md) {
+							color: #c27676;
+							opacity: .85;
+						}
+					}
+				}
 			}
 			&__btn {
 				margin-bottom: 0;

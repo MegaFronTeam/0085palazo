@@ -84,7 +84,7 @@
 			border-right: 1px solid $gray-600;
 			border-radius: 0px 4px 4px 0px;
 		}
-		&:hover, &.active {
+		&.active {
 			background-color: rgba(193, 101, 101, 0.1);
 			border-color: $primary;
 			&:first-child {
@@ -95,6 +95,21 @@
 			}
 			&:before {
 				background-color: $primary;
+			}
+		}
+		&:hover {
+			@include media-breakpoint-up(md) {
+				background-color: rgba(193, 101, 101, 0.1);
+				border-color: $primary;
+				&:first-child {
+					border-right-color: $gray-600;
+				}
+				&:last-child {
+					border-left-color: $gray-600;
+				}
+				&:before {
+					background-color: $primary;
+				}
 			}
 		}
 		img {

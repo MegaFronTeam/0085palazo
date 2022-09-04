@@ -2,7 +2,7 @@
 .sFeedback {
 	background: rgba(#EDEDED, .23);
 	--sPT: #{rem(88)};
-	--sPB: #{rem(80)};
+	--sPB: #{rem(32)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -25,22 +25,26 @@
 	.tabs {
 		margin: -24px;
     padding: 24px;
+		overflow: visible;
 		&__caption {
-			padding: 25px 0;
 			margin-bottom: 49px;
-			border-bottom: 1px solid #DBDBDB;
 		}
 		&__btn {
 			position: relative;
-			padding: 0 45px;
+			// padding: 0 45px;
 			width: auto;
 			font-weight: 600;
+			border-bottom: 1px solid #DBDBDB;
+			padding: 15px 20px;
+			@include media-breakpoint-up(lg) {
+				padding: 25px 45px;
+			}
 			&.active {
 				color: $red;
 				&::after {
 					content: '';
 					position: absolute;
-					bottom: -26px;
+					bottom: 0;
 					left: 0;
 					height: 1px;
 					width: 100%;

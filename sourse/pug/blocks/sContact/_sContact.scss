@@ -66,8 +66,10 @@
 				}
 			}
 			.icon {
-				transform: translate();
-				animation: btnAnim 0.36s ease-in-out;
+				@include media-breakpoint-up(md) {
+					transform: translate();
+					animation: btnAnim 0.36s ease-in-out;
+				}
 			}
 		}
 	}

@@ -294,6 +294,7 @@ function eventHandler() {
 	// JSCCommon.tabscostume('tabs-inner');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
+	JSCCommon.getCurrentYear('.footer__copyright span');
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
@@ -369,6 +370,7 @@ function eventHandler() {
 	// modal window
 	const swiperMain = new Swiper('.slider-main--js', { 
 		slidesPerView: 1,
+		spaceBetween: 20,
 		loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -387,6 +389,10 @@ function eventHandler() {
 	const swiperThumb = new Swiper('.slider-thumb--js', { 
 		slidesPerView: 'auto',
 		loop: true,
+		navigation: {
+			nextEl: '.slider-thumb--js .swiper-button-next',
+			prevEl: '.slider-thumb--js .swiper-button-prev',
+		},
 	});
 
 	const swiperSert = new Swiper('.slider-sert--js', { 
@@ -420,6 +426,7 @@ function eventHandler() {
 	});
 
 	const swiperFeedback = new Swiper('.slider-feedback--js', { 
+		spaceBetween: 20,
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
@@ -565,9 +572,9 @@ function eventHandler() {
 		slidesPerView: 'auto',
 	});
 
-	// const innerTabsSlider = new Swiper(".tabs-inner", {
-	// 	slidesPerView: 'auto',
-	// });
+	const innerTabsSlider = new Swiper(".sFeedback__tabs", {
+		slidesPerView: 'auto',
+	});
 	const sFeedbackPageSlider = new Swiper(".sFeedbackPage__slider--js", {
 		slidesPerView: 'auto',
 	});
@@ -949,11 +956,16 @@ for (let headset of headsets) {
 }
 
 let sCategoriesSwiper = new Swiper('.sCategories__slider--js', {
-	spaceBetween: 8,
+	spaceBetween: 16,
 	slidesPerView: 'auto',
 	navigation: {
 		nextEl: ".sCategories__slide-wrap .swiper-button-next",
 		prevEl: ".sCategories__slide-wrap .swiper-button-prev",
+	},
+	breakpoints: {
+		992: {
+			spaceBetween: 8,
+		},
 	},
 });
 

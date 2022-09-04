@@ -7,14 +7,16 @@
 		max-width: rem(762);
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		@include roww(10px);
 		flex-wrap: wrap;
 		justify-content: space-between;
+		border-top: none;
 	}
 
 	list-style: none;
 	position: relative;
 	margin-bottom: 0; 
+	border-top: 1px solid $gray-100;
 	li{
 		list-style: none;
 		// margin-left: 0;
@@ -61,20 +63,23 @@
 	}
 	&:hover{
 		&::after{
-			content: var(--chevron-down-primary); 
+			@include media-breakpoint-up(md) {
+				content: var(--chevron-down-primary); 
+			}
 		}
 
 	}
 
 	a{
 	}
-
 }
 .sub-menu{
 	display: none;
 	order: 1;
 	min-width: 100%;
 	z-index: 200;
+	border-top: 1px solid $gray-100;
+	border-bottom: 1px solid $gray-100;
 	@include media-breakpoint-up(lg) {
 		display: none !important;
 		// display: block !important;
@@ -86,6 +91,9 @@
 		border: 1px solid #dbdbdb;
 		text-align: left;
     // padding: 1rem 0;
+	}
+	a {
+		padding: rem(10);
 	}
 }
 
@@ -223,7 +231,9 @@
 		&__email {
 			display: block;
 			&:hover {
-				color: $body-color;
+				@include media-breakpoint-up(md) {
+					color: $body-color;
+				}
 			}
 			.icon {
 				margin-right: rem(15);

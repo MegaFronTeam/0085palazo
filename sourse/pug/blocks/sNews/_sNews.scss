@@ -122,7 +122,9 @@
 		text-transform: uppercase;
 		@include mt;
 		&:hover {
-			color: $red;
+			@include media-breakpoint-up(md) {
+				color: $red;
+			}
 		}
 		@include media-breakpoint-down(md) {
 			font-size: 20px;

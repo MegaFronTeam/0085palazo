@@ -77,12 +77,14 @@
 		align-items: center;
 		// height: 100%;
 		&:hover {
-			.sHowWork__text {
-				color: $primary;
-			}
-			.sHowWork__dropdown {
-				opacity: 1;
-				pointer-events: all;
+			@include media-breakpoint-up(md) {
+				.sHowWork__text {
+					color: $primary;
+				}
+				.sHowWork__dropdown {
+					opacity: 1;
+					pointer-events: all;
+				}
 			}
 		}
 		img {
@@ -99,7 +101,7 @@
 			border-radius: 50%;
 			border: 1px solid $primary;
 			font-size: rem(12);
-			letter-spacing: 0.07em;
+			// letter-spacing: 0.07em;
 			text-transform: uppercase;
 			color: $gray-600;
 			margin-bottom: rem(24);

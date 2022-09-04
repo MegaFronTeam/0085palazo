@@ -110,8 +110,8 @@
 		margin-bottom: rem(4);
 	}
 	&__tel {
+		color: $body-color;
 		&:not(:hover) {
-			color: $body-color;
 		}
 	}
 	.soc {

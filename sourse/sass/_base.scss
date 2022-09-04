@@ -173,7 +173,9 @@ h1,h2 {
 	text-decoration: underline;
 
 	&:hover {
-		text-decoration: none;
+		@include media-breakpoint-up(md) {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -339,7 +341,9 @@ ul {
 	user-select: none;
 
 	&:hover { 
-		color: var(--swiperColorDefHover);
+		@include media-breakpoint-up(md) {
+			color: var(--swiperColorDefHover);
+		}
 	}
 
 	.icon {
@@ -381,7 +385,9 @@ ul {
 
 		&-active,
 		&:hover {
-			background-color: var(--bs-primary) ;
+			@include media-breakpoint-up(md) {
+				background-color: var(--bs-primary) ;
+			}
 		}
 	}
 }
@@ -522,6 +528,17 @@ iframe {
 .btn-primary{
 		--bs-btn-color: #fff;
 		--bs-btn-active-color: #fff;
+		@include media-breakpoint-down(md) {
+			--bs-btn-hover-bg: #c16565;
+			--bs-btn-hover-border-color: #c16565;
+		}
+}
+.btn-outline-primary {
+	@include media-breakpoint-down(md) {
+		--bs-btn-hover-color: #c16565;
+		--bs-btn-hover-border-color: #c16565;
+		--bs-btn-hover-bg: transparent;
+	}
 }
 .btn,
 .form-control,

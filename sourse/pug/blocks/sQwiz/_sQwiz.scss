@@ -136,8 +136,8 @@
 	&__vertical-wrap {
 		position: relative;
 		height: auto;
-    left: -21%;
-		top: 8%;
+    left: -13%;
+		top: 10%;
     z-index: -1;
 		max-height: 260px;
 		@include media-breakpoint-up(xl) {
@@ -147,6 +147,9 @@
 		}
 		@include media-breakpoint-up(md) {
 			max-height: none;
+		}
+		@include media-breakpoint-up(sm) {
+			top: 25%;
 		}
 		&::after {
 			position: absolute;

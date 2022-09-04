@@ -14,7 +14,7 @@
 		}
 	}
 	&__col {
-		@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(sm) {
 			&:nth-child(n + 4) {
 				display: none;
 			}
@@ -44,12 +44,18 @@
 			--swiperBorderColorDef: #{$gray-600};
 			--swiperColorDef: #{$gray-600};
 			--swiperColorDefHover: #{$primary};
-			display: none;
+			// display: none;
+			display: flex;
+			z-index: 1;
+			top: -70px;
 			@include media-breakpoint-up(lg) {
-				display: flex;
+				top: 0;
 			}
 			&-prev {
-				left: 0;
+				left: calc(100% - 60px);
+				@include media-breakpoint-up(lg) {
+					left: 0;
+				}
 			}
 			&-next {
 				right: 0;
@@ -76,6 +82,12 @@
 			&.active {
 				background-color: $primary;
 				color: #fff;
+			}
+			&:hover {
+				@include media-breakpoint-up(md) {
+					background-color: $primary;
+					color: #fff;
+				}
 			}
 		}
 	}

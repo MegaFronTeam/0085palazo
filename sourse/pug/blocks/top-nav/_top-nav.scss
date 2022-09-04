@@ -124,6 +124,13 @@
 	padding-right: 0;
 	display: flex;
 	justify-content: space-between; 
+	&:hover {
+		&:after {
+			@include media-breakpoint-up(md) {
+				color: $primary;
+			}
+		}
+	}
 	&::after{
 		content: var(--chevron-down);
 		@include mt;

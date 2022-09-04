@@ -21,8 +21,10 @@
 		}
 		&:hover {
 			img {
-				opacity: 1;
-				filter: grayscale(0);
+				@include media-breakpoint-up(md) {
+					opacity: 1;
+					filter: grayscale(0);
+				}
 			}
 		}
 	}

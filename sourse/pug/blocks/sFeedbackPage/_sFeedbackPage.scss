@@ -72,8 +72,10 @@
 		height: 100%;
 		&:hover {
 			.sPartners__item-img {
-				opacity: 1;
-				filter: saturate(100%);
+				@include media-breakpoint-up(md) {
+					opacity: 1;
+					filter: saturate(100%);
+				}
 			}
 		}
 	}

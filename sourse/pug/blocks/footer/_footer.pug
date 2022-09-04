@@ -23,6 +23,7 @@ mixin footer()
 								+e.link(href="#") Производителям мебели
 				.col-sm-6
 					+soc
+						+item-sos('vk')
 					+b.footer-nav--info.footer-nav--columns
 						+e.title ПОЛЕЗНАЯ ИНФОРМАЦИЯ
 						ul
@@ -54,7 +55,7 @@ mixin footer()
 								+e.link(href="#") Вакансии
 							li
 								+e.link(href="#") Наши партнеры
-				.col-xl-3
+				+e.col.col-xl-3
 					+e.buttons
 						+e.btn.btn.btn-outline-primary(href="#" data-src='modal-apply2' data-fancybox="modal")
 								+icon("calc")
@@ -75,9 +76,9 @@ mixin footer()
 							+icon("whatsapp")
 						+e.phone-icon(href="viber://chat?number=%2B374942501621")
 							+icon("viber")
-					+e.address.ADDRESS Адрес флагманского салона г.&nbsp;Кострома, ул.Северной правды&nbsp;35
+					+e.address.ADDRESS Адрес флагманского салона г.&nbsp;Кострома, ул. Димитрова 15
 			+e.bottom
-				+e.copyright ©2017-2021 г. Все права защищены
+				+e.copyright ©2017-#[span 2021 ] г. Все права защищены
 				+e.payment
 					+img('img/mir.png')
 					+img('img/mastercard.png')
