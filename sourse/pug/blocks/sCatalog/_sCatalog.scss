@@ -57,6 +57,13 @@
 
 .catalog-body-wrap.bottom {
 	margin-bottom: rem(104);
+	.page-numbers {
+		@include media-breakpoint-down(md) {
+			--bs-pagination-hover-bg: #fff;
+			--bs-pagination-hover-border-color: #dee2e6;
+			--bs-pagination-hover-color: #7a7a7a;
+		}
+	}
 }
 .catalog-body-wrap {
 	padding-top: 52px;
@@ -335,8 +342,10 @@
 		border: none;
 		@include mt;
 		&:hover {
-			color: $gray-100;
-			background: $red;
+			@include media-breakpoint-up(md) {
+				color: $gray-100;
+				background: $red;
+			}
 		}
 	}
 }
@@ -1075,7 +1084,7 @@
 		width:70%;
 		height: 100%;
 		background-color:$white;
-		overflow-y: scroll;
+		overflow-y: auto;
 	}
 	&__mob-close {
 		cursor: pointer;

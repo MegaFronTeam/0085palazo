@@ -27,12 +27,20 @@
 			margin-top: var(--bs-gutter-y);
 			--bs-btn-padding-y: #{rem(11)};
 			--bs-btn-color: #{$primary};
-			--bs-btn-hover-color: #fff;
-			--bs-btn-hover-bg: #{$primary};
-			--bs-btn-hover-border-color: #{$primary};
+			--bs-btn-hover-color: #{$primary};
+			--bs-btn-hover-bg: #ededed;
+			--bs-btn-hover-border-color: #ededed;
 			--bs-btn-active-color: #fff;
 			--bs-btn-active-bg: #{$primary};
 			--bs-btn-active-border-color: #{$primary};
+			@include media-breakpoint-up(md) {
+				--bs-btn-hover-color: #fff;
+				--bs-btn-hover-bg: #{$primary};
+				--bs-btn-hover-border-color: #{$primary};
+				--bs-btn-active-color: #fff;
+				--bs-btn-active-bg: #{$primary};
+				--bs-btn-active-border-color: #{$primary};
+			}
 		}
 	}
 	&__btn {

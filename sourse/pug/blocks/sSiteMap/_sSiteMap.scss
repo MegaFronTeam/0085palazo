@@ -135,9 +135,11 @@
 			line-height: 1.70em;
 			max-width: rem(152);
 			font-size: 14px;
-			&:not(:hover) {
+			color: #000;
+			&:hover {
+				color: #000;
 				@include media-breakpoint-up(md) {
-					color: #000;
+					color: $primary;
 				}
 			}
 			@include media-breakpoint-up(sm) {
