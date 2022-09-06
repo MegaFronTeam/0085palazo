@@ -2,20 +2,20 @@
 mixin mnu()
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each link in nav
-			li.menu-item.menu-item-has-children(itemprop="item" )
+			li.menu-item.menu-item-has-children.menu-item-has-children--second-level(itemprop="item" )
 				a(href= link.url itemprop="url")= link.name
 				ul.sub-menu
-					li.menu-item(itemprop="item" )
+					li.menu-item.menu-item-has-children(itemprop="item" )
 						a(href="#" itemprop="url")  Кухни на заказ
-						//- ul.sub-menu
-						//- 	li.menu-item(itemprop="item" )
-						//- 		a(href="#" itemprop="url")  Кухни на заказ
-						//- 	li.menu-item(itemprop="item" )
-						//- 		a(href="#" itemprop="url")  Кухни на заказ
-						//- 	li.menu-item(itemprop="item" )
-						//- 		a(href="#" itemprop="url")  Кухни на заказ
-						//- 	li.menu-item(itemprop="item" )
-						//- 		a(href="#" itemprop="url")  Кухни на заказ
+						ul.sub-menu
+							li.menu-item(itemprop="item" )
+								a(href="#" itemprop="url")  Кухни на заказ3
+							li.menu-item(itemprop="item" )
+								a(href="#" itemprop="url")  Кухни на заказ3
+							li.menu-item(itemprop="item" )
+								a(href="#" itemprop="url")  Кухни на заказ3
+							li.menu-item(itemprop="item" )
+								a(href="#" itemprop="url")  Кухни на заказ3
 					li.menu-item(itemprop="item" )
 						a(href="#" itemprop="url")  Кухни на заказ
 					li.menu-item(itemprop="item" )

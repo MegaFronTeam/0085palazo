@@ -59,7 +59,15 @@
 	.arrow-wrap {
 		margin-left: auto;
 	}
+	.swiper-pagination {
+		&-bullet-active {
+			background-color: #{$primary} ;
+		}
+	}
 	.swiper-button-hand {
 		color: $gray-600;
+		@include media-breakpoint-up(md) {
+			--swiperColorDefHover: #{$primary};
+		}
 	}
 }

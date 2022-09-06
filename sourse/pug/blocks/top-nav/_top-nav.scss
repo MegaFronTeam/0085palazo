@@ -55,6 +55,9 @@
 	&__tel{
 		font-size: rem(18);
 		--bs-link-color: #{$body-color};
+		@include media-breakpoint-down(md) {
+			--bs-link-hover-color: #{$body-color};
+		}
 		.icon{
 			font-size: 1rem;
 		}
@@ -119,13 +122,17 @@
 
 
 .toggle-catalog{
+	@include mt;
 	position: relative;
 	padding: 1rem ;
 	padding-right: 0;
 	display: flex;
 	justify-content: space-between; 
+	cursor: pointer;
 	&:hover {
+		color: $primary;
 		&:after {
+			content: var(--chevron-down-primary);
 			@include media-breakpoint-up(md) {
 				color: $primary;
 			}
@@ -137,8 +144,10 @@
 		position: relative;
 	}
 	&.active{
+		color: $primary;
 		&::after{
 			transform: rotateX(180deg);
+			content: var(--chevron-down-primary);
 		}
 	}
 }

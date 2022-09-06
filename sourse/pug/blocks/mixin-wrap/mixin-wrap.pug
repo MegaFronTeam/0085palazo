@@ -35,6 +35,7 @@ mixin search()
 			input(type="text" placeholder="Поиск по сайту")
 			button 
 				+icon("search")
+		.search-block__cross.search-toggle--js
 
 
 mixin page-head(t, text, ...items)
@@ -104,6 +105,6 @@ mixin upload-field(text)
 			+e.SPAN.file-name!= text
 			+e.SPAN.input-wrap
 				+e.btn.btn.btn-outline-primary
-					input.input-upload(type='file' name='file')
+					input.input-upload(type='file' name='file' accept="jpg, .jpeg, .png, .pdf, .webp, .")
 					//- +icon('clip')
 					span Выбрать файл

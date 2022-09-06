@@ -1,7 +1,7 @@
 // start .sCategories
 .sCategories {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(60)};
+	--sPB: #{rem(30)};
 	// --sTPB: #{rem()};
 	&__row{
 		--bs-gutter-x: #{rem(16)};

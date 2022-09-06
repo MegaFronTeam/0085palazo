@@ -109,6 +109,29 @@
 		background: none !important;
 		border: none !important;
 	}
+	&__cross {
+		position: absolute;
+		width: 21px;
+		height: 21px;
+		top: 5.5px;
+		right: 10px;
+		cursor: pointer;
+		&::before, &:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: $primary;
+			@include a-cent;
+		}
+		&::before {
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+	}
 }
 
 .page-head {
@@ -524,12 +547,12 @@
 		background-color: $gray-100;
 		border-radius: 4px;
 		padding: rem(8) rem(10) rem(8) rem(16);
-		@include media-breakpoint-up(lg) {
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-between;
+		@include media-breakpoint-up(xl) {
 			flex-direction: row;
 		}
-		align-items: center;
-		// flex-direction: column;
-		justify-content: space-between;
 	}
 	&__btn {
 		--bs-btn-padding-x: #{rem(8)};
@@ -539,6 +562,7 @@
 		// padding-left: rem(20);
 		// padding-right: rem(20);
 		min-width: rem(151);
+		width: 100%;
 		@include media-breakpoint-down(lg) {
 			// order: 1;
 		}
@@ -551,9 +575,10 @@
 	&__input-wrap {
 		display: block;
 		margin-bottom: 0;
-		@include media-breakpoint-up(lg) {
-			// margin-right: rem(20);
-			margin-bottom: rem(5.600);
+		width: 100%;
+		margin-top: rem(10);
+		@include media-breakpoint-up(xl) {
+			margin-top: 0;
 		}
 	}
 	&__file-name {

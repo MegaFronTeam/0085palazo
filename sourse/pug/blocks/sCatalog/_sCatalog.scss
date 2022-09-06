@@ -373,6 +373,9 @@
 	}
 	.swiper-button-hand {
 		color: $gray-600;
+		@include media-breakpoint-up(md) {
+			--swiperColorDefHover: #{$primary};
+		}
 	}
 }
 
@@ -446,7 +449,7 @@
 		&:hover {
 			@include media-breakpoint-up(md) {
 				transform: scale(1.5);
-				z-index: 125;
+				// z-index: 125;
 			}
 			@include media-breakpoint-up(md) {
 				.swiper-button-hand {
