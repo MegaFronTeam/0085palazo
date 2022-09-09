@@ -1034,6 +1034,16 @@ function eventHandler() {
 		window.scrollTo(0,0);
 	});
 
+	$('.sForm--2').hcSticky({
+		mobileFirst: true,
+		responsive: {
+			992: {
+				stickTo: $('.container-faq'),
+				top: 170,
+			},
+		},
+  });
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
