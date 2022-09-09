@@ -296,7 +296,7 @@
 
 	&:hover {
 		.slider-main__img-wrap {
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				transform: scale(1.04);
 			}
 		}

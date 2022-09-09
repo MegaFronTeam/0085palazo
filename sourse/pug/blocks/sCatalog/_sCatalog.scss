@@ -58,7 +58,7 @@
 .catalog-body-wrap.bottom {
 	margin-bottom: rem(104);
 	.page-numbers {
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			--bs-pagination-hover-bg: #fff;
 			--bs-pagination-hover-border-color: #dee2e6;
 			--bs-pagination-hover-color: #7a7a7a;
@@ -352,7 +352,7 @@
 		border: none;
 		@include mt;
 		&:hover {
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				color: $gray-100;
 				background: $red;
 			}
@@ -387,6 +387,11 @@
 		position: relative;
 		bottom: 0;
 		&-bullet {
+			@include media-breakpoint-up(lg) {
+				&:hover {
+					background-color: $primary;
+				}
+			}
 			&-active {
 				background-color: $primary;
 			}
@@ -608,6 +613,19 @@
 		position: static;
 		width: auto;
 		margin-right: auto;
+		&-bullet {
+			&:hover {
+					@include media-breakpoint-up(lg) {
+					background-color: $primary;
+				}
+			}
+			&-active {
+				background-color: $primary;
+				&:hover {
+					background-color: $primary;
+				}
+			}
+		}
 	}
 	.swiper-pagination-bullet {
 		background: #FFFFFF;
@@ -1173,6 +1191,11 @@
 		bottom: 0;
 		width: auto;
 		&-bullet {
+			@include media-breakpoint-up(lg) {
+				&:hover {
+					background-color: $primary;
+				}
+			}
 			&-active {
 				background-color: $primary;
 			}

@@ -123,7 +123,7 @@
 		@include mt;
 		&:hover {
 			color: $body-color;
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				color: $red;
 			}
 		}

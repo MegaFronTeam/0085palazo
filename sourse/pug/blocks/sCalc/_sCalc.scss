@@ -237,7 +237,7 @@
 				font-weight: 600;
 				a {
 					&:hover {
-						@include media-breakpoint-up(md) {
+						@include media-breakpoint-up(lg) {
 							color: #c27676;
 							opacity: .85;
 						}

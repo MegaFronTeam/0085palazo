@@ -29,6 +29,20 @@
 				margin-top: rem(88);
 			}
 		}
+		.swiper-pagination {
+			@include media-breakpoint-up(lg) {
+				.swiper-pagination {
+					&-bullet {
+						&:hover {
+							background-color: $primary;
+						}
+						&-active {
+							background-color: $primary;
+						}
+					}
+				}
+			}
+		}
 	}
 	&__caption {
 		display: flex;

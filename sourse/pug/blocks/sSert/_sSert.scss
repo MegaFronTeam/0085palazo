@@ -60,8 +60,15 @@
 		margin-left: auto;
 	}
 	.swiper-pagination {
-		&-bullet-active {
-			background-color: #{$primary} ;
+		&-bullet {
+			@include media-breakpoint-up(lg) {
+				&:hover {
+					background-color: $primary;
+				}
+			}
+			&-active {
+				background-color: #{$primary} ;
+			}
 		}
 	}
 	.swiper-button-hand {

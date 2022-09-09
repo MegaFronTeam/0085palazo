@@ -174,7 +174,7 @@ h1,h2 {
 	text-decoration: underline;
 
 	&:hover {
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			text-decoration: none;
 		}
 	}
@@ -342,7 +342,7 @@ ul {
 	user-select: none;
 
 	&:hover { 
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			color: var(--swiperColorDefHover);
 		}
 	}
@@ -386,7 +386,7 @@ ul {
 
 		&-active,
 		&:hover {
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				background-color: var(--bs-primary) ;
 			}
 		}

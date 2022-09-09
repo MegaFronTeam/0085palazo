@@ -50,7 +50,7 @@
 			border-radius: 50%;
 			@include mt;
 			&:hover {
-				@include media-breakpoint-up(md) {
+				@include media-breakpoint-up(lg) {
 					border: 1.5px solid $red;
 					.icon {
 						color: $red;
@@ -126,7 +126,7 @@
 		&-link {
 			margin-right: 22px;
 			color: $white;
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-down(lg) {
 				&:hover {
 					color: $white;
 				}
@@ -134,7 +134,7 @@
 		}
 		&-icon {
 			&:hover {
-				@include media-breakpoint-up(md) {
+				@include media-breakpoint-up(lg) {
 					.icon {
 						color: $red;
 					}
@@ -231,7 +231,7 @@
 	cursor: pointer;
 	font-size: 12px;
 	&:hover {
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			color: $primary;
 		}
 	}
@@ -332,7 +332,7 @@
 		@include media-breakpoint-down(sm) {
 			font-size: 12px;
 		}
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			&:hover {
 				color: $gray-100;
 			}

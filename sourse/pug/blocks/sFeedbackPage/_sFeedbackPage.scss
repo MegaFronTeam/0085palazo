@@ -37,7 +37,7 @@
 				background-color: $red;
 			}
 			&:hover {
-				@include media-breakpoint-up(md) {
+				@include media-breakpoint-up(lg) {
 					color: $white;
 					background-color: $red;
 				}
@@ -78,7 +78,7 @@
 		height: 100%;
 		&:hover {
 			.sPartners__item-img {
-				@include media-breakpoint-up(md) {
+				@include media-breakpoint-up(lg) {
 					opacity: 1;
 					filter: saturate(100%);
 				}

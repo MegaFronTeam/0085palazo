@@ -67,7 +67,7 @@
 				}
 			}
 			.icon {
-				@include media-breakpoint-up(md) {
+				@include media-breakpoint-up(lg) {
 					transform: translate();
 					animation: btnAnim 0.36s ease-in-out;
 				}

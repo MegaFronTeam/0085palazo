@@ -75,7 +75,7 @@
 		text-align: center;
 		a {
 			&:hover {
-				@include media-breakpoint-up(md) {
+				@include media-breakpoint-up(lg) {
 					opacity: .6;
 				}
 			}

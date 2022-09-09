@@ -43,7 +43,7 @@
 		}
 	}
 	.page-numbers {
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			--bs-pagination-hover-bg: #fff;
 			--bs-pagination-hover-border-color: #dee2e6;
 			--bs-pagination-hover-color: #7a7a7a;

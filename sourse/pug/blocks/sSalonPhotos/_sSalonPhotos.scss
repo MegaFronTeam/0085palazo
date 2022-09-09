@@ -24,6 +24,16 @@
 	}
 	.swiper-pagination {
 		bottom: 2px;
+		&-bullet {
+			@include media-breakpoint-up(lg) {
+				&:hover {
+					background-color: $primary;
+				}
+			}
+			&-active {
+				background-color: $primary;
+			}
+		}
 	}
 	.arrow-wrap {
 		margin-left: auto;
@@ -42,7 +52,7 @@
 		overflow: hidden;
 		&:hover {
 			img {
-				@include media-breakpoint-up(md) {
+				@include media-breakpoint-up(lg) {
 					transform: scale(1.1);
 				}
 			}

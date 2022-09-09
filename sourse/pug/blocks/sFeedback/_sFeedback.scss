@@ -144,8 +144,15 @@
 		width: auto;
 		margin-right: auto;
 		// --swiper-pagination-color: #{$primary};
-		&-bullet-active {
-			background-color: #{$primary} ;
+		&-bullet {
+			@include media-breakpoint-up(lg) {
+				&:hover {
+					background-color: #{$primary};
+				}
+			}
+			&-active {
+				background-color: #{$primary} ;
+			}
 		}
 	}
 	.arrow-wrap {
