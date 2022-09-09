@@ -33,9 +33,9 @@ mixin search()
 	+b.search-block
 		form
 			input(type="text" placeholder="Поиск по сайту")
-			button 
+			+e.BUTTON.search
 				+icon("search")
-		.search-block__cross.search-toggle--js
+		button.search-block__cross.search-toggle--js
 
 
 mixin page-head(t, text, ...items)

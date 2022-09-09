@@ -580,19 +580,23 @@ function eventHandler() {
 	});
 
 
-	$(".search-toggle--js").on("click", function(){
+	$(".search-toggle--js").on("click", function(e){
+		e.preventDefault;
 		$(".topLine .search-block").toggleClass("active")
 	})
 	
-	$(".toggle-catalog--js").on("click", function(){
+	$(".toggle-catalog--js").on("click", function(e){
+		e.preventDefault;
 		$(this).toggleClass("active")
 		$(".catalog-dropdown--js").slideToggle()
 	})
 	
 	$(".catalog-dropdown--js .menu-item-has-children>a ").on("click", function(e){
 		e.preventDefault();
-		$(this).parent().toggleClass("active")
-		$(this).next().slideToggle()
+		if (window.innerWidth <= 992) {
+			$(this).parent().toggleClass("active")
+			$(this).next().slideToggle()
+		}
 	})
 
 

@@ -94,7 +94,8 @@
 		position: absolute;
 		left: 0;
 		top: 100%;
-		min-width: 240px;
+		min-width: 170px;
+		width: 100%;
 		background-color: #fff;
 		border: 1px solid #dbdbdb;
 		text-align: left;
@@ -107,29 +108,44 @@
 		&:after {
 			margin-right: 10px;
 			transform: rotate(0deg);
-			@include media-breakpoint-up(xl) {
+			@include media-breakpoint-up(lg) {
 				transform: rotate(90deg);
 			}
 		}
-		&.active {
+		&:hover {
 			& > a {
 				color: $primary;
 			}
 			&:after {
-				transform: rotate(180deg);
 				content: var(--chevron-down-primary); 
-				@include media-breakpoint-up(xl) {
+				@include media-breakpoint-up(lg) {
 					transform: rotate(270deg);
+				}
+			}
+			.sub-menu {
+				@include media-breakpoint-up(lg) {
+					display: block;
+				}
+			}
+		}
+		&.active {
+			@include media-breakpoint-down(lg) {
+				& > a {
+					color: $primary;
+				}
+				&:after {
+					content: var(--chevron-down-primary); 
+					transform: rotate(180deg);
 				}
 			}
 		}
 	}
 	.sub-menu {
 		background-color: #ededed;
+		// @include media-breakpoint-up(lg) {
+		// 	left: -1px;
+		// }
 		@include media-breakpoint-up(lg) {
-			left: -1px;
-		}
-		@include media-breakpoint-up(xl) {
 			left: 100%;
 			top: -1px;
 		}
