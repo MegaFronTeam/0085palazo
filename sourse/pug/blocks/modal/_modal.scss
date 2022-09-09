@@ -10,7 +10,6 @@
 .modal-win {
 	// display: block;
 	@extend .custom-scroll;
-	overflow: auto;
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
@@ -33,7 +32,11 @@
 		// max-width: 485px;
 		// padding-right: 40px 15px;
 	}
-
+	&__scroll-wrap {
+		@extend .custom-scroll;
+		position: relative;
+		overflow: auto;
+	}
 	.mfp-close {
 		color: $primary;
 		font-size: 40px;
@@ -90,6 +93,7 @@
 		}
 		.form-wrap {
 			max-width: rem(437);
+			height: 490px;
 			&__input-wrap {
 				margin-bottom: rem(20);
 			}
@@ -264,11 +268,11 @@ a {
 
 .modal-city{
 	//@include mt();
-	@extend .custom-scroll;
-	overflow: auto;
+	// @extend .custom-scroll;
+	// overflow: auto;
 	width: rem(680);
 	max-width: 100%;
-	position: relative;
+	// position: relative;
 	background-color: #fff;
 
 	min-height: 100%;
@@ -344,14 +348,17 @@ a {
 			margin: 0 calc(var(--bs-gutter-x)/-2);
 			//width: calc(100% + var(--bs-gutter-x));
 			display: none;
+			margin-bottom: 20px;
 			&.active{
 				display: block;
 			}
 			//
-			@extend .custom-scroll;
-			overflow-y: auto;
+
 
 			//min-height: rem(280);
+			.form-wrap {
+
+			}
 			&--popular{
 				height: calc(100vh - var(--modal-py)*2 - var(--title-fs)*var(--title-lh) - var(--title-mb) - #{rem(60)} - var(--input-mb) - var(--title-mb) - #{rem(32)});
 				@include media-breakpoint-up(md){
@@ -359,6 +366,8 @@ a {
 				}
 			}
 			&--all{
+				// overflow: auto;
+    		// position: relative;
 				height: calc(100vh - var(--modal-py)*2 - var(--title-fs)*var(--title-lh) - var(--title-mb) - #{rem(60)} - var(--input-mb));
 				@include media-breakpoint-up(md){
 					height: calc(100vh - #{rem(100)} - var(--modal-py)*2 - var(--title-fs)*var(--title-lh) - var(--title-mb) - #{rem(60)} - var(--input-mb));
@@ -379,7 +388,6 @@ a {
 				}
 			}
 		}
-
 		&__item{
 
 			margin-bottom: rem(30);
@@ -392,8 +400,15 @@ a {
 			font-weight: 600;
 			color: $primary;
 		}
-		&__city-row{
-
+		&__scroll-wrap {
+			overflow-y: auto;
+			overflow-x: hidden;
+			@extend .custom-scroll;
+		}
+		&__scroll-content {
+			display: flex;
+			flex-direction: column;
+			height: 620px;
 		}
 
 		//
@@ -427,7 +442,8 @@ a {
 		//
 		&__show-all{
 			@include mt;
-			margin-top: var(--title-mb);
+			// margin-top: var(--title-mb);
+			margin-top: auto;
 			cursor: pointer;
 			display: flex;
 			align-items: center;
@@ -462,7 +478,9 @@ a {
 		}
 
 	}
-
+	&__city-row {
+		height: rem(700);
+	}
 	//
 	&__{}
 	&__{}
