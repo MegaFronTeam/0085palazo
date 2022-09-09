@@ -175,6 +175,9 @@
 					background-color: #fff !important;
 				}
 			}
+			&-active {
+				background-color: $primary;
+			}
 		}
 	}
 	.swiper-slide-prev, .swiper-slide-next {

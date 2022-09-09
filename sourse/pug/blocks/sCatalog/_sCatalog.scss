@@ -375,6 +375,12 @@
 	}
 	.swiper-pagination {
 		position: relative;
+		bottom: 0;
+		&-bullet {
+			&-active {
+				background-color: $primary;
+			}
+		}
 	}
 	.arrow-wrap {
 		// width: 100%;
@@ -456,7 +462,7 @@
 		transform: scale(1);
 		background: none;
 		&:hover {
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				transform: scale(1.5);
 				// z-index: 125;
 			}

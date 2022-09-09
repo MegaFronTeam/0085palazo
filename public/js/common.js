@@ -1016,12 +1016,16 @@ function eventHandler() {
 	// }
 	
 	$('.catalog-item--2').hover(function() {
-		$(this).addClass('zIndexHover').addClass('zIndexHoverImportant');
+		if(window.innerWidth >= 992) {
+			$(this).addClass('zIndexHover').addClass('zIndexHoverImportant');
+		}
 	}, function() {
-		$(this).removeClass('zIndexHover');
-		setTimeout(() => {
-			$(this).removeClass('zIndexHoverImportant');
-		}, 360);
+		if(window.innerWidth >= 992) {
+			$(this).removeClass('zIndexHover');
+			setTimeout(() => {
+				$(this).removeClass('zIndexHoverImportant');
+			}, 360);
+		}
 	});
 
 };

@@ -18,7 +18,9 @@
 			flex-wrap: wrap;
 			padding: 43px 64px 36px;
 			background: $gray-900;
-			border-radius: 4px;
+			@include media-breakpoint-up(sm) {
+				border-radius: 4px;
+			}
 			@include media-breakpoint-down(md) {
 				padding: 21px 17px 16px;
 			}
@@ -154,8 +156,10 @@
 	&--2 {
 		padding: rem(25) rem(25) rem(25) rem(25) !important;
 		background-color: $gray-900;
-		border-radius: 4px;
 		margin-bottom: rem(50);
+		@include media-breakpoint-up(sm) {
+			border-radius: 4px;
+		} 
 		@include media-breakpoint-up(xl) {
 			padding: rem(50) rem(50) rem(40) rem(50) !important;
 		}
