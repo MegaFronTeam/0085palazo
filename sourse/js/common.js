@@ -664,26 +664,29 @@ function eventHandler() {
 			tagsList.forEach(function(list) {
 				const tagsBtns = list.querySelectorAll('.tags-list__item');
 				const showMoreBtn = list.querySelector('.tags-list .btn');
-
-				showMoreBtn.addEventListener('click', function(event) {
-					event.preventDefault();
-					if (showMoreBtn.dataset.visible == 'visible') {
-						for (let count = 5; count < tagsBtns.length; count++) {
-							// console.log('1323')
-							tagsBtns[count].classList.add('hidden');
+				if(showMoreBtn == null) {
+				} else {
+					// console.log(2);
+					showMoreBtn.addEventListener('click', function(event) {
+						event.preventDefault();
+						if (showMoreBtn.dataset.visible == 'visible') {
+							for (let count = 5; count < tagsBtns.length; count++) {
+								// console.log('1323')
+								tagsBtns[count].classList.add('hidden');
+							}
+							showMoreBtn.textContent = 'Показать все'
+							showMoreBtn.dataset.visible = 'invisible';
+							return;
 						}
-						showMoreBtn.textContent = 'Показать все'
-						showMoreBtn.dataset.visible = 'invisible';
-						return;
-					}
-					else if (showMoreBtn.dataset.visible == 'invisible') {
-						for (let count = 5; count < tagsBtns.length; count++) {
-							tagsBtns[count].classList.remove('hidden');
+						else if (showMoreBtn.dataset.visible == 'invisible') {
+							for (let count = 5; count < tagsBtns.length; count++) {
+								tagsBtns[count].classList.remove('hidden');
+							}
+							showMoreBtn.textContent = 'Скрыть'
+							showMoreBtn.dataset.visible = 'visible';
 						}
-						showMoreBtn.textContent = 'Скрыть'
-						showMoreBtn.dataset.visible = 'visible';
-					}
-				});
+					});
+				}
 
 				// for (let count = 5; count < tagsBtns.length; count++) {
 				// 	tagsBtns[count].classList.add('hidden');
@@ -700,21 +703,20 @@ function eventHandler() {
 
 	$('.catalog-sorter__filter-btn').on("click", function() {
 		$('.catalog-sorter__mob-sort').addClass('active');
-		$('.main-page').css('overflow', 'hidden');
+		$('body').addClass('fixed');
 		document.addEventListener('click', (event) => {
-			let container = event.target.closest(".catalog-sorter__mob-sort.active"); 
+			let container = event.target.closest(".catalog-sorter__sort-body"); 
 			let toggle = event.target.closest('.catalog-sorter__mob-close'); 
-			let fixed = event.target.closest('body.fixed2');
-			let button = event.target.closest('.catalog-sorte__filter-btn');
-			if (!toggle && !container && !button) {
-				$('.catalog-sorterg__mob-sort').removeClass('active');
-				$('body').removeClass('fixed2');
+			let button = event.target.closest('.catalog-sorter__filter-btn');
+			if (!toggle && !button && !container) {
+				$('.catalog-sorter__mob-sort').removeClass('active');
+				$('body').removeClass('fixed');
 			};
 		}, { passive: true });
 	});
 	$('.catalog-sorter__mob-close').on("click", function() {
 		$('.catalog-sorter__mob-sort').removeClass('active');
-		$('.main-page').css('overflow', 'auto');
+		$('body').removeClass('fixed');
 	});
 
 	// / Фильтр на мобильном в каталоге
@@ -810,7 +812,7 @@ function eventHandler() {
 		} else {
 			this.innerHTML = textHidden;
 		}
-		$('.sExamples__col--js.hidden').slideToggle();
+		$('.sExamples__col--js.hidden').toggleClass('avaible');
 	});
 
 	$('.location-btn-js').click(function () {
@@ -1026,6 +1028,10 @@ function eventHandler() {
 				$(this).removeClass('zIndexHoverImportant');
 			}, 360);
 		}
+	});
+
+	$('.footer__scrolup').on('click', function() {
+		window.scrollTo(0,0);
 	});
 
 };

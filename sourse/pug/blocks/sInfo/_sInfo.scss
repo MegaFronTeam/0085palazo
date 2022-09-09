@@ -98,7 +98,7 @@
 			}
 		}
 		&:hover {
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				background-color: rgba(193, 101, 101, 0.1);
 				border-color: $primary;
 				&:first-child {

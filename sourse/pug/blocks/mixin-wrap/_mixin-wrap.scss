@@ -100,7 +100,7 @@
 	// button{
 	// }
 	&__search {
-		color: var(--bs-primary);
+		color: $primary;
 		position: absolute;
 		left: rem(8);
 		top: 0;
@@ -460,11 +460,16 @@
 
 	&__group {
 			position: relative;
-			width: rem(155);
-			height: rem(31);
 			background-image: url('../img/svg/star-off.svg');
-			background-size: rem(31);
 			background-repeat: repeat-x;
+			width: rem(100);
+			height: rem(20);
+			background-size: rem(20);
+			@include media-breakpoint-up(lg) {
+				width: rem(155);
+				height: rem(31);
+				background-size: rem(31);
+			}
 	}
 
 	/* Input */
@@ -495,10 +500,14 @@
 			top: 0;
 			left: 0;
 			margin: 0;
-			height: rem(31);
-			background-size: rem(31);
 			background-repeat: repeat-x;
 			margin-right: 1px;
+			height: rem(20);
+			background-size: rem(20);
+			@include media-breakpoint-up(lg) {
+				height: rem(31);
+				background-size: rem(31);
+			}
 	}
 
 	&__star:hover,
@@ -514,27 +523,42 @@
 
 	&__star:nth-of-type(1) {
 			z-index: 5;
-			width: rem(31);
+			width: rem(20);
+			@include media-breakpoint-up(lg) {
+				width: calc(rem(31) * 1);
+			}
 	}
 
 	&__star:nth-of-type(2) {
 			z-index: 4;
-			width: calc(rem(31) * 2);
+			width: calc(rem(20) * 2);
+			@include media-breakpoint-up(lg) {
+				width: calc(rem(31) * 2);
+			}
 	}
 
 	&__star:nth-of-type(3) {
 			z-index: 3;
-			width: calc(rem(31) * 3);
+			width: calc(rem(20) * 3);
+			@include media-breakpoint-up(lg) {
+				width: calc(rem(31) * 3);
+			}
 	}
 
 	&__star:nth-of-type(4) {
 			z-index: 2;
-			width: calc(rem(31) * 4);
+			width: calc(rem(20) * 4);
+			@include media-breakpoint-up(lg) {
+				width: calc(rem(31) * 4);
+			}
 	}
 
 	&__star:nth-of-type(5) {
 			z-index: 1;
-			width: calc(rem(31) * 5);
+			width: calc(rem(20) * 5);
+			@include media-breakpoint-up(lg) {
+				width: calc(rem(31) * 5);
+			}
 	}
 }
 
@@ -566,8 +590,9 @@
 		// padding-right: rem(20);
 		min-width: rem(151);
 		width: 100%;
-		@include media-breakpoint-down(lg) {
+		@include media-breakpoint-up(xl) {
 			// order: 1;
+			max-width: rem(150);
 		}
 		.icon {
 			font-size: rem(20);
@@ -578,9 +603,10 @@
 	&__input-wrap {
 		display: block;
 		margin-bottom: 0;
-		width: 100%;
 		margin-top: rem(10);
+		width: 100%;
 		@include media-breakpoint-up(xl) {
+			width: auto;
 			margin-top: 0;
 		}
 	}

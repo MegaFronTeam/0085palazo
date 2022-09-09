@@ -23,6 +23,8 @@ mixin mob-mnu()
 				li: a(href="#")  Отзывы
 				li: a(href="#")  Контакты
 			+e.row.row
+				.col
+					+location()
 				.col-auto
 					+e.email(href="mailto:sales@palazo.ru")
 						+icon("email")

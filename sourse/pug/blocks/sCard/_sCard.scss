@@ -123,7 +123,17 @@
 			// height: auto;
 			font-weight: 600;
 			line-height: 100%;
-			border-bottom: 1px solid #DBDBDB;
+			// border-bottom: 1px solid #DBDBDB;
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 200vw;
+				height: 1px;
+				background-color: #DBDBDB;
+				left: 0;
+				bottom: -1px;
+			}
 		}
 		.tabs__btn {
 			padding-bottom: 27px;

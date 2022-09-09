@@ -224,6 +224,18 @@
 		}
 	}
 // 
+
+&__scrolup {
+	@include mt;
+	color: #fff;
+	cursor: pointer;
+	font-size: 12px;
+	&:hover {
+		@include media-breakpoint-up(md) {
+			color: $primary;
+		}
+	}
+}
 @include media-breakpoint-up(xl) {}
 
 @include media-breakpoint-up(lg) {}

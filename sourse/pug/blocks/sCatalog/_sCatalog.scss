@@ -131,6 +131,11 @@
 			height: 32px;
 			border-radius: 4px;
 			border: none;
+
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+
 			@include mt;
 			&:hover {
 				background-color: $white;
@@ -302,13 +307,13 @@
 	flex-wrap: wrap;
 	list-style-type: none;
 	margin-bottom: 0;
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		overflow: visible;
 	}
 	.swiper-wrapper {
 		flex-wrap: wrap;
 		align-items: center;
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			flex-wrap: nowrap;
 		}
 	}
@@ -324,14 +329,19 @@
 		// 	}
 		// }
 		&.hidden {
-			display: none;
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
 		}
 	}
 	.btn {
-		display: inline-block;
+		display: none;
 		width: auto;
 		padding: 12px 20px;
 		margin-bottom: 4px;
+		@include media-breakpoint-up(md) {
+			display: inline-block;
+		}
 	}
 	&__btn {
 		padding: 12px 20px;
@@ -539,6 +549,7 @@
 		}
 		@include media-breakpoint-down(sm) {
 			padding: 20px 10px;
+			border-radius: 0;
 		}
 	}
 	&__title {
@@ -811,6 +822,8 @@
 		border: 1px solid #7A7A7A;
 		border-radius: 4px;
 		background-size: 13px 10px;
+		outline: none;
+		box-shadow: none;
 	}
 	.form-check-input:checked[type=checkbox] {
 		box-shadow: 0px 4px 4px rgba(193, 101, 101, 0.21);
@@ -938,10 +951,13 @@
 // 	}
 
 	.btn {
-		padding: 0;
+		padding: 5px;
 		font-weight: 600;
 		font-size: 12px;
-		color: $red
+		color: $red;
+		@include media-breakpoint-down(lg) {
+			border-color: transparent;
+		}
 	}
 	.icon-btn {
 		background-color: transparent;
@@ -976,6 +992,9 @@
 	}
 	.pagination-wrapper {
 		margin-left: auto;
+		.page-numbers {
+			cursor: pointer;
+		}
 	}
 	&__input-wrap {
 		position: relative;
@@ -1009,12 +1028,14 @@
 		}
 	}
 	&__input {
+		cursor: pointer;
 		padding: 0;
 		padding-right: 15px;
 		font-weight: 600;
 		font-size: 12px;
 		color: $red;
 		border: none;
+		background-color: #fafafa;
 	}
 	&__total {
 		margin-right: auto;
@@ -1042,6 +1063,11 @@
 			border: 1px solid $gray-100;
 			border-radius: 4px;
 			color: $gray-600;
+			@include media-breakpoint-up(lg) {
+				&:hover {
+					border-color: $primary;
+				}
+			}
 			&.active {
 				border-color: $red;
 				color: $body-color;
@@ -1059,7 +1085,7 @@
 		}
 	}
 	&__mob-sort{
-		background-color: rgba($gray-600, .8);
+		// background-color: rgba($gray-600, .8);
     height: 100%;
     left: 0;
     position: fixed;
@@ -1134,6 +1160,7 @@
 	&__controls {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		padding: 31px;
 		@include media-breakpoint-down(md) {
 			padding-left: 0;
@@ -1145,9 +1172,16 @@
 		position: relative;
 		bottom: 0;
 		width: auto;
+		&-bullet {
+			&-active {
+				background-color: $primary;
+			}
+		}
 	}	
 	.swiper-button-hand {
 		color: $red;
+		--swiperColorDefHover: #{$primary};
+
 	}
 }
 .bottom-controls {
@@ -1181,7 +1215,7 @@
 	// left: 50%;
 	// transform: translateX(-50%);
 	z-index: 120;
-	@include mt;
+	// @include mt;
 }
 
 .tooltiptext[data-show] {

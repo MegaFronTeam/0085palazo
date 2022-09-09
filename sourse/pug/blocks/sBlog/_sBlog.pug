@@ -3,6 +3,15 @@ mixin sBlog(data)
 	+b.sBlog.section#sBlog&attributes(attributes)
 		.container
 			+productTags('','Все публикации','новости','акции')
+			//- +e.slider--js.swiper
+			//- 	.swiper-wrraper
+			//- 		+e.slide.swiper-slide 
+			//- 			button Все публикации
+			//- 		+e.slide.swiper-slide 
+			//- 			button новости
+			//- 		+e.slide.swiper-slide 
+			//- 			button акции
+
 			+e.row.row
 				.col-md-6.col-xl-4
 					+catalogRowItem('2','МЕБЕЛЬ В ДЕТСКУЮ','Чтобы ответить на&nbsp;поставленный в&nbsp;заголовке вопрос, стоит для начала определить, в&nbsp;чем заключается отличие дополнительного и&nbsp;основного')

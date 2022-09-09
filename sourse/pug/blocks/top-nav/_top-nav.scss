@@ -16,6 +16,9 @@
 		padding-top: rem(15);
 		padding-bottom: rem(15);
 		background: rgba($color: #EDEDED, $alpha: .23);
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 10px;
+		}
 	}
 	&__logo-text{
 		letter-spacing: 0.07em;
@@ -130,10 +133,12 @@
 	justify-content: space-between; 
 	cursor: pointer;
 	&:hover {
-		color: $primary;
+		@include media-breakpoint-up(lg) {
+			color: $primary;
+		}
 		&:after {
-			content: var(--chevron-down-primary);
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
+				content: var(--chevron-down-primary);
 				color: $primary;
 			}
 		}

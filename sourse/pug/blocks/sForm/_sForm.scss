@@ -253,13 +253,15 @@
 	}
 }
 .search-form {
+	margin-bottom: rem(25);
 	.row {
 		--bs-gutter-x: #{rem(33)};
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
-	input, .btn {
-		padding-top: 11px;
-		padding-bottom: 11px;
+	.form-control, .btn {
+		padding-top: 7px;
+		padding-bottom: 7px;
+		height: 100%;
 	}
 	.btn {
 		width: 100%;

@@ -63,6 +63,7 @@
 			top: 0;
 			overflow: hidden;
 			transform-origin: right;
+			color: $primary;
 			@include mt;
 			&:not(.active) {
 				transform: skewX(0);
@@ -114,6 +115,7 @@
 	align-items: center;
 	width: 2rem;
 	height: 2rem;
+	color: $primary;
 	.icon{
 		font-size: 1rem;
 
@@ -147,9 +149,9 @@
 			// @include mt();
 			font-size: rem(26);
 			flex: 0 0 auto;
+			margin-right: rem(11);
 			@include media-breakpoint-up(lg){
 				font-size: rem(15);
-				margin-right: rem(11);
 			}
 		}
 	}
@@ -158,15 +160,21 @@
 	z-index: 800;
 	&__dd{
 		@include mt();
-		transform-origin: top left;
+		transform-origin: bottom left;
 		transform: scale(0);
+		@include media-breakpoint-up(lg) {
+			transform-origin: top left;
+			top: 100%;
+			bottom: unset;
+			padding-top: rem(20);
+		}
 		&.active{
 			transform: scale(1);
 		}
 
 		position: absolute;
 		z-index: 900;
-		top: 100%;
+		bottom: calc(100% + 16px);
 
 		width: rem(230);
 		@include media-breakpoint-up(sm){
@@ -177,7 +185,6 @@
 			left: 0;
 			right: unset;
 		}
-		padding-top: rem(20);
 	}
 	&__dd-inner{
 		background-color: $white;
@@ -190,7 +197,9 @@
 
 		position: relative;
 		&:after{
-			content: '';
+			@include media-breakpoint-up(lg) {
+				content: '';
+			}
 			position: absolute;
 
 			left: calc(100% - #{rem(20)});

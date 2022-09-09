@@ -7,9 +7,9 @@
 		--sPB: #{rem(97.600)};
 	}
 	&__row{
-		--bs-gutter-y: #{rem(17.5)};
+		// --bs-gutter-y: #{rem(20)};
+		--bs-gutter-y: #{rem(35)};
 		@include media-breakpoint-up(md) {
-			--bs-gutter-y: #{rem(35)};
 		}
 	}
 	&__inner-row {

@@ -24,6 +24,7 @@ html{
 }
 
 body {
+	@extend .custom-scroll;
 	&.fixed,
 	&.fancybox-active{
 		.header{ 

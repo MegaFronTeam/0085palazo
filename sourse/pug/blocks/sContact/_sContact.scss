@@ -52,6 +52,7 @@
 		.icon {
 			font-size: rem(16);
 			margin-left: rem(16);
+			vertical-align: text-top;
 		}
 		&:hover {
 			@keyframes btnAnim {
@@ -98,7 +99,9 @@
 		font-size: rem(20);
 		font-weight: 500;
 		text-transform: uppercase;
-		margin-top: auto;
+		@include media-breakpoint-up(lg) {
+			margin-top: auto;
+		}
 	}
 	.soc {
 		margin-top: auto;
