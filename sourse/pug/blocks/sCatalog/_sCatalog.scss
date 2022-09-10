@@ -774,6 +774,8 @@
 		background-color: transparent;
 		&.active {
 			border: 1px solid $body-color;
+			pointer-events: none;
+			cursor: pointer;
 		}
 		&::after {
 			position: absolute;
