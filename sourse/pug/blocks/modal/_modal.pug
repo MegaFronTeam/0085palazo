@@ -124,10 +124,10 @@ mixin modal(data)
 										+modCityAllLetter('Б')
 										+modCityAllLetter('В')
 										+modCityAllLetter('Д')
-						+e.show-all.mc-show-all-js
-							+e.plus
-								+icon('plus')
-							span показать все города
+				+e.show-all.mc-show-all-js
+					+e.plus
+						+icon('plus')
+					span показать все города
 
 mixin modCityAllLetter(letter)
 	a.scroll-link(href=`#${letter}` data-scrollbox="#city-all")=letter
