@@ -86,7 +86,7 @@
 		position: absolute; 
 		@include media-breakpoint-down(lg) {
 			--swiperColorDefHover: #7A7A7A;
-			--swiperColorDef:  #{rgba($color: #7A7A7A, $alpha: .2)};
+			--swiperColorDef:  #7A7A7A;
 		}
 		@include media-breakpoint-up(lg) {
 

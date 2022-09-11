@@ -176,14 +176,17 @@
 		z-index: 900;
 		bottom: calc(100% + 16px);
 
-		width: rem(230);
+		width: 100%;
 		@include media-breakpoint-up(sm){
-			width: rem(340);
+			// width: rem(340);
 		}
 		right: 0;
 		@include media-breakpoint-up(md){
 			left: 0;
 			right: unset;
+		}
+		@include media-breakpoint-up(lg) {
+			width: rem(340);
 		}
 	}
 	&__dd-inner{
