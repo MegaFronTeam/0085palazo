@@ -642,6 +642,7 @@ function eventHandler() {
 		btn.addEventListener('click', (e) =>  {
 			dropBtns.forEach(el => {el.classList.remove('active')});
 			dropBody.forEach(el => {el.classList.remove('catalog-filter__show-dropdown')});
+			dropBody.forEach(el => {el.classList.remove('mobile-active')});
 			e.currentTarget.classList.toggle('active');
 			e.currentTarget.classList.toggle('mobile-active');
 			e.currentTarget.closest('.catalog-filter__dropdown-item').querySelector('.catalog-filter__dropdown-body').classList.add('catalog-filter__show-dropdown');
