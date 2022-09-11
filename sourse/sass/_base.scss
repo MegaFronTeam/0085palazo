@@ -481,31 +481,32 @@ iframe {
 
 
 
-.custom-scroll {
-	/* ===== Scrollbar CSS ===== */
-  /* Firefox */
-	--bs-primary: #DEDEDE;
- 
-  & {
-    scrollbar-width: auto;
-    scrollbar-color: $red transparent;
-  }
-
-  /* Chrome, Edge, and Safari */
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: $red;
-    border-radius: 16px;
-    border: 0px solid transparent;
-  }
-
+@include media-breakpoint-up(lg) {
+	.custom-scroll {
+		/* ===== Scrollbar CSS ===== */
+		/* Firefox */
+		--bs-primary: #DEDEDE;
+	 
+		& {
+			scrollbar-width: auto;
+			scrollbar-color: $red transparent;
+		}
+	
+		/* Chrome, Edge, and Safari */
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+	
+		&::-webkit-scrollbar-track {
+			background: transparent;
+		}
+	
+		&::-webkit-scrollbar-thumb {
+			background-color: $red;
+			border-radius: 16px;
+			border: 0px solid transparent;
+		}
+	}
 }
 
 ::-webkit-calendar-picker-indicator {

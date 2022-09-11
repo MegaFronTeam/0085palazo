@@ -799,22 +799,37 @@
 		left: 0;
 		top: 75px;
 		min-width: 100%;
-		padding: 18px;
 		background: #FFFFFF;
-		border: 1px solid #F2F4F5;
-		box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.08);
-		border-radius: 8px;
+		border-bottom: 1px solid #F2F4F5;
+		padding-bottom: 15px;
 		z-index: 20;
 		opacity: 0;
 		visibility: hidden;
 		@include mt;
+		display: none;
+		@include media-breakpoint-up(lg) {
+			border: 1px solid #F2F4F5;
+			box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.08);
+			padding: 18px;
+			border-radius: 8px;
+		}
+		&.mobile-active {
+			@include media-breakpoint-down(lg) {
+				position: static;
+				display: block;
+			}
+		}
 	}
 	&__dropdown-content {
 		max-height: 264px;
 		padding-right: 5px;
-		overflow: scroll;
+		overflow-y: scroll;
+		overflow-x: hidden;
 		height: 100%;
 		@extend .custom-scroll;
+		@include media-breakpoint-down(lg) {
+			margin-top: rem(20);
+		}
 	}
 	&__dropdown-summary {
 		display: flex;
@@ -1141,6 +1156,7 @@
 		background-color:$white;
 		overflow-y: auto;
 		overflow-x: hidden;
+		padding: calc(env(safe-area-inset-top, 0px) + 20px) 20px calc(env(safe-area-inset-bottom, 0px) + 20px);
 	}
 	&__mob-close {
 		cursor: pointer;

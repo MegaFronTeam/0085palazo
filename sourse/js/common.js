@@ -643,7 +643,9 @@ function eventHandler() {
 			dropBtns.forEach(el => {el.classList.remove('active')});
 			dropBody.forEach(el => {el.classList.remove('catalog-filter__show-dropdown')});
 			e.currentTarget.classList.toggle('active');
+			e.currentTarget.classList.toggle('mobile-active');
 			e.currentTarget.closest('.catalog-filter__dropdown-item').querySelector('.catalog-filter__dropdown-body').classList.add('catalog-filter__show-dropdown');
+			e.currentTarget.closest('.catalog-filter__dropdown-item').querySelector('.catalog-filter__dropdown-body').classList.toggle('mobile-active');
 		});
 	});
 
@@ -652,6 +654,7 @@ function eventHandler() {
 		if ((!e.target.classList.contains('catalog-filter__dropdown-btn')) && (!e.target.classList.contains('catalog-filter__dropdown-body')) && (!e.target.classList.contains('custom-input__input')) && (!e.target.classList.contains('custom-input__text')) && (!e.target.classList.contains('form-check'))) {
 			dropBtns.forEach(el => {el.classList.remove('active')});
 			dropBody.forEach(el => {el.classList.remove('catalog-filter__show-dropdown')});
+			dropBody.forEach(el => {el.classList.remove('mobile-active')});
 		}
 	})
 	
