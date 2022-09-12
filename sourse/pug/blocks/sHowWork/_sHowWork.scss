@@ -60,6 +60,32 @@
 				}
 			}
 		}
+		&:first-child {
+			.sHowWork__dropdown {
+				@include media-breakpoint-only(lg) {
+					left: 0;
+					transform: translateX(0);
+					&:before {
+						left: 13%;
+						transform: rotate(-45deg);
+					}
+				}
+			}
+		}
+		&:last-child {
+			.sHowWork__dropdown {
+				@include media-breakpoint-only(lg) {
+					left: unset;
+					right: 0;
+					transform: translateX(0);
+					&:before {
+						left: unset;
+						right: 13%;
+						transform: rotate(-45deg);
+					}
+				}
+			}
+		}
 		&:last-child {
 			.sHowWork__item {
 				@include media-breakpoint-up(lg) {

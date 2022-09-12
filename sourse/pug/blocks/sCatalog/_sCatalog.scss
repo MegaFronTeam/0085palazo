@@ -685,6 +685,10 @@
 		position: absolute;
 		top: 0;
 		right: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+		flex-grow: 1;
+		padding: 0;
 	}
 	&__row {
 		display: grid;
@@ -807,14 +811,15 @@
 		visibility: hidden;
 		@include mt;
 		display: none;
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
+			display: block;
 			border: 1px solid #F2F4F5;
 			box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.08);
 			padding: 18px;
 			border-radius: 8px;
 		}
 		&.mobile-active {
-			@include media-breakpoint-down(lg) {
+			@include media-breakpoint-down(md) {
 				position: static;
 				display: block;
 			}
@@ -828,7 +833,7 @@
 		height: 100%;
 		margin-bottom: 10px;
 		@extend .custom-scroll;
-		@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(md) {
 			margin-top: rem(20);
 		}
 	}
@@ -1130,6 +1135,9 @@
     width:100%;
     z-index: 1000;
 		// overflow-y:hidden;
+
+		display: flex;
+		flex-direction: column;
 		@include mt;
 		@include media-breakpoint-up(md) {
 			display: none;
@@ -1155,9 +1163,11 @@
 		width: 100%;
 		height: 100%;
 		background-color:$white;
-		overflow-y: auto;
-		overflow-x: hidden;
+		// overflow-y: auto;
+		// overflow-x: hidden;
 		padding: calc(env(safe-area-inset-top, 0px) + 20px) 20px calc(env(safe-area-inset-bottom, 0px) + 20px);
+		display: flex;
+    flex-direction: column;
 	}
 	&__mob-close {
 		cursor: pointer;
@@ -1191,6 +1201,14 @@
 		margin-bottom: 20px;
 		font-size: 18px;
 		font-weight: 600px;
+	}
+	&__btns-row {
+		--bs-gutter-x: #{rem(10)};
+		--bs-gutter-y: #{rem(10)};
+		margin-top: rem(15);
+	}
+	&__btn {
+		width: 100%;
 	}
 }
 .slider-more {

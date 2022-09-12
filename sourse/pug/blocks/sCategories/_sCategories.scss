@@ -63,9 +63,9 @@
 		}
 	}
 	&__slider {
-		overflow: visible;
+		// overflow: visible;
 		@include media-breakpoint-up(lg) {
-			overflow: hidden;
+			// overflow: hidden;
 			margin: 0 rem(32);
 		}
 	}

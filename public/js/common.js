@@ -523,13 +523,13 @@ function eventHandler() {
 	function tagsToSlide() {
 		const tagSliders = document.querySelectorAll('.tags-slider');
 		for (let tagSlider of tagSliders) {
-			if (window.innerWidth <= 576 && tagSlider.dataset.mobile == 'false') {
+			if (window.innerWidth <= 768 && tagSlider.dataset.mobile == 'false') {
 				const tagSwiper = new Swiper(tagSlider.querySelector('.tags-list--js'), {
 					slidesPerView: 'auto',
 				});
 				tagSlider.dataset.mobile = 'true';
 			}
-			if (window.innerWidth > 576) {
+			if (window.innerWidth > 768) {
 				tagSlider.dataset.mobile = 'false';
 				if (tagSlider.classList.contains('swiper-container-initialized')) {
 					mobSlider.destroy();
@@ -1048,7 +1048,6 @@ function eventHandler() {
 			},
 		},
   });
-
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
