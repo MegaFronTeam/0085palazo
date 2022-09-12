@@ -67,7 +67,8 @@ mixin searchForm()
 		+form-wrap()
 			.row
 				.col-12.col-sm-6.col-md-10
-					+input('','text')
+					+input('','text').input--js
+						+e.del.search-del--js
 				.col-12.col-sm-6.col-md-2
 					+e.button.BUTTON(type="submit").btn.btn-primary Поиск
 	// end searchForm

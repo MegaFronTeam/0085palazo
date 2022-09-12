@@ -61,7 +61,7 @@
 			right: calc(var(--bs-gutter-x) / 2);
 			width: calc(100% - var(--bs-gutter-x) - #{rem(120)});
 			top: 0;
-			overflow: hidden;
+			// overflow: hidden;
 			transform-origin: right;
 			color: $primary;
 			@include mt;

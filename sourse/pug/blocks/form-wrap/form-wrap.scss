@@ -26,6 +26,7 @@
 	&__input-wrap {
 		margin-bottom: 10px;
 		height: 100%;
+		position: relative;
 	}
 	&__input-title {
 		position: absolute;
@@ -113,6 +114,39 @@
 		&__text {
 			font-size: rem(15);
 			line-height: 1.55em;
+		}
+	}
+	&__del {
+		position: absolute;
+		@include mt;
+		right: 10px;
+		width: 17px;
+		height: 17px;
+		pointer-events: none;
+		opacity: 0;
+		&.active {
+			pointer-events: all;
+			opacity: 1;
+		}
+		top: 50%;
+		border: none;
+		cursor: pointer;
+		background-color: transparent;
+		transform: translateY(-50%);
+		&::before, &:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: $primary;
+			@include a-cent;
+		}
+		&::before {
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
 		}
 	}
 }

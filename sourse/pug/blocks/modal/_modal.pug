@@ -118,16 +118,16 @@ mixin modal(data)
 									+modCityAllItem('В', 'Валуйки')
 									+modCityAllItem('Д', 'Дзержинск')
 									+modCityAllItem('Я', 'Яркутськ', 100)
-								.col-auto.d-xl-none
-									+e.ancors
-										+modCityAllLetter('A')
-										+modCityAllLetter('Б')
-										+modCityAllLetter('В')
-										+modCityAllLetter('Д')
-				+e.show-all.mc-show-all-js
-					+e.plus
-						+icon('plus')
-					span показать все города
+								//- .col-auto.d-xl-none
+								//- 	+e.ancors
+								//- 		+modCityAllLetter('A')
+								//- 		+modCityAllLetter('Б')
+								//- 		+modCityAllLetter('В')
+								//- 		+modCityAllLetter('Д')
+						+e.show-all.mc-show-all-js
+							+e.plus
+								+icon('plus')
+							span показать все города
 
 mixin modCityAllLetter(letter)
 	a.scroll-link(href=`#${letter}` data-scrollbox="#city-all")=letter

@@ -170,7 +170,7 @@ mixin catalogSlider
 mixin catSorter
 	+b.catalog-sorter&attributes(attributes)
 		+e.container.container
-			+select('Сортировка','Сначала дорогие','Сначала недорогие')
+			+select('Сортировка','Сначала дорогие','Сначала недорогие').js-choice
 			+e.total.d-none.d-md-block Всего: 250
 			+e.display.d-none.d-md-flex
 				| Отображать по:
@@ -274,9 +274,9 @@ mixin catSorter
 									+e.right(href="#") Сбросить
 					+e.btns-row.row
 						.col.col-sm-6
-							+e.btn.btn.btn-primary Применить
+							+e.btn.btn.btn-primary.modal-close-js Применить
 						.col.col-sm-6
-							+e.btn.btn.btn-outline-primary Сбросить
+							+e.btn.btn.btn-outline-primary.modal-close-js Сбросить
 
 mixin catFilter
 	.filter-wrap

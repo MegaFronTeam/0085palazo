@@ -30,11 +30,12 @@ mixin addblock()
 		+e.btn--plus(type="button")
 
 mixin search()
-	+b.search-block
+	+b.search-block.form-wrap
 		form
-			input(type="text" placeholder="Поиск по сайту")
+			input(type="text" placeholder="Поиск по сайту").input--js
 			+e.BUTTON.search
 				+icon("search")
+		button.search-block__del.search-del--js
 		button.search-block__cross.search-toggle--js
 
 

@@ -3,6 +3,7 @@
 }
 
 .fancybox__content {
+	@extend .custom-scroll;
 	padding: 0;
 	max-width: 100%;
 	@include media-breakpoint-up(lg) {
@@ -315,9 +316,15 @@ a {
 	.form-wrap{
 		--bs-gutter-x: #{rem(20)};
 		--bs-gutter-y: #{rem(12)};
+		height: min(650px, 100%);
 		@include media-breakpoint-up(sm){
 			--bs-gutter-x: #{rem(24)};
 			--bs-gutter-y: #{rem(16)};
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			height: min(650px, 100%);
 		}
 		.row{
 			--bs-gutter-x: inherit;
@@ -337,6 +344,7 @@ a {
 		&__input-wrap{
 			margin-bottom: var(--input-mb);
 			max-width: rem(471);
+			height: auto;
 		}
 		&__input{
 			border-width: 1px!important;
@@ -407,14 +415,19 @@ a {
 			color: $primary;
 		}
 		&__scroll-wrap {
-			overflow-y: auto;
-			overflow-x: hidden;
 			@extend .custom-scroll;
+			@include media-breakpoint-up(lg) {
+				overflow-y: auto;
+				overflow-x: hidden;
+				flex-grow: 1;
+			}
 		}
 		&__scroll-content {
 			display: flex;
 			flex-direction: column;
-			height: 620px;
+			@include media-breakpoint-up(lg) {
+				// height: 430px;
+			}
 		}
 
 		//

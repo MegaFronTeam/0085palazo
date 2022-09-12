@@ -103,6 +103,10 @@
 		@include block(176, 140);
 		width: rem(176);
 		max-width: 100%;
+		display: none;
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
 	}
 	&__img-content {
 		align-self: center;
