@@ -1066,7 +1066,7 @@ function eventHandler() {
 	}
 
 	let searchInputs = document.querySelectorAll('.input--js');
-	if( searchInputs.length > 0) {
+	if( searchInputs) {
 		for (const searchInput of searchInputs) {
 			searchInput.addEventListener('input', function() {
 				if(searchInput.value.split('').length > 0) {
@@ -1075,9 +1075,11 @@ function eventHandler() {
 					this.closest('.form-wrap').querySelector('.search-del--js').classList.remove('active');
 				}
 			});
-			$('.search-del--js').on('click', function() {
-				this.closest('.form-wrap').querySelector('.search-del--js').classList.remove('active');
-				this.closest('.form-wrap').querySelector('.input--js').value = '';
+			searchInput.closest('.form-del-wrap').addEventListener('click', function(event) {
+				let del = event.target.closest('.search-del--js');
+				if(!del) return;
+				del.classList.remove('active');
+				this.closest('.form-del-wrap').querySelector('.input--js').value = '';
 			});
 		}
 	}
