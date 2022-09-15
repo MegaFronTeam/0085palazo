@@ -103,7 +103,11 @@ mixin modal(data)
 		+b.modal-city--js
 			+form-wrap
 				+e.H4.title Выберите свой город
-				+input('Ввести название города', 'text')
+				+e.input-wrraper
+					.form-del-wrap
+						+input('Ввести название города', 'text').input--js
+						+e.del.search-del--js
+				//- +input('Ввести название города', 'text')
 				+e.scroll-wrap
 					+e.scroll-content
 						+e.city--popular.mc-popular-js.active

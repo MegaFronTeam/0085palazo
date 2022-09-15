@@ -29,7 +29,7 @@
 		max-width: 215px;
 		margin-right: auto;
 		font-weight: 600;
-		font-size: 12px;
+		font-size: 10px;
 		line-height: 155%;
 		/* or 19px */ 
 		letter-spacing: 0.07em;
@@ -38,6 +38,9 @@
 		/* Text2 */
 
 		color: #7A7A7A;
+		@include media-breakpoint-up(sm) {
+			font-size: 12px;
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}

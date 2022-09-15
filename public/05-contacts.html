@@ -311,8 +311,11 @@
 						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">О компании</span>
-									<meta itemprop="position" content="2"/></a></li>
+							<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+								<div itemprop="item"><span itemprop="name">О компании</span>
+									<meta itemprop="position" content="2"/>
+								</div>
+							</li>
 						</ol>
 					</nav>
 					<h1>Контакты</h1>
@@ -966,9 +969,15 @@
 					<form>
 						<h4 class="form-wrap__title">Выберите свой город
 						</h4>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ввести название города"/>
+						<div class="form-wrap__input-wrraper">
+							<div class="form-del-wrap">
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control input input--js" name="text" type="text" placeholder="Ввести название города"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__del search-del search-del--js">
+								</div>
+							</div>
 						</div>
-						<!-- +e.input-wrap-->
 						<div class="form-wrap__scroll-wrap">
 							<div class="form-wrap__scroll-content">
 								<div class="form-wrap__city form-wrap__city--popular mc-popular-js active">

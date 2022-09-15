@@ -783,8 +783,10 @@
 		background-color: transparent;
 		&.active {
 			border: 1px solid $body-color;
-			// pointer-events: none;
 			cursor: pointer;
+			@include media-breakpoint-up(md) {
+				pointer-events: none;
+			}
 		}
 		&::after {
 			position: absolute;
@@ -833,7 +835,7 @@
 	&__dropdown-content {
 		max-height: 264px;
 		padding-right: 5px;
-		overflow-y: scroll;
+		overflow-y: auto;
 		overflow-x: hidden;
 		height: 100%;
 		margin-bottom: 10px;
@@ -1251,6 +1253,7 @@
 		&__list {
 			padding: 0;
 			z-index: 200;
+			min-width: rem(174);
 			&--single {
 				& > * {
 					padding: 0 !important;

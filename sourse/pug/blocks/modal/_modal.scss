@@ -342,9 +342,15 @@ a {
 			margin-bottom: var(--title-mb);
 		}
 		&__input-wrap{
+			width: 100%;
+			margin-bottom: 0;
+			// margin-bottom: var(--input-mb);
+			// max-width: rem(471);
+			height: auto;
+		}
+		&__input-wrraper {
 			margin-bottom: var(--input-mb);
 			max-width: rem(471);
-			height: auto;
 		}
 		&__input{
 			border-width: 1px!important;
@@ -495,7 +501,9 @@ a {
 				stroke-width: 1px;
 			}
 		}
+		&__del {
 
+		}
 	}
 	&__city-row {
 		height: rem(700);

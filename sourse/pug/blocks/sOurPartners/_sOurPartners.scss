@@ -19,22 +19,22 @@
 		@include media-breakpoint-up(md) {
 			--bs-gutter-x: #{rem(32)};
 		}
-		&:hover {
-			img {
-				@include media-breakpoint-up(lg) {
-					opacity: 1;
-					filter: grayscale(0);
-				}
-			}
-		}
+		// &:hover {
+		// 	img {
+		// 		@include media-breakpoint-up(lg) {
+		// 			opacity: 1;
+		// 			filter: grayscale(0);
+		// 		}
+		// 	}
+		// }
 	}
 	&__col{
 
 	}
 	img {
-		@include mt;
-		opacity: .5;
-		filter: grayscale(1);
+		// @include mt;
+		// opacity: .5;
+		// filter: grayscale(1);
 	}
 	h4 {
 		margin-bottom: rem(16);

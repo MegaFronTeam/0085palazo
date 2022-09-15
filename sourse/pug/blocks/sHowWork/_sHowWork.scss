@@ -62,7 +62,7 @@
 		}
 		&:first-child {
 			.sHowWork__dropdown {
-				@include media-breakpoint-only(lg) {
+				@include media-breakpoint-between(lg, xxl) {
 					left: 0;
 					transform: translateX(0);
 					&:before {
@@ -74,7 +74,7 @@
 		}
 		&:last-child {
 			.sHowWork__dropdown {
-				@include media-breakpoint-only(lg) {
+				@include media-breakpoint-between(lg, xxl) {
 					left: unset;
 					right: 0;
 					transform: translateX(0);

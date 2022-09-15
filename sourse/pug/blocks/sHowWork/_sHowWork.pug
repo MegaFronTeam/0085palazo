@@ -5,9 +5,9 @@ mixin sHowWork(data)
 			+b.section-title
 				h2 Как мы работаем над вашим заказом
 				p Простая схема работы для взаимодействия с нашими клиентами
-			mixin item(i, text, btn=false)
+			mixin item(img, i, text, btn=false)
 				+e.item
-					+img('img/svg/sHowWork-img-1.svg')
+					+img(`img/svg/sHowWork-img-${img}.svg`)
 					span!= i
 					+e.text!= text
 					if btn
@@ -16,15 +16,15 @@ mixin sHowWork(data)
 						p Мы встретимся с вами в удобном для вас месте и обсудим все детали заказа
 			+e.row.row
 				+e.col.col-lg-2.col-md-4.col-6
-					+item(1, 'Предварительный расчет', true)
+					+item(1, 1, 'Предварительный расчет', true)
 				+e.col.col-lg-2.col-md-4.col-6
-					+item(2, 'Встреча и обсуждение эскиза')
+					+item(2, 2, 'Встреча и обсуждение эскиза')
 				+e.col.col-lg-2.col-md-4.col-6
-					+item(3, 'Заключение договора')
+					+item(3, 3, 'Заключение договора')
 				+e.col.col-lg-2.col-md-4.col-6
-					+item(4, 'Производство мебели')
+					+item(4, 4, 'Производство мебели')
 				+e.col.col-lg-2.col-md-4.col-6
-					+item(5, 'Доставка')
+					+item(5, 5, 'Доставка')
 				+e.col.col-lg-2.col-md-4.col-6
-					+item(6, 'Установка')
+					+item(6, 6, 'Установка')
 	// end sHowWork
