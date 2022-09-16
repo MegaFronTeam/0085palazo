@@ -85,6 +85,9 @@ body {
 		left: 0;
 		top: 0;
 		z-index: 999;
+		touch-action: none; 
+    /* Other browsers */
+    overscroll-behavior: none;
 
 		&::before {
 			z-index: 999;
