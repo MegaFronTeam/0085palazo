@@ -27,10 +27,10 @@ mixin sForm2()
 			h4 нужна помощь?
 		+e.form-col
 			+form-wrap()
-				+input('Введите','text','Ваше имя')
+				+input('','text','Ваше имя')
 				+input('','tel','Ваш номер телефона')
-				+input('Введите','email','E-mail')
-				+input('Введите','textarea','Опишите свой вопрос')
+				+input('','email','E-mail')
+				+input('','textarea','Опишите свой вопрос')
 				+e.button.BUTTON(type="submit").btn.btn-primary
 					| Отправить
 					+icon('arrow-right')
