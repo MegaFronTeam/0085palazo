@@ -224,7 +224,7 @@
 		position: fixed !important;
 		z-index: 999;
 		max-width: 85%;
-		height: calc(var(--vh, 1vh) * 100);
+		// height: calc(var(--vh, 1vh) * 100);
 		width: 280px;
 		top: 0;
 		// left: 0;
@@ -258,10 +258,10 @@
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
-			height: 100%;
-			@include mt(.3s);
-			transition-delay: .4s;
-			opacity: var(--opacity);
+			height: 100vh;
+			// @include mt(.3s);
+			// transition-delay: .4s;
+			// opacity: var(--opacity);
 
 			display: flex;
     	flex-direction: column;
