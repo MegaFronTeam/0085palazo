@@ -7,6 +7,9 @@
 		--sPT: #{rem(35)};
 		--sPB: #{rem(42)};
 	}
+	article {
+		display: inline;
+	}
 	&__row{
 		--bs-gutter-x: #{rem(33)};
 		// --bs-gutter-y: #{rem()};

@@ -17,11 +17,12 @@ mixin mob-mnu()
 		+e.inner
 			a(href="/")
 				+img("img/logo.png")
-			ul
-				li: a(href="#")  О компании
-				li: a(href="#")  Партнерам
-				li: a(href="#")  Отзывы
-				li: a(href="#")  Контакты
+			nav
+				ul
+					li: a(href="#")  О компании
+					li: a(href="#")  Партнерам
+					li: a(href="#")  Отзывы
+					li: a(href="#")  Контакты
 			+e.row.row
 				.col
 					+location()

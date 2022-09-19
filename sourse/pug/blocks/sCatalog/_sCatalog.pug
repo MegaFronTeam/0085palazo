@@ -10,26 +10,28 @@ mixin productTags(show,...items)
 	// /.tags-list
 
 mixin catalogRowItem(img,title,price='125 000 руб.')
-	+b.catalog-item(href="#")
-		+img(`img/prod-${img}.jpg`)
-		+e.text
-			+e.title= title
-			+e.price!= price
+	article 
+		+b.catalog-item(href="#")
+			+img(`img/prod-${img}.jpg`)
+			+e.text
+				+e.title= title
+				+e.price!= price
 
 mixin catalogRowItem2(img,title,price='125 000 руб.')
-	+b.catalog-item--2(href="#")
-		+e.img-wrap
-			+e.slider-wrapper
-				+e.slider--js.swiper
-					.swiper-wrapper
-						.swiper-slide
-							+img(`img/prod-${img}.jpg`)
-						.swiper-slide
-							+img(`img/prod-${img}.jpg`)
-					+arrow
-		+e.text
-			+e.title= title
-			+e.price!= price
+	article 
+		+b.catalog-item--2(href="#")
+			+e.img-wrap
+				+e.slider-wrapper
+					+e.slider--js.swiper
+						.swiper-wrapper
+							.swiper-slide
+								+img(`img/prod-${img}.jpg`)
+							.swiper-slide
+								+img(`img/prod-${img}.jpg`)
+						+arrow
+			+e.text
+				+e.title= title
+				+e.price!= price
 
 mixin categoryRow
 	+b.slider-category--js.swiper
@@ -83,7 +85,7 @@ mixin seeMore(title)
 				+arrow
 
 mixin product-item(img, title="Кухня Дестини", total='110 900 р', price='18 900 р')
-	+b.product-item
+	+b.ARTICLE.product-item
 		+e.img-wrap
 			+e.slider-wrapper
 				+e.slider--js.swiper

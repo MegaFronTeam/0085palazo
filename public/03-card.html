@@ -22,12 +22,14 @@
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
 				<div class="menu-mobile__inner"><a href="/"><img src="img/logo.png" alt="" loading="lazy"/></a>
-					<ul>
-						<li><a href="#"> О компании</a></li>
-						<li><a href="#"> Партнерам</a></li>
-						<li><a href="#"> Отзывы</a></li>
-						<li><a href="#"> Контакты</a></li>
-					</ul>
+					<nav>
+						<ul>
+							<li><a href="#"> О компании</a></li>
+							<li><a href="#"> Партнерам</a></li>
+							<li><a href="#"> Отзывы</a></li>
+							<li><a href="#"> Контакты</a></li>
+						</ul>
+					</nav>
 					<div class="menu-mobile__row row">
 						<div class="col">
 							<div class="location">
@@ -577,30 +579,36 @@
 								<div class="sCard__news d-none d-lg-block">
 									<h2 class="sCard__news-title">Полезные статьи
 									</h2>
-									<a class="news-item news-item--common" href="#">
-										<div class="news-item__text">
-											<div class="news-item__date">04 июн 2022
+									<article> 
+										<a class="news-item news-item--common" href="#">
+											<div class="news-item__text">
+												<div class="news-item__date">04 июн 2022
+												</div>
+												<div class="news-item__title">Fresenius продолжает расширять сеть диализных центров в России
+												</div>
 											</div>
-											<div class="news-item__title">Fresenius продолжает расширять сеть диализных центров в России
+										</a>
+									</article>
+									<article> 
+										<a class="news-item news-item--common" href="#">
+											<div class="news-item__text">
+												<div class="news-item__date">04 июн 2022
+												</div>
+												<div class="news-item__title">Академия Диализа Fresenius Medical Care запустила первый курс повышения квалификации
+												</div>
 											</div>
-										</div>
-									</a>
-									<a class="news-item news-item--common" href="#">
-										<div class="news-item__text">
-											<div class="news-item__date">04 июн 2022
+										</a>
+									</article>
+									<article> 
+										<a class="news-item news-item--common" href="#">
+											<div class="news-item__text">
+												<div class="news-item__date">04 июн 2022
+												</div>
+												<div class="news-item__title">Fresenius открывает второй диализный центр в Красноярске
+												</div>
 											</div>
-											<div class="news-item__title">Академия Диализа Fresenius Medical Care запустила первый курс повышения квалификации
-											</div>
-										</div>
-									</a>
-									<a class="news-item news-item--common" href="#">
-										<div class="news-item__text">
-											<div class="news-item__date">04 июн 2022
-											</div>
-											<div class="news-item__title">Fresenius открывает второй диализный центр в Красноярске
-											</div>
-										</div>
-									</a>
+										</a>
+									</article>
 									<a class="sCard__news-archive" href="#">Архив статей
 										<svg class="icon icon-forward ">
 											<use xlink:href="img/svg/sprite.svg#forward"></use>
@@ -827,7 +835,7 @@
 											</label><span class="add-file__filename"></span>
 										</div>
 										<div class="form-wrap__input-wrap form-group">
-											<label><span class="form-wrap__input-title">Ваш номер телефона</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Введите"/>
+											<label><span class="form-wrap__input-title">Ваш номер телефона</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder=""/>
 											</label>
 										</div>
 										<!-- +e.input-wrap-->
@@ -845,7 +853,7 @@
 					<div class="slider-more slider-more--js swiper">
 						<div class="swiper-wrapper">
 							<div class="slider-more__slide swiper-slide">
-								<div class="product-item">
+								<article class="product-item">
 									<div class="product-item__img-wrap">
 										<div class="product-item__slider-wrapper">
 											<div class="product-item__slider product-item__slider--js swiper">
@@ -956,11 +964,11 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="slider-more__slide swiper-slide">
-								<div class="product-item">
+								<article class="product-item">
 									<div class="product-item__img-wrap">
 										<div class="product-item__slider-wrapper">
 											<div class="product-item__slider product-item__slider--js swiper">
@@ -1071,11 +1079,11 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="slider-more__slide swiper-slide">
-								<div class="product-item">
+								<article class="product-item">
 									<div class="product-item__img-wrap">
 										<div class="product-item__slider-wrapper">
 											<div class="product-item__slider product-item__slider--js swiper">
@@ -1186,11 +1194,11 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="slider-more__slide swiper-slide">
-								<div class="product-item">
+								<article class="product-item">
 									<div class="product-item__img-wrap">
 										<div class="product-item__slider-wrapper">
 											<div class="product-item__slider product-item__slider--js swiper">
@@ -1301,11 +1309,11 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="slider-more__slide swiper-slide">
-								<div class="product-item">
+								<article class="product-item">
 									<div class="product-item__img-wrap">
 										<div class="product-item__slider-wrapper">
 											<div class="product-item__slider product-item__slider--js swiper">
@@ -1416,7 +1424,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</article>
 								<!-- /.product-item-->
 							</div>
 						</div>
@@ -1599,34 +1607,38 @@
 							<div class="footer-nav">
 								<div class="footer-nav__title">Категории
 								</div>
-								<ul>
-									<li>
-										<a class="footer-nav__link" href="#">Кухни на заказ
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Мебель в детскую
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Столовые группы
-										</a>
-									</li>
-								</ul>
+								<nav>
+									<ul>
+										<li>
+											<a class="footer-nav__link" href="#">Кухни на заказ
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Мебель в детскую
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Столовые группы
+											</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
 							<div class="footer-nav">
 								<div class="footer-nav__title footer-nav__title--fading">Категории
 								</div>
-								<ul>
-									<li>
-										<a class="footer-nav__link" href="#">Дизайнерам
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Производителям мебели
-										</a>
-									</li>
-								</ul>
+								<nav>
+									<ul>
+										<li>
+											<a class="footer-nav__link" href="#">Дизайнерам
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Производителям мебели
+											</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
 						</div>
 						<div class="col-sm-6">
@@ -1640,64 +1652,66 @@
 							<div class="footer-nav footer-nav--info footer-nav footer-nav--columns">
 								<div class="footer-nav__title">ПОЛЕЗНАЯ ИНФОРМАЦИЯ
 								</div>
-								<ul>
-									<li>
-										<a class="footer-nav__link" href="#">О компании
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Рассрочка
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Наши видео
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Фото наших работ
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Гарантия
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Сборка
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Доставка
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Дизайн-замер
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Оплата
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Полезные статьи
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Отзывы
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Часто задаваемы вопросы
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Вакансии
-										</a>
-									</li>
-									<li>
-										<a class="footer-nav__link" href="#">Наши партнеры
-										</a>
-									</li>
-								</ul>
+								<nav>
+									<ul>
+										<li>
+											<a class="footer-nav__link" href="#">О компании
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Рассрочка
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Наши видео
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Фото наших работ
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Гарантия
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Сборка
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Доставка
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Дизайн-замер
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Оплата
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Полезные статьи
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Отзывы
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Часто задаваемы вопросы
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Вакансии
+											</a>
+										</li>
+										<li>
+											<a class="footer-nav__link" href="#">Наши партнеры
+											</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
 						</div>
 						<div class="footer__col col-xl-3">
@@ -1999,17 +2013,17 @@
 					<div class="form-wrap">
 						<form>
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">Достоинства</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+								<label><span class="form-wrap__input-title">Достоинства</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">Недостатки</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+								<label><span class="form-wrap__input-title">Недостатки</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">Общие впечатления</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+								<label><span class="form-wrap__input-title">Общие впечатления</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
@@ -2019,12 +2033,12 @@
 								</label>
 							</div>
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">Ваше имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите"/>
+								<label><span class="form-wrap__input-title">Ваше имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__input-wrap form-group">
-								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Введите"/>
+								<label><span class="form-wrap__input-title">E-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder=""/>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->

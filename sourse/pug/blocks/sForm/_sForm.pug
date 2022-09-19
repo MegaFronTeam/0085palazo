@@ -10,7 +10,7 @@ mixin sForm()
 					+e.descr.P Задайте их&nbsp;по&nbsp;номеру телефона&nbsp;#[a(href="tel:+74950000000") +7 (495) 000-00-00] или оставте свой номер телефона и&nbsp;наш инженер перезвонит вам через 15&nbsp;минут
 				+e.form-col
 					+form-wrap()
-						+input('Введите','tel','Ваш номер телефона')
+						+input('','tel','Ваш номер телефона')
 						+e.button.btn.btn-primary(type="submit" data-src='modal-call' data-fancybox="modal") Оставить заявку
 				.col-lg-9
 					+e.policy.P Нажимая «Оставить завку», я соглашаюсь c 
@@ -58,7 +58,7 @@ mixin sFormFile()
 								span.add-file__btn  
 								span.add-file__text.upload-field__file-name Выбрать фото
 							span.add-file__filename
-						+input('Введите','tel','Ваш номер телефона')
+						+input('','tel','Ваш номер телефона')
 						+e.button(type="submit" data-src='modal-thx' data-fancybox="modal").btn.btn-primary Оставить заявку
 	// end sFormFile
 

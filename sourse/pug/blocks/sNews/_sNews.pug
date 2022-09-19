@@ -1,10 +1,11 @@
 mixin newsItem(date,title,theme,pic,img)
-	+b(class=`news-item--${theme}`,href="#")
-		if pic
-			+img(`img/news-${pic}.jpg`)(class=`news-item__${img}`)
-		+e.text
-			+e.date= date
-			+e.title=title
+	article 
+		+b(class=`news-item--${theme}`,href="#")
+			if pic
+				+img(`img/news-${pic}.jpg`)(class=`news-item__${img}`)
+			+e.text
+				+e.date= date
+				+e.title=title
 mixin sNews(title)
 	// start sNews
 	+b.SECTION.sNews.section#sNews&attributes(attributes)
