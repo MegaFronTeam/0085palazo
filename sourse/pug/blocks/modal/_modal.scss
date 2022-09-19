@@ -10,6 +10,13 @@
 		overflow: hidden;
 	}
 }
+.can-zoom_in, .is-draggable {
+	.fancybox__content {
+		@include media-breakpoint-up(lg) {
+			overflow: visible;
+		}
+	}
+}
 .modal-win {
 	// display: block;
 	@extend .custom-scroll;

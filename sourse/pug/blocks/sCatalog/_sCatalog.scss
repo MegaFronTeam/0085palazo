@@ -316,10 +316,14 @@
 		@include media-breakpoint-down(md) {
 			flex-wrap: nowrap;
 		}
+		@include media-breakpoint-up(md) {
+			transform: none !important;
+		}
 	}
 	&__item {
 		margin-bottom: 4px;
-		width: auto;
+		width: 100%;
+		max-width: max-content;
 		&:not(:last-child) {
 			margin-right: 8px;
 		}
@@ -1120,6 +1124,7 @@
 			border: 1px solid $gray-100;
 			border-radius: 4px;
 			color: $gray-600;
+			padding: 0;
 			@include media-breakpoint-up(lg) {
 				&:hover {
 					border-color: $primary;

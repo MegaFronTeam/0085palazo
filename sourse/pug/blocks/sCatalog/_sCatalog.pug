@@ -4,7 +4,7 @@ mixin productTags(show,...items)
 			.swiper-wrapper
 				-for (var i = 0; i < items.length; i++)
 					+e.item.swiper-slide
-						+e.btn.BUTTON= items[i]
+						+e.btn= items[i]
 				if show					
 					.btn.btn-outline-primary.swiper-slide(data-visible='visible') Скрыть
 	// /.tags-list
