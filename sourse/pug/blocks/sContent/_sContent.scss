@@ -3,6 +3,18 @@
 	.sContent {
 	--sPT: 0;
 	--sPB: 0;
+	p {
+		font-size: rem(16);
+		line-height: 1.55em;
+		color: $gray-600;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(18);
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+
+		}
+	}
 	&__block {
 		margin-bottom: rem(44);
 		@include media-breakpoint-up(lg) {
@@ -25,6 +37,12 @@
 			&:last-of-type {
 				margin-bottom: 0;
 
+			}
+		}
+		&--2 {
+			margin-bottom: 0;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 0;
 			}
 		}
 	}

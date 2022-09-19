@@ -26,12 +26,12 @@ mixin sExamples(data)
 				.tabs__content.active
 					+e.inner-row.row
 						-for(let i = 6; i <=17; i++)
-							.col-sm-6.col-lg-4 
+							article.col-sm-6.col-lg-4 
 								+catalogRowItem(i, 'детская спальня', '125 000 руб.')
 				-for(let i = 0; i <15; i++)
 					.tabs__content
 						+e.inner-row.row
 							-for(let i = 6; i <=17; i++)
-								.col-sm-6.col-lg-4 
+								article.col-sm-6.col-lg-4 
 									+catalogRowItem(i, 'детская спальня', '125 000 руб.')
 	// end sExamples

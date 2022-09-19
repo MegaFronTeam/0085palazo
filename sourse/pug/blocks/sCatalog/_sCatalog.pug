@@ -10,53 +10,51 @@ mixin productTags(show,...items)
 	// /.tags-list
 
 mixin catalogRowItem(img,title,price='125 000 руб.')
-	article 
-		+b.catalog-item(href="#")
-			+img(`img/prod-${img}.jpg`)
-			+e.text
-				+e.title= title
-				+e.price!= price
+	+b.catalog-item(href="#")
+		+img(`img/prod-${img}.jpg`)
+		+e.text
+			+e.title= title
+			+e.price!= price
 
 mixin catalogRowItem2(img,title,price='125 000 руб.')
-	article 
-		+b.catalog-item--2(href="#")
-			+e.img-wrap
-				+e.slider-wrapper
-					+e.slider--js.swiper
-						.swiper-wrapper
-							.swiper-slide
-								+img(`img/prod-${img}.jpg`)
-							.swiper-slide
-								+img(`img/prod-${img}.jpg`)
-						+arrow
-			+e.text
-				+e.title= title
-				+e.price!= price
+	+b.catalog-item--2(href="#")
+		+e.img-wrap
+			+e.slider-wrapper
+				+e.slider--js.swiper
+					.swiper-wrapper
+						.swiper-slide
+							+img(`img/prod-${img}.jpg`)
+						.swiper-slide
+							+img(`img/prod-${img}.jpg`)
+					+arrow
+		+e.text
+			+e.title= title
+			+e.price!= price
 
 mixin categoryRow
 	+b.slider-category--js.swiper
 		.swiper-wrapper
-			+e.slide.swiper-slide
+			+e.ARTICLE.slide.swiper-slide
 				+catalogRowItem(`1`,`КУХНИ НА ЗАКАЗ`,`от 125 000 руб.`)
-			+e.slide.swiper-slide
+			+e.ARTICLE.slide.swiper-slide
 				+catalogRowItem(`2`,`МЕБЕЛЬ В ДЕТСКУЮ`,`от 125 000 руб.`)
-			+e.slide.swiper-slide
+			+e.ARTICLE.slide.swiper-slide
 				+catalogRowItem(`3`,`СТОЛОВЫЕ ГРУППЫ`,`от 125 000 руб.`)
 
 mixin categorySliderRow
 	+b.slider-category--js.swiper
 		.swiper-wrapper
-			+e.slide.swiper-slide
+			+e.ARTICLE.slide.swiper-slide
 				+catalogRowItem(`1`,`КУХНИ НА ЗАКАЗ`,`от 125 000 руб.`)
-			+e.slide.swiper-slide
+			+e.ARTICLE.slide.swiper-slide
 				+catalogRowItem(`2`,`МЕБЕЛЬ В ДЕТСКУЮ`,`от 125 000 руб.`)
-			+e.slide.swiper-slide
+			+e.ARTICLE.slide.swiper-slide
 				+catalogRowItem(`3`,`СТОЛОВЫЕ ГРУППЫ`,`от 125 000 руб.`)
-			+e.slide.swiper-slide
+			+e.ARTICLE.slide.swiper-slide
 				+catalogRowItem(`1`,`КУХНИ НА ЗАКАЗ`,`от 125 000 руб.`)
-			+e.slide.swiper-slide
+			+e.ARTICLE.slide.swiper-slide
 				+catalogRowItem(`2`,`МЕБЕЛЬ В ДЕТСКУЮ`,`от 125 000 руб.`)
-			+e.slide.swiper-slide
+			+e.ARTICLE.slide.swiper-slide
 				+catalogRowItem(`3`,`СТОЛОВЫЕ ГРУППЫ`,`от 125 000 руб.`)
 		+e.controls.row
 			.col.col-md-6

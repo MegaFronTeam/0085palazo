@@ -63,15 +63,14 @@ mixin page-head2(t, text, ...items)
 						p!= text
 
 mixin video(i)
-	article 
-		+b.video(href="https://www.youtube.com/watch?v=L_LUpnjgPso&t=1s" data-fancybox= `sAbout-video-${i}` )
-			+e.img-wrap
-				.img-wrap-center
-					+img(`img/video-img-${i}.jpg`)
-			+e.content
-				+e.icon 
-					+icon('play')
-				.h4 спальня в белом цвете
+	+b.video(href="https://www.youtube.com/watch?v=L_LUpnjgPso&t=1s" data-fancybox= `sAbout-video-${i}` )
+		+e.img-wrap
+			.img-wrap-center
+				+img(`img/video-img-${i}.jpg`)
+		+e.content
+			+e.icon 
+				+icon('play')
+			.h4 спальня в белом цвете
 
 mixin videoLg()
 	+b.videoLg

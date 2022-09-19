@@ -16,33 +16,33 @@ mixin sFeedbackPage(data)
 				.tabs__content
 					+e.video-row.row
 						-for(let i =1; i <=12; i++)
-							.col-sm-6.col-lg-4
+							article.col-sm-6.col-lg-4
 								+video(i)
 				.tabs__content.active
 					+e.row.row
-						.col-md-6.col-xl-4
+						article.col-md-6.col-xl-4
 							+catalogRowItem('6','детская спальня')
-						.col-md-6.col-xl-4
+						article.col-md-6.col-xl-4
 							+catalogRowItem('7','детская спальня')
-						.col-md-6.col-xl-4
+						article.col-md-6.col-xl-4
 							+catalogRowItem('8','детская спальня')
-						.col-md-6.col-xl-4
+						article.col-md-6.col-xl-4
 							+catalogRowItem('9','лаконичная гостиная')
-						.col-md-6.col-xl-4
+						article.col-md-6.col-xl-4
 							+catalogRowItem('10','современная гостиная')
-						.col-md-6.col-xl-4
+						article.col-md-6.col-xl-4
 							+catalogRowItem('11','детская спальня')
-						.col-md-6.col-xl-4
+						article.col-md-6.col-xl-4
 							+catalogRowItem('12','чувственная спальня')
-						.col-md-6.col-xl-4
+						article.col-md-6.col-xl-4
 							+catalogRowItem('13','комфортная спальня')
-						.col-md-6.col-xl-4
+						article.col-md-6.col-xl-4
 							+catalogRowItem('14','современная гостиная')
-						.col-md-6.col-xl-4
+						article.col-md-6.col-xl-4
 							+catalogRowItem('15','гостиная в белом цвете')
-						.col-md-6.col-xl-4
+						article.col-md-6.col-xl-4
 							+catalogRowItem('16','стенка для гостиной')
-						.col-md-6.col-xl-4
+						article.col-md-6.col-xl-4
 							+catalogRowItem('17','детская спальня')
 					.bottom-controls
 						.catalog-sorter__display.d-none.d-md-flex Отображать по:
@@ -67,7 +67,7 @@ mixin sFeedbackPage(data)
 							button(class="catalog-sorter__btn btn" type="button") 48
 						.d-flex
 							+pugin()
-				.tabs__content
+				article.tabs__content
 					p Встроенную мебель нельзя перенести, сдвинуть, она плохо поддается демонтажу и&nbsp;сложно монтируется. Встройка, которая была установлена в&nbsp;одном месте, скорее всего не&nbsp;установится в&nbsp;другом, так как все детали изначально подгоняются под кривизну и&nbsp;особенности стен, которые никогда не&nbsp;повторяются. Но&nbsp;как часто Вам приходится переносить мебель? Обычно, встроенный шкаф-купе стоит годами и&nbsp;сносится только перед капитальным ремонтом.
 					.sPartners__row.row
 						+partnersItem(1,descr)
