@@ -40,12 +40,13 @@ block pagecontent
 	+header()
 		+topLine
 		+top-nav()
-	+page-head(title, '', 'поиск' )
-	.container
-		+catalogSlider
-		+searchForm
-	+catSorter().offset
-	+catalogBody().bottom
+	main
+		+page-head(title, '', 'поиск' )
+		.container
+			+catalogSlider
+			+searchForm
+		+catSorter().offset
+		+catalogBody().bottom
 	+footer()
       
 

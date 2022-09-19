@@ -37,19 +37,20 @@ block pagecontent
 	+header()
 		+topLine
 		+top-nav()
-	+page-head(title, '', 'Каталог','КУХНИ НА ЗАКАЗ' )
-	.container.slider-container
-		+catalogSlider
-	//- +sCatalog
-	.container
-		+productTags('show','Прямые','Угловые','МДФ','Пластик','Современные','Лофт','Классические','Кантри')
-		+catFilter()
-	+catSorter
-	+catalogBody()
-	+sFormFile()
-	+sHowWork
-	+sSert
-	+sFaq
+	main
+		+page-head(title, '', 'Каталог','КУХНИ НА ЗАКАЗ' )
+		.container.slider-container
+			+catalogSlider
+		//- +sCatalog
+		.container
+			+productTags('show','Прямые','Угловые','МДФ','Пластик','Современные','Лофт','Классические','Кантри')
+			+catFilter()
+		+catSorter
+		+catalogBody()
+		+sFormFile()
+		+sHowWork
+		+sSert
+		+sFaq
 	+footer()
       
 
