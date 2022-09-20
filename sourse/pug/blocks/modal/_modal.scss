@@ -280,6 +280,20 @@ a {
   }
 }
 
+
+#modal-city{
+
+	// @include media-breakpoint-up(lg){
+		// max-height: calc(100% - 128px);
+		max-height: 100%;
+		padding-top: 0;
+		padding-bottom: 0;
+		&::before,
+		&::after{
+			display: none;
+		}
+	}
+// }
 .modal-city{
 	//@include mt();
 	// @extend .custom-scroll;
@@ -288,12 +302,15 @@ a {
 	max-width: 100%;
 	// position: relative;
 	background-color: #fff;
-
-	min-height: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	// min-height: 100%;
 	@include media-breakpoint-up(md){
-		min-height:0;
-		height: auto;
+		// min-height:0;
+		// height: auto;
 		max-width: rem(720);
+		margin-bottom: 0;
+		margin-top: 0;
 	}
 	&.big{
 		max-width: 100%;
@@ -326,8 +343,8 @@ a {
 		height: 100%;
     max-height: 100%;
 		@include media-breakpoint-up(lg) {
-			height: 430px;
-			max-height: 100%;
+			// height: 430px;
+			// max-height: 100%;
 		}
 		@include media-breakpoint-up(sm){
 			--bs-gutter-x: #{rem(24)};
@@ -338,9 +355,10 @@ a {
 			flex-direction: column;
 			height: 100%;
 			max-height: 100%;
+			// flex-grow: 1;
 			@include media-breakpoint-up(lg) {
-				height: 430px;
-				max-height: 100%;
+				// height: 430px;
+				// max-height: 100%;
 			}
 		}
 		.row{
@@ -439,10 +457,11 @@ a {
 		}
 		&__scroll-wrap {
 			@extend .custom-scroll;
+			// max-height: 430px;
+			overflow-y: auto;
+			overflow-x: hidden;
+			flex-grow: 1;
 			@include media-breakpoint-up(lg) {
-				overflow-y: auto;
-				overflow-x: hidden;
-				flex-grow: 1;
 			}
 		}
 		&__scroll-content {
@@ -531,4 +550,12 @@ a {
 	}
 	&__{}
 	&__{}
+}
+
+.fancybox__slide.has-inline {
+	@media (max-height: 760px) {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+	// padding: 64px 100px;
 }
