@@ -72,15 +72,17 @@
 			margin-left: 5px;
 			margin-right: 5px;
 			display: inline-block;
-			&::before{
-				content: '';
-				position: absolute;
-				right: rem(-4);
-				top: rem(4);
-				width: rem(7);
-				height: rem(7);
-				border-radius: 50%;
-				background-color: $body-color;
+			&.active {
+				&::before{
+					content: '';
+					position: absolute;
+					right: rem(-4);
+					top: rem(4);
+					width: rem(7);
+					height: rem(7);
+					border-radius: 50%;
+					background-color: $body-color;
+				}
 			}
 		.icon{
 			font-size: 1rem;
