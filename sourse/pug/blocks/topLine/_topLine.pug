@@ -3,10 +3,10 @@ mixin topLine()
 	+b.topLine&attributes(attributes)
 		.container
 			.row
-				.col-md-auto.col.d-lg-none.me-auto.me-lg-0
+				.col-auto.col.d-lg-none.me-auto.me-lg-0
 					+b.toggle-menu-mobile--js
 						span
-				.col.d-none.d-lg-block
+				.col
 					+location()
 					//- +b.city-change(href="#")
 					//- 	+icon('location')
@@ -33,13 +33,14 @@ mixin topLine()
 				.col-auto.d-none.d-md-block
 					+b.search-toggle--js
 						+icon("search")
+				//- .col-auto.d-md-none
+				//- 		a.top-nav__tel(href="tel:8(4942)501-621") 8 (4942) 501-621
 				.col-auto.d-md-none
-						a.top-nav__tel(href="tel:8(4942)501-621") 8 (4942) 501-621
-				.col-auto.d-md-none
-					a.top-nav__soc(href="#")
-						+icon("whatsapp")
-					a.top-nav__soc(href="#")
-						+icon("viber")
+					a.top-nav__soc(href="https://wa.me/74942501621")
+						//- +icon("whatsapp")
+						+whatsappgreen()
+					//- a.top-nav__soc(href="#")
+					//- 	+icon("viber")
 			+search
 	// end topLine
 

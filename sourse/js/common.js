@@ -590,7 +590,7 @@ function eventHandler() {
 
 	$(".search-toggle--js").on("click", function(e){
 		e.preventDefault;
-		$(".topLine .search-block").toggleClass("active")
+		$(".topLine .search-block").toggleClass("active");
 	})
 	
 	$(".toggle-catalog--js").on("click", function(e){
@@ -1045,7 +1045,16 @@ function eventHandler() {
 		}
 	});
 
-	$('.footer__scrolup').on('click', function() {
+	document.addEventListener('scroll', function() {
+		if (window.scrollY >= 500) {
+			$('.scrollTop').addClass('active');
+		} else {
+			$('.scrollTop').removeClass('active');
+		}
+	});
+
+	$('.scrollTop').on('click', function(event) {
+		event.preventDefault();
 		window.scrollTo(0,0);
 	});
 
@@ -1067,23 +1076,38 @@ function eventHandler() {
 		});
 	}
 
-	let searchInputs = document.querySelectorAll('.input--js');
-	if( searchInputs) {
-		for (const searchInput of searchInputs) {
-			searchInput.addEventListener('input', function() {
-				if(searchInput.value.split('').length > 0) {
+	let inputWithDeletes = document.querySelectorAll('.input--js');
+	if( inputWithDeletes) {
+		for (const inputWithDelete of inputWithDeletes) {
+			inputWithDelete.addEventListener('input', function() {
+				if(inputWithDelete.value.split('').length > 0) {
 					this.closest('.form-wrap').querySelector('.search-del--js').classList.add('active');
 				} else {
 					this.closest('.form-wrap').querySelector('.search-del--js').classList.remove('active');
 				}
 			});
-			searchInput.closest('.form-del-wrap').addEventListener('click', function(event) {
+			inputWithDelete.closest('.form-del-wrap').addEventListener('click', function(event) {
 				let del = event.target.closest('.search-del--js');
 				if(!del) return;
 				del.classList.remove('active');
 				this.closest('.form-del-wrap').querySelector('.input--js').value = '';
 			});
 		}
+	}
+
+	let searchInputs = document.querySelectorAll('.search-block input');
+	for (const searchInput of searchInputs) {
+		searchInput.addEventListener('input', function() {
+			if (searchInput.value != "") {
+				$('.search-block__result').addClass('active');
+			} else {
+				$('.search-block__result').removeClass('active');
+			}
+		});
+		let searchDelete = searchInput.closest('.search-block').querySelector('.search-del--js');
+		searchDelete.addEventListener('click', function() {
+			$('.search-block__result').removeClass('active');
+		});
 	}
 };
 if (document.readyState !== 'loading') {

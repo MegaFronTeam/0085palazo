@@ -12,32 +12,28 @@ mixin mob-mnu()
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
+		//- +b.toggle-menu-mobile--js
+		//- 	span
 		+e.inner
-			a(href="/")
-				+img("img/logo.png")
+			//- a(href="/")
+			//- 	+img("img/logo.png")
+			+search
+			+b.catalog-dropdown--js.d-lg-block
+				+mnu()
 			nav
-				ul
+				+e.UL.mobile-main-menu
 					li: a(href="#")  О компании
 					li: a(href="#")  Партнерам
 					li: a(href="#")  Отзывы
 					li: a(href="#")  Контакты
-			+e.row.row
-				.col
-					+location()
-				.col-auto
-					+e.email(href="mailto:sales@palazo.ru")
-						+icon("email")
-						| sales@palazo.ru
-				.col-12
-					+e.btn.btn.btn-outline-primary(href="#" data-src='modal-apply2' data-fancybox="modal")
-						+icon("calc")
-						| Онлайн расчет кухни
-				.col-12
-					+e.btn.btn.btn-outline-primary(href="#" data-src="modal-call" data-fancybox="modal")
-						+icon("designer")
-						| Вызвать дизайнера
+			+e.row.row 
+				+e.link(href="mailto: sales@palazo.ru")
+					+icon("email")
+					| sales@palazo.ru
+				+e.time 
+					+icon('clock')
+					| ПН-ПТ, с 9:00 - 18:00  
+					span  Без перерыва
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
@@ -47,7 +43,8 @@ mixin top-nav()
 				.row
 					.col-auto
 						a(href="/")
-							+img("img/logo.png")
+							//- +img("img/logo.png")
+							+logo
 					.col
 						+e.logo-text Мебель на&nbsp;заказ от&nbsp;производителя
 					.col-auto.d-none.d-xxl-block
@@ -61,10 +58,11 @@ mixin top-nav()
 					.col-auto.d-none.d-md-block
 						+e.tel(href="tel:8(4942)501-621") 8 (4942) 501-621
 					.col-auto.d-none.d-md-block
-						+e.soc(href="#")
-							+icon("whatsapp")
-						+e.soc(href="#")
-							+icon("viber")
+						+e.soc(href="https://wa.me/74942501621")
+							//- +icon("whatsapp")
+							+whatsappgreen
+						//- +e.soc(href="#")
+						//- 	+icon("viber")
 		.container
 			.row
 				.col-lg.order-lg-0.order-last
@@ -81,6 +79,6 @@ mixin top-nav()
 						+icon("like")
 
 
-				.col-12.d-lg-none
-					+b.toggle-catalog--js  Каталог
+				//- .col-12.d-lg-none
+				//- 	+b.toggle-catalog--js  Каталог
 	// end top-nav

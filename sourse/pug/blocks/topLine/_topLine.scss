@@ -2,6 +2,8 @@
 	// start .topLine
 	.topLine {
 		border-bottom: 1px solid #DBDBDB;
+		position: relative;
+		z-index: 1000;
 		@include media-breakpoint-up(xl){
 			
 			// margin-right: 25px;
@@ -69,6 +71,9 @@
 				transform: skewX(0);
 				visibility: hidden;
 				opacity: 0;
+			}
+			@include media-breakpoint-down(md) {
+				display: none;
 			}
 		}
 	@include media-breakpoint-up(xl) {}
@@ -162,10 +167,10 @@
 		@include mt();
 		transform-origin: bottom left;
 		transform: scale(0);
+		top: calc(100% + 10px);
+		transform-origin: top left;
 		@include media-breakpoint-up(lg) {
-			transform-origin: top left;
-			top: 100%;
-			bottom: unset;
+			// bottom: unset;
 			padding-top: rem(20);
 		}
 		&.active{
@@ -174,7 +179,7 @@
 
 		position: absolute;
 		z-index: 900;
-		bottom: calc(100% + 16px);
+		// bottom: calc(100% + 16px);
 
 		width: 100%;
 		@include media-breakpoint-up(sm){
@@ -200,14 +205,14 @@
 
 		position: relative;
 		&:after{
+			content: '';
 			@include media-breakpoint-up(lg) {
-				content: '';
 			}
 			position: absolute;
 
-			left: calc(100% - #{rem(20)});
+			// left: calc(100% - #{rem(20)});
+			left: rem(45);
 			@include media-breakpoint-up(md){
-				left: rem(45);
 			}
 			bottom: calc(100% - 1px);
 
