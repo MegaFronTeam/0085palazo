@@ -193,6 +193,7 @@
 		}
 	}
 	&__payment {
+		@include roww(22px, 'm');
 		display: flex;
 		align-items: center;
 		@include media-breakpoint-down(lg) {
@@ -201,9 +202,9 @@
 		svg {
 			// max-width: 50px;
 			// max-height: 24px;
-			&:not(:last-child) {
-				margin-right: 22px;
-			}
+			// &:not(:last-child) {
+			// 	margin-right: 22px;
+			// }
 		}
 	}
 	&__links {
