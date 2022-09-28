@@ -128,8 +128,9 @@
 	&__phone {
 		margin-bottom: rem(41);
 		font-size: rem(18);
+		@include roww(15px, 'm');
 		&-link {
-			margin-right: 22px;
+			// margin-right: 22px;
 			color: $white;
 			@include media-breakpoint-down(lg) {
 				&:hover {

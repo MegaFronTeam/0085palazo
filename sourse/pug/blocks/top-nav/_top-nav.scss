@@ -68,6 +68,9 @@
 		@include media-breakpoint-down(md) {
 			--bs-link-hover-color: #{$body-color};
 		}
+		@include media-breakpoint-down(sm) { 
+			font-size: rem(13);
+		}
 		.icon{
 			font-size: 1rem;
 		}
